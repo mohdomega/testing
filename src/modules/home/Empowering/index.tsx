@@ -1,0 +1,59 @@
+import Link from 'next/link';
+
+import Button from '@/components/Button';
+import Stack from '@/components/Stack';
+import TitleChip from '@/components/TitleChip';
+import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+
+interface EmpoweringProps {
+  className?: string;
+}
+
+const chips = ['Strategic Vision', 'Seamless Implementation', 'Ongoing Support', 'People-First Approch'];
+
+export default function Empowering({ className }: EmpoweringProps) {
+  return (
+    <div className={cn('pb-52.5 max-lg:pb-27', className)}>
+      <Stack
+        component="section"
+        alignItems="center"
+        className="gap-8 py-17.5 max-lg:p-15 max-sm:px-6 max-sm:py-10"
+      >
+        <Stack alignItems="center" className="gap-4">
+          <TitleChip>About us</TitleChip>
+          <Stack className="gap-4 text-center max-w-166">
+            <Typography variant="h2" className="text-gradient">
+              Empowering Your Salesforce Journey
+            </Typography>
+            <Typography variant="body2" className="font-medium text-secondary">
+              IDRMS Technologies is your trusted Salesforce partner, committed to driving real transformation.
+              We specialize in delivering tailored solutions that align with your goals—making your growth
+              smarter, faster, and simpler
+            </Typography>
+          </Stack>
+        </Stack>
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 max-sm:grid-cols-1 max-sm:grid-rows-4">
+          {chips.map((label) => (
+            <Stack
+              key={label}
+              direction="row"
+              alignItems="center"
+              className="gap-2.5 px-4 py-2.5 rounded-full border border-dashed border-secondary/40 max-sm:py-2"
+            >
+              <div className="p-1.75 rounded-full bg-[#EFE9FF]">
+                <div className="size-1.5 rounded-full bg-primary-light" />
+              </div>
+              <Typography variant="body2" className="font-medium text-secondary max-sm:text-base">
+                {label}
+              </Typography>
+            </Stack>
+          ))}
+        </div>
+        <Button component={Link} href="/about" color="gradient">
+          Read More
+        </Button>
+      </Stack>
+    </div>
+  );
+}

@@ -1,0 +1,83 @@
+import Link from 'next/link';
+
+import Button from '@/components/Button';
+import Stack from '@/components/Stack';
+import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+
+import Rating from './Rating';
+
+import AWSLogo from '/public/icons/aws-logo.svg';
+import ChevronRight from '/public/icons/chevron-right.svg';
+import LightingFlash from '/public/icons/lighting-flash.svg';
+import Image from 'next/image';
+// import HomeVideoImg1 from '../../../../public/images/home-video-image-1.png';
+import HomeVideoImg1 from '../../../../public/images/home-video-image-1-JPEG.jpg';
+
+interface HeroProps {
+  className?: string;
+}
+
+export default function Hero({ className }: HeroProps) {
+  return (
+    <Stack
+      justifyContent="center"
+      className={cn(
+        'min-h-screen bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6',
+        className
+      )}
+    >
+      <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1">
+        <Stack className="gap-10 max-sm:gap-6">
+          <Stack className="gap-3 max-sm:items-center max-sm:text-center">
+            <Stack direction="row" alignItems="center" className="gap-3">
+              <div className="p-3 border border-white/10 rounded-full">
+                <LightingFlash className="size-4 text-white" />
+              </div>
+              <Typography variant="small" className="text-white/60">
+                Grow faster with <span className="text-white">smart CRM</span>
+              </Typography>
+            </Stack>
+            <Stack className="gap-4 text-balance font-medium">
+              <Typography variant="h1" className="text-white max-lg:text-4xl max-sm:text-2xl">
+                Transform Your Customer Experience With Salesforce
+              </Typography>
+              <Typography className="text-white/60 max-sm:font-normal">
+                Digitalize your business with smart salesforce technologies and stimulate your growth rate.
+              </Typography>
+            </Stack>
+          </Stack>
+          <Stack direction="row" className="gap-3 max-sm:justify-center">
+            <Button component={Link} href="/contact-us/schedule-meeting" color="accent">
+              Book Free Consulting
+            </Button>
+            <Button
+              component={Link}
+              href="/offerings"
+              variant="outlined"
+              endIcon={<ChevronRight className="size-4 text-white" />}
+            >
+              Explore Services
+            </Button>
+          </Stack>
+        </Stack>
+
+        {/* TODO: Video */}
+        {/* <div className="rounded-3xl bg-neutral-300/50 max-lg:aspect-video" /> */}
+        <div className="rounded-3xl max-lg:aspect-video relative overflow-hidden">
+          <Image src={HomeVideoImg1} alt="home video img 1" className="w-full h-full object-cover" />
+        </div>
+
+        <Rating className="max-lg:hidden" />
+
+        <Stack direction="row" justifyContent="space-between">
+          <AWSLogo className="size-16" />
+          <AWSLogo className="size-16" />
+          <AWSLogo className="size-16" />
+          <AWSLogo className="size-16" />
+          <AWSLogo className="size-16" />
+        </Stack>
+      </div>
+    </Stack>
+  );
+}

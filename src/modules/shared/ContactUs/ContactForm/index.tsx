@@ -1,0 +1,84 @@
+'use client';
+
+import { useActionState, useEffect, useRef } from 'react';
+
+import Button from '@/components/Button';
+import Stack from '@/components/Stack';
+import TextField from '@/components/TextField';
+import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+
+import { contactUs } from './action';
+
+interface ContactFormProps {
+  className?: string;
+}
+
+export default function ContactForm({ className }: ContactFormProps) {
+  const [state, action, isPending] = useActionState(contactUs, undefined);
+
+  const ref = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    if (state?.success) {
+      ref.current.reset();
+    }
+  }, [state?.success]);
+
+  return (
+    <Stack
+      ref={ref}
+      component="form"
+      action={action}
+      className={cn('gap-4 p-8 rounded-3xl bg-white max-lg:p-6 max-sm:p-4', className)}
+    >
+      <Stack direction="row" alignItems="flex-start" className="gap-4 max-sm:flex-col">
+        <TextField
+          type="text"
+          name="firstName"
+          id="firstName"
+          label="First Name"
+          placeholder="Enter name"
+          error={Boolean(state?.errors?.firstName)}
+          helperText={state?.errors?.firstName}
+        />
+        <TextField
+          type="text"
+          name="lastName"
+          id="lastName"
+          label="Last Name"
+          placeholder="Enter name"
+          error={Boolean(state?.errors?.lastName)}
+          helperText={state?.errors?.lastName}
+        />
+      </Stack>
+      <TextField
+        type="email"
+        name="email"
+        id="email"
+        label="Email"
+        placeholder="Enter your email"
+        error={Boolean(state?.errors?.email)}
+        helperText={state?.errors?.email}
+      />
+      <TextField
+        component="textarea"
+        name="message"
+        id="message"
+        label="Your Message"
+        rows={7}
+        placeholder="Write your message here..."
+        error={Boolean(state?.errors?.message)}
+        helperText={state?.errors?.message}
+      />
+      <Typography className={cn('text-green-500', state?.success ? 'block' : 'hidden')}>
+        Thank you for contacting. We&apos;ll reach you out soon.
+      </Typography>
+      <Button type="submit" className="w-fit max-sm:self-center max-sm:px-6" isLoading={isPending}>
+        Submit
+      </Button>
+    </Stack>
+  );
+}
