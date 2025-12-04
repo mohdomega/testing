@@ -11,21 +11,25 @@ interface JoinTeamProps {
 
 export default function JoinTeam({ className }: JoinTeamProps) {
   return (
-    <Stack component="section" className={cn('gap-15 px-20 py-17.5', className)}>
-      <Stack className="gap-4 font-medium max-lg:items-center max-lg:text-center">
-        <TitleChip>Careers</TitleChip>
-        <Typography variant="h2">Join our creative team</Typography>
-        <Typography variant="body2" className="text-balance text-primary-dark/60">
-          We are expanding everyday! We look forward to working with great minds and welcoming new
-          perspectives into our team. Grasp new concepts, push your boundaries, and reach new heights in your
-          career with IDRMS.
-        </Typography>
-      </Stack>
-      <div className="grid grid-cols-2 gap-10 max-lg:gap-4">
-        <Job />
-        <Job />
-        <Job />
-        <Job />
+    <Stack component="section" className={cn('py-17.5 w-full', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10">
+        <Stack className="gap-15">
+          <Stack className="gap-4 font-medium max-lg:items-center max-lg:text-center">
+            <TitleChip>Careers</TitleChip>
+            <Typography variant="h2">Join our creative team</Typography>
+            <Typography variant="body2" className="text-balance text-primary-dark/60">
+              We are expanding everyday! We look forward to working with great minds and welcoming new
+              perspectives into our team. Grasp new concepts, push your boundaries, and reach new heights in
+              your career with IDRMS.
+            </Typography>
+          </Stack>
+          <div className="grid grid-cols-2 gap-10 max-lg:gap-4">
+            <Job />
+            <Job />
+            <Job />
+            <Job />
+          </div>
+        </Stack>
       </div>
     </Stack>
   );

@@ -19,8 +19,14 @@ export const routes = [
     name: 'Services',
     path: '/services',
     children: [
-      { name: 'Consulting', path: '/contact-us/schedule-meeting' },
-      { name: 'Explore Services', path: '/offerings' },
+      { name: 'CRM', path: '/services/crm' },
+      { name: 'Data Analytics & AI', path: '/services/data-analytics-ai' },
+      { name: 'Staff Augmentation', path: '/services/staff-augmentation' },
+      { name: 'Cloud Strategy', path: '/services/cloud-strategy' },
+      { name: 'ERP', path: '/services/erp' },
+      { name: 'App Development', path: '/services/app-development' },
+      { name: 'Game Development', path: '/services/game-development' },
+      { name: 'UI/UX', path: '/services/ui-ux' },
     ],
   },
   {

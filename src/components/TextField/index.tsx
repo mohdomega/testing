@@ -45,8 +45,11 @@ export default function TextField({
   className,
   ...props
 }: TextFieldProps) {
+  const hasFlex1 = className?.includes('flex-1');
+  const inputClassName = className?.replace('flex-1', '').trim() || '';
+
   return (
-    <Stack className="gap-2 w-full">
+    <Stack className={cn('gap-2 w-full min-w-0', hasFlex1 && 'flex-1')}>
       {label && (
         <Typography component="label" htmlFor={name} variant="subtitle" className={cn('font-medium')}>
           {label}
@@ -60,9 +63,9 @@ export default function TextField({
           name={name}
           disabled={disabled}
           className={cn(
-            'px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm',
+            'px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm w-full min-w-0',
             { 'focus-visible:outline-red-500 border-red-500': error },
-            className
+            inputClassName
           )}
         />
       ) : (
@@ -72,9 +75,9 @@ export default function TextField({
           name={name}
           disabled={disabled}
           className={cn(
-            'px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary placeholder:font-light max-sm:text-sm',
+            'px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary placeholder:font-light max-sm:text-sm w-full min-w-0',
             { 'focus-visible:outline-red-500 border-red-500': error },
-            className
+            inputClassName
           )}
         />
       )}

@@ -15,23 +15,25 @@ export default function ContactUs({ className }: ContactUsProps) {
     <Stack
       alignItems="center"
       component="section"
-      className={cn('gap-13 px-20 py-17.5 bg-background max-lg:px-18 max-sm:px-6 max-sm:py-10', className)}
+      className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}
     >
-      <Stack className="gap-2 max-w-116 text-center">
-        <Stack alignItems="center" className="gap-1">
-          <TitleChip>Need help?</TitleChip>
-          <Typography variant="h2" className="text-gradient">
-            Contact us
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10 flex flex-col items-center gap-13">
+        <Stack className="gap-2 max-w-116 text-center">
+          <Stack alignItems="center" className="gap-1">
+            <TitleChip>Need help?</TitleChip>
+            <Typography variant="h2" className="text-gradient">
+              Contact us
+            </Typography>
+          </Stack>
+          <Typography variant="body2" className="text-secondary font-medium">
+            Reach out to us with questions, ideas, or support needs — our team is ready to assist you
           </Typography>
         </Stack>
-        <Typography variant="body2" className="text-secondary font-medium">
-          Reach out to us with questions, ideas, or support needs — our team is ready to assist you
-        </Typography>
-      </Stack>
-      <Stack direction="row" className="gap-10 w-full">
-        <Map className="flex-1 max-lg:hidden" />
-        <ContactForm className="flex-1" />
-      </Stack>
+        <Stack direction="row" className="gap-10 w-full">
+          <Map className="flex-1 max-lg:hidden" />
+          <ContactForm className="flex-1" />
+        </Stack>
+      </div>
     </Stack>
   );
 }

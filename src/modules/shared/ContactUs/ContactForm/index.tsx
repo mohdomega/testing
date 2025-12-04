@@ -32,9 +32,12 @@ export default function ContactForm({ className }: ContactFormProps) {
       ref={ref}
       component="form"
       action={action}
-      className={cn('gap-4 p-8 rounded-3xl bg-white max-lg:p-6 max-sm:p-4', className)}
+      className={cn(
+        'gap-4 p-8 rounded-3xl bg-white max-lg:p-6 max-sm:p-4 w-full max-w-full overflow-hidden',
+        className
+      )}
     >
-      <Stack direction="row" alignItems="flex-start" className="gap-4 max-sm:flex-col">
+      <Stack direction="row" alignItems="flex-start" className="gap-4 max-sm:flex-col min-w-0">
         <TextField
           type="text"
           name="firstName"
@@ -43,6 +46,7 @@ export default function ContactForm({ className }: ContactFormProps) {
           placeholder="Enter name"
           error={Boolean(state?.errors?.firstName)}
           helperText={state?.errors?.firstName}
+          className="min-w-0 flex-1 max-sm:flex-none"
         />
         <TextField
           type="text"
@@ -52,6 +56,7 @@ export default function ContactForm({ className }: ContactFormProps) {
           placeholder="Enter name"
           error={Boolean(state?.errors?.lastName)}
           helperText={state?.errors?.lastName}
+          className="min-w-0 flex-1 max-sm:flex-none"
         />
       </Stack>
       <TextField
@@ -62,6 +67,7 @@ export default function ContactForm({ className }: ContactFormProps) {
         placeholder="Enter your email"
         error={Boolean(state?.errors?.email)}
         helperText={state?.errors?.email}
+        className="min-w-0 w-full"
       />
       <TextField
         component="textarea"
@@ -72,6 +78,7 @@ export default function ContactForm({ className }: ContactFormProps) {
         placeholder="Write your message here..."
         error={Boolean(state?.errors?.message)}
         helperText={state?.errors?.message}
+        className="min-w-0 w-full"
       />
       <Typography className={cn('text-green-500', state?.success ? 'block' : 'hidden')}>
         Thank you for contacting. We&apos;ll reach you out soon.

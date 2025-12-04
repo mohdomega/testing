@@ -5,7 +5,7 @@ import { cn } from '@/lib';
 import Image from 'next/image';
 
 interface ProfileCardProps {
-  classname?: string;
+  className?: string;
   img: any;
   name: string;
   role: string;
@@ -14,7 +14,7 @@ interface ProfileCardProps {
 }
 export default function ProfileCard({
   justifyBetween,
-  classname,
+  className,
   img,
   name,
   tagline,
@@ -23,38 +23,26 @@ export default function ProfileCard({
   return (
     <Stack
       justifyContent="flex-end"
-      // className="p-6 aspect-[4/5] rounded-3xl bg-[#646FC626] overflow-hidden"
       className={cn(
-        // ' w-fit aspect-[17/25] p-6 rounded-3xl bg-[#646FC626] relative overflow-hidden',
-        ' w-full h-full aspect-[17/25] p-6 rounded-3xl bg-[#646FC626] relative overflow-hidden',
-        classname
+        'w-full min-h-[280px] sm:min-h-[320px] aspect-[17/25] p-3 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#646FC626] relative overflow-hidden',
+        className
       )}
     >
       {/* Background Image */}
       <Image src={img} alt="team image" fill className="object-cover" />
       <Stack
-        // className="gap-6 p-6 border border-white rounded-[20px] backdrop-blur-[20px]"
-        // className="gap-6 min-w-73 p-6 border border-white rounded-[20px] backdrop-blur-[20px]"
-
         className={cn(
-          'gap-6 min-w-73 p-6 border border-white rounded-[20px] backdrop-blur-[20px]',
-          justifyBetween && 'flex flex-row items-center justify-between',
-          classname
+          'gap-3 sm:gap-6 p-3 sm:p-6 border border-white rounded-xl sm:rounded-[20px] backdrop-blur-[20px] z-10',
+          justifyBetween && 'flex sm:flex-row flex-col sm:items-center sm:justify-between'
         )}
       >
         <Stack className="gap-1">
-          <Typography variant="subtitle" className="text-white font-semibold">
-            {/* Liam Carter */}
+          <Typography variant="subtitle" className="text-white font-semibold text-sm sm:text-base">
             {name}
           </Typography>
-          <Typography className="text-white/80">
-            {/* Streamlines operations */}
-            {tagline}
-          </Typography>
+          <Typography className="text-white/80 text-xs sm:text-sm">{tagline}</Typography>
         </Stack>
-        <Typography className="text-[#FCC33F] font-bold">
-          {/* - Founder */}- {role}
-        </Typography>
+        <Typography className="text-[#FCC33F] font-bold text-sm sm:text-base">- {role}</Typography>
       </Stack>
     </Stack>
   );

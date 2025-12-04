@@ -21,18 +21,28 @@ interface OurTeamProps {
 
 export default function OurTeam({ className }: OurTeamProps) {
   return (
-    <Stack alignItems="center" className={cn('gap-15 px-20 py-17.5', className)}>
+    <Stack alignItems="center" className={cn('gap-8 md:gap-15 px-4 md:px-20 py-10 md:py-17.5', className)}>
       <Stack alignItems="center" className="gap-4">
         <TitleChip>Our visionaries</TitleChip>
         <Typography variant="h2" className="text-gradient text-center">
           Meet the Team
         </Typography>
       </Stack>
-      <Stack className="gap-10">
-        <Stack direction="row" className="gap-10">
-          <Stack className="gap-10">
-            <ProfileCard img={TeamImg3} justifyBetween={true} name="Liam Carter" tagline="Streamlines operations" role="Founder" />
-            <Stack direction="row" className="gap-10">
+      <Stack className="gap-4 md:gap-10 max-w-[1200px] w-full">
+        {/* Top section - 2 columns on desktop, stacked on mobile */}
+        <Stack className="flex-col lg:flex-row gap-4 md:gap-10 w-full">
+          {/* Left column */}
+          <Stack className="gap-4 md:gap-10 flex-1">
+            <Stack className="flex-1 max-h-[558px] w-full ">
+              <ProfileCard
+                img={TeamImg3}
+                justifyBetween={true}
+                name="Liam Carter"
+                tagline="Streamlines operations"
+                role="Founder"
+              />
+            </Stack>
+            <Stack className="flex-col sm:flex-row gap-4 md:gap-10 max-h-[359px] ">
               <ProfileCard
                 img={TeamImg2}
                 name="Stephanie Moore "
@@ -47,9 +57,18 @@ export default function OurTeam({ className }: OurTeamProps) {
               />
             </Stack>
           </Stack>
-          <Stack direction="column-reverse" className="gap-10">
-            <ProfileCard img={TeamImg1} justifyBetween={true} name="Mateo Rossi" tagline="Builds smart logistics tech" role="CTO" />
-            <Stack direction="row" className="gap-10">
+          {/* Right column */}
+          <Stack className="flex-col-reverse lg:flex-col-reverse gap-4 md:gap-10 flex-1">
+            <Stack className=" flex-1 max-h-[558px] w-full ">
+              <ProfileCard
+                img={TeamImg1}
+                justifyBetween={true}
+                name="Mateo Rossi"
+                tagline="Builds smart logistics tech"
+                role="CTO"
+              />
+            </Stack>
+            <Stack className="flex-col sm:flex-row gap-4 md:gap-10 max-h-[359px]">
               <ProfileCard
                 img={TeamImg5}
                 name="Jennifer Rossi"
@@ -65,14 +84,28 @@ export default function OurTeam({ className }: OurTeamProps) {
             </Stack>
           </Stack>
         </Stack>
-        <Stack direction="row" className="gap-10 *:w-full">
-          <ProfileCard img={TeamImg4} name="Ethan Brooks" tagline="Innovates processes" role="CMO" />
-          <ProfileCard img={TeamImg8} name="Liam Payne" tagline="Innovates processes" role="COO" />
+        {/* Bottom row - 3 columns on desktop, stacked on mobile */}
+        <Stack className="flex-col sm:flex-row gap-4 md:gap-10 w-full max-h-[420px]">
+          <ProfileCard
+            img={TeamImg4}
+            name="Ethan Brooks"
+            tagline="Innovates processes"
+            role="CMO"
+            className="flex-1"
+          />
+          <ProfileCard
+            img={TeamImg8}
+            name="Liam Payne"
+            tagline="Innovates processes"
+            role="COO"
+            className="flex-1"
+          />
           <ProfileCard
             img={TeamImg9}
             name="Jessica Moore"
             tagline="Innovates processes"
             role="Sr.Marketing Manager"
+            className="flex-1"
           />
         </Stack>
       </Stack>

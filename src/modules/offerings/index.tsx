@@ -1,3 +1,4 @@
+import OurIndustries from '../industries/OurIndustries';
 import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
 import OurServices from '../shared/OurServices';
@@ -9,6 +10,7 @@ export default function Offerings() {
     <div>
       <Hero />
       <OurServices />
+      {/* <OurIndustries /> */}
       <OurOfferings />
       <BlazeNewTrails />
       <ContactUs />

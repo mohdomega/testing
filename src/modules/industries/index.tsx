@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Logistics from './Logistics';
 import Manufacturing from './Manufacturing';
 import MediaAndPublication from './MediaAndPublication';
+import OurIndustries from './OurIndustries';
 import RealEstate from './RealEstate';
 import Retail from './Retail';
 
@@ -13,7 +14,7 @@ export default function Industries() {
   return (
     <div>
       <Hero />
-      <OurServices />
+      <OurIndustries />
       <Healthcare />
       <FinancialServices />
       <Retail />

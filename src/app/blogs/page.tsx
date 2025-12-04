@@ -1,3 +1,9 @@
+import Blogs from '@/modules/blogs';
+
 export default function Page() {
-  return <div></div>;
+  return (
+    <div>
+      <Blogs />
+    </div>
+  );
 }

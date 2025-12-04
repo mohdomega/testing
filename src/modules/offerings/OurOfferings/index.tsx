@@ -24,21 +24,23 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
         className
       )}
     >
-      <Stack alignItems="center" className="gap-4">
-        <TitleChip>Our Offerings</TitleChip>
-        <Typography variant="h2" className="text-gradient text-center max-w-216">
-          {/* Your salesforce simplicity secret weapon */}
-          Your Partner in Making Salesforce Simple
-        </Typography>
-      </Stack>
-      <div className="w-full grid grid-cols-2 gap-10 max-sm:grid-cols-1 max-lg:gap-x-4 max-lg:gap-y-6">
-        {offerings.map(({ icon, image, title, subtitle, path }) => (
-          <Card key={title} icon={icon} img={Img1} title={title} subtitle={subtitle} path={path} />
-        ))}
+      <div className="max-w-[1440px] w-full mx-auto flex flex-col items-center gap-15 max-sm:gap-10">
+        <Stack alignItems="center" className="gap-4">
+          <TitleChip>Our Offerings</TitleChip>
+          <Typography variant="h2" className="text-gradient text-center max-w-216">
+            {/* Your salesforce simplicity secret weapon */}
+            Your Partner in Making Salesforce Simple
+          </Typography>
+        </Stack>
+        <div className="w-full grid grid-cols-2 gap-10 max-sm:grid-cols-1 max-lg:gap-x-4 max-lg:gap-y-6">
+          {offerings.map(({ icon, image, title, subtitle, path }) => (
+            <Card key={title} icon={icon} img={Img1} title={title} subtitle={subtitle} path={path} />
+          ))}
+        </div>
+        {/* <Button component={Link} href="/services" color="gradient">
+          View all
+        </Button> */}
       </div>
-      <Button component={Link} href="/services" color="gradient">
-        View all
-      </Button>
     </Stack>
   );
 }

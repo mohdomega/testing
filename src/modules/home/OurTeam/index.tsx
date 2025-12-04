@@ -20,132 +20,73 @@ interface OurTeamProps {
 
 export default function OurTeam({ className }: OurTeamProps) {
   return (
-    <Stack component="section" alignItems="center" className={cn('gap-12 py-17.5 bg-background ', className)}>
-      <Stack alignItems="center" className="gap-4 ">
-        <TitleChip>Our visionaries</TitleChip>
-        <Typography variant="h2" className="text-gradient">
-          Meet the Team
-        </Typography>
-      </Stack>
-      {/* Carousel */}
-      {/* <Stack direction="row" className="gap-10"> */}
-      <div className="w-full">
-        <Carousel opts={{ align: 'center', loop: true }}>
-          <CarouselContent className="flex ">
-            <CarouselItem className="flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg3}
-                name="Liam Carter"
-                tagline="Streamlines operations"
-                role="Founder"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg2}
-                name="Stephanie Moore"
-                tagline="Crafts intuitive designs"
-                role="Design Head"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg1}
-                name="Mateo Rossi"
-                tagline="Builds smart logistics tech"
-                role="CTO"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard img={TeamImg4} name="Ethan Brooks" tagline="Innovates processes" role="CMO" />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg5}
-                name="Jennifer Rossi"
-                tagline="Crafts intuitive designs"
-                role="CFO"
-              />
-            </CarouselItem>
+    // <Stack component="section" alignItems="center" className={cn('gap-12 py-17.5 bg-background ', className)}>
+    //   <Stack alignItems="center" className="gap-4 ">
+    //     <TitleChip>Our visionaries</TitleChip>
+    //     <Typography variant="h2" className="text-gradient">
+    //       Meet the Team
+    //     </Typography>
+    //   </Stack>
+    //   {/* Carousel */}
+    //   {/* <Stack direction="row" className="gap-10"> */}
+    //   <div className="w-full">
+    //     <Carousel opts={{ align: 'center', loop: true }}>
+    //       <CarouselContent className="flex ">
+    //         <CarouselItem className="flex-none w-[340px] mr-[40px]  shrink-0">
+    //           <ProfileCard
+    //             img={TeamImg3}
+    //             name="Liam Carter"
+    //             tagline="Streamlines operations"
+    //             role="Founder"
+    //           />
+    //         </CarouselItem>
+    //         <CarouselItem className="flex-none w-[340px] mr-[40px]  shrink-0">
+    //           <ProfileCard
+    //             img={TeamImg2}
+    //             name="Stephanie Moore"
+    //             tagline="Crafts intuitive designs"
+    //             role="Design Head"
+    //           />
+    //         </CarouselItem>
+    //         <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
+    //           <ProfileCard
+    //             img={TeamImg1}
+    //             name="Mateo Rossi"
+    //             tagline="Builds smart logistics tech"
+    //             role="CTO"
+    //           />
+    //         </CarouselItem>
+    //       </CarouselContent>
+    //     </Carousel>
+    //   </div>
+    //   {/* </Stack> */}
+    //   <Button component={Link} href="/about" color="gradient">
+    //     View all
+    //   </Button>
+    // </Stack>
 
-            <CarouselItem className="flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg3}
-                name="Liam Carter"
-                tagline="Streamlines operations"
-                role="Founder"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard
-                img={TeamImg2}
-                name="Stephanie Moore"
-                tagline="Crafts intuitive designs"
-                role="Design Head"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg1}
-                name="Mateo Rossi"
-                tagline="Builds smart logistics tech"
-                role="CTO"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard img={TeamImg4} name="Ethan Brooks" tagline="Innovates processes" role="CMO" />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard
-                img={TeamImg5}
-                name="Jennifer Rossi"
-                tagline="Crafts intuitive designs"
-                role="CFO"
-              />
-            </CarouselItem>
-
-            <CarouselItem className="flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard
-                img={TeamImg3}
-                name="Liam Carter"
-                tagline="Streamlines operations"
-                role="Founder"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard
-                img={TeamImg2}
-                name="Stephanie Moore"
-                tagline="Crafts intuitive designs"
-                role="Design Head"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard
-                img={TeamImg1}
-                name="Mateo Rossi"
-                tagline="Builds smart logistics tech"
-                role="CTO"
-              />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px] mr-[40px]  shrink-0">
-              <ProfileCard img={TeamImg4} name="Ethan Brooks" tagline="Innovates processes" role="CMO" />
-            </CarouselItem>
-            <CarouselItem className=" flex-none w-[340px]  mr-[40px] shrink-0">
-              <ProfileCard
-                img={TeamImg5}
-                name="Jennifer Rossi"
-                tagline="Crafts intuitive designs"
-                role="CFO"
-              />
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+    <Stack component="section" alignItems="center" className={cn('py-17.5 bg-background w-full', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 flex flex-col items-center gap-12">
+        <Stack alignItems="center" className="gap-4">
+          <TitleChip>Our visionaries</TitleChip>
+          <Typography variant="h2" className="text-gradient">
+            Meet the Team
+          </Typography>
+        </Stack>
+        <div className="w-full grid grid-cols-3 gap-[40px] max-lg:grid-cols-2 max-md:grid-cols-1">
+          <ProfileCard img={TeamImg3} name="Liam Carter" tagline="Streamlines operations" role="Founder" />
+          <ProfileCard
+            img={TeamImg2}
+            name="Stephanie Moore"
+            tagline="Crafts intuitive designs"
+            role="Design Head"
+          />
+          <ProfileCard img={TeamImg1} name="Mateo Rossi" tagline="Builds smart logistics tech" role="CTO" />
+        </div>
+        <Button component={Link} href="/about" color="gradient">
+          View all
+        </Button>
       </div>
-      {/* </Stack> */}
-      <Button component={Link} href="/about" color="gradient">
-        View all
-      </Button>
     </Stack>
   );
 }

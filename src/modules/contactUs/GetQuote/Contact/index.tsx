@@ -39,71 +39,86 @@ export default function Contact({ className }: ContactProps) {
 
   return (
     <Stack component="section" className="gap-15 px-20 py-17.5">
-      <Stack
-        direction="row"
-        alignItems="center"
-        className={cn('gradient-vertical rounded-3xl *:flex-1 overflow-hidden', className)}
-      >
-        <div className="h-77.5">
-          <Image src={LadyPointingRight} alt="lady pointing right" />
-        </div>
-        <Stack className="gap-6 text-white">
-          <Stack direction="row" alignItems="center" className="gap-3">
-            <div className="p-3 border border-white/10 rounded-full">
-              <LightingFlash className="size-4 " />
-            </div>
-            <Typography variant="small">Get a Quote</Typography>
-          </Stack>
-          <Stack className="gap-2 max-w-120">
-            <Typography variant="h5" className="font-medium">
-              Every business is different and so is our approach
-            </Typography>
-            <Typography variant="body2" className="text-white/60 font-light">
-              Let us understand your unique needs and provide a custom quote. At IDRMS, we tailor solutions
-              that match your goals and budget precisely
-            </Typography>
-          </Stack>
-        </Stack>
-      </Stack>
-      <Stack direction="row" className="gap-10 *:flex-1">
-        <Stack className="gap-10">
-          <Stack className="gap-4">
-            <Typography variant="subtitle" className="font-medium">
-              Services
-            </Typography>
-            <Stack direction="row" flexWrap="wrap" className="gap-4 max-w-120">
-              {services.map((label, index) => (
-                <Button
-                  key={label}
-                  variant={index === currentIndex ? 'contained' : 'outlined'}
-                  onClick={handleSelect(index)}
-                  className={index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10'}
-                >
-                  {label}
-                </Button>
-              ))}
+      <div className="max-w-[1440px] w-full mx-auto flex flex-col gap-15">
+        <Stack
+          direction="row"
+          alignItems="center"
+          className={cn('gradient-vertical rounded-3xl *:flex-1 overflow-hidden', className)}
+        >
+          <div className="h-77.5">
+            <Image src={LadyPointingRight} alt="lady pointing right" />
+          </div>
+          <Stack className="gap-6 text-white">
+            <Stack direction="row" alignItems="center" className="gap-3">
+              <div className="p-3 border border-white/10 rounded-full">
+                <LightingFlash className="size-4 " />
+              </div>
+              <Typography variant="small">Get a Quote</Typography>
             </Stack>
-          </Stack>
-          <Stack className="gap-4">
-            <Typography variant="subtitle" className="font-medium">
-              Delivery Timeline
-            </Typography>
-            <Stack direction="row" flexWrap="wrap" className="gap-4 max-w-120">
-              {delivery.map((label, index) => (
-                <Button
-                  key={label}
-                  variant={index === currentIndex2 ? 'contained' : 'outlined'}
-                  onClick={handleSelect2(index)}
-                  className={index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10'}
-                >
-                  {label}
-                </Button>
-              ))}
+            <Stack className="gap-2 max-w-120">
+              <Typography variant="h5" className="font-medium">
+                Every business is different and so is our approach
+              </Typography>
+              <Typography variant="body2" className="text-white/60 font-light">
+                Let us understand your unique needs and provide a custom quote. At IDRMS, we tailor solutions
+                that match your goals and budget precisely
+              </Typography>
             </Stack>
           </Stack>
         </Stack>
-        <ContactForm className="bg-background" />
-      </Stack>
+        <Stack
+          direction="row"
+          className="gap-10 max-[1100px]:flex-col max-[1100px]:w-full *:flex-1 max-[1100px]:*:flex-none max-[1100px]:*:w-full"
+        >
+          <Stack className="gap-10 max-[1100px]:w-full">
+            <Stack className="gap-4">
+              <Typography variant="subtitle" className="font-medium">
+                Services
+              </Typography>
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                className="gap-4 max-w-120 max-[1100px]:max-w-full max-[1100px]:w-full"
+              >
+                {services.map((label, index) => (
+                  <Button
+                    key={label}
+                    variant={index === currentIndex ? 'contained' : 'outlined'}
+                    onClick={handleSelect(index)}
+                    className={index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10'}
+                  >
+                    {label}
+                  </Button>
+                ))}
+              </Stack>
+            </Stack>
+            <Stack className="gap-4">
+              <Typography variant="subtitle" className="font-medium">
+                Delivery Timeline
+              </Typography>
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                className="gap-4 max-w-120 max-[1100px]:max-w-full max-[1100px]:w-full"
+              >
+                {delivery.map((label, index) => (
+                  <Button
+                    key={label}
+                    variant={index === currentIndex2 ? 'contained' : 'outlined'}
+                    onClick={handleSelect2(index)}
+                    className={index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10'}
+                  >
+                    {label}
+                  </Button>
+                ))}
+              </Stack>
+            </Stack>
+          </Stack>
+          <div className="max-[1100px]:w-full">
+            <ContactForm className="bg-background" />
+          </div>
+        </Stack>
+      </div>
     </Stack>
   );
 }

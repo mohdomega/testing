@@ -12,7 +12,7 @@ import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import Image from 'next/image';
 // import HomeVideoImg1 from '../../../../public/images/home-video-image-1.png';
-import HomeVideoImg1 from '../../../../public/images/home-video-image-1-JPEG.jpg';
+import HomeVideoImg1 from '../../../../public/images/home-video-img-new-1.jpg';
 
 interface HeroProps {
   className?: string;
@@ -23,11 +23,12 @@ export default function Hero({ className }: HeroProps) {
     <Stack
       justifyContent="center"
       className={cn(
-        'min-h-screen bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6',
+        // 'min-h-screen bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6 w-full',
+        'min-h-[850px] bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6 w-full',
         className
       )}
     >
-      <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1">
+      <div className="max-w-[1440px] w-full mx-auto grid grid-cols-2 gap-12 max-lg:grid-cols-1">
         <Stack className="gap-10 max-sm:gap-6">
           <Stack className="gap-3 max-sm:items-center max-sm:text-center">
             <Stack direction="row" alignItems="center" className="gap-3">

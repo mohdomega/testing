@@ -12,7 +12,8 @@ export default function Services() {
       <OurServices />
       <CaseStudies />
       <Blogs />
-      <BlazeNewTrails className="max-lg:hidden" />
+      {/* <BlazeNewTrails className="max-lg:hidden" /> */}
+      <BlazeNewTrails />
       <ContactUs />
     </div>
   );
