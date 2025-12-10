@@ -83,7 +83,7 @@ export default function OurTeam({ className }: OurTeamProps) {
           />
           <ProfileCard img={TeamImg1} name="Mateo Rossi" tagline="Builds smart logistics tech" role="CTO" />
         </div>
-        <Button component={Link} href="/about" color="gradient">
+        <Button component={Link} href="/about#our-team" color="gradient">
           View all
         </Button>
       </div>

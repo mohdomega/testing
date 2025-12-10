@@ -12,9 +12,29 @@ import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
 import ContactForm from '@/modules/shared/ContactUs/ContactForm';
 import { cn } from '@/lib';
+import Tooltip from '@/components/Tooltip';
 
-const services = ['Sales Cloud', 'Manufactoring Cloud', 'Financial Services Cloud', 'Marketing Cloud'];
-const delivery = ['30-35 days', '2-3 months', '3-6 months', 'More than 6 months', 'Continue project'];
+const services = [
+  { label: 'Sales Cloud', description: 'Manage your sales processes and customer relationships.' },
+  { label: 'Manufactoring Cloud', description: 'Streamline manufacturing operations and supply chain.' },
+  { label: 'Financial Services Cloud', description: 'Unified platform for wealth management and banking.' },
+  { label: 'Marketing Cloud', description: 'Create personalized customer journeys and campaigns.' },
+];
+
+const budgets = [
+  { label: '$2K-$10K', description: 'Suitable for small-scale projects or MVPs.' },
+  { label: '$10K-$50K', description: 'Ideal for medium-sized business solutions.' },
+  { label: '$50K-$100K', description: 'For comprehensive enterprise applications.' },
+  { label: '$100K+', description: 'Large-scale digital transformation initiatives.' },
+];
+
+const delivery = [
+  { label: '30-35 days', description: 'Quick turnaround for small to medium projects.' },
+  { label: '2-3 months', description: 'Standard timeline for comprehensive solutions.' },
+  { label: '3-6 months', description: 'For complex enterprise-grade implementations.' },
+  { label: 'More than 6 months', description: 'Long-term partnership for large scale transformation.' },
+  { label: 'Continue project', description: 'Ongoing support and development for existing projects.' },
+];
 
 interface ContactProps {
   className?: string;
@@ -34,6 +54,14 @@ export default function Contact({ className }: ContactProps) {
   function handleSelect2(index: number) {
     return () => {
       setCurrentIndex2(index);
+    };
+  }
+
+  const [currentIndex3, setCurrentIndex3] = useState(0);
+
+  function handleSelect3(index: number) {
+    return () => {
+      setCurrentIndex3(index);
     };
   }
 
@@ -78,15 +106,38 @@ export default function Contact({ className }: ContactProps) {
                 flexWrap="wrap"
                 className=" gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
               >
-                {services.map((label, index) => (
-                  <Button
-                    key={label}
-                    variant={index === currentIndex ? 'contained' : 'outlined'}
-                    onClick={handleSelect(index)}
-                    className={index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10'}
-                  >
-                    {label}
-                  </Button>
+                {services.map((item, index) => (
+                  <Tooltip key={item.label} content={item.description}>
+                    <Button
+                      variant={index === currentIndex ? 'contained' : 'outlined'}
+                      onClick={handleSelect(index)}
+                      className={index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10'}
+                    >
+                      {item.label}
+                    </Button>
+                  </Tooltip>
+                ))}
+              </Stack>
+            </Stack>
+            <Stack className=" gap-4 w-full">
+              <Typography variant="subtitle" className="font-medium">
+                Your Budget
+              </Typography>
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                className=" gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
+              >
+                {budgets.map((item, index) => (
+                  <Tooltip key={item.label} content={item.description}>
+                    <Button
+                      variant={index === currentIndex2 ? 'contained' : 'outlined'}
+                      onClick={handleSelect2(index)}
+                      className={index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10'}
+                    >
+                      {item.label}
+                    </Button>
+                  </Tooltip>
                 ))}
               </Stack>
             </Stack>
@@ -99,15 +150,16 @@ export default function Contact({ className }: ContactProps) {
                 flexWrap="wrap"
                 className="gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
               >
-                {delivery.map((label, index) => (
-                  <Button
-                    key={label}
-                    variant={index === currentIndex2 ? 'contained' : 'outlined'}
-                    onClick={handleSelect2(index)}
-                    className={index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10'}
-                  >
-                    {label}
-                  </Button>
+                {delivery.map((item, index) => (
+                  <Tooltip key={item.label} content={item.description}>
+                    <Button
+                      variant={index === currentIndex3 ? 'contained' : 'outlined'}
+                      onClick={handleSelect3(index)}
+                      className={index === currentIndex3 ? 'text-white' : 'text-primary-dark border-black/10'}
+                    >
+                      {item.label}
+                    </Button>
+                  </Tooltip>
                 ))}
               </Stack>
             </Stack>

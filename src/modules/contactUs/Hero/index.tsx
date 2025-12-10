@@ -4,6 +4,7 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
+import Link from 'next/link';
 
 interface HeroProps {
   className?: string;
@@ -41,7 +42,9 @@ export default function Hero({ className }: HeroProps) {
             and we&apos;ll get back to you shortly
           </Typography>
           <Stack direction="row" className="gap-3">
-            <Button color="accent">Email us now</Button>
+            <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent">
+              Email us now
+            </Button>
           </Stack>
         </Stack>
       </div>

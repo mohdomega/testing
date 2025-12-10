@@ -168,7 +168,8 @@ interface OurServicesProps {
 export default function OurServices({ className }: OurServicesProps) {
   return (
     <section className={cn('w-full', className)}>
-      <div className="max-w-[1440px] w-full mx-auto">
+      {/* <div className="max-w-[1440px] w-full mx-auto"> */}
+      <div className="w-full mx-auto">
         <div className="grid grid-cols-4 border border-black/15 max-sm:grid-cols-2">
           <Stack
             component={Link}

@@ -33,7 +33,7 @@ export default function GetInTouch({ className }: GetInTouchProps) {
           direction="row"
           className="gap-15 w-full max-[1050px]:flex-col max-[1050px]:items-center *:flex-1 max-[1050px]:*:flex-none"
         >
-          <div className="rounded-3xl relative overflow-hidden max-w-[496px] w-full aspect-square flex items-center justify-center max-[1050px]:mx-auto">
+          <div className="rounded-3xl relative overflow-hidden max-w-[496px] w-full aspect-square flex items-center justify-center max-[1050px]:mx-auto max-[1050px]:hidden">
             {/* Use more reliable spacing for absolute positions */}
             <div className="absolute top-4 left-8 p-6 flex justify-center items-center rounded-full w-[90px] h-[90px] bg-[#F2F0F7] z-10">
               <Integration className="w-8 h-8 text-primary-dark max-lg:w-6 max-lg:h-6" />

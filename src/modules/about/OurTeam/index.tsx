@@ -21,7 +21,11 @@ interface OurTeamProps {
 
 export default function OurTeam({ className }: OurTeamProps) {
   return (
-    <Stack alignItems="center" className={cn('gap-8 md:gap-15 px-4 md:px-20 py-10 md:py-17.5', className)}>
+    <Stack
+      id="our-team"
+      alignItems="center"
+      className={cn('gap-8 md:gap-15 px-4 md:px-20 py-10 md:py-17.5', className)}
+    >
       <Stack alignItems="center" className="gap-4">
         <TitleChip>Our visionaries</TitleChip>
         <Typography variant="h2" className="text-gradient text-center">

@@ -23,11 +23,7 @@ interface OurOfferingsProps {
 
 export default function OurOfferings({ className }: OurOfferingsProps) {
   return (
-    <Stack
-      component="section"
-      alignItems="center"
-      className={cn('bg-background  w-full', className)}
-    >
+    <Stack component="section" alignItems="center" className={cn('bg-background  w-full', className)}>
       <div className="max-w-[1440px] w-full flex flex-col gap-[60px] px-20 py-17.5 mx-auto max-lg:p-15 max-sm:gap-10 max-sm:px-6 max-sm:py-10">
         <Stack alignItems="center" className="gap-[16px]">
           <TitleChip>Our Offerings</TitleChip>
@@ -41,24 +37,28 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Mentor}
             img={Img1}
             title="Consultation services"
+            path="/services/crm"
             subtitle="End-to-end strategy aligned with Salesforce best practices"
           />
           <Card
             icon={Integration}
             img={Img2}
             title="Implementation services"
+            path="/services/data-analytics-ai"
             subtitle="Boost Salesforce ROI with seamless integration and clean data"
           />
           <Card
             icon={Support}
             img={Img3}
             title="Support & Maintenance"
+            path="/services/cloud-strategy"
             subtitle="Tailored support using latest tools to optimize Salesforce"
           />
           <Card
             icon={Team}
             img={Img4}
             title="Staff Augmentation"
+            path="/services/staff-augmentation"
             subtitle="Scalable Salesforce talent to fast-track your goals"
           />
         </div>

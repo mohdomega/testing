@@ -4,13 +4,6 @@ import { sendMail } from '@/lib';
 
 import { validateContact } from './validation';
 
-const initialState = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  message: '',
-};
-
 export async function contactUs(state: unknown, formData: FormData) {
   const data = {
     firstName: formData.get('firstName'),
@@ -32,25 +25,35 @@ export async function contactUs(state: unknown, formData: FormData) {
 
   const { firstName, lastName, email, message } = validatedData.data;
 
+  // Check if environment variables are configured
+  if (!process.env.NODEMAILER_USER_EMAIL_ID || !process.env.ADMIN_EMAIL_ID) {
+    console.error('Email configuration missing: NODEMAILER_USER_EMAIL_ID or ADMIN_EMAIL_ID not set');
+    return {
+      success: false,
+      error: 'Email service is not configured. Please contact support.',
+    };
+  }
+
   const emailDetails = {
     from: `IDRMS - <${process.env.NODEMAILER_USER_EMAIL_ID}>`,
     to: process.env.ADMIN_EMAIL_ID,
-    subject: 'Testing',
+    subject: 'New Contact Form Submission',
     html: `
      <html>
       <body>
+        <h3>New Contact Form Submission</h3>
         <table>
           <tbody>
             <tr>
-              <td>Name:</td>
+              <td><strong>Name:</strong></td>
               <td>${firstName} ${lastName}</td>
             </tr>
             <tr>
-              <td>Email:</td>
+              <td><strong>Email:</strong></td>
               <td>${email}</td>
             </tr>
             <tr>
-              <td>Message:</td>
+              <td><strong>Message:</strong></td>
               <td>${message}</td>
             </tr>
           </tbody>
@@ -67,7 +70,10 @@ export async function contactUs(state: unknown, formData: FormData) {
       success: true,
     };
   } catch (error: any) {
-    // TODO: log the error to logger
-    console.log(error);
+    console.error('Contact form email error:', error);
+    return {
+      success: false,
+      error: 'Failed to send message. Please try again later.',
+    };
   }
 }

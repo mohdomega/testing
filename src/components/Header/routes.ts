@@ -7,8 +7,8 @@ export const routes = [
     name: 'About',
     path: '/about',
     children: [
-      { name: 'Careers', path: '/careers' },
       { name: 'About IDRMS', path: '/about' },
+      { name: 'Careers', path: '/careers' },
     ],
   },
   {

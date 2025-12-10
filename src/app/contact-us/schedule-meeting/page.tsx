@@ -1,5 +1,7 @@
-import SubmitRequest from '@/modules/contactUs/SubmitRequest';
+import ScheduledMeeting from '@/modules/contactUs/ScheduleMeeting';
+
 
 export default function Page() {
-  return <SubmitRequest />;
+  // return <SubmitRequest />;
+  return < ScheduledMeeting />;
 }

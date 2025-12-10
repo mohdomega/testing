@@ -54,11 +54,11 @@ export default function Hero({ className }: HeroProps) {
             <Button
               component={Link}
               // href="/offerings"
-              href="/services"
+              href="/industries"
               variant="outlined"
               endIcon={<ChevronRight className="size-4 text-white" />}
             >
-              Explore Services
+              Explore Industries
             </Button>
           </Stack>
         </Stack>

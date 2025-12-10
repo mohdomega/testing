@@ -13,5 +13,10 @@ const nodemailerAuth = nodemailer.createTransport({
 });
 
 export async function sendMail(receiver: SendMailOptions) {
-  await nodemailerAuth.sendMail(receiver);
+  try {
+    await nodemailerAuth.sendMail(receiver);
+  } catch (error) {
+    console.error('Nodemailer error:', error);
+    throw error; // Re-throw to be handled by the caller
+  }
 }

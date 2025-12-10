@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
@@ -27,6 +28,13 @@ export default function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState<any>({});
   const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
+
+  const pathname = usePathname();
+  const isBlogDetails = pathname?.startsWith('/blogs/') && pathname !== '/blogs';
+  const isPrivacyPolicy = pathname === '/privacy-policy';
+
+  // Combined condition for pages that need light header styling
+  const isLightHeaderPage = isBlogDetails || isPrivacyPolicy;
 
   useMotionValueEvent(scrollY, 'change', () => {
     setIsScrolled((scrollY.getPrevious() ?? 0) > 100);
@@ -63,23 +71,27 @@ export default function Header({ className }: HeaderProps) {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          className={cn(
-            'bg-white/10 rounded-3xl mx-10 px-6 py-3 backdrop-blur-xl transition-all duration-300',
-            { 'bg-white shadow-xl': isScrolled }
-          )}
+          className={cn('rounded-3xl mx-10 px-6 py-3 transition-all duration-300', {
+            'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+            'bg-background': !isScrolled && isLightHeaderPage,
+            'bg-white shadow-xl': isScrolled,
+          })}
         >
-          <Logo className={cn(isScrolled ? 'text-black' : 'text-white')} />
+          <Logo
+            className={cn(
+              !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+            )}
+          />
           <nav ref={desktopMenuRef}>
             <Stack component="ul" direction="row" className="gap-8">
               {routes.map(({ name, path, children }) => (
-                // <li key={name} className="hover:scale-105 active:scale-95 transition duration-300">
                 <li key={name} className="relative hover:scale-105 active:scale-95 transition duration-300">
                   <NavLink
-                    // href={path}
                     href={path}
                     className={cn(
                       'p-1 text-white data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6',
                       {
+                        'text-primary-dark': !isScrolled && isLightHeaderPage,
                         'text-black': isScrolled,
                       }
                     )}
@@ -100,7 +112,13 @@ export default function Header({ className }: HeaderProps) {
                           openDesktopMenu === name && 'rotate-180'
                         )}
                       >
-                        {isScrolled ? <ChevronDownSvg color={'black'} /> : <ChevronDownSvg color="white" />}
+                        {!isScrolled && isLightHeaderPage ? (
+                          <ChevronDownSvg color={'#1E0A52'} />
+                        ) : isScrolled ? (
+                          <ChevronDownSvg color={'black'} />
+                        ) : (
+                          <ChevronDownSvg color="white" />
+                        )}
                       </span>
                     )}
                   </NavLink>
@@ -108,7 +126,7 @@ export default function Header({ className }: HeaderProps) {
                   {children && openDesktopMenu === name && (
                     <div
                       className={cn(
-                        'absolute left-0 top-full mt-1 flex flex-col rounded-2xl transition-all duration-300 p-[16px] min-w-[160px] z-50 shadow-xl',
+                        'absolute left-[-24px] top-full mt-1 flex flex-col rounded-2xl transition-all duration-300 p-[16px] min-w-[160px] z-50 shadow-xl',
                         isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-xl'
                       )}
                     >
@@ -118,7 +136,11 @@ export default function Header({ className }: HeaderProps) {
                             href={sub.path}
                             className={cn(
                               'px-3 py-2 rounded-lg text-[16px] weight-500 whitespace-nowrap transition-colors',
-                              isScrolled ? 'text-black hover:bg-black/10' : 'text-white hover:bg-white/30'
+                              !isScrolled && isLightHeaderPage
+                                ? 'text-primary-dark'
+                                : isScrolled
+                                ? 'text-black hover:bg-black/10'
+                                : 'text-white hover:bg-white/30'
                             )}
                             onClick={() => setOpenDesktopMenu(null)}
                           >
@@ -152,16 +174,23 @@ export default function Header({ className }: HeaderProps) {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            className={cn(
-              'bg-white/10 rounded-2xl mx-10 px-6 py-4 backdrop-blur-xl transition-all duration-300',
-              {
-                'bg-white': isScrolled,
-              }
-            )}
+            className={cn('rounded-2xl mx-10 px-6 py-4 transition-all duration-300', {
+              'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+              'bg-background': !isScrolled && isLightHeaderPage,
+              'bg-white': isScrolled,
+            })}
           >
-            <Logo className={cn(isScrolled ? 'text-black' : 'text-white')} />
+            <Logo
+              className={cn(
+                !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+              )}
+            />
             <Button variant="icon" onClick={handleToggle}>
-              <MenuIcon className={cn(isScrolled ? 'text-black' : 'text-white')} />
+              <MenuIcon
+                className={cn(
+                  !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                )}
+              />
             </Button>
           </Stack>
           {isOpen && (
@@ -180,10 +209,10 @@ export default function Header({ className }: HeaderProps) {
                   <li key={name} className="hover:scale-105 active:scale-95 transition duration-300">
                     <NavLink
                       href={path}
-                      // href={children ? '' : path}
                       className={cn(
                         'px-1 py-0 text-white data-[active=true]:text-accent font-medium flex items-center justify-between',
                         {
+                          'text-primary-dark': !isScrolled && isLightHeaderPage,
                           'text-black': isScrolled,
                         }
                       )}
@@ -220,7 +249,11 @@ export default function Header({ className }: HeaderProps) {
                             href={sub.path}
                             className={cn(
                               'text-sm transition-colors',
-                              isScrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white'
+                              !isScrolled && isLightHeaderPage
+                                ? 'text-primary-dark'
+                                : isScrolled
+                                ? 'text-black hover:text-black/80'
+                                : 'text-white hover:text-white'
                             )}
                           >
                             {sub.name}

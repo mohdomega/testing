@@ -168,11 +168,12 @@ interface OurServicesProps {
 export default function OurIndustries({ className }: OurServicesProps) {
   return (
     <section className={cn('w-full', className)}>
-      <div className="max-w-[1440px] w-full mx-auto">
+      {/* <div className="max-w-[1440px] w-full mx-auto"> */}
+      <div className=" w-full mx-auto">
         <div className="grid grid-cols-4 border border-black/15 max-sm:grid-cols-2">
           <Stack
             component={Link}
-            href="/services"
+            href="#healthcare"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -186,7 +187,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#financialServices"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -200,7 +201,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#retail"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -214,7 +215,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#realEstate"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -228,7 +229,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#manufacturing"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -242,7 +243,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#mediaAndPublication"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -256,7 +257,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#logistics"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -270,7 +271,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services"
+            href="#energy"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"

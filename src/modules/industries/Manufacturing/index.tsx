@@ -18,6 +18,7 @@ interface HealthcareProps {
 export default function Manufacturing({ className }: HealthcareProps) {
   return (
     <Stack
+      id="manufacturing"
       component="section"
       className={cn('gap-15 px-20 py-17.5 bg-white group even:bg-background', className)}
     >

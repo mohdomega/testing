@@ -21,7 +21,7 @@ export default function OurProcess({ className }: OurProcessProps) {
       className={cn('gap-15 px-20 py-17.5 max-lg:p-15 max-sm:gap-10 max-sm:p-10', className)}
     >
       <Stack alignItems="center" className="gap-1">
-        <TitleChip>Our visionaries</TitleChip>
+        {/* <TitleChip>Our visionaries</TitleChip> */}
         <Typography variant="h2" className="text-gradient">
           Our Process
         </Typography>

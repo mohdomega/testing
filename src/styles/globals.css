@@ -25,6 +25,10 @@
   --text-6xl: 4.5rem; /* 72px */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   line-height: 1.2;

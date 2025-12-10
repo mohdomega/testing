@@ -19,4 +19,8 @@ export const routes = [
     name: 'Contact us',
     path: '/contact-us',
   },
+  {
+    name: 'Privacy Policy',
+    path: '/privacy-policy',
+  },
 ];

@@ -19,7 +19,8 @@ interface FooterProps {
 export default function Footer({ className }: FooterProps) {
   return (
     <footer className={cn('pb-10 bg-[url("/images/bg-gradient.png")] bg-cover w-full', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-20 pt-20 pb-10 max-lg:px-15 max-lg:pt-15 max-sm:px-6 max-sm:pt-10">
+      {/* <div className="max-w-[1440px] w-full mx-auto px-20 pt-20 pb-10 max-lg:px-15 max-lg:pt-15 max-sm:px-6 max-sm:pt-10"> */}
+      <div className=" w-full mx-auto px-20 pt-20 pb-10 max-lg:px-15 max-lg:pt-15 max-sm:px-6 max-sm:pt-10">
         <Stack divider={<hr className="border-none h-0.5 bg-white/10" />} className="gap-10 text-white">
           <Stack direction="row" className="gap-10 max-lg:flex-col">
             <Stack className="flex-1 gap-10">
