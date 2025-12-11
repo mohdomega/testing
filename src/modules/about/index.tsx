@@ -1,5 +1,3 @@
-'use client';
-
 import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
 import OurTrustedPeople from '../shared/OurTrustedPeople';
