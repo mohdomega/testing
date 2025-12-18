@@ -100,9 +100,12 @@ function Carousel({
     onSelect(api);
     api.on('reInit', onSelect);
     api.on('select', onSelect);
+    api.on('scroll', onSelect); // Added scroll listener for better accuracy
 
     return () => {
+      api?.off('reInit', onSelect);
       api?.off('select', onSelect);
+      api?.off('scroll', onSelect);
     };
   }, [api, onSelect]);
 

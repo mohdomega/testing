@@ -10,7 +10,13 @@ interface EmpoweringProps {
   className?: string;
 }
 
-const chips = ['Strategic Vision', 'Seamless Implementation', 'Ongoing Support', 'People-First Approch'];
+// const chips = ['Strategic Vision', 'Seamless Implementation', 'Ongoing Support', 'People-First Approch'];
+const chips = [
+  'Global Reach',
+  'Client-Centric Approach',
+  'Certified Salesforce Experts',
+  'Proven Track Record',
+];
 
 export default function Empowering({ className }: EmpoweringProps) {
   return (
@@ -27,9 +33,14 @@ export default function Empowering({ className }: EmpoweringProps) {
               Empowering Your Salesforce Journey
             </Typography>
             <Typography variant="body2" className="font-medium text-secondary">
-              IDRMS Technologies is your trusted Salesforce partner, committed to driving real transformation.
+              {/* IDRMS Technologies is your trusted Salesforce partner, committed to driving real transformation.
               We specialize in delivering tailored solutions that align with your goals—making your growth
-              smarter, faster, and simpler
+              smarter, faster, and simpler */}
+              At IDRMS Technologies, we bring your business vision to life with customized and effective
+              Salesforce solutions. With deep experience across multiple industries, our team provides ongoing
+              support tailored to your unique needs. After an initial consultation, we craft a strong strategy
+              and execution plan designed to deliver tangible results. Our mission is simple — to help
+              businesses grow smarter, faster, and more efficiently.
             </Typography>
           </Stack>
         </Stack>

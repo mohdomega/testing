@@ -15,7 +15,7 @@ interface GetInTouchProps {
 
 export default function GetInTouch({ className }: GetInTouchProps) {
   return (
-    <Stack component="section" alignItems="center" className={cn('gap-15 px-20 py-17.5', className)}>
+    <Stack component="section" alignItems="center" className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5', className)}>
       <div className="max-w-[1440px] w-full mx-auto flex flex-col items-center gap-15">
         <Stack className="gap-2 max-w-175 text-center">
           <Stack alignItems="center" className="gap-1">

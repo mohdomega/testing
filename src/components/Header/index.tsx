@@ -47,7 +47,26 @@ export default function Header({ className }: HeaderProps) {
     setIsOpen((prev) => !prev);
   }
 
-  // Close desktop dropdown when clicking outside
+  /* 
+   * Hover & Delay Logic 
+   */
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (name: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setOpenDesktopMenu(name);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDesktopMenu(null);
+    }, 300); // 300ms delay to keep it open briefly
+  };
+
+  // Close desktop dropdown when clicking outside (still useful if clicks happen elsewhere)
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (desktopMenuRef.current && !desktopMenuRef.current.contains(event.target as Node)) {
@@ -61,6 +80,7 @@ export default function Header({ className }: HeaderProps) {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [openDesktopMenu]);
 
@@ -77,19 +97,26 @@ export default function Header({ className }: HeaderProps) {
             'bg-white shadow-xl': isScrolled,
           })}
         >
-          <Logo
-            className={cn(
-              !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
-            )}
-          />
+          <Link href="/">
+            <Logo
+              className={cn(
+                !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+              )}
+            />
+          </Link>
           <nav ref={desktopMenuRef}>
             <Stack component="ul" direction="row" className="gap-8">
               {routes.map(({ name, path, children }) => (
-                <li key={name} className="relative hover:scale-105 active:scale-95 transition duration-300">
+                <li
+                  key={name}
+                  className="relative transition duration-300"
+                  onMouseEnter={() => children && handleMouseEnter(name)}
+                  onMouseLeave={() => children && handleMouseLeave()}
+                >
                   <NavLink
                     href={path}
                     className={cn(
-                      'p-1 text-white data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6',
+                      'p-1 text-white data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6 hover:scale-105 active:scale-95 transition-transform duration-300',
                       {
                         'text-primary-dark': !isScrolled && isLightHeaderPage,
                         'text-black': isScrolled,
@@ -97,8 +124,11 @@ export default function Header({ className }: HeaderProps) {
                     )}
                     onClick={(e: any) => {
                       if (children) {
-                        e.preventDefault(); // ❗ don't navigate, just open dropdown
-                        setOpenDesktopMenu(openDesktopMenu === name ? null : name);
+                        if (name === 'Services') {
+                          setOpenDesktopMenu(null);
+                          return
+                        }
+                        e.preventDefault();
                       } else {
                         setOpenDesktopMenu(null);
                       }
@@ -127,7 +157,8 @@ export default function Header({ className }: HeaderProps) {
                     <div
                       className={cn(
                         'absolute left-[-24px] top-full mt-1 flex flex-col rounded-2xl transition-all duration-300 p-[16px] min-w-[160px] z-50 shadow-xl',
-                        isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-xl'
+                        // isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-xl'
+                        isScrolled ? 'bg-white' : 'bg-white'
                       )}
                     >
                       {children.map((sub: any, i) => (
@@ -139,8 +170,9 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                ? 'text-black hover:bg-black/10'
-                                : 'text-white hover:bg-white/30'
+                                  ? 'text-black hover:bg-black/10'
+                                  // : 'text-white hover:bg-white/30'
+                                  : 'text-black hover:bg-black/10'
                             )}
                             onClick={() => setOpenDesktopMenu(null)}
                           >
@@ -180,11 +212,13 @@ export default function Header({ className }: HeaderProps) {
               'bg-white': isScrolled,
             })}
           >
-            <Logo
-              className={cn(
-                !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
-              )}
-            />
+            <Link href="/">
+              <Logo
+                className={cn(
+                  !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                )}
+              />
+            </Link>
             <Button variant="icon" onClick={handleToggle}>
               <MenuIcon
                 className={cn(
@@ -252,8 +286,8 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                ? 'text-black hover:text-black/80'
-                                : 'text-white hover:text-white'
+                                  ? 'text-black hover:text-black/80'
+                                  : 'text-white hover:text-white'
                             )}
                           >
                             {sub.name}

@@ -53,3 +53,13 @@ body {
   -webkit-background-clip: text;
   padding-bottom: 0.1em;
 }
+
+
+/* .cloud-tooltip {
+  border-radius: 40px 40px 45px 45px / 30px 30px 35px 35px;
+} */
+
+.cloud-tooltip {
+  border-radius: 50px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+}

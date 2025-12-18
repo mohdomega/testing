@@ -3,10 +3,10 @@ export const routes = [
     name: 'About us',
     path: '/about',
   },
-  {
-    name: 'Offerings',
-    path: '/offerings',
-  },
+  // {
+  //   name: 'Offerings',
+  //   path: '/offerings',
+  // },
   {
     name: 'Services',
     path: '/services',

@@ -16,7 +16,8 @@ export default function Step({ isReverse, step, title, description, className }:
   return (
     <div
       className={cn(
-        'grid grid-cols-1 grid-rows-2 justify-center gap-6 text-center max-w-56 max-sm:grid-rows-1 odd:self-end',
+        // 'border border-red-700  grid grid-cols-1 grid-rows-2 justify-center gap-6 text-center max-w-56 max-sm:grid-rows-1 odd:self-end',
+        ' grid grid-cols-1 grid-rows-2 justify-center gap-6 text-center max-w-70 max-sm:grid-rows-1 odd:self-end',
         className
       )}
     >

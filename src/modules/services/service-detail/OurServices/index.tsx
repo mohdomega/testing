@@ -77,7 +77,7 @@ export default function OurServices({ title, description, className }: OurServic
       component="section"
       direction="row"
       alignItems="center"
-      className={cn('bg-background gap-16 px-20 py-17.5', className)}
+      className={cn('bg-background gap-16 px-6 md:px-10 lg:px-20 py-17.5', className)}
     >
       <div className="max-w-[1440px] w-full mx-auto flex flex-col items-center gap-16">
         <div className="flex flex-row items-center gap-16 max-lg:flex-col">
@@ -125,7 +125,7 @@ export default function OurServices({ title, description, className }: OurServic
         <div className=" relative w-full">
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none max-lg:w-10" />
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none max-lg:w-10" />
-          <Carousel opts={{ loop: true, align: 'start', slidesToScroll: 1 }} className="w-full ">
+          <Carousel opts={{ ...{ loop: false, align: 'start', slidesToScroll: 1 } }} className="w-full ">
             <CarouselContent className=" ml-0">
               {serviceItems.map((item, index) => {
                 const Icon = item.icon;

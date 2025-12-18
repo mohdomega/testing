@@ -10,7 +10,7 @@ import Typography from '@/components/Typography';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
-import ContactForm from '@/modules/shared/ContactUs/ContactForm';
+import QuoteRequestForm from '@/modules/shared/ContactUs/QuoteRequestForm';
 import { cn } from '@/lib';
 
 import Tooltip from '@/components/Tooltip';
@@ -52,7 +52,7 @@ export default function Contact({ className }: ContactProps) {
   }
 
   return (
-    <Stack component="section" className="gap-15 px-20 py-17.5">
+    <Stack component="section" className="gap-15 px-6 md:px-10 lg:px-20 py-17.5">
       <div className="max-w-[1440px] w-full mx-auto flex flex-col gap-15">
         <Stack
           direction="row"
@@ -131,7 +131,12 @@ export default function Contact({ className }: ContactProps) {
             </Stack>
           </Stack>
           <div className="max-[1100px]:w-full">
-            <ContactForm className="bg-background" />
+            <QuoteRequestForm
+              className="bg-background"
+              selectedService={services[currentIndex]?.label || services[0].label}
+              selectedDeliveryTime={delivery[currentIndex2]?.label || delivery[0].label}
+              formType="quote"
+            />
           </div>
         </Stack>
       </div>

@@ -17,7 +17,7 @@ export default function RecommendedBlogs() {
   const featuredBlogs = [...blogPosts, ...blogPosts];
 
   return (
-    <Stack className="bg-background mt-20 p-20">
+    <Stack className="bg-background mt-20 p-4 md:p-10 lg:p-20">
       <div className="max-w-[1440px] w-full  mx-auto">
         <Stack className="gap-1 mb-[60px]">
           <TitleChip>Latest Post</TitleChip>

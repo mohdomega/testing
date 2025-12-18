@@ -9,7 +9,7 @@ export default function ContactUs() {
       <Hero />
       <GetInTouch />
       <EngageWithUs />
-      <BlazeNewTrails className="bg-white" />
+      {/* <BlazeNewTrails className="bg-white" /> */}
     </div>
   );
 }

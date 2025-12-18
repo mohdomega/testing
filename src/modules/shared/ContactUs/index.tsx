@@ -22,11 +22,12 @@ export default function ContactUs({ className }: ContactUsProps) {
           <Stack alignItems="center" className="gap-1">
             <TitleChip>Need help?</TitleChip>
             <Typography variant="h2" className="text-gradient">
-              Contact us
+              Contact Us
             </Typography>
           </Stack>
           <Typography variant="body2" className="text-secondary font-medium">
-            Reach out to us with questions, ideas, or support needs — our team is ready to assist you
+            {/* Reach out to us with questions, ideas, or support needs — our team is ready to assist you */}
+            Get an expert opinion on your ideas and vision. Our team will be ready with a strong, effective solution to eliminate your challenges.
           </Typography>
         </Stack>
         <Stack direction="row" className="gap-10 w-full">

@@ -23,7 +23,7 @@ export default function ServicePage({
       <Hero title={title} description={heroDescription} />
       <OurServices title={serviceTitle} description={serviceDescription} />
       <CaseStudies />
-      <Blogs />
+      {/* <Blogs /> */}
       <BlazeNewTrails />
       <ContactUs />
     </div>

@@ -26,8 +26,14 @@ export async function contactUs(state: unknown, formData: FormData) {
   const { firstName, lastName, email, message } = validatedData.data;
 
   // Check if environment variables are configured
-  if (!process.env.NODEMAILER_USER_EMAIL_ID || !process.env.ADMIN_EMAIL_ID) {
-    console.error('Email configuration missing: NODEMAILER_USER_EMAIL_ID or ADMIN_EMAIL_ID not set');
+  if (
+    !process.env.NODEMAILER_USER_EMAIL_ID ||
+    !process.env.NODEMAILER_USER_PASSWORD ||
+    !process.env.ADMIN_EMAIL_ID
+  ) {
+    console.error(
+      'Email configuration missing: NODEMAILER_USER_EMAIL_ID, NODEMAILER_USER_PASSWORD, or ADMIN_EMAIL_ID not set'
+    );
     return {
       success: false,
       error: 'Email service is not configured. Please contact support.',

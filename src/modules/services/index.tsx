@@ -11,7 +11,7 @@ export default function Services() {
       <Hero />
       <OurServices />
       <CaseStudies />
-      <Blogs />
+      {/* <Blogs /> */}
       {/* <BlazeNewTrails className="max-lg:hidden" /> */}
       <BlazeNewTrails />
       <ContactUs />

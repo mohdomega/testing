@@ -11,13 +11,14 @@ export const routes = [
       { name: 'Careers', path: '/careers' },
     ],
   },
-  {
-    name: 'Offerings',
-    path: '/offerings',
-  },
+  // {
+  //   name: 'Offerings',
+  //   path: '/offerings',
+  // },
   {
     name: 'Services',
     path: '/services',
+    // path: '/offerings',
     children: [
       { name: 'CRM', path: '/services/crm' },
       { name: 'Data Analytics & AI', path: '/services/data-analytics-ai' },

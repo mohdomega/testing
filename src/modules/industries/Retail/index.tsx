@@ -20,7 +20,7 @@ export default function Retail({ className }: HealthcareProps) {
     <Stack
       id="retail"
       component="section"
-      className={cn('gap-15 px-20 py-17.5 bg-white group even:bg-background', className)}
+      className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5 bg-white group even:bg-background', className)}
     >
       <div className="max-w-[1440px] w-full mx-auto flex flex-col gap-15">
         <div className="grid grid-cols-2 items-center gap-10">

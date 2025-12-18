@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
@@ -14,7 +17,10 @@ interface BlogsProps {
 
 export default function Blogs({ className }: BlogsProps) {
   // Get first 4 blog posts for home page
-  const featuredBlogs = blogPosts.slice(0, 4);
+  const featuredBlogs = [...blogPosts, ...blogPosts,...blogPosts].slice(0, 12);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleBlogs = showAll ? featuredBlogs : featuredBlogs.slice(0, 4);
 
   return (
     <Stack className={cn('w-full py-17.5 max-sm:py-10', className)}>
@@ -27,12 +33,13 @@ export default function Blogs({ className }: BlogsProps) {
         </Stack>
         <Stack alignItems="center" className="gap-12">
           <div className="w-full grid grid-cols-4 gap-10 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            {featuredBlogs.map((blog) => (
-              <Card key={blog.slug} blog={blog} />
+            {visibleBlogs.map((blog, index) => (
+              <Card key={`${blog.slug}-${index}`} blog={blog} />
             ))}
           </div>
-          <Button component={Link} href="/blogs" color="gradient">
-            View all
+          {/* <Button component={Link} href="/blogs" color="gradient"> */}
+          <Button color="gradient" onClick={() => setShowAll(!showAll)}>
+            {showAll ? 'See Less' : 'See More'}
           </Button>
         </Stack>
       </div>

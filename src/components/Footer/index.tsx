@@ -11,6 +11,7 @@ import { socialMedia } from './socialMedia';
 
 import Logo from '/public/icons/main-logo.svg';
 import IndiaFlag from '/public/images/india-flag.png';
+import USFlag from '/public/images/us-flag.jpg';
 
 interface FooterProps {
   className?: string;
@@ -62,6 +63,7 @@ export default function Footer({ className }: FooterProps) {
                       href={link}
                       justifyContent="center"
                       alignItems="center"
+                      target='_blank'
                       className="size-12 border border-white/10 rounded-full"
                     >
                       <Icon className="size-5" />
@@ -112,27 +114,22 @@ export default function Footer({ className }: FooterProps) {
                       <Image src={IndiaFlag} alt="india flag" className="w-5 min-w-5 h-4" />
                     </div>
                     <Typography>
-                      1st Floor, Sri Lakshmi Narasimha Arcade, 6, Bannerghatta Rd, next to Bandhan bank, KEB
-                      Colony, Opp. Jayadeva Hospital, Bengaluru, Karnataka 560029.
+                      1st Floor, Sri Lakshmi Narasimha Arcade, B7, Bannerghatta Rd, next to Bandhan bank, opp.
+                      Jayadeva Hospital, KEB Colony, New Gurappana Palya, BTM 1st Stage, Bengaluru, Karnataka
+                      560029
                     </Typography>
                   </Stack>
-                  <Stack direction="row" alignItems="flex-start" className="gap-4">
+                  <Stack direction="row" alignItems="center" className="gap-4">
                     <div className="p-3.5 border border-white/10 rounded-full">
                       <Image src={IndiaFlag} alt="india flag" className="w-5 min-w-5 h-4" />
                     </div>
-                    <Typography>
-                      1st Floor, Sri Lakshmi Narasimha Arcade, 6, Bannerghatta Rd, next to Bandhan bank, KEB
-                      Colony, Opp. Jayadeva Hospital, Bengaluru, Karnataka 560029.
-                    </Typography>
+                    <Typography>Man Mandir Plots, Near S.T Depot, Wankaner, Gujarat - 363621</Typography>
                   </Stack>
-                  <Stack direction="row" alignItems="flex-start" className="gap-4">
+                  <Stack direction="row" alignItems="center" className="gap-4">
                     <div className="p-3.5 border border-white/10 rounded-full">
-                      <Image src={IndiaFlag} alt="india flag" className="w-5 min-w-5 h-4" />
+                      <Image src={USFlag} alt="us flag" className="w-5 min-w-5 h-4" />
                     </div>
-                    <Typography>
-                      1st Floor, Sri Lakshmi Narasimha Arcade, 6, Bannerghatta Rd, next to Bandhan bank, KEB
-                      Colony, Opp. Jayadeva Hospital, Bengaluru, Karnataka 560029.
-                    </Typography>
+                    <Typography>254 CHAPMAN RD, STE 208 #19217, NEWARK , DE 19702</Typography>
                   </Stack>
                 </Stack>
               </Stack>

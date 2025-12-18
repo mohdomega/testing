@@ -15,7 +15,8 @@ interface OurBlogsProps {
 
 export default function OurBlogs({ className }: OurBlogsProps) {
   // Get last 4 blog posts (excluding the first one which is already featured)
-  const displayBlogs = blogPosts.slice(1, 5);
+  // const displayBlogs = blogPosts.slice(1, 5);
+  const displayBlogs = [...blogPosts, ...blogPosts];
 
   return (
     <Stack component="section" alignItems="center" className={cn('bg-background w-full', className)}>
@@ -38,9 +39,9 @@ export default function OurBlogs({ className }: OurBlogsProps) {
           ))}
         </div>
         <Stack alignItems="center">
-          <Button component={Link} href="/blogs" color="gradient">
+          {/* <Button component={Link} href="/blogs" color="gradient">
             View all
-          </Button>
+          </Button> */}
         </Stack>
       </div>
     </Stack>

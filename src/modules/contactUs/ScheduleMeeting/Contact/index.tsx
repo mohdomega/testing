@@ -18,7 +18,7 @@ interface ContactProps {
 
 export default function Contact({ classname }: ContactProps) {
   return (
-    <Stack component="section" className={cn('gap-15 px-20 py-17.5 max-lg:px-15 max-sm:px-6', classname)}>
+    <Stack component="section" className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5', classname)}>
       <Stack
         direction="row"
         alignItems="center"

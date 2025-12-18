@@ -35,15 +35,16 @@ export default function Hero({ className }: HeroProps) {
             </Stack>
             <Stack direction="row" className="gap-3">
               <Button component={Link} href="/contact-us/schedule-meeting" color="accent">
-                Free Consulting
+                Book Free Consulting
               </Button>
               <Button
                 component={Link}
-                href="/offerings"
+                // href="/offerings"
+                href="/services"
                 variant="outlined"
                 endIcon={<ChevronRight className="size-4 text-white" />}
               >
-                Our Products
+                Our Services
               </Button>
             </Stack>
           </Stack>

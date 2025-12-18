@@ -30,7 +30,8 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
       <div className="p-6 rounded-full gradient-vertical max-lg:p-4">
         <Icon className="size-8 text-white max-lg:size-6" />
       </div>
-      <Stack alignItems="flex-start" className="gap-2 w-min relative z-10 max-lg:w-full">
+      {/* <Stack alignItems="flex-start" className="gap-2 w-min relative z-10 max-lg:w-full"> */}
+      <Stack alignItems="flex-start" className="gap-2 relative z-10 max-lg:w-full">
         <Typography variant="h3" className="whitespace-nowrap text-2xl font-medium leading-[1]">
           {title}
         </Typography>

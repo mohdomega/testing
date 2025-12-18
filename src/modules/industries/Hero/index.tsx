@@ -48,7 +48,8 @@ export default function Hero({ className }: HeroProps) {
               </Button>
               <Button
                 component={Link}
-                href="/offerings"
+                // href="/offerings"
+                href="/services"
                 variant="outlined"
                 endIcon={<ChevronRight className="size-4 text-white" />}
                 className="max-sm:hidden"

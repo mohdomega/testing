@@ -49,7 +49,9 @@ export default function Hero({ className }: HeroProps) {
               success...
             </Typography>
             <Link
-              href="#"
+              // href="#"
+              // href={`/blogs/${blog.slug}`}
+              href={`/blogs/unlocking-the-true-power-of-salesforce`}
               className="flex items-center gap-2 text-white hover:gap-3 transition-all mt-[12px]"
             >
               Read More <ChevronRight className="size-4" />

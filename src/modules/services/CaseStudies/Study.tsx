@@ -71,7 +71,7 @@ export default function Study({ title, description, image, className }: StudyPro
         <div className="w-full aspect-video bg-neutral-300 rounded-3xl relative overflow-hidden">
           <Image src={image} alt="service video img 1" className="w-full h-full object-cover" />
         </div>
-        <Stack direction="row" className="gap-10">
+        <Stack direction="row" className="flex flex-col md:flex-row gap-2 md:gap-10">
           <Stack className="gap-2">
             <Typography variant="h5" className="font-medium">
               {title}

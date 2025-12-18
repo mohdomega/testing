@@ -17,14 +17,15 @@ export default function BlazeNewTrails({ className }: BlazeNewTrailsProps) {
   return (
     <section className={cn('px-20 py-17.5 bg-background max-lg:p-0', className)}>
       <div className="max-w-[1440px] w-full mx-auto">
-        <Stack direction="row" className="gap-10 rounded-3xl gradient-vertical max-lg:rounded-none">
+        <Stack direction="row" className=" gap-0 rounded-3xl gradient-vertical max-lg:rounded-none">
           <Stack
             alignItems="flex-start"
-            className="flex-1 gap-10 p-15 pr-0 max-lg:items-center max-lg:text-center max-sm:gap-6 max-lg:p-15"
+            className=' w-[100%] lg:w-[55%] gap-10 p-15 pr-0 max-lg:items-center max-lg:text-center max-sm:gap-6 max-lg:p-15'
           >
             <Typography className="text-5xl font-medium text-white leading-20 max-lg:text-4xl max-sm:text-xl max-sm:leading-[1.4]">
               {/* Blaze new trails with Salesforce experts */}
-              Blaze New Trails with Salesforce Experts
+              {/* Blaze New Trails with Salesforce Experts */}
+              Consult Our Salesforce Experts & Gain Clarity on Your Vision
             </Typography>
             <Button
               component={Link}
@@ -33,10 +34,11 @@ export default function BlazeNewTrails({ className }: BlazeNewTrailsProps) {
               color="accent"
               endIcon={<ChevronRight className="size-4" />}
             >
-              Lets go
+              {/* Lets go */}
+              Let’s Connect!
             </Button>
           </Stack>
-          <Stack justifyContent="flex-end" className="flex-1 max-lg:hidden">
+          <Stack justifyContent="flex-end" className="w-[45%] max-lg:hidden">
             <Image src={PersonReading} alt="person reading document" />
           </Stack>
         </Stack>
