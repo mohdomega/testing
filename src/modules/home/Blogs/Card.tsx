@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
@@ -5,8 +8,6 @@ import { cn } from '@/lib';
 import { BlogPost } from '@/modules/blogs/data';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
-import Image from 'next/image';
-import Link from 'next/link';
 
 interface CardProps {
   className?: string;

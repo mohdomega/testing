@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
@@ -10,7 +13,6 @@ import { cn } from '@/lib';
 import { blogPosts } from '@/modules/blogs/data';
 
 import Card from './Card';
-import Link from 'next/link';
 
 interface BlogsProps {
   className?: string;

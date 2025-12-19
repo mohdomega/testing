@@ -1,16 +1,17 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import Image from 'next/image';
 import Script from 'next/script';
 
+import CalendlyIframe from '@/components/Calendely/CalendlyIframe';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
-import CalendlyIframe from '@/components/Calendely/CalendlyIframe';
 
 interface ContactProps {
   classname?: string;

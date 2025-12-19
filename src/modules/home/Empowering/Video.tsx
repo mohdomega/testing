@@ -1,5 +1,7 @@
-import { cn } from '@/lib';
 import Image from 'next/image';
+
+import { cn } from '@/lib';
+
 import HomeVideoImg1 from '../../../../public/images/video-image-1.png';
 
 interface VideoProps {

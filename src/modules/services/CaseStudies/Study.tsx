@@ -1,16 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+
 import Image from 'next/image';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 
 import ArrowUpRight from '/public/icons/arrow-top-right.svg';
-
-import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 
 interface StudyProps {
   title: string;

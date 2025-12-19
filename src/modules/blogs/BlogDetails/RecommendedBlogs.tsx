@@ -1,14 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { cn } from '@/lib';
+
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+import Card from '@/modules/home/Blogs/Card';
 
 import { blogPosts } from '../data';
-import Card from '@/modules/home/Blogs/Card';
-import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
+
 import ArrowLeft from '/public/icons/servicePageCraousalIcons/arrow left.svg';
 import ArrowRight from '/public/icons/servicePageCraousalIcons/arrow right.svg';
 

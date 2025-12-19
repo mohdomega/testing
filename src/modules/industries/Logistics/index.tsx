@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/Button';
@@ -9,7 +10,6 @@ import { cn } from '@/lib';
 import ArrowUp from '/public/icons/arrow-up.svg';
 import Bill from '/public/icons/bill.svg';
 import IndustryImg12 from '/public/images/IndustryImages/industry-image-12.png';
-import Image from 'next/image';
 
 interface HealthcareProps {
   className?: string;

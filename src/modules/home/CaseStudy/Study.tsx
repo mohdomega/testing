@@ -2,16 +2,17 @@
 
 import { ReactNode, useRef, useState } from 'react';
 
+import Image from 'next/image';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 import { motion, useScroll, useSpring, useTransform } from 'motion/react';
 import { useMediaQuery } from 'usehooks-ts';
-import Image from 'next/image';
-import HomeVideoImg1 from '../../../../public/images/home-case-study-image-4.png';
 
-import CaseStudyModal from '@/modules/shared/CaseStudyModal';
+import HomeVideoImg1 from '../../../../public/images/home-case-study-image-4.png';
 interface StudyProps {
   step: number;
   title: string;

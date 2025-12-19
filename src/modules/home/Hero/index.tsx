@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/Button';
@@ -7,12 +8,11 @@ import { cn } from '@/lib';
 
 import Rating from './Rating';
 
+// import HomeVideoImg1 from '../../../../public/images/home-video-image-1.png';
+import HomeVideoImg1 from '../../../../public/images/home-video-img-new-1.jpg';
 import AWSLogo from '/public/icons/aws-logo.svg';
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
-import Image from 'next/image';
-// import HomeVideoImg1 from '../../../../public/images/home-video-image-1.png';
-import HomeVideoImg1 from '../../../../public/images/home-video-img-new-1.jpg';
 
 interface HeroProps {
   className?: string;

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/Button';
@@ -6,9 +7,8 @@ import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
-import ChevronRight from '/public/icons/chevron-right.svg';
-import Image from 'next/image';
 import AboutImg1 from '../../../../public/images/AboutImages/about-image-1.png';
+import ChevronRight from '/public/icons/chevron-right.svg';
 
 interface HeroProps {
   className?: string;

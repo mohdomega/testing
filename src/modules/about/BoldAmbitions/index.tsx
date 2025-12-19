@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/Button';
@@ -5,7 +6,7 @@ import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import Image from 'next/image';
+
 import AboutImg5 from '../../../../public/images/AboutImages/about-img2.png';
 
 interface BoldAmbitionsProps {

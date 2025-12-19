@@ -1,6 +1,7 @@
 import Stack from '@/components/Stack';
 
 import Card from './Card';
+
 import AboutImg2 from '../../../../public/images/AboutImages/about-image-2.png';
 import AboutImg3 from '../../../../public/images/AboutImages/about-image-3.png';
 import AboutImg4 from '../../../../public/images/AboutImages/about-image-4.png';

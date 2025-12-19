@@ -1,27 +1,28 @@
 'use client';
 
+import { useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
-import Calendar from '/public/images/BlogImages/Calendar.svg';
+import { BlogPost } from '../data';
+import Sidebar from './Sidebar';
+
 // import Facebook from '/public/images/BlogImages/facebook.svg';
 import Facebook from '/public/icons/blogsDetailsIcons/Facebook';
 // import Instagram from '/public/images/BlogImages/instagram-fill.svg';
 import Instagram from '/public/icons/blogsDetailsIcons/Instagram';
 // import Linkedin from '/public/images/BlogImages/linkedin.svg';
 import Linkedin from '/public/icons/blogsDetailsIcons/LinkedIn';
+import Twitter from '/public/icons/blogsDetailsIcons/Twitter';
+import Calendar from '/public/images/BlogImages/Calendar.svg';
 // import Twitter from '/public/images/BlogImages/twitter.svg';
 import Share from '/public/images/BlogImages/share alt.svg';
-
 import TimeCircle from '/public/images/BlogImages/time-circle.svg';
-import Sidebar from './Sidebar';
-import Twitter from '/public/icons/blogsDetailsIcons/Twitter';
-import { BlogPost } from '../data';
 
 interface BlogContentProps {
   blog: BlogPost;

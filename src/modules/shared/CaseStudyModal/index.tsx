@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useRef,useState } from 'react';
 
 import { sendCaseStudyDownloadEmail } from '@/actions/case-study';
 import Button from '@/components/Button';

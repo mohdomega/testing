@@ -1,5 +1,6 @@
 'use client';
 import { useActionState, useEffect, useRef } from 'react';
+
 import Image from 'next/image';
 
 import Button from '@/components/Button';
@@ -8,9 +9,10 @@ import TextField from '@/components/TextField';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import CareerImg11 from '/public/images/CareerImages/career-image-11.png';
 
 import { joinUs } from './action';
+
+import CareerImg11 from '/public/images/CareerImages/career-image-11.png';
 
 interface ContactUsProps {
   className?: string;

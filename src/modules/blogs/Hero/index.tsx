@@ -1,12 +1,12 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
-
 import FeaturedImg from '/public/images/BlogImages/blogs-img1.png';
 
 interface HeroProps {

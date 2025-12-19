@@ -1,13 +1,15 @@
+import Image from 'next/image';
+
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 import ContactForm from '@/modules/shared/ContactUs/ContactForm';
-import Image from 'next/image';
-import GetInTouchImg1 from '/public/images/get-in-touch-img1.png';
+
 import Integration from '/public/icons/integration.svg';
 import Mentor from '/public/icons/mentor.svg';
 import Support from '/public/icons/support.svg';
+import GetInTouchImg1 from '/public/images/get-in-touch-img1.png';
 
 interface GetInTouchProps {
   className?: string;

@@ -6,13 +6,13 @@ import Image from 'next/image';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
+import Tooltip from '@/components/Tooltip';
 import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+import QuoteRequestForm from '@/modules/shared/ContactUs/QuoteRequestForm';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
-import QuoteRequestForm from '@/modules/shared/ContactUs/QuoteRequestForm';
-import { cn } from '@/lib';
-import Tooltip from '@/components/Tooltip';
 
 const services = [
   { label: 'Sales Cloud', description: 'Manage your sales processes and customer relationships.' },

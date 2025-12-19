@@ -1,21 +1,21 @@
 'use client';
 
+import Image from 'next/image';
+
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
-import Image from 'next/image';
-import ServiceImg1 from '../../../../../public/images/ServiceImages/service-image-1.png';
-
-import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
 import { cn } from '@/lib';
 
+import ServiceImg1 from '../../../../../public/images/ServiceImages/service-image-1.png';
 import ARVRDevice from '/public/icons/servicePageCraousalIcons/ar-vr-device.svg';
-import Clustering from '/public/icons/servicePageCraousalIcons/clustering.svg';
-import CloudIcon from '/public/icons/servicePageCraousalIcons/cloud (1).svg';
-import LeadGeneration from '/public/icons/servicePageCraousalIcons/lead-generation.svg';
-import Payroll from '/public/icons/servicePageCraousalIcons/payroll.svg';
 import ArrowLeft from '/public/icons/servicePageCraousalIcons/arrow left.svg';
 import ArrowRight from '/public/icons/servicePageCraousalIcons/arrow right.svg';
+import CloudIcon from '/public/icons/servicePageCraousalIcons/cloud (1).svg';
+import Clustering from '/public/icons/servicePageCraousalIcons/clustering.svg';
+import LeadGeneration from '/public/icons/servicePageCraousalIcons/lead-generation.svg';
+import Payroll from '/public/icons/servicePageCraousalIcons/payroll.svg';
 
 interface OurServicesProps {
   title: string;

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
@@ -10,7 +12,6 @@ import Card from './Card';
 import { offerings } from './data';
 
 import Img1 from '/public/images/our-offering-img-1.png';
-import Link from 'next/link';
 
 interface OurOfferingsProps {
   className?: string;

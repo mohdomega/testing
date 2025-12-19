@@ -1,10 +1,12 @@
 import { FC } from 'react';
+
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+
 import ChevronRight from '/public/icons/chevron-right.svg';
 
 interface BlogCardProps {

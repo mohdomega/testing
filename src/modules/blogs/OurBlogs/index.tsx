@@ -5,8 +5,8 @@ import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import { blogPosts } from '../data';
 
+import { blogPosts } from '../data';
 import BlogCard from './BlogCard';
 
 interface OurBlogsProps {

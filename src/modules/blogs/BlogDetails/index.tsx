@@ -1,4 +1,5 @@
 import Stack from '@/components/Stack';
+
 import { getBlogBySlug } from '../data';
 import BlogContent from './BlogContent';
 import RecommendedBlogs from './RecommendedBlogs';

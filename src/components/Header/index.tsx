@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef,useState } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,9 +15,9 @@ import ForNonDesktop from '../MediaQuery/ForNonDesktop';
 import NavLink from './NavLink';
 import { routes } from './routes';
 
+import ChevronDownSvg from '/public/icons/ChevronDownSvg';
 import Logo from '/public/icons/main-logo.svg';
 import MenuIcon from '/public/icons/menu-icon.svg';
-import ChevronDownSvg from '/public/icons/ChevronDownSvg';
 
 interface HeaderProps {
   className?: string;

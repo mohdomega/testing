@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+
 import Image from 'next/image';
-import { motion, useAnimationFrame } from 'motion/react';
 
 import { cn } from '@/lib';
+import { motion, useAnimationFrame } from 'motion/react';
 
 import Img1 from '/public/images/IndustryImages/industry-image-1.png';
 import Img2 from '/public/images/IndustryImages/industry-image-2.png';

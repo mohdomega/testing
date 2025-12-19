@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import Image from 'next/image';
 
 interface ProfileCardProps {
   classname?: string;

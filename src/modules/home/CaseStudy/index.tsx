@@ -4,15 +4,15 @@ import { cn } from '@/lib';
 
 import Study from './Study';
 
+import HomeVideoImg1 from '../../../../public/images/home-case-study-image-1.png';
+import HomeVideoImg2 from '../../../../public/images/home-case-study-image-2.png';
+import HomeVideoImg3 from '../../../../public/images/home-case-study-image-3.png';
+import HomeVideoImg4 from '../../../../public/images/home-case-study-image-4.png';
 import Automation from '/public/icons/automation.svg';
 import Clock from '/public/icons/clock.svg';
 import Microphone from '/public/icons/microphone.svg';
 import PieChart from '/public/icons/pie-chart.svg';
 import Star from '/public/icons/star.svg';
-import HomeVideoImg1 from '../../../../public/images/home-case-study-image-1.png';
-import HomeVideoImg2 from '../../../../public/images/home-case-study-image-2.png';
-import HomeVideoImg3 from '../../../../public/images/home-case-study-image-3.png';
-import HomeVideoImg4 from '../../../../public/images/home-case-study-image-4.png';
 
 interface CaseStudyProps {
   className?: string;

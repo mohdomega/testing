@@ -142,24 +142,25 @@
 //   );
 // }
 
+import Link from 'next/link';
+
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import Cloud from '/public/icons/cloud.svg';
+import Energy from '/public/icons/energy.svg';
 import ERP from '/public/icons/erp.svg';
+import Finance from '/public/icons/financial.svg';
 import Game from '/public/icons/game.svg';
+import HealthCare from '/public/icons/healthcare.svg';
 import Integration from '/public/icons/integration.svg';
 import MagicPen from '/public/icons/magicpen.svg';
-import Mentor from '/public/icons/mentor.svg';
-import HealthCare from '/public/icons/healthcare.svg';
-import Finance from '/public/icons/financial.svg';
-import Energy from '/public/icons/energy.svg';
 import Media from '/public/icons/media.svg';
-import Retail from '/public/icons/retail.svg';
+import Mentor from '/public/icons/mentor.svg';
 import Mobile from '/public/icons/mobile.svg';
+import Retail from '/public/icons/retail.svg';
 import Support from '/public/icons/support.svg';
-import Link from 'next/link';
 
 interface OurServicesProps {
   className?: string;

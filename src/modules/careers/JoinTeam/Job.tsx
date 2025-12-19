@@ -7,12 +7,12 @@ import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
+import ApplyNowModal from './ApplyNowModal';
+import DownloadJDModal from './DownloadJDModal';
+
 import ChevronRight from '/public/icons/chevron-right.svg';
 import ClockIcon from '/public/icons/days-clock.svg';
 import LocationIcon from '/public/icons/location.svg';
-
-import ApplyNowModal from './ApplyNowModal';
-import DownloadJDModal from './DownloadJDModal';
 
 interface JobProps {
   className?: string;

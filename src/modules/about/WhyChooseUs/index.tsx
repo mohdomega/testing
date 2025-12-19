@@ -2,13 +2,15 @@
 
 import { useState } from 'react';
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import Link from 'next/link';
-import Image from 'next/image';
+
 import AboutImg6 from '../../../../public/images/AboutImages/about-image-6.png';
 
 interface WhyChooseUsProps {

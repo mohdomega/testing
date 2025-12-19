@@ -1,10 +1,11 @@
+import Link from 'next/link';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
-import Link from 'next/link';
 
 interface HeroProps {
   className?: string;

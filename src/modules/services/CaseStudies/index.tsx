@@ -1,13 +1,14 @@
 'use client';
 
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
 import Stack from '@/components/Stack';
-import Typography from '@/components/Typography';
 import TitleChip from '@/components/TitleChip';
+import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import { caseStudies } from './data';
 import Study from './Study';
-import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
+
 import ArrowLeft from '/public/icons/servicePageCraousalIcons/arrow left.svg';
 import ArrowRight from '/public/icons/servicePageCraousalIcons/arrow right.svg';
 

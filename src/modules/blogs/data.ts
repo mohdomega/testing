@@ -1,15 +1,15 @@
 import { StaticImageData } from 'next/image';
 
-import HomeBlogImg1 from '../../../public/images/BlogImages/home-blogs-img-1.png';
-import HomeBlogImg2 from '../../../public/images/BlogImages/home-blogs-img-2.png';
-import HomeBlogImg3 from '../../../public/images/BlogImages/home-blogs-img-3.png';
-import HomeBlogImg4 from '../../../public/images/BlogImages/home-blogs-img-4.png';
+import AuthorImg from '../../../public/images/BlogImages/blog-author-img1.png';
 import BlogImg1 from '../../../public/images/BlogImages/blogs-img1.png';
 import BlogImg2 from '../../../public/images/BlogImages/blogs-img2.png';
 import BlogImg3 from '../../../public/images/BlogImages/blogs-img3.jpg';
 import BlogImg4 from '../../../public/images/BlogImages/blogs-img4.png';
 import BlogImg5 from '../../../public/images/BlogImages/blogs-img5.jpg';
-import AuthorImg from '../../../public/images/BlogImages/blog-author-img1.png';
+import HomeBlogImg1 from '../../../public/images/BlogImages/home-blogs-img-1.png';
+import HomeBlogImg2 from '../../../public/images/BlogImages/home-blogs-img-2.png';
+import HomeBlogImg3 from '../../../public/images/BlogImages/home-blogs-img-3.png';
+import HomeBlogImg4 from '../../../public/images/BlogImages/home-blogs-img-4.png';
 
 export interface BlogPost {
   slug: string;

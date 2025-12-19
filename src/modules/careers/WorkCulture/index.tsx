@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
@@ -18,7 +20,6 @@ import CareerImg7 from '/public/images/CareerImages/career-image-7.png';
 import CareerImg8 from '/public/images/CareerImages/career-image-8.png';
 import CareerImg9 from '/public/images/CareerImages/career-image-9.png';
 import CareerImg10 from '/public/images/CareerImages/career-image-10.png';
-import Image from 'next/image';
 
 interface WorkCultureProps {
   className?: string;

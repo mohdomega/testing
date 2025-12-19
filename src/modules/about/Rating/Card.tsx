@@ -1,9 +1,10 @@
+import Image from 'next/image';
+
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
+import { cn } from '@/lib';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
-import { cn } from '@/lib';
-import Image from 'next/image';
 
 interface CardProps {
   className?: string;

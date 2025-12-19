@@ -3,15 +3,15 @@
 import { FC, SVGProps, useState } from 'react';
 
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
+import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import Button from '@/components/Button';
-import Link from 'next/link';
-import ChevronRight from '/public/icons/chevron-right.svg';
-
 import CaseStudyModal from '@/modules/shared/CaseStudyModal';
+
+import ChevronRight from '/public/icons/chevron-right.svg';
 
 interface CardProps {
   icon: FC<SVGProps<SVGElement>>;

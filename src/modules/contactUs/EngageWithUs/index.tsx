@@ -1,15 +1,15 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import GetQuote from '/public/images/ContactImages/get-a-quote-contact-img1.png';
-import SubmitRequest from '/public/images/ContactImages/Submit-a-request-contact-img2.png';
-import ScheduleMeeting from '/public/images/ContactImages/scheduled-a-meeting-contact-img3.png';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
-import Image from 'next/image';
+import GetQuote from '/public/images/ContactImages/get-a-quote-contact-img1.png';
+import ScheduleMeeting from '/public/images/ContactImages/scheduled-a-meeting-contact-img3.png';
+import SubmitRequest from '/public/images/ContactImages/Submit-a-request-contact-img2.png';
 
 interface EngageWithUsProps {
   className?: string;

@@ -6,13 +6,14 @@ import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+
+import ProfileCard from './ProfileCard';
+
 import TeamImg1 from '../../../../public/images/TeamImages/team-image-1.png';
 import TeamImg2 from '../../../../public/images/TeamImages/team-image-2.png';
 import TeamImg3 from '../../../../public/images/TeamImages/team-image-3.png';
 import TeamImg4 from '../../../../public/images/TeamImages/team-image-4.png';
 import TeamImg5 from '../../../../public/images/TeamImages/team-image-5.png';
-
-import ProfileCard from './ProfileCard';
 
 interface OurTeamProps {
   className?: string;

@@ -1,13 +1,14 @@
+import Link from 'next/link';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
+import Carousel from './Carousel';
+
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
-
-import Carousel from './Carousel';
-import Link from 'next/link';
 
 interface HeroProps {
   className?: string;

@@ -9,10 +9,9 @@ import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
-
-import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 
 interface CardProps {
   icon: FC<SVGProps<SVGElement>>;
