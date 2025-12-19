@@ -45,7 +45,7 @@ export default function WhyChooseUs({ className }: WhyChooseUsProps) {
           <Stack
             direction="row"
             justifyContent="space-between"
-            className="p-6 rounded-3xl shadow-[0px_8px_80px_0px_#0000000F]  overflow-x-auto"
+            className="p-6 rounded-3xl shadow-[0px_8px_80px_0px_#0000000F] overflow-x-hidden"
           >
             <Stack
               direction="row"

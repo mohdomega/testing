@@ -30,7 +30,7 @@ export default function Hero({ className }: HeroProps) {
             <LightingFlash className="size-4" />
             <Typography variant="small">Smart CRM Insights</Typography>
           </Stack>
-          <Typography variant="h1" className="text-white text-6xl font-medium">
+          <Typography variant="h1" className="text-white text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-medium">
             The IDRMS Journal
           </Typography>
         </Stack>

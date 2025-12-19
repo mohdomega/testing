@@ -17,10 +17,10 @@ export default function Modal({ isOpen, onClose, children, className }: ModalPro
         if (isOpen) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = '';
         }
         return () => {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = '';
         };
     }, [isOpen]);
 

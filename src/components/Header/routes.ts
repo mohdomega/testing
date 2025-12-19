@@ -4,17 +4,19 @@ export const routes = [
     path: '/',
   },
   {
-    name: 'About',
-    path: '/about',
+    name: 'Industries',
+    path: '/industries',
     children: [
-      { name: 'About IDRMS', path: '/about' },
-      { name: 'Careers', path: '/careers' },
+      { name: 'Healthcare', path: '/industries#healthcare' },
+      { name: 'Financial Services', path: '/industries#financialServices' },
+      { name: 'Retail', path: '/industries#retail' },
+      { name: 'Real Estate', path: '/industries#realEstate' },
+      { name: 'Manufacturing', path: '/industries#manufacturing' },
+      { name: 'Media & Publication', path: '/industries#mediaAndPublication' },
+      { name: 'Logistics', path: '/industries#logistics' },
+      { name: 'Energy', path: '/industries#energy' },
     ],
   },
-  // {
-  //   name: 'Offerings',
-  //   path: '/offerings',
-  // },
   {
     name: 'Services',
     path: '/services',
@@ -31,11 +33,19 @@ export const routes = [
     ],
   },
   {
-    name: 'Industries',
-    path: '/industries',
-  },
-  {
     name: 'Blogs',
     path: '/blogs',
   },
+  {
+    name: 'About',
+    path: '/about',
+    children: [
+      { name: 'About IDRMS', path: '/about' },
+      { name: 'Careers', path: '/careers' },
+    ],
+  },
+  // {
+  //   name: 'Offerings',
+  //   path: '/offerings',
+  // },
 ];

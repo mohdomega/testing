@@ -16,7 +16,7 @@ export default function Hero({ className }: HeroProps) {
     <Stack
       component="section"
       className={cn(
-        'min-h-[478px] pt-45 pb-24 bg-[url("/images/bg-gradient.png")] bg-cover w-full',
+        'min-h-[478px] md:pt-45 pb-24 bg-[url("/images/bg-gradient.png")] bg-cover w-full',
         className
       )}
     >

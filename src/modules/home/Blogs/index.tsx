@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
@@ -16,8 +17,11 @@ interface BlogsProps {
 }
 
 export default function Blogs({ className }: BlogsProps) {
+  const pathname = usePathname();
+  const isBlogsPage = pathname === '/blogs';
+
   // Get first 4 blog posts for home page
-  const featuredBlogs = [...blogPosts, ...blogPosts,...blogPosts].slice(0, 12);
+  const featuredBlogs = [...blogPosts, ...blogPosts, ...blogPosts].slice(0, 12);
   const [showAll, setShowAll] = useState(false);
 
   const visibleBlogs = showAll ? featuredBlogs : featuredBlogs.slice(0, 4);
@@ -37,10 +41,15 @@ export default function Blogs({ className }: BlogsProps) {
               <Card key={`${blog.slug}-${index}`} blog={blog} />
             ))}
           </div>
-          {/* <Button component={Link} href="/blogs" color="gradient"> */}
-          <Button color="gradient" onClick={() => setShowAll(!showAll)}>
-            {showAll ? 'See Less' : 'See More'}
-          </Button>
+          {isBlogsPage ? (
+            <Button color="gradient" onClick={() => setShowAll(!showAll)}>
+              {showAll ? 'See Less' : 'See More'}
+            </Button>
+          ) : (
+            <Button component={Link} href="/blogs" color="gradient">
+              View All
+            </Button>
+          )}
         </Stack>
       </div>
     </Stack>

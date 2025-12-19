@@ -1,4 +1,5 @@
 import OurIndustries from '../industries/OurIndustries';
+import CaseStudies from '../services/CaseStudies';
 import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
 import OurServices from '../shared/OurServices';
@@ -12,6 +13,7 @@ export default function Offerings() {
       <OurServices />
       {/* <OurIndustries /> */}
       <OurOfferings />
+      <CaseStudies />
       <BlazeNewTrails />
       <ContactUs />
     </div>

@@ -28,12 +28,12 @@ export default function OurProcess({ className }: OurProcessProps) {
       </Stack>
       <Stack
         direction="row"
-        className="gap-28 relative overflow-x-auto justify-center max-sm:flex-col max-sm:gap-8"
+        className="gap-28 relative overflow-x-hidden justify-center max-sm:flex-col max-sm:gap-8"
       >
         <Image
           src={ProcessFlowLine}
           alt="process flow line"
-          className="w-full absolute top-1/2 left-0 -translate-y-1/2 -z-10 max-sm:hidden"
+          className=" w-full absolute top-1/2 left-0 -translate-y-1/2 -z-10 max-sm:hidden"
         />
         {process.map((props, index) => (
           <Step

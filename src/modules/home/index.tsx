@@ -21,7 +21,7 @@ export default function Home() {
       <CaseStudy />
       <BlazeNewTrails className="max-lg:hidden" />
       <OurProcess />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Blogs />
       <ContactUs />
     </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';

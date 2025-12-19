@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useRef } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
@@ -10,6 +10,8 @@ import { motion, useScroll, useSpring, useTransform } from 'motion/react';
 import { useMediaQuery } from 'usehooks-ts';
 import Image from 'next/image';
 import HomeVideoImg1 from '../../../../public/images/home-case-study-image-4.png';
+
+import CaseStudyModal from '@/modules/shared/CaseStudyModal';
 interface StudyProps {
   step: number;
   title: string;
@@ -28,6 +30,7 @@ export default function Study({
   className,
 }: StudyProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'center'] });
 
@@ -60,7 +63,9 @@ export default function Study({
               </Typography>
             </Stack>
             {highlightedFeatures}
-            <Button color="primary">View Case Study</Button>
+            <Button color="primary" onClick={() => setIsModalOpen(true)}>
+              View Case Study
+            </Button>
           </Stack>
         ) : (
           <div className="bg-white/10 p-5 rounded-3xl">
@@ -95,7 +100,7 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button color="primary">View Case Study</Button>
+          <Button onClick={() => setIsModalOpen(true)} color="primary">View Case Study</Button>
         </Stack>
       ) : isOdd ? (
         <div className="bg-white/10 p-5 rounded-3xl">
@@ -115,9 +120,10 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button color="primary">View Case Study</Button>
+          <Button onClick={() => setIsModalOpen(true)} color="primary">View Case Study</Button>
         </Stack>
       )}
+      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} studyTitle={title} />
     </div>
   );
 }

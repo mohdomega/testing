@@ -11,7 +11,7 @@ export default function Careers() {
       <JoinTeam />
       <WorkCulture />
       <BlazeNewTrails />
-      <JoinUs />
+      <JoinUs id="join-us-section" />
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
           plugins={[AutoScroll({ direction: 'backward', stopOnInteraction: false, stopOnMouseEnter: true })]}
           opts={{ loop: true, duration: 55 }}
         >
-          <CarouselContent className="gap-20 max-w-screen">
+          <CarouselContent className="gap-20 w-full">
             <CarouselItem className="basis-auto ml-20">
               <Stack alignItems="center" className="gap-2">
                 <Typography component="span" variant="h3" className="font-medium">
@@ -272,7 +272,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
           plugins={[AutoScroll({ direction: 'forward', stopOnInteraction: false, stopOnMouseEnter: true })]}
           opts={{ loop: true, duration: 60 }}
         >
-          <CarouselContent className="gap-20 max-w-screen">
+          <CarouselContent className="gap-20 w-full">
             <CarouselItem className="basis-auto ml-20">
               <Stack alignItems="center" className="gap-2">
                 <Typography component="span" variant="h3" className="font-medium">

@@ -12,7 +12,11 @@ export async function sendCaseStudyDownloadEmail(data: DownloadRequest) {
   const { name, email, studyTitle } = data;
 
   // Check if environment variables are set
-  if (!process.env.NODEMAILER_USER_EMAIL_ID || !process.env.NODEMAILER_USER_PASSWORD) {
+  if (
+    !process.env.NODEMAILER_USER_EMAIL_ID ||
+    !process.env.NODEMAILER_USER_PASSWORD ||
+    !process.env.ADMIN_EMAIL_ID
+  ) {
     console.error('Nodemailer environment variables are not set');
     return {
       success: false,
@@ -22,8 +26,8 @@ export async function sendCaseStudyDownloadEmail(data: DownloadRequest) {
 
   try {
     await sendMail({
-      from: process.env.NODEMAILER_USER_EMAIL_ID,
-      to: process.env.NODEMAILER_USER_EMAIL_ID, // Sending to admin (self)
+      from: `IDRMS Case Study - <${process.env.NODEMAILER_USER_EMAIL_ID}>`,
+      to: process.env.ADMIN_EMAIL_ID,
       subject: `New Case Study Download: ${studyTitle}`,
       html: `
         <h1>New Case Study Download</h1>

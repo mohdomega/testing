@@ -15,7 +15,14 @@
 export const JD_PDF_MAPPING: Record<string, string> = {
   // Add your job titles and their PDF paths here
   // Make sure the PDF file exists in public/jds/ folder
-  'Marketing Intern': '/jds/default-jd.pdf', // Update this when you have specific PDF
+  'MuleSoft Developer': '/jds/mulesoft-developer-jd.pdf',
+  'Salesforce Consultant': '/jds/salesforce-consultant-jd.pdf',
+  'Salesforce Developer Consultant (SPIFF)': '/jds/salesforce-developer-consultant-spiff-jd.pdf',
+  'Salesforce Developer': '/jds/salesforce-developer-jd.pdf',
+  'Salesforce QA': '/jds/salesforce-qa-jd.pdf',
+  'Senior Developer / Tech Lead': '/jds/senior-developer-tech-lead-jd.pdf',
+  // Fallback mappings
+  'Marketing Intern': '/jds/default-jd.pdf',
   'Sales Cloud Developer': '/jds/default-jd.pdf',
   'Full Stack Developer': '/jds/default-jd.pdf',
   'UI/UX Designer': '/jds/default-jd.pdf',

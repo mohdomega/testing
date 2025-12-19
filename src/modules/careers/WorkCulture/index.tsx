@@ -93,7 +93,7 @@ export default function WorkCulture({ className }: WorkCultureProps) {
               </Typography>
             </Stack>
           </div>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <StatCard icon={BillIcon} value="120+" description="Experts driving IDRMS forward" />
             <StatCard
               icon={DirectSendBoxIcon}

@@ -32,86 +32,94 @@ export default function OurTeam({ className }: OurTeamProps) {
           Meet the Team
         </Typography>
       </Stack>
-      <Stack className="gap-4 md:gap-10 max-w-[1200px] w-full">
-        {/* Top section - 2 columns on desktop, stacked on mobile */}
-        <Stack className="flex-col lg:flex-row gap-4 md:gap-10 w-full">
-          {/* Left column */}
-          <Stack className="gap-4 md:gap-10 flex-1">
-            <Stack className="flex-1 max-h-[558px] w-full ">
+      <Stack className="gap-6 md:gap-10 max-w-[1240px] w-full h-fit">
+        {/* Team Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 w-full h-fit">
+          {/* Left Large Column Group */}
+          <div className="flex flex-col gap-6 md:gap-10 w-full h-fit">
+            <div className="w-full">
               <ProfileCard
                 img={TeamImg3}
                 justifyBetween={true}
                 name="Liam Carter"
                 tagline="Streamlines operations"
                 role="Founder"
+                className="lg:aspect-[21/20] aspect-[4/5]"
               />
-            </Stack>
-            <Stack className="flex-col sm:flex-row gap-4 md:gap-10 max-h-[359px] ">
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 w-full h-fit">
               <ProfileCard
                 img={TeamImg2}
-                name="Stephanie Moore "
+                name="Stephanie Moore"
                 tagline="Crafts intuitive designs"
                 role="Design Head"
+                className="aspect-[4/5] lg:aspect-[3/4]"
               />
               <ProfileCard
                 img={TeamImg7}
                 name="Cristina Jones"
                 tagline="Builds smart logistics tech"
-                role="Sr.HR Manager"
+                role="Sr. HR Manager"
+                className="aspect-[4/5] lg:aspect-[3/4]"
               />
-            </Stack>
-          </Stack>
-          {/* Right column */}
-          <Stack className="flex-col-reverse lg:flex-col-reverse gap-4 md:gap-10 flex-1">
-            <Stack className=" flex-1 max-h-[558px] w-full ">
+            </div>
+          </div>
+
+          {/* Right Large Column Group */}
+          <div className="flex flex-col lg:flex-col-reverse gap-6 md:gap-10 w-full h-fit">
+            <div className="w-full">
               <ProfileCard
                 img={TeamImg1}
                 justifyBetween={true}
                 name="Mateo Rossi"
                 tagline="Builds smart logistics tech"
                 role="CTO"
+                className="lg:aspect-[21/20] aspect-[4/5]"
               />
-            </Stack>
-            <Stack className="flex-col sm:flex-row gap-4 md:gap-10 max-h-[359px]">
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 w-full h-fit">
               <ProfileCard
                 img={TeamImg5}
                 name="Jennifer Rossi"
                 tagline="Crafts intuitive designs"
                 role="CFO"
+                className="aspect-[4/5] lg:aspect-[3/4]"
               />
               <ProfileCard
                 img={TeamImg6}
                 name="Edward Davids"
                 tagline="Crafts intuitive designs"
-                role="Sr.Product Manager"
+                role="Sr. Product Manager"
+                className="aspect-[4/5] lg:aspect-[3/4]"
               />
-            </Stack>
-          </Stack>
-        </Stack>
-        {/* Bottom row - 3 columns on desktop, stacked on mobile */}
-        <Stack className="flex-col sm:flex-row gap-4 md:gap-10 w-full max-h-[420px]">
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Row - 3 columns on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full h-fit">
           <ProfileCard
             img={TeamImg4}
             name="Ethan Brooks"
             tagline="Innovates processes"
             role="CMO"
-            className="flex-1"
+            className="aspect-[4/5] lg:aspect-[4/3.5]"
           />
           <ProfileCard
             img={TeamImg8}
             name="Liam Payne"
             tagline="Innovates processes"
             role="COO"
-            className="flex-1"
+            className="aspect-[4/5] lg:aspect-[4/3.5]"
           />
           <ProfileCard
             img={TeamImg9}
             name="Jessica Moore"
             tagline="Innovates processes"
-            role="Sr.Marketing Manager"
-            className="flex-1"
+            role="Sr. Marketing Manager"
+            className="aspect-[4/5] lg:aspect-[4/3.5] sm:col-span-2 lg:col-span-1"
           />
-        </Stack>
+        </div>
       </Stack>
     </Stack>
   );

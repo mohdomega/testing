@@ -123,7 +123,8 @@ export default function Footer({ className }: FooterProps) {
                     <div className="p-3.5 border border-white/10 rounded-full">
                       <Image src={IndiaFlag} alt="india flag" className="w-5 min-w-5 h-4" />
                     </div>
-                    <Typography>Man Mandir Plots, Near S.T Depot, Wankaner, Gujarat - 363621</Typography>
+                    {/* <Typography>Man Mandir Plots, Near S.T Depot, Wankaner, Gujarat - 363621</Typography> */}
+                    <Typography>1102, City Center 2, Science City Road, Ahmedabad - 380060</Typography>
                   </Stack>
                   <Stack direction="row" alignItems="center" className="gap-4">
                     <div className="p-3.5 border border-white/10 rounded-full">

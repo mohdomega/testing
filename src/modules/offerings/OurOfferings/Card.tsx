@@ -1,4 +1,6 @@
-import { FC, SVGProps } from 'react';
+'use client';
+
+import { FC, SVGProps, useState } from 'react';
 
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -10,6 +12,8 @@ import { cn } from '@/lib';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
 
+import CaseStudyModal from '@/modules/shared/CaseStudyModal';
+
 interface CardProps {
   icon: FC<SVGProps<SVGElement>>;
   img: StaticImageData;
@@ -20,6 +24,8 @@ interface CardProps {
 }
 
 export default function Card({ icon: Icon, img, title, subtitle, className, path }: CardProps) {
+  const [isCaseStudyModalOpen, setIsCaseStudyModalOpen] = useState(false);
+
   return (
     <Stack
       alignItems="flex-start"
@@ -43,7 +49,12 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
         <Image src={img} alt={`${title} img`} className="w-full h-60 object-cover" />
       </div>
       <Stack direction="row" justifyContent="space-between" alignItems="center" className="w-full">
-        <Button className="border border-black/10 max-lg:hidden">Case Study</Button>
+        <Button
+          className="border border-black/10 max-lg:hidden"
+          onClick={() => setIsCaseStudyModalOpen(true)}
+        >
+          Case Study
+        </Button>
         <Button
           component={Link}
           href={path}
@@ -55,6 +66,11 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
         </Button>
       </Stack>
       <Icon className="size-54 text-[#E9E7EE] absolute -top-12 -right-12 max-lg:size-25 max-lg:-top-3 max-lg:-right-3" />
+      <CaseStudyModal
+        isOpen={isCaseStudyModalOpen}
+        onClose={() => setIsCaseStudyModalOpen(false)}
+        studyTitle={title}
+      />
     </Stack>
   );
 }

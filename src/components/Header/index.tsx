@@ -47,8 +47,8 @@ export default function Header({ className }: HeaderProps) {
     setIsOpen((prev) => !prev);
   }
 
-  /* 
-   * Hover & Delay Logic 
+  /*
+   * Hover & Delay Logic
    */
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -124,9 +124,15 @@ export default function Header({ className }: HeaderProps) {
                     )}
                     onClick={(e: any) => {
                       if (children) {
+                        // Special handling for Services - allow navigation
                         if (name === 'Services') {
                           setOpenDesktopMenu(null);
-                          return
+                          return; // Allow navigation to proceed
+                        }
+                        // For Industries and other parents with children, allow navigation to parent route
+                        if (name === 'Industries' || name === 'About') {
+                          setOpenDesktopMenu(null);
+                          return; // Allow navigation to proceed
                         }
                         e.preventDefault();
                       } else {
@@ -170,11 +176,23 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                  ? 'text-black hover:bg-black/10'
-                                  // : 'text-white hover:bg-white/30'
-                                  : 'text-black hover:bg-black/10'
+                                ? 'text-black hover:bg-black/10'
+                                : // : 'text-white hover:bg-white/30'
+                                  'text-black hover:bg-black/10'
                             )}
-                            onClick={() => setOpenDesktopMenu(null)}
+                            onClick={() => {
+                              setOpenDesktopMenu(null);
+                              // Handle scroll for industry hash links
+                              if (sub.path.includes('#') && sub.path.startsWith('/industries')) {
+                                setTimeout(() => {
+                                  const hash = sub.path.split('#')[1];
+                                  const element = document.getElementById(hash);
+                                  if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                  }
+                                }, 100);
+                              }
+                            }}
                           >
                             {sub.name}
                           </Link>
@@ -209,7 +227,7 @@ export default function Header({ className }: HeaderProps) {
             className={cn('rounded-2xl mx-10 px-6 py-4 transition-all duration-300', {
               'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
               'bg-background': !isScrolled && isLightHeaderPage,
-              'bg-white': isScrolled,
+              'bg-white shadow-2xl': isScrolled,
             })}
           >
             <Link href="/">
@@ -252,13 +270,17 @@ export default function Header({ className }: HeaderProps) {
                       )}
                       onClick={(e: any) => {
                         if (children) {
-                          e.preventDefault(); // ← navigation stop
+                          // For parents with children: Navigate to parent route but keep menu open
+                          // Don't close navbar, just toggle the children menu
                           setIsOpenMenu((prev: any) => ({
                             ...prev,
                             [name]: !prev[name],
                           }));
+                          // Allow navigation to proceed - don't prevent default
+                          // Navbar will stay open so user can access children
                         } else {
-                          setIsOpen(false); // close menu on navigation
+                          // No children - close menu and navigate
+                          setIsOpen(false);
                         }
                       }}
                     >
@@ -270,7 +292,7 @@ export default function Header({ className }: HeaderProps) {
                             ' transition-all duration-300'
                           )}
                         >
-                          <ChevronDownSvg />
+                          <ChevronDownSvg color="#1E0A52" />
                         </span>
                       )}
                     </NavLink>
@@ -286,9 +308,23 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                  ? 'text-black hover:text-black/80'
-                                  : 'text-white hover:text-white'
+                                ? 'text-black hover:text-black/80'
+                                : 'text-white hover:text-white'
                             )}
+                            onClick={() => {
+                              // Close menu when child is clicked
+                              setIsOpen(false);
+                              // Handle scroll for industry hash links
+                              if (sub.path.includes('#') && sub.path.startsWith('/industries')) {
+                                setTimeout(() => {
+                                  const hash = sub.path.split('#')[1];
+                                  const element = document.getElementById(hash);
+                                  if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                  }
+                                }, 100);
+                              }
+                            }}
                           >
                             {sub.name}
                           </NavLink>
