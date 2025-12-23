@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef,useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -92,15 +92,17 @@ export default function Header({ className }: HeaderProps) {
           justifyContent="space-between"
           alignItems="center"
           className={cn('rounded-3xl mx-10 px-6 py-3 transition-all duration-300', {
-            'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+            // 'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+            // 'bg-white': !isScrolled && !isLightHeaderPage,
+            'bg-white shadow-xl': (!isScrolled && !isLightHeaderPage) || isScrolled,
             'bg-background': !isScrolled && isLightHeaderPage,
-            'bg-white shadow-xl': isScrolled,
           })}
         >
           <Link href="/">
             <Logo
               className={cn(
-                !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                'text-black'
               )}
             />
           </Link>
@@ -116,7 +118,8 @@ export default function Header({ className }: HeaderProps) {
                   <NavLink
                     href={path}
                     className={cn(
-                      'p-1 text-white data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6 hover:scale-105 active:scale-95 transition-transform duration-300',
+                      // 'p-1 text-white data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6 hover:scale-105 active:scale-95 transition-transform duration-300',
+                      'p-1 text-black data-[active=true]:text-accent font-semibold flex items-center gap-2 justify-center h-6 hover:scale-105 active:scale-95 transition-transform duration-300',
                       {
                         'text-primary-dark': !isScrolled && isLightHeaderPage,
                         'text-black': isScrolled,
@@ -148,13 +151,14 @@ export default function Header({ className }: HeaderProps) {
                           openDesktopMenu === name && 'rotate-180'
                         )}
                       >
-                        {!isScrolled && isLightHeaderPage ? (
+                        {/* {!isScrolled && isLightHeaderPage ? (
                           <ChevronDownSvg color={'#1E0A52'} />
                         ) : isScrolled ? (
                           <ChevronDownSvg color={'black'} />
                         ) : (
                           <ChevronDownSvg color="white" />
-                        )}
+                        )} */}
+                        <ChevronDownSvg color="black" />
                       </span>
                     )}
                   </NavLink>
@@ -176,8 +180,8 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                ? 'text-black hover:bg-black/10'
-                                : // : 'text-white hover:bg-white/30'
+                                  ? 'text-black hover:bg-black/10'
+                                  : // : 'text-white hover:bg-white/30'
                                   'text-black hover:bg-black/10'
                             )}
                             onClick={() => {
@@ -225,7 +229,8 @@ export default function Header({ className }: HeaderProps) {
             justifyContent="space-between"
             alignItems="center"
             className={cn('rounded-2xl mx-10 px-6 py-4 transition-all duration-300', {
-              'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+              // 'bg-white/10 backdrop-blur-xl': !isScrolled && !isLightHeaderPage,
+              'bg-white shadow-xl': !isScrolled && !isLightHeaderPage,
               'bg-background': !isScrolled && isLightHeaderPage,
               'bg-white shadow-2xl': isScrolled,
             })}
@@ -233,14 +238,16 @@ export default function Header({ className }: HeaderProps) {
             <Link href="/">
               <Logo
                 className={cn(
-                  !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                  // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                  'text-black'
                 )}
               />
             </Link>
             <Button variant="icon" onClick={handleToggle}>
               <MenuIcon
                 className={cn(
-                  !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                  // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
+                  'text-black'
                 )}
               />
             </Button>
@@ -250,19 +257,22 @@ export default function Header({ className }: HeaderProps) {
               component="nav"
               justifyContent="space-between"
               className={cn(
-                'bg-white/10 rounded-2xl mt-3 mx-10 px-4 py-4 backdrop-blur-xl transition-all duration-300',
+                // 'bg-white/10 rounded-2xl mt-3 mx-10 px-4 py-4 backdrop-blur-xl transition-all duration-300',
+                'bg-white rounded-2xl mt-3 mx-10 px-4 py-4 shadow-xl transition-all duration-300',
                 {
                   'bg-white': isScrolled,
                 }
               )}
             >
-              <Stack component="ul" className="gap-4" divider={<hr className="border-t-white/10" />}>
+              {/* <Stack component="ul" className="gap-4" divider={<hr className="border-t-white/10" />}> */}
+              <Stack component="ul" className="gap-4" divider={<hr className="border-t-black/10" />}>
                 {routes.map(({ name, path, children }) => (
                   <li key={name} className="hover:scale-105 active:scale-95 transition duration-300">
                     <NavLink
                       href={path}
                       className={cn(
-                        'px-1 py-0 text-white data-[active=true]:text-accent font-medium flex items-center justify-between',
+                        // 'px-1 py-0 text-white data-[active=true]:text-accent font-medium flex items-center justify-between',
+                        'px-1 py-0 text-black data-[active=true]:text-accent font-medium flex items-center justify-between',
                         {
                           'text-primary-dark': !isScrolled && isLightHeaderPage,
                           'text-black': isScrolled,
@@ -292,7 +302,8 @@ export default function Header({ className }: HeaderProps) {
                             ' transition-all duration-300'
                           )}
                         >
-                          <ChevronDownSvg color="#1E0A52" />
+                          {/* <ChevronDownSvg color="#1E0A52" /> */}
+                          <ChevronDownSvg color="black" />
                         </span>
                       )}
                     </NavLink>
@@ -308,8 +319,9 @@ export default function Header({ className }: HeaderProps) {
                               !isScrolled && isLightHeaderPage
                                 ? 'text-primary-dark'
                                 : isScrolled
-                                ? 'text-black hover:text-black/80'
-                                : 'text-white hover:text-white'
+                                  ? 'text-black hover:text-black/80'
+                                  // : 'text-white hover:text-white'
+                                  : 'text-black hover:text-black/80'
                             )}
                             onClick={() => {
                               // Close menu when child is clicked
