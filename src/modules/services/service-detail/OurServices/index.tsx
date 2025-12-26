@@ -123,8 +123,8 @@ export default function OurServices({ title, description, className }: OurServic
 
         {/* Carousel Section */}
         <div className=" relative w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none max-lg:w-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none max-lg:w-10" />
+          {/* <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none max-lg:w-10" /> */}
+          {/* <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none max-lg:w-10" /> */}
           <Carousel opts={{ ...{ loop: false, align: 'start', slidesToScroll: 1 } }} className="w-full ">
             <CarouselContent className=" ml-0">
               {serviceItems.map((item, index) => {
