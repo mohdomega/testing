@@ -5,6 +5,7 @@ import BoldAmbitions from './BoldAmbitions';
 import Hero from './Hero';
 import OurTeam from './OurTeam';
 import Rating from './Rating';
+import Testimonials from './Testimonials';
 import WhyChooseUs from './WhyChooseUs';
 
 export default function About() {
@@ -16,6 +17,7 @@ export default function About() {
       <BoldAmbitions />
       <WhyChooseUs />
       <OurTeam />
+      <Testimonials />
       <ContactUs />
       <BlazeNewTrails className="bg-white" />
     </div>
