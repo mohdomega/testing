@@ -32,7 +32,7 @@ export default function Testimonials({ className }: TestimonialsProps) {
               Share Your Story Today!
             </Typography>
             <Typography variant="body" className="text-gray-600 max-w-2xl  m-0 p-0">
-              Our partners say it best — discover how we've helped ambitious brands scale smarter, move
+              Our partners say it best — discover how we&apos;ve helped ambitious brands scale smarter, move
               faster, and lead with impact.
             </Typography>
           </Stack>
