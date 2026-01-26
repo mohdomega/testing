@@ -31,8 +31,9 @@ export default function Retail({ className }: HealthcareProps) {
                 Smarter Solutions for Retail
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
-                We support retail brands with omnichannel solutions that optimize inventory, enhance customer
-                journeys, and increase sales velocity. From storefront to doorstep, we power smarter commerce
+                We help omnichannel retail brands overcome fragmented customer data and generic marketing
+                campaigns. Our solutions deliver consistent, personalized experiences across digital and
+                in-store touchpoints, driving higher engagement, conversions, and repeat purchases.
               </Typography>
             </Stack>
           </Stack>
@@ -51,67 +52,34 @@ export default function Retail({ className }: HealthcareProps) {
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    45%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  increase in email open rates
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    20%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  boost in conversions
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    25%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  increase in repeat purchases
                 </Typography>
               </Stack>
             </div>

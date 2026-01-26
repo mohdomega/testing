@@ -31,8 +31,9 @@ export default function Manufacturing({ className }: HealthcareProps) {
                 Smarter Solutions for Manufacturing
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
-                We deliver connected solutions that improve production efficiency, monitor assets, and reduce
-                waste. Our systems automate workflows and unlock real-time visibility across the factory floor
+                We help global manufacturers with complex product configurations and distributor-led sales
+                achieve better alignment between sales forecasting, production planning, and customer service.
+                Our connected solutions enable data-driven, forward-looking decisions instead of reactive planning.
               </Typography>
             </Stack>
           </Stack>
@@ -56,62 +57,51 @@ export default function Manufacturing({ className }: HealthcareProps) {
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  reduction in sales cycle duration
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    30%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  increase in overall revenue
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    50%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  improvement in service response times
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    25%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  increase in customer engagement
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    20%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  improvement in production planning
                 </Typography>
               </Stack>
             </div>

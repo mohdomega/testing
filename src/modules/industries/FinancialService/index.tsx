@@ -31,9 +31,10 @@ export default function FinancialServices({ className }: HealthcareProps) {
                 Smarter Solutions for Finance
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
-                We help financial institutions build secure, agile platforms for faster transactions, smarter
-                analytics, and regulatory compliance. Our tools drive trust, transparency, and performance
-                across banking, insurance, and fintech operations
+                We help financial services institutions overcome disconnected customer data, slow inquiry
+                handling, and strict compliance requirements. Our solutions enable relationship managers
+                to gain a complete view of customers, unlock personalization and cross-sell opportunities,
+                and support data-driven advisory models at scale.
               </Typography>
             </Stack>
           </Stack>
@@ -52,12 +53,12 @@ export default function FinancialServices({ className }: HealthcareProps) {
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    25%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  increase in cross-selling success
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
@@ -68,51 +69,29 @@ export default function FinancialServices({ className }: HealthcareProps) {
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  faster inquiry response times
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    30%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  improvement in marketing ROI
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    100%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  compliance visibility and audit readiness
                 </Typography>
               </Stack>
             </div>

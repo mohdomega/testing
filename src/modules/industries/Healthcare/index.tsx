@@ -31,9 +31,10 @@ export default function Healthcare({ className }: HealthcareProps) {
                 Smarter Solutions for Healthcare
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
-                We envision a world where every business can harness the full power of Salesforce to grow
-                smarter and move faster. Our mission is to simplify complex systems, deliver tailored
-                solutions, and empower teams to turn possibilities into performance.
+                A rapidly growing multi-specialty healthcare network managing patient interactions across
+                departments, locations, and channels. We help unify patient engagement, service requests,
+                and follow-ups with a connected digital platform to improve care coordination, operational
+                efficiency, and patient satisfaction—without increasing administrative burden on staff.
               </Typography>
             </Stack>
           </Stack>
@@ -52,12 +53,23 @@ export default function Healthcare({ className }: HealthcareProps) {
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    25%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  reduction in appointment no-shows
+                </Typography>
+              </Stack>
+              <Stack className="gap-2 p-12">
+                <Stack direction="row" alignItems="center" className="gap-2">
+                  <Typography component="span" variant="h3" className="font-semibold">
+                    30%
+                  </Typography>
+                  <ArrowUp className="size-10 text-accent" />
+                </Stack>
+                <Typography variant="body2" className="font-medium text-primary-dark/60">
+                  faster service response times
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
@@ -68,52 +80,19 @@ export default function Healthcare({ className }: HealthcareProps) {
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
                 <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
+                  improvement in case resolution
                 </Typography>
               </Stack>
               <Stack className="gap-2 p-12">
                 <Stack direction="row" alignItems="center" className="gap-2">
                   <Typography component="span" variant="h3" className="font-semibold">
-                    40%
+                    35%
                   </Typography>
                   <ArrowUp className="size-10 text-accent" />
                 </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
-              </Stack>
-              <Stack className="gap-2 p-12">
-                <Stack direction="row" alignItems="center" className="gap-2">
-                  <Typography component="span" variant="h3" className="font-semibold">
-                    40%
-                  </Typography>
-                  <ArrowUp className="size-10 text-accent" />
-                </Stack>
-                <Typography variant="body2" className="font-medium text-primary-dark/60">
-                  quicker approvals
-                </Typography>
+                {/* <Typography variant="body2" className="font-medium text-primary-dark/60"> */}
+                increase in patient engagement
+                {/* </Typography> */}
               </Stack>
             </div>
           </Stack>
