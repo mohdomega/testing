@@ -28,7 +28,7 @@ export default function NonProfit({ className }: NonProfitProps) {
                         <Stack className="gap-4">
                             <TitleChip>Non-Profit</TitleChip>
                             <Typography variant="h2" className="text-gradient">
-                                Smarter Solutions for Donor & Program Management
+                                How a Non-Profit Increased Donor Retention by 60% Using Salesforce Nonprofit Cloud
                             </Typography>
                             <Typography className="text-primary-dark/60 font-medium">
                                 We help non-profit organizations managing multiple programs and campaigns build stronger donor
@@ -95,46 +95,38 @@ export default function NonProfit({ className }: NonProfitProps) {
                     </Stack>
                     <Stack className="gap-8 p-8 rounded-3xl border border-black/15 border-dashed">
                         <div className="px-3 py-1.5 -ml-8 w-fit bg-secondary/20 font-medium rounded-r-full">
-                            <Typography>Our Solutions</Typography>
+                            <Typography>Core Challenges</Typography>
                         </div>
-                        <div className="grid grid-cols-2 gap-x-10 gap-y-6 max-lg:grid-cols-3 max-sm:grid-cols-2">
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Nonprofit Cloud
+                                    Disconnected donor and campaign data
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Marketing Cloud
+                                    Generic outreach that failed to build long-term engagement
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Program Management
+                                    Limited visibility into program impact
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Einstein Analytics
+                                    Manual reporting for stakeholders and funders
                                 </Typography>
                             </Stack>
                         </div>
                     </Stack>
                 </div>
-                <Button component={Link} href="/contact-us" className="w-fit self-center">
-                    Connect with us
+                <Button component={Link} href="/blogs/nonprofit-case-study" className="w-fit self-center">
+                    Read More
                 </Button>
             </div>
         </Stack>

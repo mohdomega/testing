@@ -28,7 +28,7 @@ export default function RebateManagement({ className }: RebateManagementProps) {
                         <Stack className="gap-4">
                             <TitleChip>Rebate Management</TitleChip>
                             <Typography variant="h2" className="text-gradient">
-                                Smarter Solutions for Channel & Partner Automation
+                                How Salesforce Automation Reduced Rebate Errors by 30% for a Global Distributor Network
                             </Typography>
                             <Typography className="text-primary-dark/60 font-medium">
                                 We help global distributor-driven organizations running multiple rebate programs across regions
@@ -95,46 +95,44 @@ export default function RebateManagement({ className }: RebateManagementProps) {
                     </Stack>
                     <Stack className="gap-8 p-8 rounded-3xl border border-black/15 border-dashed">
                         <div className="px-3 py-1.5 -ml-8 w-fit bg-secondary/20 font-medium rounded-r-full">
-                            <Typography>Our Solutions</Typography>
+                            <Typography>Core Challenges</Typography>
                         </div>
-                        <div className="grid grid-cols-2 gap-x-10 gap-y-6 max-lg:grid-cols-3 max-sm:grid-cols-2">
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Rebate Automation
+                                    Manual rebate calculations prone to errors
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Partner Portals
+                                    Limited real-time visibility for partners
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Real-time Dashboards
+                                    Delayed approvals and payout cycles
                                 </Typography>
                             </Stack>
-                            <Stack className="gap-4">
-                                <div className="gradient-vertical p-6 rounded-full w-fit">
-                                    <Bill className="size-8" />
-                                </div>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                                 <Typography variant="body2" className="font-medium">
-                                    Approval Workflows
+                                    High administrative effort to manage programs
+                                </Typography>
+                            </Stack>
+                            <Stack direction="row" alignItems="center" className="gap-3">
+                                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                                <Typography variant="body2" className="font-medium">
+                                    Poor reporting on rebate effectiveness
                                 </Typography>
                             </Stack>
                         </div>
                     </Stack>
                 </div>
-                <Button component={Link} href="/contact-us" className="w-fit self-center">
-                    Connect with us
+                <Button component={Link} href="/blogs/rebate-management-case-study" className="w-fit self-center">
+                    Read More
                 </Button>
             </div>
         </Stack>

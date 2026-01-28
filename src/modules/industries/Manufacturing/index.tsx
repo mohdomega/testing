@@ -28,7 +28,7 @@ export default function Manufacturing({ className }: HealthcareProps) {
             <Stack className="gap-4">
               <TitleChip>Manufacturing</TitleChip>
               <Typography variant="h2" className="text-gradient">
-                Smarter Solutions for Manufacturing
+                How a Global Manufacturer Achieved 30% Revenue Growth Using Salesforce Manufacturing Cloud
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
                 We help global manufacturers with complex product configurations and distributor-led sales
@@ -109,62 +109,44 @@ export default function Manufacturing({ className }: HealthcareProps) {
           <Stack className="gap-8 p-8 rounded-3xl border border-black/15 border-dashed">
             {/* Chip */}
             <div className="px-3 py-1.5 -ml-8 w-fit bg-secondary/20 font-medium rounded-r-full">
-              <Typography>Our Solutions</Typography>
+              <Typography>Core Challenges</Typography>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-6 max-lg:grid-cols-3 max-sm:grid-cols-2">
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+            <div className="grid grid-cols-1 gap-4">
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Manual and slow sales processes
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Disconnected service and support systems
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Complex CPQ requirements
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  No real-time visibility into demand and revenue forecasts
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
-                </Typography>
-              </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
-                <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Inefficient production planning due to inaccurate data
                 </Typography>
               </Stack>
             </div>
           </Stack>
         </div>
-        <Button component={Link} href="/contact-us" className="w-fit self-center">
-          Connect with us
+        <Button component={Link} href="/blogs/manufacturing-case-study" className="w-fit self-center">
+          Read More
         </Button>
       </div>
     </Stack>

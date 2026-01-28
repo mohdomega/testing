@@ -174,8 +174,8 @@ export default function RealEstate({ className }: HealthcareProps) {
             </div>
           </Stack>
         </div>
-        <Button component={Link} href="/contact-us" className="w-fit self-center">
-          Connect with us
+        <Button component={Link} href="/blogs/real-estate-case-study" className="w-fit self-center">
+          Read More
         </Button>
       </div>
     </Stack>

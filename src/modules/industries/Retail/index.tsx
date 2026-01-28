@@ -28,7 +28,7 @@ export default function Retail({ className }: HealthcareProps) {
             <Stack className="gap-4">
               <TitleChip>Retail</TitleChip>
               <Typography variant="h2" className="text-gradient">
-                Smarter Solutions for Retail
+                How Salesforce Personalization Increased Retail Conversions by 20%
               </Typography>
               <Typography className="text-primary-dark/60 font-medium">
                 We help omnichannel retail brands overcome fragmented customer data and generic marketing
@@ -87,62 +87,32 @@ export default function Retail({ className }: HealthcareProps) {
           <Stack className="gap-8 p-8 rounded-3xl border border-black/15 border-dashed">
             {/* Chip */}
             <div className="px-3 py-1.5 -ml-8 w-fit bg-secondary/20 font-medium rounded-r-full">
-              <Typography>Our Solutions</Typography>
+              <Typography>Core Challenges</Typography>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-6 max-lg:grid-cols-3 max-sm:grid-cols-2">
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+            <div className="grid grid-cols-1 gap-4">
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Siloed customer data
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Low engagement from generic campaigns
                 </Typography>
               </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
+              <Stack direction="row" alignItems="center" className="gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
-                </Typography>
-              </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
-                <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
-                </Typography>
-              </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
-                <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
-                </Typography>
-              </Stack>
-              <Stack className="gap-4">
-                <div className="gradient-vertical p-6 rounded-full w-fit">
-                  <Bill className="size-8" />
-                </div>
-                <Typography variant="body2" className="font-medium">
-                  Core Banking Platforms
+                  Limited insight into customer behavior
                 </Typography>
               </Stack>
             </div>
           </Stack>
         </div>
-        <Button component={Link} href="/contact-us" className="w-fit self-center">
-          Connect with us
+        <Button component={Link} href="/blogs/retail-case-study" className="w-fit self-center">
+          Read More
         </Button>
       </div>
     </Stack>
