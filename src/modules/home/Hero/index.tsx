@@ -10,7 +10,11 @@ import Rating from './Rating';
 
 // import HomeVideoImg1 from '../../../../public/images/home-video-image-1.png';
 import HomeVideoImg1 from '../../../../public/images/home-video-img-new-1.jpg';
-import AWSLogo from '/public/icons/aws-logo.svg';
+import AWSLogo from '/public/icons/aws.svg';
+import MicrosoftLogo from '/public/icons/microsoft.svg';
+import SalesforceLogo from '/public/icons/salesforce.svg';
+import SlackLogo from '/public/icons/slack.svg';
+import SniffLogo from '/public/icons/sniff.svg';
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
 
@@ -73,11 +77,11 @@ export default function Hero({ className }: HeroProps) {
         <Rating className="max-lg:hidden" />
 
         <Stack direction="row" justifyContent="space-between">
-          <AWSLogo className="size-16" />
-          <AWSLogo className="size-16" />
-          <AWSLogo className="size-16" />
-          <AWSLogo className="size-16" />
-          <AWSLogo className="size-16" />
+          <SlackLogo className="size-26" />
+          <MicrosoftLogo className="size-26" />
+          <AWSLogo className="size-26" />
+          <SalesforceLogo className="size-26" />
+          <SniffLogo className="size-26" />
         </Stack>
       </div>
     </Stack>
