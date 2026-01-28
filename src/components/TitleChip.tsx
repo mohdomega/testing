@@ -8,7 +8,7 @@ interface TitleChipProps {
   dotClassName?: string;
 }
 
-export default function TitleChip({dotClassName, children, className }: TitleChipProps) {
+export default function TitleChip({ dotClassName, children, className }: TitleChipProps) {
   // TODO: Curved inside
   return (
     // <Stack direction="row" alignItems="center" className="gap-6 w-fit px-3 py-5 bg-accent rounded-full">
@@ -21,7 +21,7 @@ export default function TitleChip({dotClassName, children, className }: TitleChi
       <Typography variant="small" className="font-medium">
         {children}
       </Typography>
-      <div className={cn("size-3 bg-primary-dark rounded-3xl",dotClassName)} />
+      <div className={cn('size-3 bg-primary-dark rounded-3xl', dotClassName)} />
     </Stack>
   );
 }

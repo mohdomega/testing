@@ -42,8 +42,8 @@ export default function WorkCulture({ className }: WorkCultureProps) {
                 solutions to our clients. */}
                 Our culture is fueled by a passionate pursuit of creativity, innovation, and open
                 communication. We believe in empowering our team to grow alongside the company, fostering a
-                family-like environment where hard work and play are in perfect harmony. It's not just a job -
-                it's a chance to thrive, create, and make a positive impact on the world.
+                family-like environment where hard work and play are in perfect harmony. It&apos;s not just a
+                job - it&apos;s a chance to thrive, create, and make a positive impact on the world.
               </Typography>
             </div>
           </Stack>

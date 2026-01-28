@@ -32,7 +32,7 @@ export default function OurVision({ className }: OurVisionProps) {
                 Mission Two
               </Typography>
               <Typography>
-                Our mission is to enhance our clients' ability to engage with their customers in a
+                Our mission is to enhance our clients&apos; ability to engage with their customers in a
                 personalized, timely and data-driven way that fosters stronger relationships and to enhance
                 their decision-making and overall experience. We strive to ensure that all stakeholders have
                 timely access to relevant data, at the right time, and through the right channel.
