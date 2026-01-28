@@ -38,7 +38,7 @@ export default function JoinUs({ className, id }: ContactUsProps) {
           <Stack alignItems="center" className="gap-1">
             <TitleChip>Begin your journey</TitleChip>
             <Typography variant="h2" className="text-gradient">
-              Join US
+              Join Us
             </Typography>
           </Stack>
           <Typography variant="body2" className="text-secondary font-medium">

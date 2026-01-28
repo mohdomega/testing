@@ -26,14 +26,13 @@ export default function OurProcess({ className }: OurProcessProps) {
           Our Process
         </Typography>
       </Stack>
-      <Stack
-        direction="row"
-        className="gap-28 relative overflow-x-hidden justify-center max-sm:flex-col max-sm:gap-8"
+      <div
+        className="m-auto grid grid-cols-4 items-center w-full max-w-[1440px] relative justify-center max-sm:flex max-sm:flex-col max-sm:gap-8"
       >
         <Image
           src={ProcessFlowLine}
           alt="process flow line"
-          className=" w-full absolute top-1/2 left-0 -translate-y-1/2 -z-10 max-sm:hidden"
+          className="m-auto max-w-[1440px] w-full absolute top-1/2 left-0 -translate-y-1/2 -z-10 max-sm:hidden"
         />
         {process.map((props, index) => (
           <Step
@@ -43,7 +42,8 @@ export default function OurProcess({ className }: OurProcessProps) {
             {...props}
           />
         ))}
-      </Stack>
+      {/* </Stack> */}
+      </div>
     </Stack>
   );
 }

@@ -27,7 +27,7 @@ export default function TestimonialCard({
   return (
     <div
       className={cn(
-        'relative bg-[#F7F7F7] rounded-2xl p-6 flex flex-col gap-12 min-w-[410px] max-w-[410px] overflow-hidden',
+        'relative bg-[#F7F7F7] rounded-2xl p-6 flex flex-col gap-12 w-full overflow-hidden h-full',
         className
       )}
     >

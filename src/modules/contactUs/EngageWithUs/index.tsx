@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
@@ -16,10 +19,14 @@ interface EngageWithUsProps {
 }
 
 export default function EngageWithUs({ className }: EngageWithUsProps) {
+  const pathname = usePathname();
+  const isSubmitRequest = pathname?.includes('/submit-request');
+  const isScheduleMeeting = pathname?.includes('/schedule-meeting');
+
   return (
     <Stack component="section" className={cn('bg-[#F2F0F7] gap-10 px-20 py-17.5 max-sm:px-6', className)}>
-      <div className="max-w-[1440px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <Stack className="gap-[19px] p-0 rounded-[24px] bg-white">
+      <div className="max-w-[1440px] w-full mx-auto flex flex-wrap justify-center gap-10">
+        {/* <Stack className="gap-[19px] p-0 rounded-[24px] bg-white flex-1 min-w-[300px] max-w-[450px]">
           <div className="w-full h-full relative overflow-hidden ">
             <Image src={GetQuote} alt="Get a Quote" className="w-full h-full object-cover" />
           </div>
@@ -40,51 +47,55 @@ export default function EngageWithUs({ className }: EngageWithUsProps) {
               Chat with us
             </Button>
           </Stack>
-        </Stack>
-        <Stack className="gap-[19px] p-0 rounded-[24px] bg-white">
-          <div className="w-full h-full relative overflow-hidden ">
-            <Image src={SubmitRequest} alt="Get a Quote" className="w-full h-full object-cover" />
-          </div>
-          <Stack alignItems="center" className="p-[38px] pt-0 gap-6">
-            <Stack className="gap-2 text-center">
-              <Typography variant="h5" className="font-medium">
-                Submit a Request
-              </Typography>
-              <Typography variant="body2" className="text-primary-dark/60">
-                Need something specific? Share your needs, and we&apos;ll handle the rest
-              </Typography>
+        </Stack> */}
+        {!isSubmitRequest && (
+          <Stack className="gap-[19px] p-0 rounded-[24px] bg-white flex-1 min-w-[300px] max-w-[450px]">
+            <div className="w-full h-full relative overflow-hidden ">
+              <Image src={SubmitRequest} alt="Get a Quote" className="w-full h-full object-cover" />
+            </div>
+            <Stack alignItems="center" className="p-[38px] pt-0 gap-6">
+              <Stack className="gap-2 text-center">
+                <Typography variant="h5" className="font-medium">
+                  Submit a Request
+                </Typography>
+                <Typography variant="body2" className="text-primary-dark/60">
+                  Need something specific? Share your needs, and we&apos;ll handle the rest
+                </Typography>
+              </Stack>
+              <Button
+                component={Link}
+                href="/contact-us/submit-request"
+                endIcon={<ChevronRight className="size-4" />}
+              >
+                Chat with us
+              </Button>
             </Stack>
-            <Button
-              component={Link}
-              href="/contact-us/submit-request"
-              endIcon={<ChevronRight className="size-4" />}
-            >
-              Chat with us
-            </Button>
           </Stack>
-        </Stack>
-        <Stack className="gap-[19px] p-0 rounded-[24px] bg-white">
-          <div className="w-full h-full relative overflow-hidden ">
-            <Image src={ScheduleMeeting} alt="Get a Quote" className="w-full h-full object-cover" />
-          </div>
-          <Stack alignItems="center" className="p-[38px] pt-0 gap-6">
-            <Stack className="gap-2 text-center">
-              <Typography variant="h5" className="font-medium">
-                Schedule a Meeting
-              </Typography>
-              <Typography variant="body2" className="text-primary-dark/60">
-                Book a quick call with our team to discuss how we can help{' '}
-              </Typography>
+        )}
+        {!isScheduleMeeting && (
+          <Stack className="gap-[19px] p-0 rounded-[24px] bg-white flex-1 min-w-[300px] max-w-[450px]">
+            <div className="w-full h-full relative overflow-hidden ">
+              <Image src={ScheduleMeeting} alt="Get a Quote" className="w-full h-full object-cover" />
+            </div>
+            <Stack alignItems="center" className="p-[38px] pt-0 gap-6">
+              <Stack className="gap-2 text-center">
+                <Typography variant="h5" className="font-medium">
+                  Schedule a Meeting
+                </Typography>
+                <Typography variant="body2" className="text-primary-dark/60">
+                  Book a quick call with our team to discuss how we can help{' '}
+                </Typography>
+              </Stack>
+              <Button
+                component={Link}
+                href="/contact-us/schedule-meeting"
+                endIcon={<ChevronRight className="size-4" />}
+              >
+                Chat with us
+              </Button>
             </Stack>
-            <Button
-              component={Link}
-              href="/contact-us/schedule-meeting"
-              endIcon={<ChevronRight className="size-4" />}
-            >
-              Chat with us
-            </Button>
           </Stack>
-        </Stack>
+        )}
       </div>
     </Stack>
   );

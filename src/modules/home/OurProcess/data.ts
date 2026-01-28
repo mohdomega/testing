@@ -22,29 +22,55 @@ import Zap from '/public/icons/zap.svg';
 import Mentor from '/public/icons/mentor.svg';
 import Support1 from '/public/icons/support1.svg';
 
+// export const process = [
+//   {
+//     title: 'Understanding the Basics',
+//     description:
+//       'We start by listening. Your immediate and long-term business goals, current challenges, and unique requirements build the foundation of our strategy.',
+//     icon: Vector,
+//   },
+//   {
+//     title: 'Strategizing Efficiently',
+//     description:
+//       'Next comes planning. A blueprint that represents coherent plans with a best suited implementation strategy.',
+//     icon: Mentor,
+//   },
+//   {
+//     title: 'Making It Happen',
+//     description:
+//       'Plans take shape. Our team starts implementing different cloud strategies through agile development, seamless integration, and impactful execution.',
+//     icon: Zap,
+//   },
+//   {
+//     title: 'Maintaining the Stance',
+//     description:
+//       'We stay. After we hand over the project to your team, we continue to provide regular training, enhancements, support, and maintenance to ensure lasting success.',
+//     icon: Support1,
+//   },
+// ];
 export const process = [
   {
-    title: 'Understanding the Basics',
+    title: 'Discover & Align',
     description:
-      'We start by listening. Your immediate and long-term business goals, current challenges, and unique requirements build the foundation of our strategy.',
+      'Understanding your business goals, current processes is key. Through stakeholder discussions and requirement workshops, we identify challenges, priorities, and success metrics to ensure alignment from day one.',
     icon: Vector,
   },
   {
-    title: 'Strategizing Efficiently',
+    title: 'Design for Impact',
     description:
-      'Next comes planning. A blueprint that represents coherent plans with a best suited implementation strategy.',
+      'We design a future-ready Salesforce solution tailored to your business. We do the solution architecture, data models, integration strategy, and an implementation roadmap aligned to your growth plans.',
     icon: Mentor,
   },
   {
-    title: 'Making It Happen',
+    title: 'Execution in Motion',
     description:
-      'Plans take shape. Our team starts implementing different cloud strategies through agile development, seamless integration, and impactful execution.',
+      'Our certified experts configure, customize, and integrate Salesforce using agile delivery methods. We ensure clean data migration, seamless system integrations, and rigorous testing—followed by user training and a smooth go-live.',
     icon: Zap,
   },
   {
-    title: 'Maintaining the Stance',
+    title: 'Value That Grows',
     description:
-      'We stay. After we hand over the project to your team, we continue to provide regular training, enhancements, support, and maintenance to ensure lasting success.',
+      'Post-launch, we stay engaged to provide support, enhancements, and performance optimization. As your business evolves, we help scale Salesforce through continuous improvements, platform upgrades, and adoption support.',
     icon: Support1,
   },
 ];

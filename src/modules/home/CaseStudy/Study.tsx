@@ -50,7 +50,10 @@ export default function Study({
   return (
     <div
       ref={ref}
-      className={cn('col-span-3 grid grid-cols-subgrid grid-rows-1 group max-lg:col-span-2', className)}
+      className={cn(
+        'relative col-span-3 grid grid-cols-subgrid grid-rows-1 group max-lg:col-span-2',
+        className
+      )}
     >
       {!isNonDesktop &&
         (isOdd ? (
@@ -101,7 +104,9 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button onClick={() => setIsModalOpen(true)} color="primary">View Case Study</Button>
+          <Button onClick={() => setIsModalOpen(true)} color="primary">
+            View Case Study
+          </Button>
         </Stack>
       ) : isOdd ? (
         <div className="bg-white/10 p-5 rounded-3xl">
@@ -121,7 +126,9 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button onClick={() => setIsModalOpen(true)} color="primary">View Case Study</Button>
+          <Button onClick={() => setIsModalOpen(true)} color="primary">
+            View Case Study
+          </Button>
         </Stack>
       )}
       <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} studyTitle={title} />

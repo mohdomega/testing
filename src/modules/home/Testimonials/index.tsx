@@ -50,7 +50,10 @@ export default function Testimonials({ className }: TestimonialsProps) {
           >
             <CarouselContent className="gap-0">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={`${testimonial.name}-${index}`} className="pl-6 basis-auto">
+                <CarouselItem
+                  key={`${testimonial.name}-${index}`}
+                  className="pl-6 basis-full md:basis-1/2 lg:basis-1/3"
+                >
                   <TestimonialCard {...testimonial} />
                 </CarouselItem>
               ))}

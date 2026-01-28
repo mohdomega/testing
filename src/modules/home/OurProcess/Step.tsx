@@ -15,49 +15,50 @@ export default function Step({ isReverse, step, title, description, icon: Icon, 
   return (
     <div
       className={cn(
-        // 'border border-red-700  grid grid-cols-1 grid-rows-2 justify-center gap-6 text-center max-w-56 max-sm:grid-rows-1 odd:self-end',
-        ' grid grid-cols-1 grid-rows-2 justify-center gap-6 text-center max-w-70 max-sm:grid-rows-1 odd:self-end',
+        'relative flex flex-col items-center justify-center gap-6 text-center max-w-70 w-full',
         className
       )}
     >
+      {/* Icon - Positioned Absolutely relative to center line */}
+      <div
+        className={cn(
+          'absolute top-1/2 right-10 -translate-x-1/2 -translate-y-1/2 z-10 p-6 gradient-vertical rounded-full max-sm:hidden transition-transform duration-300',
+          isReverse ? 'translate-y-[calc(-50%+6.5vw)]' : '-translate-y-[calc(50%+6.5vw)]'
+        )}
+      >
+        <Icon className={cn('text-white', isReverse ? '' : 'size-8')} />
+      </div>
+
       {isReverse ? (
-        <>
-          <Stack className="flex-1 gap-4 max-sm:gap-2">
-            <Typography variant="body" className="text-3xl font-semibold text-gradient max-sm:text-2xl">
-              {step}
+        // Text Top (Icon is at Bottom)
+        <Stack className="flex-1 gap-4 max-sm:gap-2 mb-[16vw] max-sm:mb-0">
+          <Typography variant="body" className="text-3xl font-semibold text-gradient max-sm:text-2xl">
+            {step}
+          </Typography>
+          <Stack className="gap-2">
+            <Typography variant="title" className="whitespace-nowrap font-medium max-sm:text-md">
+              {title}
             </Typography>
-            <Stack className="gap-2">
-              <Typography variant="title" className="whitespace-nowrap font-medium max-sm:text-md">
-                {title}
-              </Typography>
-              <Typography variant="body2" className="text-secondary">
-                {description}
-              </Typography>
-            </Stack>
+            <Typography variant="body2" className="text-secondary">
+              {description}
+            </Typography>
           </Stack>
-          <div className="place-self-center p-6 gradient-vertical rounded-full max-sm:hidden">
-            <Icon className="size-8 text-white" />
-          </div>
-        </>
+        </Stack>
       ) : (
-        <>
-          <div className="place-self-center p-6 gradient-vertical rounded-full max-sm:hidden">
-            <Icon className="size-8 text-white" />
-          </div>
-          <Stack className="flex-1 gap-4 max-sm:gap-2">
-            <Typography variant="body" className="text-3xl font-semibold text-gradient max-sm:text-2xl">
-              {step}
+        // Text Bottom (Icon is at Top)
+        <Stack className="flex-1 gap-4 max-sm:gap-2 mt-[16vw] max-sm:mt-0">
+          <Typography variant="body" className="text-3xl font-semibold text-gradient max-sm:text-2xl">
+            {step}
+          </Typography>
+          <Stack className="gap-2">
+            <Typography variant="title" className="whitespace-nowrap font-medium max-sm:text-md">
+              {title}
             </Typography>
-            <Stack className="gap-2">
-              <Typography variant="title" className="whitespace-nowrap font-medium max-sm:text-md">
-                {title}
-              </Typography>
-              <Typography variant="body2" className="text-secondary">
-                {description}
-              </Typography>
-            </Stack>
+            <Typography variant="body2" className="text-secondary">
+              {description}
+            </Typography>
           </Stack>
-        </>
+        </Stack>
       )}
     </div>
   );
