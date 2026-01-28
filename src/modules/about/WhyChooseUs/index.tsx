@@ -18,10 +18,10 @@ interface WhyChooseUsProps {
 }
 
 const data = [
-  'We value your propositions and prioritize your goals while preparing tailored Salesforce plans for your organization.',
-  'Our experts provide scalable solutions after studying the current market trends and your business objectives.',
+  'Your goals come first—we craft customized Salesforce strategies designed around your business needs.',
+  'Our experts deliver scalable solutions by aligning current market trends with your business objectives.',
   'Our work speaks for itself! We have collaborated with multiple industries to deliver measurable impact and client satisfaction.',
-  'We never back down from offering regular support and maintenance to our clients to ensure their progress remains upscale.',
+  'Our commitment doesn’t end at delivery, we ensure ongoing support and maintenance to drive sustained growth.',
 ];
 
 export default function WhyChooseUs({ className }: WhyChooseUsProps) {

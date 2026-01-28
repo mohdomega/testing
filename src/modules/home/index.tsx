@@ -9,6 +9,7 @@ import Hero from './Hero';
 import OurOfferings from './OurOfferings';
 import OurProcess from './OurProcess';
 import OurTeam from './OurTeam';
+import Testimonials from './Testimonials';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <OurTrustedPeople />
       <OurOfferings />
+      <Testimonials />
       <Empowering />
       <Video />
       <CaseStudy />

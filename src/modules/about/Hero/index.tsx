@@ -24,7 +24,7 @@ export default function Hero({ className }: HeroProps) {
         <Stack className=" gap-82.5 max-lg:gap-15 max-sm:gap-10">
           <Stack alignItems="center" className="gap-10">
             <Stack alignItems="center" className="gap-4 max-w-250 text-center">
-              <TitleChip>About us</TitleChip>
+              <TitleChip dotClassName="bg-white" className='bg-white/10 text-white'>About us</TitleChip>
               <Typography variant="h1" className="text-white font-semibold max-lg:text-4xl max-sm:text-2xl">
                 Redefining Growth with Salesforce Expertise
               </Typography>

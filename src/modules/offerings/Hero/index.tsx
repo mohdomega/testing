@@ -32,7 +32,7 @@ export default function Hero({ className }: HeroProps) {
       <div className="max-w-[1440px] w-full mx-auto">
         <Stack alignItems="center" className="gap-10">
           <Stack alignItems="center" className="gap-4 max-w-200 text-center">
-            <TitleChip>Offerings</TitleChip>
+            <TitleChip dotClassName="bg-white" className='bg-white/10 text-white'>Offerings</TitleChip>
             <Typography
               variant="h1"
               className="text-white font-medium text-balance max-lg:text-4xl max-sm:text-2xl"

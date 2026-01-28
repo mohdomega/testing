@@ -2,10 +2,10 @@ import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
 import OurTrustedPeople from '../shared/OurTrustedPeople';
 import BoldAmbitions from './BoldAmbitions';
+import OurVision from './BoldAmbitions/OurVision';
 import Hero from './Hero';
 import OurTeam from './OurTeam';
 import Rating from './Rating';
-import Testimonials from './Testimonials';
 import WhyChooseUs from './WhyChooseUs';
 
 export default function About() {
@@ -15,9 +15,9 @@ export default function About() {
       <OurTrustedPeople className="pt-80" />
       <Rating />
       <BoldAmbitions />
+      <OurVision/>
       <WhyChooseUs />
       <OurTeam />
-      <Testimonials />
       <ContactUs />
       <BlazeNewTrails className="bg-white" />
     </div>
