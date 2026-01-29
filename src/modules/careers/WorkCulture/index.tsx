@@ -34,7 +34,8 @@ export default function WorkCulture({ className }: WorkCultureProps) {
             <TitleChip>Work Culture</TitleChip>
             <div className="grid grid-cols-2 items-center gap-20 **:text-balance font-medium max-lg:grid-cols-1 max-lg:gap-6">
               <Typography variant="h2" className="text-gradient">
-                Team That Works Wonders
+                {/* Team That Works Wonders */}
+                A culture where people thrive, ideas lead, and innovation grows—together.
               </Typography>
               <Typography className="text-primary-dark/60 text-balance">
                 {/* Our team represents us on every level and works with complete dedication to deliver the best
@@ -99,13 +100,13 @@ export default function WorkCulture({ className }: WorkCultureProps) {
             </Stack>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <StatCard icon={BillIcon} value="120+" description="Experts driving IDRMS forward" />
+            <StatCard icon={BillIcon} value="120+ Experts" description="Driving IDRMS forward" />
             <StatCard
               icon={DirectSendBoxIcon}
-              value="15+"
-              description="Countries our team proudly works from"
+              value="15+ Countries"
+              description="Our team proudly works from"
             />
-            <StatCard icon={CalenderIcon} value="30+" description="Clients we actively collaborate with " />
+            <StatCard icon={CalenderIcon} value="30+ Clients" description="We actively collaborate with " />
           </div>
         </Stack>
       </div>

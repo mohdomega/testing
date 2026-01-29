@@ -24,7 +24,9 @@ export default function Hero({ className }: HeroProps) {
         <Stack className=" gap-82.5 max-lg:gap-15 max-sm:gap-10">
           <Stack alignItems="center" className="gap-10">
             <Stack alignItems="center" className="gap-4 max-w-250 text-center">
-              <TitleChip dotClassName="bg-white" className='bg-white/10 text-white'>About us</TitleChip>
+              <TitleChip dotClassName="bg-white" className="bg-white/10 text-white">
+                About us
+              </TitleChip>
               <Typography variant="h1" className="text-white font-semibold max-lg:text-4xl max-sm:text-2xl">
                 Redefining Growth with Salesforce Expertise
               </Typography>
@@ -53,7 +55,20 @@ export default function Hero({ className }: HeroProps) {
               {/* TODO: Video */}
               {/* <div className="h-125 rounded-3xl bg-neutral-300 max-lg:aspect-video max-lg:h-auto" /> */}
               <div className="h-125 rounded-3xl bg-neutral-300 max-lg:aspect-video max-lg:h-auto relative overflow-hidden">
-                <Image src={AboutImg1} alt="about video img 1" className="w-full h-full object-cover" />
+                <video
+                  src="/video/About US.MP4"
+                  width="100%"
+                  height="100%"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  className="w-full h-full object-cover"
+                >
+                  <track kind="captions" />
+                </video>
               </div>
             </div>
           </div>

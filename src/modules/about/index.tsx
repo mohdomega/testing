@@ -2,7 +2,7 @@ import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
 import OurTrustedPeople from '../shared/OurTrustedPeople';
 import BoldAmbitions from './BoldAmbitions';
-import OurVision from './BoldAmbitions/OurVision';
+import OurMission from './BoldAmbitions/OurMission';
 import Hero from './Hero';
 import OurTeam from './OurTeam';
 import Rating from './Rating';
@@ -13,9 +13,9 @@ export default function About() {
     <div>
       <Hero />
       <OurTrustedPeople className="pt-80" />
-      <Rating />
+      {/* <Rating /> */}
       <BoldAmbitions />
-      <OurVision/>
+      <OurMission/>
       <WhyChooseUs />
       <OurTeam />
       <ContactUs />

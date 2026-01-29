@@ -24,7 +24,7 @@ export default function BoldAmbitions({ className }: BoldAmbitionsProps) {
         >
           <Stack alignItems="flex-start" className="flex-1 gap-8 max-lg:items-center max-lg:text-center">
             <Stack className=" gap-4 max-w-145 max-lg:items-center">
-              <TitleChip>Bold Ambitions</TitleChip>
+              <TitleChip>Vision</TitleChip>
               <Typography variant="h2" className="text-gradient">
                 Our Vision
               </Typography>
@@ -35,11 +35,11 @@ export default function BoldAmbitions({ className }: BoldAmbitionsProps) {
                 forefront of the industry.
               </Typography>
             </Stack>
-            <Button component={Link} href="/contact-us">
+            {/* <Button component={Link} href="/contact-us">
               Connect with us
-            </Button>
+            </Button> */}
           </Stack>
-          <div className="max-w-[450px] max-h-[616px] relative overflow-hidden flex-1 w-full aspect-square rounded-3xl bg-[#F2F0F7] max-lg:aspect-[4/3]">
+          <div className="max-w-[400px] max-h-[616px] relative overflow-hidden flex-1 w-full aspect-square rounded-3xl bg-[#F2F0F7] max-lg:aspect-[4/3]">
             <Image src={AboutImg5} alt="home video img 1" className="w-full h-full object-cover" />
           </div>
         </Stack>

@@ -316,7 +316,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
           </CarouselContent>
         </Carousel> */}
 
-        <div className="px-[24px] flex items-center justify-between gap-20">
+        <div className=" px-[150px] flex items-center justify-between gap-20">
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
               100%

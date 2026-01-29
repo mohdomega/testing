@@ -48,27 +48,30 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
             {subtitle}
           </Typography>
         </Stack>
+      </div>
+
+      <div className="w-full flex flex-col gap-6">
         <div className="w-full rounded-2xl bg-neutral-200 overflow-hidden max-lg:hidden">
           <Image src={img} alt={`${title}-img`} className="w-full h-60 object-cover" />
         </div>
+        <Stack direction="row" justifyContent="space-between" alignItems="center" className="w-full">
+          <Button
+            className="border border-black/10 max-lg:hidden"
+            onClick={() => setIsCaseStudyModalOpen(true)}
+          >
+            Case Study
+          </Button>
+          <Button
+            component={Link}
+            href={path}
+            variant="text"
+            endIcon={<ChevronRight className="size-6" />}
+            className="px-0 max-lg:p-0 max-sm:p-0"
+          >
+            Know more
+          </Button>
+        </Stack>
       </div>
-      <Stack direction="row" justifyContent="space-between" alignItems="center" className="w-full">
-        <Button
-          className="border border-black/10 max-lg:hidden"
-          onClick={() => setIsCaseStudyModalOpen(true)}
-        >
-          Case Study
-        </Button>
-        <Button
-          component={Link}
-          href={path}
-          variant="text"
-          endIcon={<ChevronRight className="size-6" />}
-          className="px-0 max-lg:p-0 max-sm:p-0"
-        >
-          Know more
-        </Button>
-      </Stack>
       <Icon className="size-54 text-[#E9E7EE] absolute -top-12 -right-12 max-lg:size-25 max-lg:-top-3 max-lg:-right-3" />
       <CaseStudyModal
         isOpen={isCaseStudyModalOpen}

@@ -34,7 +34,7 @@ export default function Job({
   const [isJDModalOpen, setIsJDModalOpen] = useState(false);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   return (
-    <Stack className={cn('gap-6 max-sm:gap-4 p-6 max-sm:p-4 bg-background rounded-3xl', className)}>
+    <Stack className={cn('flex flex-col justify-between gap-6 max-sm:gap-4 p-6 max-sm:p-4 bg-background rounded-3xl', className)}>
       <Stack className="gap-4 max-sm:gap-3">
         <Stack justifyContent="space-between" className="flex flex-col sm:flex-row gap-2 max-sm:gap-2">
           <div className="flex gap-2 flex-wrap">
@@ -70,42 +70,40 @@ export default function Job({
         </Stack>
       </Stack>
 
-      <div className=" flex justify-end">
-        <Stack
-          direction="row"
-          alignItems="center"
-          className=" gap-2 w-fit max-sm:w-full max-sm:justify-center px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-full border border-dashed border-primary-dark/60"
-        >
-          <LocationIcon className="size-4 max-sm:size-3" />
-          <Typography className="font-medium max-sm:text-sm">Bengaluru, India</Typography>
-        </Stack>
-      </div>
+      <div className="flex flex-col gap-6 max-sm:gap-4">
+        <div className=" flex justify-end">
+          <Stack
+            direction="row"
+            alignItems="center"
+            className=" gap-2 w-fit max-sm:w-full max-sm:justify-center px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-full border border-dashed border-primary-dark/60"
+          >
+            <LocationIcon className="size-4 max-sm:size-3" />
+            <Typography className="font-medium max-sm:text-sm">Bengaluru, India</Typography>
+          </Stack>
+        </div>
 
-      <Stack
-        direction="row"
-        justifyContent="space-between"
-        className="gap-4 max-lg:flex-col-reverse max-sm:gap-3"
-      >
         <Stack
           direction="row"
-          className=" w-full gap-2 max-sm:gap-2 max-sm:w-full max-sm:flex-col"
+          justifyContent="space-between"
+          className="gap-4 max-lg:flex-col-reverse max-sm:gap-3"
         >
-          <Button
-            endIcon={<ChevronRight className="size-4 max-sm:size-3" />}
-            onClick={() => setIsApplyModalOpen(true)}
-            className="flex-1 max-sm:w-full max-sm:justify-center"
-          >
-            Apply Now
-          </Button>
-          <Button
-            variant="contained"
-            className="whitespace-nowrap flex-1 max-sm:w-full max-sm:justify-center"
-            onClick={() => setIsJDModalOpen(true)}
-          >
-            Download JD
-          </Button>
-        </Stack>
-        {/* <Stack
+          <Stack direction="row" className=" w-full gap-2 max-sm:gap-2 max-sm:w-full max-sm:flex-col">
+            <Button
+              endIcon={<ChevronRight className="size-4 max-sm:size-3" />}
+              onClick={() => setIsApplyModalOpen(true)}
+              className="flex-1 max-sm:w-full max-sm:justify-center"
+            >
+              Apply Now
+            </Button>
+            <Button
+              variant="contained"
+              className="whitespace-nowrap flex-1 max-sm:w-full max-sm:justify-center"
+              onClick={() => setIsJDModalOpen(true)}
+            >
+              Download JD
+            </Button>
+          </Stack>
+          {/* <Stack
           direction="row"
           alignItems="center"
           className="gap-2 w-fit max-sm:w-full max-sm:justify-center px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-full border border-dashed border-primary-dark/60"
@@ -113,7 +111,8 @@ export default function Job({
           <LocationIcon className="size-4 max-sm:size-3" />
           <Typography className="font-medium max-sm:text-sm">Bengaluru, India</Typography>
         </Stack> */}
-      </Stack>
+        </Stack>
+      </div>
 
       <DownloadJDModal
         isOpen={isJDModalOpen}
