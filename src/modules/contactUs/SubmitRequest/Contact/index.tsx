@@ -13,6 +13,7 @@ import QuoteRequestForm from '@/modules/shared/ContactUs/QuoteRequestForm';
 
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
+import Link from 'next/link';
 
 const services = [
   { label: 'Sales Cloud', description: 'Manage your sales processes and customer relationships.' },
@@ -172,6 +173,16 @@ export default function Contact({ className }: ContactProps) {
               selectedDeliveryTime={delivery[currentIndex3]?.label || delivery[0].label}
               formType="request"
             />
+
+            <div className="mt-10 w-full flex justify-center items-center">
+              <Button
+                component={Link}
+                href="/contact-us/schedule-meeting"
+                className="w-fit max-sm:self-center max-sm:px-6"
+              >
+                Schedule a Meeting
+              </Button>
+            </div>
           </div>
         </Stack>
       </div>

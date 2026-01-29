@@ -3,10 +3,10 @@ import ServicePage from '@/modules/services/service-detail';
 export default function Page() {
   return (
     <ServicePage
-      title="Game Development"
-      heroDescription="Create immersive play worlds with our end-to-end game development solutions. We build engaging, high-performance games across platforms, from concept and design to development and launch."
-      serviceTitle="We help you get the most from Game Development"
-      serviceDescription="From game design to deployment, we make game development easier, faster, and more aligned with your vision. Our solutions help you create captivating experiences that players love."
+      title="Data Migration"
+      heroDescription="Securely transfer your critical data with our expert data migration services. We ensure zero data loss, minimal downtime, and complete integrity as you move to new platforms."
+      serviceTitle="We help you get the most from Data Migration"
+      serviceDescription="From planning to execution, we make data migration easier, safer, and more aligned with your business goals. We ensure your data is ready for action in your new environment."
     />
   );
 }

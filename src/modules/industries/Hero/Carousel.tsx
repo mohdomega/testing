@@ -12,8 +12,15 @@ import Img2 from '/public/images/IndustryImages/industry-image-2.png';
 import Img3 from '/public/images/IndustryImages/industry-image-3.jpg';
 import Img4 from '/public/images/IndustryImages/industry-image-4.png';
 import Img5 from '/public/images/IndustryImages/industry-image-5.png';
+import Energy from '/public/images/industry/energy.png';
+import Finanical from '/public/images/industry/Finanical.png';
+import Logistics from '/public/images/industry/Logistics.png';
+import Manufactoring from '/public/images/industry/Manufactoring.png';
+import RealEstate from '/public/images/industry/Real estate.png';
+import Healthcare from '/public/images/industry/healthcare image.png';
 
-const images = [Img1, Img2, Img3, Img4, Img5];
+// const images = [Img1, Img2, Img3, Img4, Img5];
+const images = [Energy, Finanical, Logistics, Manufactoring, RealEstate, Healthcare];
 
 // Card dimensions
 const CARD_WIDTH = 402;

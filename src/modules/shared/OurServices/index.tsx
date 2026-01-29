@@ -182,8 +182,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Mentor className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              CRM
+            <Typography variant="title" className="font-medium text-center">
+              Salesforce Implementation
             </Typography>
           </Stack>
           <Stack
@@ -196,8 +196,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Integration className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              Data Analytics & Al
+            <Typography variant="title" className="font-medium text-center">
+              Data Analytics & AI
             </Typography>
           </Stack>
           <Stack
@@ -210,8 +210,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Support className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              Staff Augmentation
+            <Typography variant="title" className="font-medium text-center">
+              Salesforce Managed Services
             </Typography>
           </Stack>
           <Stack
@@ -220,12 +220,13 @@ export default function OurServices({ className }: OurServicesProps) {
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
+            style={{ padding: '48px 10px' }}
           >
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Cloud className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              Cloud Strategy
+            <Typography variant="title" className="font-medium text-center">
+              Digital Transformation Consultation
             </Typography>
           </Stack>
           <Stack
@@ -238,8 +239,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <ERP className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              ERP
+            <Typography variant="title" className="font-medium text-center">
+              Integration Services
             </Typography>
           </Stack>
           <Stack
@@ -252,8 +253,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Mobile className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              App Development
+            <Typography variant="title" className="font-medium text-center">
+              Custom App Development
             </Typography>
           </Stack>
           <Stack
@@ -266,8 +267,8 @@ export default function OurServices({ className }: OurServicesProps) {
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <Game className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              Game Development
+            <Typography variant="title" className="font-medium text-center">
+              Data Migration
             </Typography>
           </Stack>
           <Stack
@@ -276,12 +277,13 @@ export default function OurServices({ className }: OurServicesProps) {
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
+            style={{ padding: '48px 10px' }}
           >
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
               <MagicPen className="size-8 text-primary-dark max-lg:size-6" />
             </div>
-            <Typography variant="title" className="font-medium">
-              UI/UX
+            <Typography variant="title" className="font-medium text-center">
+              Slack Implementation/Migration
             </Typography>
           </Stack>
         </div>

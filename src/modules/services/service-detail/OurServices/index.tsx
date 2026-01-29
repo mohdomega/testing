@@ -24,16 +24,78 @@ interface OurServicesProps {
 }
 
 const serviceItems = [
-  { icon: LeadGeneration, label: 'Lead Scoring' },
-  { icon: ARVRDevice, label: 'AR/VR Integration' },
-  { icon: Clustering, label: 'Cluster Analysis' },
-  { icon: CloudIcon, label: 'CI/CD Pipeline Setup' },
-  { icon: Payroll, label: 'HR & Payroll' },
-  { icon: LeadGeneration, label: 'Lead Scoring' },
-  { icon: ARVRDevice, label: 'AR/VR Integration' },
-  { icon: Clustering, label: 'Cluster Analysis' },
-  { icon: CloudIcon, label: 'CI/CD Pipeline Setup' },
-  { icon: Payroll, label: 'HR & Payroll' },
+  {
+    icon: LeadGeneration,
+    label: 'Sales Cloud',
+    description:
+      'Sales Cloud streamlines your entire sales process by automating tasks, managing leads, and providing real-time insights to drive better decisions.',
+  },
+  {
+    icon: Payroll,
+    label: 'Service Cloud',
+    description:
+      'Service Cloud helps you deliver outstanding customer support by automating workflows, providing 24/7 service across multiple channels.',
+  },
+  {
+    icon: Clustering,
+    label: 'Marketing Cloud',
+    description:
+      'Marketing Cloud empowers businesses to deliver personalized, data-driven marketing across every channel, from email and social media.',
+  },
+  {
+    icon: CloudIcon,
+    label: 'Commerce Cloud',
+    description:
+      'Commerce Cloud empowers your e-commerce business with a flexible, scalable platform designed to create personalized shopping experiences.',
+  },
+  {
+    icon: ARVRDevice,
+    label: 'Experience Cloud',
+    description:
+      'Experience Cloud enables you to create personalized digital experiences through branded portals, websites, and communities and more.',
+  },
+  {
+    icon: Payroll,
+    label: 'Financial Service Cloud',
+    description:
+      'Financial Services Cloud empowers financial institutions to enhance client relationships and streamline operations through a platform.',
+  },
+  {
+    icon: LeadGeneration,
+    label: 'Manufacturing Cloud',
+    description:
+      'Manufacturing Cloud is a specialized software solution tailored to meet the unique needs of all types manufacturing organizations.',
+  },
+  {
+    icon: CloudIcon,
+    label: 'Field Service Lightning',
+    description:
+      'Field Service Lightning (FSL) is a product offered by Salesforce that provides more advanced field service management capabilities.',
+  },
+  {
+    icon: Payroll,
+    label: 'CPQ',
+    description:
+      'CPQ Cloud refers to a Configure, Price, Quote (CPQ) solution delivered via the cloud. CPQ solutions streamline the sales process.',
+  },
+  {
+    icon: Clustering,
+    label: 'Pardot',
+    description:
+      'Pardot is a B2B marketing automation platform offered by Salesforce, designed to help businesses generate and nurture leads.',
+  },
+  {
+    icon: ARVRDevice,
+    label: 'Heroku',
+    description:
+      'Heroku is a platform-as-a-service (PaaS) offering that enables developers to build, run, and manage applications entirely in the cloud.',
+  },
+  {
+    icon: LeadGeneration,
+    label: 'Mulesoft',
+    description:
+      'Mulesoft is a platform specializing in integration and API management, enabling businesses to connect applications & data.',
+  },
 ];
 
 function CustomCarouselArrows() {
@@ -123,33 +185,24 @@ export default function OurServices({ title, description, className }: OurServic
 
         {/* Carousel Section */}
         <div className=" relative w-full">
-          {/* <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none max-lg:w-10" /> */}
-          {/* <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none max-lg:w-10" /> */}
-          <Carousel opts={{ ...{ loop: false, align: 'start', slidesToScroll: 1 } }} className="w-full ">
-            <CarouselContent className=" ml-0">
+          <Carousel opts={{ loop: false, align: 'start', slidesToScroll: 1 }} className="w-full ">
+            <CarouselContent className="-ml-6">
               {serviceItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <CarouselItem key={index} className="pl-0 basis-auto">
-                    <div className=" flex relative h-full gap-0">
-                      <Stack className=" gap-3 px-[0px] max-lg:px-[0px]" alignItems="center">
-                        <div className="min-h-[100px] min-w-[100px] w-auto h-full  rounded-full border-2 border-black/10 flex items-center justify-center">
-                          <Icon className="w-[48px] h-[48px] text-primary-dark max-lg:size-8" />
-                        </div>
-                        <Typography
-                          variant="body2"
-                          className="text-center font-medium text-primary-dark whitespace-nowrap"
-                          style={{
-                            fontSize: '24px',
-                            fontWeight: 500,
-                            lineHeight: '38px',
-                            letterSpacing: '0%',
-                          }}
-                        >
+                  <CarouselItem key={index} className="pl-6 basis-full md:basis-1/2 lg:basis-1/3">
+                    <div className="bg-white rounded-[32px] p-8 h-full border border-black/10 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300">
+                      <div className="w-fit h-fit p-2 rounded-2xl bg-primary-light/10 flex items-center justify-center text-primary-dark">
+                        <Icon className="w-12 h-12" />
+                      </div>
+                      <Stack className="gap-3">
+                        <Typography variant="h5" className="font-semibold text-primary-dark">
                           {item.label}
                         </Typography>
+                        <Typography variant="body2" className="text-neutral-600 leading-relaxed">
+                          {item.description}
+                        </Typography>
                       </Stack>
-                      <div className="my-[35px] mx-[60px] w-[1px] bg-black/10 " />
                     </div>
                   </CarouselItem>
                 );
