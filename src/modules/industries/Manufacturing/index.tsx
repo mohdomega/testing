@@ -9,7 +9,7 @@ import { cn } from '@/lib';
 
 import ArrowUp from '/public/icons/arrow-up.svg';
 import Bill from '/public/icons/bill.svg';
-import IndustryImg10 from '/public/images/IndustryImages/industry-image-10.png';
+import IndustryImg10 from '/public/images/IndustryImages/Manufactoring.png';
 
 interface HealthcareProps {
   className?: string;
