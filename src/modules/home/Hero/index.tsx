@@ -18,6 +18,11 @@ import SniffLogo from '/public/icons/sniff.svg';
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
 
+import Slack from '/public/images/Home/Slack.png';
+import AWS from '/public/images/Home/AWS.png';
+import Mulesoft from '/public/images/Home/Mulesoft.png';
+import Spiff from '/public/images/Home/Spiff.png';
+
 interface HeroProps {
   className?: string;
 }
@@ -76,12 +81,28 @@ export default function Hero({ className }: HeroProps) {
 
         <Rating className="max-lg:hidden" />
 
-        <Stack direction="row" justifyContent="space-between">
-          <SlackLogo className="size-26" />
-          <MicrosoftLogo className="size-26" />
-          <AWSLogo className="size-26" />
-          <SalesforceLogo className="size-26" />
-          <SniffLogo className="size-26" />
+        <Stack direction="row" className="" alignItems="center" justifyContent="space-between">
+          {/* <SlackLogo className="size-26" /> */}
+          {/* <MicrosoftLogo className="size-26" /> */}
+          {/* <AWSLogo className="size-26" /> */}
+          {/* <SalesforceLogo className="size-20 border border-red-500" /> */}
+          {/* <SniffLogo className="size-26" /> */}
+          {/* <Image src={Slack} alt="slack" className="" /> */}
+          <div className="w-[100px] h-[53px] relative overflow-hidden flex items-center justify-center">
+            <SalesforceLogo className="w-auto h-full max-w-full object-contain" />
+          </div>
+          <div className="w-[100px] h-[53px] relative overflow-hidden">
+            <Image src={Slack} alt="slack" className="w-full h-full object-contain" />
+          </div>
+          <div className="w-[100px] h-[53px] relative overflow-hidden">
+            <Image src={AWS} alt="aws" className="w-full h-full object-contain" />
+          </div>
+          <div className="w-[100px] h-[53px] relative overflow-hidden">
+            <Image src={Mulesoft} alt="mulesoft" className="w-full h-full object-contain" />
+          </div>
+          <div className="w-[100px] h-[53px] relative overflow-hidden">
+            <Image src={Spiff} alt="spiff" className="w-full h-full object-contain" />
+          </div>
         </Stack>
       </div>
     </Stack>

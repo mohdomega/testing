@@ -53,24 +53,25 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
           opts={{ loop: true, duration: 55 }}
           className="w-full"
         >
-          <CarouselContent className="gap-20">
+          <CarouselContent className="-ml-20">
             {CLIENT_LOGOS.map((logo) => (
-              <CarouselItem key={logo.id} className="basis-auto h-20 flex items-center justify-center">
+              <CarouselItem key={logo.id} className="basis-auto h-20 flex items-center justify-center pl-20">
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-full w-auto object-contain max-h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                  // className="h-full w-auto object-contain max-h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                  className="h-full w-auto object-contain max-h-16 transition-all duration-300"
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
-        <Carousel
+        {/* <Carousel
           plugins={[AutoScroll({ direction: 'forward', stopOnInteraction: false, stopOnMouseEnter: true })]}
           opts={{ loop: true, duration: 60 }}
           className="w-full"
         >
-          <CarouselContent className="gap-20 w-full">
+          <CarouselContent className="gap-20 w-full justify-between items-center">
             <CarouselItem className="basis-auto ml-20">
               <Stack alignItems="center" className="gap-2">
                 <Typography component="span" variant="h3" className="font-medium">
@@ -121,6 +122,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
                 </Typography>
               </Stack>
             </CarouselItem>
+
             <CarouselItem className="basis-auto">
               <Stack alignItems="center" className="gap-2">
                 <Typography component="span" variant="h3" className="font-medium">
@@ -312,7 +314,50 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
               </Stack>
             </CarouselItem>
           </CarouselContent>
-        </Carousel>
+        </Carousel> */}
+
+        <div className="px-[24px] flex items-center justify-between gap-20">
+          <Stack alignItems="center" className="gap-2">
+            <Typography component="span" variant="h3" className="font-medium">
+              100%
+            </Typography>
+            <Typography component="span" variant="title" className="font-medium">
+              Success Rate
+            </Typography>
+          </Stack>
+          <Stack alignItems="center" className="gap-2">
+            <Typography component="span" variant="h3" className="font-medium">
+              100%
+            </Typography>
+            <Typography component="span" variant="title" className="font-medium">
+              Success Rate
+            </Typography>
+          </Stack>
+          <Stack alignItems="center" className="gap-2">
+            <Typography component="span" variant="h3" className="font-medium">
+              100%
+            </Typography>
+            <Typography component="span" variant="title" className="font-medium">
+              Success Rate
+            </Typography>
+          </Stack>
+          <Stack alignItems="center" className="gap-2">
+            <Typography component="span" variant="h3" className="font-medium">
+              100%
+            </Typography>
+            <Typography component="span" variant="title" className="font-medium">
+              Success Rate
+            </Typography>
+          </Stack>
+          <Stack alignItems="center" className="gap-2">
+            <Typography component="span" variant="h3" className="font-medium">
+              100%
+            </Typography>
+            <Typography component="span" variant="title" className="font-medium">
+              Success Rate
+            </Typography>
+          </Stack>
+        </div>
       </Stack>
     </Stack>
   );

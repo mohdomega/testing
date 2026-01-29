@@ -27,7 +27,7 @@ export default function TestimonialCard({
   return (
     <div
       className={cn(
-        'relative bg-[#F7F7F7] rounded-2xl p-6 flex flex-col gap-12 w-full overflow-hidden h-full',
+        'relative bg-[#F7F7F7] rounded-2xl p-6 flex flex-col justify-between gap-12 w-full overflow-hidden h-full',
         className
       )}
     >
@@ -42,17 +42,19 @@ export default function TestimonialCard({
         <div className="absolute top-0 left-0 w-8 h-8 bg-red-800 rounded-bl-[24px]" />
       </div> */}
 
-      {/* Avatar */}
-      <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
-        <Image src={avatar} alt={name} className="w-full h-full object-cover" />
-      </div>
+      <div>
+        {/* Avatar */}
+        <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
+          <Image src={avatar} alt={name} className="w-full h-full object-cover" />
+        </div>
 
-      {/* Quote Icon and Text */}
-      <div className="flex flex-col gap-6">
-        <DoubleQuotes className="w-[26px] h-[24px]" />
-        <Typography variant="body" className="text-[24px] font-normal leading-relaxed text-[#131313]">
-          {quote}
-        </Typography>
+        {/* Quote Icon and Text */}
+        <div className="mt-12 flex flex-col gap-6">
+          <DoubleQuotes className="w-[26px] h-[24px]" />
+          <Typography variant="body" className="text-[24px] font-normal leading-relaxed text-[#131313]">
+            {quote}
+          </Typography>
+        </div>
       </div>
 
       {/* Name and Location */}

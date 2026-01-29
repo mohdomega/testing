@@ -92,15 +92,25 @@ export default function BlogContent({ blog }: BlogContentProps) {
               {section.paragraphs.map((paragraph, pIndex) => (
                 <div key={pIndex}>
                   {pIndex > 0 && <br />}
-                  <Typography
-                    className={
-                      pIndex === 0
-                        ? 'mt-3 text-md font-regular text-secondary'
-                        : 'text-md font-regular text-secondary'
-                    }
-                  >
-                    {paragraph}
-                  </Typography>
+                  {typeof paragraph === 'object' && paragraph.list ? (
+                    // <ul className="list-disc pl-10 space-y-2 mt-2">
+                    <ul className="list-disc pl-7 -mt-4">
+                      {paragraph.list.map((item: string, i: number) => (
+                        <li key={i}>
+                          <Typography className="text-md font-regular text-secondary">{item}</Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : typeof paragraph === 'string' && paragraph.startsWith('End Goal:') ? (
+                    <Typography className={cn('text-md font-regular text-secondary', pIndex === 0 && 'mt-3')}>
+                      <span className="font-bold block mb-1">End Goal:</span>
+                      {paragraph.replace('End Goal:', '').trim()}
+                    </Typography>
+                  ) : (
+                    <Typography className={cn('text-md font-regular text-secondary', pIndex === 0 && 'mt-3')}>
+                      {paragraph}
+                    </Typography>
+                  )}
                 </div>
               ))}
               {index === 1 && (
@@ -116,9 +126,9 @@ export default function BlogContent({ blog }: BlogContentProps) {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            className=" mt-4 max-sm:flex-col max-sm:gap-6 max-sm:items-start"
+            className=" mt-4 gap-3 max-sm:flex-col max-sm:gap-6 max-sm:items-start"
           >
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {blog.tags.map((tag, index) => (
                 <span
                   key={index}

@@ -29,24 +29,28 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
     <Stack
       alignItems="flex-start"
       className={cn(
-        'gap-6 relative p-6 rounded-3xl bg-white overflow-hidden max-lg:gap-4 max-lg:p-4',
+        'gap-6 relative p-6 rounded-3xl bg-white overflow-hidden justify-between max-lg:gap-4 max-lg:p-4',
         className
       )}
     >
-      <div className="p-6 rounded-full gradient-vertical max-lg:p-4">
-        <Icon className="size-8 text-white max-lg:size-6" />
-      </div>
-      {/* <Stack alignItems="flex-start" className="gap-2 w-min relative z-10 max-lg:w-full"> */}
-      <Stack alignItems="flex-start" className="gap-2 relative z-10 max-lg:w-full">
-        <Typography variant="h3" className="whitespace-nowrap text-2xl font-medium leading-[1]">
-          {title}
-        </Typography>
-        <Typography variant="body2" className="text-secondary">
-          {subtitle}
-        </Typography>
-      </Stack>
-      <div className="w-full rounded-2xl bg-neutral-200 overflow-hidden max-lg:hidden">
-        <Image src={img} alt={`${title}-img`} className="w-full h-60 object-cover" />
+      <div className="flex flex-col z-10 gap-6 max-lg:gap-4">
+        <div className="flex items-center gap-3 z-10">
+          <div className="p-6 rounded-full gradient-vertical max-lg:p-4">
+            <Icon className="size-8 text-white max-lg:size-6" />
+          </div>
+          <Typography variant="h3" className="whitespace-nowrap text-2xl font-medium leading-[1]">
+            {title}
+          </Typography>
+        </div>
+        {/* <Stack alignItems="flex-start" className="gap-2 w-min relative z-10 max-lg:w-full"> */}
+        <Stack alignItems="flex-start" className="gap-2 relative z-10 max-lg:w-full">
+          <Typography variant="body2" className="text-secondary">
+            {subtitle}
+          </Typography>
+        </Stack>
+        <div className="w-full rounded-2xl bg-neutral-200 overflow-hidden max-lg:hidden">
+          <Image src={img} alt={`${title}-img`} className="w-full h-60 object-cover" />
+        </div>
       </div>
       <Stack direction="row" justifyContent="space-between" alignItems="center" className="w-full">
         <Button

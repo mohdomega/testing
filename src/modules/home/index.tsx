@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <OurTrustedPeople />
       <OurOfferings />
+      <OurTrustedPeople />
       <Testimonials />
       <Empowering />
       <Video />
