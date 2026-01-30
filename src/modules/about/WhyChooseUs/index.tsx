@@ -12,6 +12,10 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import AboutImg6 from '../../../../public/images/AboutImages/about-image-6.png';
+import First from '/public/images/AboutImages/1.png';
+import Two from '/public/images/AboutImages/2.png';
+import Three from '/public/images/AboutImages/3.png';
+import Four from '/public/images/AboutImages/4.png';
 
 interface WhyChooseUsProps {
   className?: string;
@@ -155,7 +159,11 @@ export default function WhyChooseUs({ className }: WhyChooseUsProps) {
                 </Typography>
               </Stack>
               <div className="relative overflow-hidden flex-1 aspect-[4/3] bg-neutral-300 rounded-3xl">
-                <Image src={AboutImg6} alt="home video img 1" className="w-full h-full object-cover" />
+                <Image
+                  src={[First, Two, Three, Four][currentIndex]}
+                  alt="home video img 1"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </Stack>
           </div>

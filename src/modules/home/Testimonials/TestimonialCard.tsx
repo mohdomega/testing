@@ -32,7 +32,7 @@ export default function TestimonialCard({
       )}
     >
       {/* Company Logo - Top Right Corner with inverted border radius */}
-      <div className="absolute top-0 right-0 w-[140px] min-h-16 bg-white rounded-bl-[24px] rounded-tr-2xl flex items-center justify-center z-10">
+      <div className="absolute top-0 right-0 w-[140px] h-16 bg-white rounded-bl-[24px] rounded-tr-2xl flex items-center justify-center z-10 overflow-hidden p-2">
         <Image src={companyLogo} alt={company} className="object-contain w-full h-full" />
       </div>
 
@@ -59,9 +59,9 @@ export default function TestimonialCard({
 
       {/* Name and Location */}
       <div className="flex flex-col gap-1">
-        <Typography variant="title" className="text-[18px] text-[#131313] font-semibold">
+        {/* <Typography variant="title" className="text-[18px] text-[#131313] font-semibold">
           {name}
-        </Typography>
+        </Typography> */}
         <Typography variant="body2" className="text-[16px] text-[#5A5A59] font-normal">
           {location}
         </Typography>

@@ -34,8 +34,8 @@ export default function CaseStudy({ className }: CaseStudyProps) {
             <Study
               image={HomeVideoImg1}
               step={1}
-              title="Rebate management"
-              description="Boost efficiency and savings with smart rebates and automation"
+              title="Customer Service & CX Transformation"
+              description="Improve CSAT, reduce handling time, and increase conversions with AI-driven Salesforce Service Cloud solutions by IDRMS."
               highlightedFeatures={
                 <div className="w-full p-5 bg-white/10 rounded-3xl">
                   <Stack className="gap-4">
@@ -64,8 +64,8 @@ export default function CaseStudy({ className }: CaseStudyProps) {
             <Study
               image={HomeVideoImg2}
               step={2}
-              title="Salesforce marketing cloud"
-              description="Boost efficiency and savings with smart rebates and automation"
+              title="Manufacturing Sales & Forecasting Transformation"
+              description="Drive faster sales cycles, accurate forecasting, and connected manufacturing operations with Salesforce Manufacturing Cloud."
               highlightedFeatures={
                 <div className="relative w-full p-6 pb-12.5 bg-white/10 rounded-2xl overflow-hidden">
                   <Stack className="gap-4 w-fit p-4 border border-dashed border-white/20 rounded-2xl">
@@ -131,8 +131,8 @@ export default function CaseStudy({ className }: CaseStudyProps) {
             <Study
               image={HomeVideoImg3}
               step={3}
-              title="Financial system cloud"
-              description="Boost efficiency and savings with smart rebates and automation"
+              title="REBATE MANAGEMENT – CHANNEL & PARTNER AUTOMATION"
+              description="Automate rebate programs, improve accuracy, and accelerate partner payments using Salesforce-powered rebate management solutions."
               highlightedFeatures={
                 <Stack
                   divider={<div className="border-t border-dashed border-white" />}
@@ -155,8 +155,8 @@ export default function CaseStudy({ className }: CaseStudyProps) {
             <Study
               image={HomeVideoImg4}
               step={4}
-              title="Automating Account Searches"
-              description="Boost efficiency and savings with smart rebates and automation"
+              title="MULESOFT – SALESFORCE INTEGRATION AUTOMATION"
+              description="Automate data flows, reduce manual effort, and improve accuracy with MuleSoft-powered Salesforce integrations."
               highlightedFeatures={
                 <Stack direction="row" className="gap-4 max-sm:flex-col">
                   <Stack
