@@ -38,7 +38,7 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Mentor}
             img={Img1}
             title="Consultation Services"
-            path="/services/crm"
+            path="/services/digital-transformation-consultation"
             // subtitle="End-to-end strategy aligned with Salesforce best practices"
             subtitle="We help you define the right Salesforce strategy by aligning technology with your business goals. Our consultants assess your current landscape and create clear, outcome-driven roadmaps that reduce risk and improve adoption."
           />
@@ -46,24 +46,26 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Integration}
             img={Img2}
             title="Implementation & Integration"
-            path="/services/data-analytics-ai"
+            path="/services/integration-services"
             // subtitle="Boost Salesforce ROI with seamless integration and clean data"
-            subtitle='We design, build, and integrate Salesforce solutions tailored to your business processes. From configuration to complex integrations, we ensure a smooth rollout that scales with your growth.' />
+            subtitle="We design, build, and integrate Salesforce solutions tailored to your business processes. From configuration to complex integrations, we ensure a smooth rollout that scales with your growth."
+          />
           <Card
             icon={Support}
             img={Img3}
             title="Support & Maintenance"
-            path="/services/cloud-strategy"
+            path="/services/salesforce-managed-services"
             // subtitle="Tailored support using latest tools to optimize Salesforce"
-            subtitle='We keep your Salesforce platform secure, optimized, and up to date with proactive support and ongoing enhancements. Our flexible support models help you maximize value without increasing operational overhead.'
+            subtitle="We keep your Salesforce platform secure, optimized, and up to date with proactive support and ongoing enhancements. Our flexible support models help you maximize value without increasing operational overhead."
           />
           <Card
             icon={Team}
             img={Img4}
             title="Staff Augmentation"
-            path="/services/staff-augmentation"
+            path="/services/salesforce-managed-services"
             // subtitle="Scalable Salesforce talent to fast-track your goals"
-            subtitle='Scale your team quickly with certified Salesforce professionals who integrate seamlessly with your internal teams. Our flexible staffing models give you the expertise you need—when you need it.' />
+            subtitle="Scale your team quickly with certified Salesforce professionals who integrate seamlessly with your internal teams. Our flexible staffing models give you the expertise you need—when you need it."
+          />
         </div>
         <Stack alignItems="center">
           {/* <Button component={Link} href="/offerings" color="gradient"> */}

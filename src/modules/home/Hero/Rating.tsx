@@ -7,6 +7,7 @@ import { cn } from '@/lib';
 import ProfileIcon1 from '/public/images/profile-icon-1.png';
 import ProfileIcon2 from '/public/images/profile-icon-2.png';
 import ProfileIcon3 from '/public/images/profile-icon-3.png';
+import SalesforceRidgePartnerLogo from '/public/images/Home/Salesforce RIdge Partner Logo.jpeg';
 
 interface RatingProps {
   className?: string;
@@ -34,10 +35,14 @@ export default function Rating({ className }: RatingProps) {
           className="gap-2 text-white font-medium"
         >
           <Typography variant="body2">4.9</Typography>
-          <Typography variant="body2">2.4M users</Typography>
+          <Typography variant="body2">50k+ users</Typography>
         </Stack>
-        <Typography className="text-white/60">120+ Projects delivered</Typography>
+        <Typography className="text-white/60">60+ Projects delivered</Typography>
       </Stack>
+
+      <div className="rounded-md w-[65px] h-[65px] relative overflow-hidden">
+        <Image src={SalesforceRidgePartnerLogo} alt="SalesforceRidgePartnerLogo" className="w-full h-full object-cover" />
+      </div>
     </Stack>
   );
 }

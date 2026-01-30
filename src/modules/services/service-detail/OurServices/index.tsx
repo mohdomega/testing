@@ -1,5 +1,5 @@
 'use client';
-
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 import { Carousel, CarouselContent, CarouselItem, useCarousel } from '@/components/Carousel';
@@ -134,6 +134,7 @@ function CustomCarouselArrows() {
 }
 
 export default function OurServices({ title, description, className }: OurServicesProps) {
+  const pathname = usePathname();
   return (
     <Stack
       component="section"
@@ -184,35 +185,65 @@ export default function OurServices({ title, description, className }: OurServic
         </div>
 
         {/* Carousel Section */}
-        <div className=" relative w-full">
-          <Carousel opts={{ loop: false, align: 'start', slidesToScroll: 1 }} className="w-full ">
-            <CarouselContent className="-ml-6">
-              {serviceItems.map((item, index) => {
+        {pathname.includes('salesforce-implementation') && (
+          <div className="relative w-full">
+            <Carousel opts={{ loop: false, align: 'start', slidesToScroll: 1 }} className="w-full">
+              <CarouselContent className="-ml-6">
+                {serviceItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <CarouselItem key={index} className="pl-6 basis-full md:basis-1/2 lg:basis-1/3">
+                      <div className="bg-white rounded-[32px] p-8 h-full border border-black/10 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex flex-row items-center gap-4">
+                          <div className="w-fit h-fit p-2 rounded-2xl bg-primary-light/10 flex items-center justify-center text-primary-dark">
+                            <Icon className="w-12 h-12" />
+                          </div>
+                          <Typography variant="h5" className="font-semibold text-primary-dark text-[22px]">
+                            {item.label}
+                          </Typography>
+                        </div>
+                        <Typography variant="body2" className="text-neutral-600 leading-relaxed text-left">
+                          {item.description}
+                        </Typography>
+                      </div>
+                    </CarouselItem>
+                  );
+                })}
+              </CarouselContent>
+              <div className="flex justify-center items-center gap-4 mt-[20px]">
+                <CustomCarouselArrows />
+              </div>
+            </Carousel>
+          </div>
+        )}
+
+        {pathname.includes('data-analytics-and-ai') && (
+          <div className="relative w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {serviceItems.slice(0, 3).map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <CarouselItem key={index} className="pl-6 basis-full md:basis-1/2 lg:basis-1/3">
-                    <div className="bg-white rounded-[32px] p-8 h-full border border-black/10 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300">
+                  <div
+                    key={index}
+                    className="bg-white rounded-[32px] p-8 h-full border border-black/10 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div className="flex flex-row items-center gap-4">
                       <div className="w-fit h-fit p-2 rounded-2xl bg-primary-light/10 flex items-center justify-center text-primary-dark">
                         <Icon className="w-12 h-12" />
                       </div>
-                      <Stack className="gap-3">
-                        <Typography variant="h5" className="font-semibold text-primary-dark">
-                          {item.label}
-                        </Typography>
-                        <Typography variant="body2" className="text-neutral-600 leading-relaxed">
-                          {item.description}
-                        </Typography>
-                      </Stack>
+                      <Typography variant="h5" className="font-semibold text-primary-dark text-[22px]">
+                        {item.label}
+                      </Typography>
                     </div>
-                  </CarouselItem>
+                    <Typography variant="body2" className="text-neutral-600 leading-relaxed text-left">
+                      {item.description}
+                    </Typography>
+                  </div>
                 );
               })}
-            </CarouselContent>
-            <div className="flex justify-center items-center gap-4 mt-[20px]">
-              <CustomCarouselArrows />
             </div>
-          </Carousel>
-        </div>
+          </div>
+        )}
       </div>
     </Stack>
   );

@@ -31,7 +31,7 @@ export default function Testimonials({ className }: TestimonialsProps) {
             <Typography variant="h2" className="text-gradient m-0 p-0 ">
               Share Your Story Today!
             </Typography>
-            <Typography variant="body" className="text-gray-600 max-w-2xl  m-0 p-0">
+            <Typography variant="body" className="text-[#5A5A59] text-md text-normal max-w-2xl  m-0 p-0">
               Our partners say it best — discover how we&apos;ve helped ambitious brands scale smarter, move
               faster, and lead with impact.
             </Typography>

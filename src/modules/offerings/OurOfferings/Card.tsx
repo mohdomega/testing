@@ -48,12 +48,12 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
         <Image src={img} alt={`${title} img`} className="w-full h-60 object-cover" />
       </div>
       <Stack direction="row" justifyContent="space-between" alignItems="center" className="w-full">
-        <Button
+        {/* <Button
           className="border border-black/10 max-lg:hidden"
           onClick={() => setIsCaseStudyModalOpen(true)}
         >
           Case Study
-        </Button>
+        </Button> */}
         <Button
           component={Link}
           href={path}

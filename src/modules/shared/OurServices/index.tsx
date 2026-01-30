@@ -174,7 +174,7 @@ export default function OurServices({ className }: OurServicesProps) {
         <div className="grid grid-cols-4 border border-black/15 max-sm:grid-cols-2">
           <Stack
             component={Link}
-            href="/services/crm"
+            href="/services/salesforce-implementation"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -188,7 +188,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/data-analytics-ai"
+            href="/services/data-analytics-and-ai"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -202,7 +202,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/staff-augmentation"
+            href="/services/salesforce-managed-services"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -216,7 +216,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/cloud-strategy"
+            href="/services/digital-transformation-consultation"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -231,7 +231,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/erp"
+            href="/services/integration-services"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -245,7 +245,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/app-development"
+            href="/services/custom-app-development"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -259,7 +259,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/game-development"
+            href="/services/data-migration"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -273,7 +273,7 @@ export default function OurServices({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="/services/ui-ux"
+            href="/services/slack-implementation-migration"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"

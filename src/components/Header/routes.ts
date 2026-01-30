@@ -22,14 +22,14 @@ export const routes = [
     path: '/services',
     // path: '/offerings',
     children: [
-      { name: 'Salesforce Implementation', path: '/services/crm' },
-      { name: 'Digital Transformation Consultation', path: '/services/cloud-strategy' },
-      { name: 'Salesforce Managed Services', path: '/services/staff-augmentation' },
-      { name: 'Integration Services', path: '/services/erp' },
-      { name: 'Data Analytics AI', path: '/services/data-analytics-ai' },
-      { name: 'Custom App Development', path: '/services/app-development' },
-      { name: 'Data Migration', path: '/services/game-development' },
-      { name: 'Slack Implementation/Migration', path: '/services/ui-ux' },
+      { name: 'Salesforce Implementation', path: '/services/salesforce-implementation' },
+      { name: 'Digital Transformation Consultation', path: '/services/digital-transformation-consultation' },
+      { name: 'Salesforce Managed Services', path: '/services/salesforce-managed-services' },
+      { name: 'Integration Services', path: '/services/integration-services' },
+      { name: 'Data Analytics & AI', path: '/services/data-analytics-and-ai' },
+      { name: 'Custom App Development', path: '/services/custom-app-development' },
+      { name: 'Data Migration', path: '/services/data-migration' },
+      { name: 'Slack Implementation/Migration', path: '/services/slack-implementation-migration' },
     ],
   },
   {
@@ -42,6 +42,7 @@ export const routes = [
     children: [
       { name: 'About IDRMS', path: '/about' },
       { name: 'Careers', path: '/careers' },
+      { name: 'Work Culture', path: '/careers#work-culture' },
     ],
   },
   // {

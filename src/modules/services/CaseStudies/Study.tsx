@@ -3,24 +3,26 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
-import CaseStudyModal from '@/modules/shared/CaseStudyModal';
+// import CaseStudyModal from '@/modules/shared/CaseStudyModal'; // Removed modal
 
 import ArrowUpRight from '/public/icons/arrow-top-right.svg';
 
 interface StudyProps {
+  id: string;
   title: string;
   image?: string | any;
   description: string;
   className?: string;
 }
 
-export default function Study({ title, description, image, className }: StudyProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export default function Study({ id, title, description, image, className }: StudyProps) {
+  // const [isModalOpen, setIsModalOpen] = useState(false); // Removed modal state
 
   return (
     <>
@@ -40,17 +42,20 @@ export default function Study({ title, description, image, className }: StudyPro
             </Typography>
           </Stack>
           <Button
+            component={Link}
+            href={`/case-studies/${id}`}
             variant="text"
-            endIcon={<ArrowUpRight className="transition-all 0.5s ease-in-out hover:size-7 size-5" />}
-            className=" p-0 whitespace-nowrap max-sm:p-0 flex-shrink-0"
-            onClick={() => setIsModalOpen(true)}
+            endIcon={
+              <ArrowUpRight className="transition-transform duration-500 ease-in-out size-5 group-hover:scale-125 group-hover:-translate-y-1 group-hover:translate-x-1" />
+            }
+            className="group p-0 whitespace-nowrap max-sm:p-0 flex-shrink-0"
           >
             {/* Learn More */}
           </Button>
         </Stack>
       </Stack>
 
-      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} studyTitle={title} />
+      {/* <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} studyTitle={title} /> */}
     </>
   );
 }

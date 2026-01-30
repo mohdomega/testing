@@ -37,11 +37,13 @@ export default function CaseStudies({ className }: CaseStudiesProps) {
           <div className="relative w-full">
             <Carousel opts={{ loop: true, align: 'start', slidesToScroll: 1 }} className="w-full">
               <CarouselContent className="gap-0 h-full">
-                {repeatedCaseStudies.map(({ image, title, description }, index) => (
+                {repeatedCaseStudies.map(({ id, image, title, description }, index) => (
                   <CarouselItem key={`${title}-${index}`} className="basis-auto h-full flex">
                     <div className="h-full pr-10 max-lg:pr-5 flex">
                       <Study
                         className="bg-white h-full flex flex-col max-w-[280px] min-h-[404px]"
+                        key={`${id}-${index}`}
+                        id={id}
                         title={title}
                         description={description}
                         image={image}

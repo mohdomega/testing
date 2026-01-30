@@ -19,7 +19,7 @@ import SaintGobin from '/public/images/HomePageClients/Saint Gobin.png';
 
 export const testimonials = [
   {
-    name: 'Anika Sharma',
+    name: 'Aniket Sharma',
     // location: 'Mumbai, India',
     location: 'Chief Revenue Officer',
     company: 'Elastic',
@@ -37,22 +37,22 @@ export const testimonials = [
     quote:
       'What stood out about IDRMS was their ability to understand our business before touching the technology. The Salesforce solution they designed is scalable, intuitive, and clearly built for long-term growth.',
   },
-  {
+   {
     name: 'Amit Rao',
-    location: 'Director of Operations',
-    company: 'Slack',
-    companyLogo: Ekinkare,
-    avatar: Image3,
-    quote: 'With IDRMS’s Salesforce implementation, we reduced manual effort by over 30% and gained real-time visibility across our sales pipeline and service operations.',
-  },
-  {
-    name: 'Anika Sharma',
     location: 'Vice President – Digital Transformation',
     company: 'Elastic',
     companyLogo: Oasis,
     avatar: Image1,
     quote:
       'IDRMS didn’t just implement Salesforce for us — they became a trusted advisor. From discovery to go-live, the team was proactive, transparent, and focused on outcomes.',
+  },
+  {
+    name: 'Anika Sharma',
+    location: 'Director of Operations',
+    company: 'Slack',
+    companyLogo: Ekinkare,
+    avatar: Image3,
+    quote: 'With IDRMS’s Salesforce implementation, we reduced manual effort by over 30% and gained real-time visibility across our sales pipeline and service operations.',
   },
   {
     name: 'Marissa Lim',
@@ -64,7 +64,7 @@ export const testimonials = [
       'Their Salesforce expertise significantly improved our service response times and agent productivity. The solution was well-architected, cleanly integrated, and delivered exactly as promised.',
   },
   {
-    name: 'Amit Rao',
+    name: 'Linda',
     location: 'Chief Information Officer',
     company: 'Slack',
     companyLogo: GameADzone,
@@ -72,7 +72,7 @@ export const testimonials = [
     quote: 'IDRMS played a critical role in modernizing our Salesforce ecosystem. The integration work was seamless, and the platform now supports both our current needs and future expansion.',
   },
   {
-    name: 'Amit Rao',
+    name: 'Julia Roberts',
     location: 'Chief Operating Officer',
     company: 'Slack',
     companyLogo: OsevenExports,
@@ -80,7 +80,7 @@ export const testimonials = [
     quote: 'We saw measurable improvements within weeks of go-live. Sales forecasting accuracy improved, service escalations dropped, and leadership finally had a unified view of customer data.',
   },
   {
-    name: 'Anika Sharma',
+    name: 'Aarav Kumar',
     location: 'Director of Enterprise Applications',
     company: 'Elastic',
     companyLogo: Rudminds,
@@ -98,7 +98,7 @@ export const testimonials = [
       'What impressed us most was IDRMS’s commitment beyond implementation. Their ongoing Salesforce support and optimization continue to deliver value as our business evolves.',
   },
   {
-    name: 'Amit Rao',
+    name: 'Lucy',
     location: 'Director of Information',
     company: 'Slack',
     companyLogo: Noble,

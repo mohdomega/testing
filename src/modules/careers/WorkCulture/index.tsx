@@ -27,7 +27,7 @@ interface WorkCultureProps {
 
 export default function WorkCulture({ className }: WorkCultureProps) {
   return (
-    <Stack component="section" className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}>
+    <Stack id="work-culture" component="section" className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}>
       <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10">
         <Stack className="gap-15">
           <Stack className="gap-1 max-lg:items-center max-lg:text-center">
@@ -81,7 +81,7 @@ export default function WorkCulture({ className }: WorkCultureProps) {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-20 max-lg:grid-cols-1 max-lg:gap-6 max-lg:text-center">
-            <Typography variant="h2" className="text-gradient text-balance w-fit">
+            <Typography variant="h2" className="text-[72px] text-gradient text-balance w-fit">
               We Build This On a Culture
             </Typography>
             <Stack className="gap-5 font-medium text-primary-dark/60">
@@ -100,10 +100,10 @@ export default function WorkCulture({ className }: WorkCultureProps) {
             </Stack>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <StatCard icon={BillIcon} value="120+ Experts" description="Driving IDRMS forward" />
+            <StatCard icon={BillIcon} value="50+ Experts" description="Driving IDRMS forward" />
             <StatCard
               icon={DirectSendBoxIcon}
-              value="15+ Countries"
+              value="3+ Countries"
               description="Our team proudly works from"
             />
             <StatCard icon={CalenderIcon} value="30+ Clients" description="We actively collaborate with " />

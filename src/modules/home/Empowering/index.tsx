@@ -5,6 +5,14 @@ import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import Image from 'next/image';
+
+import Img1 from '/public/images/offering-hero-img-1.png';
+import Img2 from '/public/images/offering-hero-img-2.png';
+import Img3 from '/public/images/offering-hero-img-3.jpg';
+import Img4 from '/public/images/offering-hero-img-4.png';
+import Img5 from '/public/images/offering-hero-img-5.jpg';
+import Img6 from '/public/images/offering-hero-img-6.png';
 
 interface EmpoweringProps {
   className?: string;
@@ -20,7 +28,7 @@ const chips = [
 
 export default function Empowering({ className }: EmpoweringProps) {
   return (
-    <div className={cn('pb-52.5 max-lg:pb-27', className)}>
+    <div className={cn('relative pb-52.5 max-lg:pb-27', className)}>
       <Stack
         component="section"
         alignItems="center"
@@ -65,6 +73,41 @@ export default function Empowering({ className }: EmpoweringProps) {
           Read More
         </Button>
       </Stack>
+
+      <div className="max-w-[1440px] w-full mx-auto absolute inset-0 pointer-events-none max-lg:hidden">
+        <div className="h-[85%] relative  *:pointer-events-auto">
+          <Image
+            src={Img1}
+            alt=""
+            className="absolute top-1/20 left-1/6 -rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+          />
+          <Image
+            src={Img2}
+            alt=""
+            className="absolute top-1/20 right-1/6 rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+          />
+          <Image
+            src={Img3}
+            alt=""
+            className="absolute top-1/2 left-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
+          />
+          <Image
+            src={Img4}
+            alt=""
+            className="absolute top-1/2 right-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
+          />
+          <Image
+            src={Img5}
+            alt=""
+            className="absolute top-3/4 left-1/5 rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+          />
+          <Image
+            src={Img6}
+            alt=""
+            className="absolute top-3/4 right-1/5 -rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+          />
+        </div>
+      </div>
     </div>
   );
 }

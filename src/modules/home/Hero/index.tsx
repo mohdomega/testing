@@ -88,19 +88,19 @@ export default function Hero({ className }: HeroProps) {
           {/* <SalesforceLogo className="size-20 border border-red-500" /> */}
           {/* <SniffLogo className="size-26" /> */}
           {/* <Image src={Slack} alt="slack" className="" /> */}
-          <div className="w-[100px] h-[53px] relative overflow-hidden flex items-center justify-center">
+          <div className="w-[140px] h-[70px] relative overflow-hidden flex items-center justify-center">
             <SalesforceLogo className="w-auto h-full max-w-full object-contain" />
           </div>
-          <div className="w-[100px] h-[53px] relative overflow-hidden">
+          <div className="w-[140px] h-[70px] relative overflow-hidden">
             <Image src={Slack} alt="slack" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[100px] h-[53px] relative overflow-hidden">
+          <div className="w-[140px] h-[50px] relative overflow-hidden">
             <Image src={AWS} alt="aws" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[100px] h-[53px] relative overflow-hidden">
+          <div className="w-[140px] h-[70px] relative overflow-hidden">
             <Image src={Mulesoft} alt="mulesoft" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[100px] h-[53px] relative overflow-hidden">
+          <div className="w-[140px] h-[70px] relative overflow-hidden">
             <Image src={Spiff} alt="spiff" className="w-full h-full object-contain" />
           </div>
         </Stack>

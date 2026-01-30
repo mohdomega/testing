@@ -5,6 +5,7 @@ import ContactUs from '../shared/ContactUs';
 import OurServices from '../shared/OurServices';
 import Hero from './Hero';
 import OurOfferings from './OurOfferings';
+import OurOfferingInfinityCard from './ServicesCardInfinity';
 
 export default function Offerings() {
   return (
@@ -12,6 +13,7 @@ export default function Offerings() {
       <Hero />
       <OurServices />
       {/* <OurIndustries /> */}
+      <OurOfferingInfinityCard/>
       <OurOfferings />
       <CaseStudies />
       <BlazeNewTrails />
