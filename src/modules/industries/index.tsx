@@ -32,7 +32,7 @@ export default function Industries() {
       <RebateManagement />
       <NonProfit />
       <Hospitality />
-      <MuleSoft />
+      {/* <MuleSoft /> */}
     </div>
   );
 }
