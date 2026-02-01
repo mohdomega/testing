@@ -37,7 +37,7 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
         </Stack>
         <div className="w-full grid grid-cols-2 gap-10 max-sm:grid-cols-1 max-lg:gap-x-4 max-lg:gap-y-6">
           {offerings.map(({ icon, image, title, subtitle, path }) => (
-            <Card key={title} icon={icon} img={Img1} title={title} subtitle={subtitle} path={path} />
+            <Card key={title} icon={icon} img={image} title={title} subtitle={subtitle} path={path} />
           ))}
         </div>
         {/* <Button component={Link} href="/services" color="gradient">

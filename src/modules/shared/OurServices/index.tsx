@@ -150,13 +150,13 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import SalesforceImplementationLogo from '/public/images/serviceLogos/Salesforce Implementation.png';
-import DataAnalyticsLogo from '/public/images/serviceLogos/Data Analytics & AI.png';
+import DataAnalyticsLogo from '/public/images/serviceLogos/Data Analytics AI.png';
 import ManagedServicesLogo from '/public/images/serviceLogos/Salesforce Managed Services.png';
 import DigitalTransformationLogo from '/public/images/serviceLogos/Digital Transformation Consultation.png';
 import IntegrationServicesLogo from '/public/images/serviceLogos/Integration Services.png';
 import CustomAppLogo from '/public/images/serviceLogos/Custom App Development.png';
 import DataMigrationLogo from '/public/images/serviceLogos/Data Migration.png';
-import SlackLogo from '/public/images/serviceLogos/Slack ImplementationMigration.png';
+import SlackLogo from '/public/images/serviceLogos/Slack Implementation Migration.png';
 
 interface OurServicesProps {
   className?: string;
