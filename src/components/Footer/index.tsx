@@ -13,6 +13,10 @@ import Logo from '/public/icons/main-logo.svg';
 import IndiaFlag from '/public/images/india-flag.png';
 import USFlag from '/public/images/us-flag.jpg';
 
+
+import SalesforceRidgePartnerLogo from '/public/images/Home/Salesforce RIdge Partner Logo.jpeg';
+
+
 interface FooterProps {
   className?: string;
 }
@@ -56,6 +60,9 @@ export default function Footer({ className }: FooterProps) {
                   Follow us at
                 </Typography>
                 <Stack direction="row" className="gap-4">
+                  <div className="rounded-md w-[50px] h-[50px] relative overflow-hidden">
+                    <Image src={SalesforceRidgePartnerLogo} alt="SalesforceRidgePartnerLogo" className="w-full h-full object-cover" />
+                  </div>
                   {socialMedia.map(({ icon: Icon, label, link }) => (
                     <Stack
                       key={label}

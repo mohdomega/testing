@@ -61,11 +61,13 @@ export const blogPosts: BlogPost[] = [
           paragraphs: [
             'A successful Salesforce data migration begins with a detailed assessment of existing systems. This includes identifying all data sources, understanding ownership, and evaluating data relevance. Not all legacy data deserves to be migrated. Businesses that archive or eliminate redundant data before migration reduce post-go-live issues by nearly 40%.',
             'This phase typically involves',
-            {list: [
-              'Data audits and profiling',
-              'Identifying duplicates and obsolete records',
-              'Defining data ownership and governance rules',
-            ]},
+            {
+              list: [
+                'Data audits and profiling',
+                'Identifying duplicates and obsolete records',
+                'Defining data ownership and governance rules',
+              ]
+            },
           ],
         },
         {
@@ -113,13 +115,15 @@ export const blogPosts: BlogPost[] = [
           title: 'Top Salesforce Automation Strategies That Deliver ROI',
           paragraphs: [
             'Key automation strategies include:',
-            {list: [
-              'Automated Lead Assignment & Routing to reduce response time',
-              'Opportunity Stage Automation for consistent pipeline management',
-              'Guided Selling with Salesforce Paths',
-              'Approval Automation for Discounts & Quotes',
-              'AI-Powered Forecasting using Einstein Analytics',
-            ]},
+            {
+              list: [
+                'Automated Lead Assignment & Routing to reduce response time',
+                'Opportunity Stage Automation for consistent pipeline management',
+                'Guided Selling with Salesforce Paths',
+                'Approval Automation for Discounts & Quotes',
+                'AI-Powered Forecasting using Einstein Analytics',
+              ]
+            },
             'Organizations implementing these strategies see 20–40% faster sales cycles and improved win rates.',
           ],
         },
@@ -161,13 +165,15 @@ export const blogPosts: BlogPost[] = [
           title: 'Common Salesforce Security Risks Organizations Overlook',
           paragraphs: [
             'Many Salesforce security issues are not caused by platform limitations but by poor governance and configuration. Common risks include:',
-            {list: [
-              'Over-permissioned users and shared login access',
-              'Lack of field-level security on sensitive data',
-              'Unmonitored integrations and API access',
-              'Inconsistent role hierarchy design',
-              'No audit trail or event monitoring',
-            ]},
+            {
+              list: [
+                'Over-permissioned users and shared login access',
+                'Lack of field-level security on sensitive data',
+                'Unmonitored integrations and API access',
+                'Inconsistent role hierarchy design',
+                'No audit trail or event monitoring',
+              ]
+            },
             'These gaps often emerge as Salesforce environments scale rapidly without a long-term governance strategy.',
           ],
         },
@@ -176,12 +182,14 @@ export const blogPosts: BlogPost[] = [
           paragraphs: [
             'A strong Salesforce security posture starts with role-based access control and least-privilege principles. This ensures users only see and modify data relevant to their role. Field-level security, record-level sharing rules, and permission set governance prevent accidental data exposure.',
             'Additional best practices include:',
-            {list: [
-              'Enforcing Multi-Factor Authentication (MFA)',
-              'Encrypting sensitive data at rest and in transit',
-              'Using Salesforce Shield for audit trails and event monitoring',
-              'Conducting regular Salesforce Health Checks',
-            ]},
+            {
+              list: [
+                'Enforcing Multi-Factor Authentication (MFA)',
+                'Encrypting sensitive data at rest and in transit',
+                'Using Salesforce Shield for audit trails and event monitoring',
+                'Conducting regular Salesforce Health Checks',
+              ]
+            },
             'Organizations that adopt these practices reduce compliance risks by up to 45-50% within the first year.',
           ],
         },
@@ -190,11 +198,13 @@ export const blogPosts: BlogPost[] = [
           paragraphs: [
             'Security is not a one-time setup, it’s an ongoing discipline. A Salesforce governance framework defines ownership, change management processes, release controls, and compliance checkpoints. This is especially critical when multiple teams or partners access the same Salesforce org.',
             'Companies with formal Salesforce governance models experience:',
-            {list: [
-              'Faster audits',
-              'Fewer production incidents',
-              'Higher user trust and adoption',
-            ]},
+            {
+              list: [
+                'Faster audits',
+                'Fewer production incidents',
+                'Higher user trust and adoption',
+              ]
+            },
             'End Goal: Enable organizations to scale Salesforce securely while maintaining compliance, data integrity, and operational confidence.',
           ],
         },
@@ -253,59 +263,6 @@ export const blogPosts: BlogPost[] = [
   },
   // Case Study Blog Posts
   {
-    slug: 'cx-technology-case-study',
-    title: 'How a CX Services Firm Improved CSAT by 25% Using Salesforce Einstein AI',
-    description:
-      'A growing CX services organization handling thousands of customer interactions daily needed a scalable platform to unify customer data, reduce response times, and unlock predictive insights across sales and service teams.',
-    heroImage: BlogImg1,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '8 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'A growing CX services organization handling thousands of customer interactions daily needed a scalable platform to unify customer data, reduce response times, and unlock predictive insights across sales and service teams.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Fragmented customer interactions across channels',
-            '• High average call handling time impacting CSAT',
-            '• Missed leads due to delayed follow-ups',
-            '• No predictive insight into customer intent or sentiment',
-            '• Manual processes limiting upsell and cross-sell opportunities',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS designed and delivered an AI-powered Salesforce Service Cloud architecture focused on speed, intelligence, and personalization.',
-            'Key components included: Service Cloud for omnichannel case management and SLA tracking, Agentforce to automate website lead capture and route leads intelligently, Einstein AI to predict lead conversion likelihood, analyze customer sentiment in real time, and recommend next-best actions for agents.',
-            'Marketing Cloud was integrated to trigger automated, behavior-based engagement, and Einstein Activity Capture provided a 360° customer interaction timeline.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 30% reduction in average handling time',
-            '• 40% increase in qualified lead conversions',
-            '• 25% improvement in CSAT scores',
-            '• 20% increase in upselling success',
-          ],
-        },
-      ],
-    },
-    tags: ['CX Technology', 'Case Study', 'Salesforce', 'Einstein AI'],
-    cardImage: BlogImg1,
-  },
-  {
     slug: 'manufacturing-case-study',
     title: 'How a Global Manufacturer Achieved 30% Revenue Growth Using Salesforce Manufacturing Cloud',
     description:
@@ -358,12 +315,12 @@ export const blogPosts: BlogPost[] = [
     cardImage: BlogImg2,
   },
   {
-    slug: 'healthcare-case-study',
-    title: 'How a Multi-Specialty Healthcare Network Improved Patient Engagement by 35% Using Salesforce',
+    slug: 'cx-technology-case-study',
+    title: 'How a CX Services Firm Improved CSAT by 25% Using Salesforce Einstein AI',
     description:
-      'A rapidly growing multi-specialty healthcare network managing patient interactions across departments, locations, and channels transformed their patient engagement using Salesforce.',
-    heroImage: BlogImg3,
-    contentImage: BlogImg5,
+      'A growing CX services organization handling thousands of customer interactions daily needed a scalable platform to unify customer data, reduce response times, and unlock predictive insights across sales and service teams.',
+    heroImage: BlogImg1,
+    contentImage: BlogImg3,
     author: {
       name: 'IDRMS Team',
       image: AuthorImg,
@@ -375,343 +332,397 @@ export const blogPosts: BlogPost[] = [
         {
           title: 'Business Context',
           paragraphs: [
-            'A rapidly growing multi-specialty healthcare network was managing patient interactions across departments, locations, and channels. While clinical systems existed, patient engagement, communication, and service coordination were fragmented.',
+            'A growing CX services organization handling thousands of customer interactions daily needed a scalable platform to unify customer data, reduce response times, and unlock predictive insights across sales and service teams.',
           ],
         },
         {
           title: 'Core Challenges',
           paragraphs: [
-            '• Patient data scattered across sales, service, and marketing systems',
-            '• Manual intake and follow-up processes causing appointment no-shows',
-            '• Slow service response times impacting patient experience',
-            '• No predictive insight into patient engagement or service demand',
-            '• Limited visibility into end-to-end patient journeys',
+            '• Fragmented customer interactions across channels',
+            '• High average call handling time impacting CSAT',
+            '• Missed leads due to delayed follow-ups',
+            '• No predictive insight into customer intent or sentiment',
+            '• Manual processes limiting upsell and cross-sell opportunities',
           ],
         },
         {
           title: 'IDRMS Solution Approach',
           paragraphs: [
-            'IDRMS designed a patient-centric Salesforce architecture that unified engagement, service, and analytics into a single operating model.',
-            'The solution included: Health Cloud for 360° patient profiles, Service Cloud for streamlined issue resolution, Marketing Cloud for personalized outreach and reminders, and Einstein Analytics for predictive patient behavior insights.',
+            'IDRMS designed and delivered an AI-powered Salesforce Service Cloud architecture focused on speed, intelligence, and personalization.',
+            'Key components included: Service Cloud for omnichannel case management and SLA tracking, Agentforce to automate website lead capture and route leads intelligently, Einstein AI to predict lead conversion likelihood, analyze customer sentiment in real time, and recommend next-best actions for agents.',
+            'Marketing Cloud was integrated to trigger automated, behavior-based engagement, and Einstein Activity Capture provided a 360° customer interaction timeline.',
           ],
         },
         {
           title: 'Measurable Results',
           paragraphs: [
-            '• 35% improvement in patient engagement',
-            '• 40% reduction in appointment no-shows',
-            '• 25% faster service response times',
-            '• Unified patient journey visibility across departments',
+            '• 30% reduction in average handling time',
+            '• 40% increase in qualified lead conversions',
+            '• 25% improvement in CSAT scores',
+            '• 20% increase in upselling success',
           ],
         },
       ],
     },
-    tags: ['Healthcare', 'Case Study', 'Salesforce', 'Health Cloud'],
-    cardImage: BlogImg3,
-  },
-  {
-    slug: 'rebate-management-case-study',
-    title: 'How Salesforce Automation Reduced Rebate Errors by 30% for a Global Distributor Network',
-    description:
-      'A global distributor-driven organization running multiple rebate programs across regions and partners transformed their rebate management with Salesforce automation.',
-    heroImage: BlogImg4,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '7 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'A global distributor-driven organization was running multiple rebate programs across regions and partners. Rebates were critical to channel success—but manual tracking, complex calculations, and delayed payments created friction.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Manual rebate calculations prone to errors',
-            '• Limited real-time visibility for partners',
-            '• Delayed approvals and payout cycles',
-            '• High administrative effort to manage programs',
-            '• Poor reporting on rebate effectiveness',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS implemented a Salesforce-based rebate automation framework designed for scale and accuracy.',
-            'Key components: Custom rebate calculation engine, Partner portal for real-time visibility, Automated approval workflows, and Analytics dashboards for program performance.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 30% reduction in rebate calculation errors',
-            '• 25% faster rebate payments',
-            '• 20% increase in rebate program effectiveness',
-            '• 100% improved partner trust and satisfaction',
-          ],
-        },
-      ],
-    },
-    tags: ['Rebate Management', 'Case Study', 'Salesforce', 'Automation'],
-    cardImage: BlogImg4,
-  },
-  {
-    slug: 'nonprofit-case-study',
-    title: 'How a Non-Profit Increased Donor Retention by 60% Using Salesforce Nonprofit Cloud',
-    description:
-      'A large non-profit organization managing multiple programs and campaigns transformed donor relationships using Salesforce Nonprofit Cloud.',
-    heroImage: BlogImg5,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '7 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'A large non-profit organization managing multiple programs and campaigns struggled to maintain long-term donor relationships. While fundraising efforts were strong, donor data, impact visibility, and personalized engagement were fragmented.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Disconnected donor and campaign data',
-            '• Generic outreach that failed to build long-term engagement',
-            '• Limited visibility into program impact',
-            '• Manual reporting for stakeholders and funders',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS implemented a Salesforce Nonprofit Cloud ecosystem focused on engagement, transparency, and scalability.',
-            'The solution included: Nonprofit Cloud for donor and program management, Marketing Cloud for personalized donor journeys, Program Management for impact tracking, and Einstein Analytics for automated reporting.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 60% improvement in donor retention',
-            '• 45% increase in repeat donations',
-            '• 100% visibility into program impact',
-            '• Automated stakeholder and funder reporting',
-          ],
-        },
-      ],
-    },
-    tags: ['Non-Profit', 'Case Study', 'Salesforce', 'Nonprofit Cloud'],
-    cardImage: BlogImg5,
-  },
-  {
-    slug: 'financial-services-case-study',
-    title: 'How Salesforce Enabled Smarter Cross-Selling and Faster Response in Financial Services',
-    description:
-      'A financial services institution offering multiple products transformed their customer engagement and compliance with Salesforce Financial Services Cloud.',
-    heroImage: BlogImg1,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '7 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'A financial services institution offering multiple products struggled with disconnected customer data, slow inquiry handling, and strict compliance requirements.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Customer data spread across product systems',
-            '• Manual sales and service processes',
-            '• Slow response times impacting client trust',
-            '• Complex compliance and reporting requirements',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS deployed Salesforce Financial Services Cloud as the foundation for connected customer engagement.',
-            'The solution included: Financial Services Cloud for unified client profiles, Sales Cloud for opportunity management, Service Cloud for faster inquiry resolution, and Compliance tracking and automated reporting.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 35% increase in cross-selling success',
-            '• 40% faster response times',
-            '• 100% compliance with regulatory requirements',
-            '• Unified client view across all products',
-          ],
-        },
-      ],
-    },
-    tags: ['Financial Services', 'Case Study', 'Salesforce', 'FSC'],
+    tags: ['CX Technology', 'Case Study', 'Salesforce', 'Einstein AI'],
     cardImage: BlogImg1,
   },
-  {
-    slug: 'hospitality-case-study',
-    title: 'How Salesforce Increased Loyalty Engagement by 40% for a Global Hospitality Brand',
-    description:
-      'A global hospitality brand operating across multiple booking channels transformed guest experiences with Salesforce.',
-    heroImage: BlogImg2,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '6 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'A global hospitality brand operating across multiple booking channels struggled to deliver personalized guest experiences. Guest data was fragmented, limiting loyalty engagement and service personalization.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Disconnected guest profiles across systems',
-            '• Generic loyalty campaigns',
-            '• Limited operational visibility for service teams',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS implemented a connected Salesforce hospitality platform.',
-            'Key components: Customer 360 for unified guest profiles, Marketing Cloud for personalized loyalty campaigns, Service Cloud for guest service excellence, and Field Service for on-property operations.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 30% increase in guest satisfaction scores',
-            '• 40% growth in loyalty program engagement',
-            '• Personalized guest experiences at every touchpoint',
-          ],
-        },
-      ],
-    },
-    tags: ['Hospitality', 'Case Study', 'Salesforce', 'Loyalty'],
-    cardImage: BlogImg2,
-  },
-  {
-    slug: 'retail-case-study',
-    title: 'How Salesforce Personalization Increased Retail Conversions by 20%',
-    description:
-      'An omnichannel retail brand faced declining engagement due to fragmented customer data and generic marketing campaigns. Learn how they transformed with Salesforce.',
-    heroImage: BlogImg3,
-    contentImage: BlogImg5,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '6 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'An omnichannel retail brand faced declining engagement due to fragmented customer data and generic marketing campaigns. Leadership needed a solution for personalized customer journeys.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Siloed customer data',
-            '• Low engagement from generic campaigns',
-            '• Limited insight into customer behavior',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS built a Salesforce-powered retail personalization engine.',
-            'Key components: Customer 360 for unified shopper data, Marketing Cloud for omnichannel journeys, AI-driven segmentation using Einstein, and Commerce Cloud integration for seamless shopping experiences.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 20% increase in retail conversions',
-            '• 25% improvement in customer engagement',
-            '• 30% increase in repeat purchases',
-            '• Personalized experiences across all channels',
-          ],
-        },
-      ],
-    },
-    tags: ['Retail', 'Case Study', 'Salesforce', 'Personalization'],
-    cardImage: BlogImg3,
-  },
-  {
-    slug: 'mulesoft-case-study',
-    title: 'How MuleSoft Reduced Manual Processing by 40% Through Intelligent Integration',
-    description:
-      'An enterprise Salesforce user relied on external forms for data capture. Manual ingestion and complex record matching slowed operations and introduced data inconsistencies.',
-    heroImage: BlogImg4,
-    contentImage: BlogImg3,
-    author: {
-      name: 'IDRMS Team',
-      image: AuthorImg,
-    },
-    date: 'January 28, 2026',
-    readTime: '6 min Read',
-    content: {
-      sections: [
-        {
-          title: 'Business Context',
-          paragraphs: [
-            'An enterprise Salesforce user relied on external forms for data capture. Manual ingestion and complex record matching slowed operations and introduced data inconsistencies.',
-          ],
-        },
-        {
-          title: 'Core Challenges',
-          paragraphs: [
-            '• Manual data entry',
-            '• Complex matching logic',
-            '• Slow processing and retrieval',
-          ],
-        },
-        {
-          title: 'IDRMS Solution Approach',
-          paragraphs: [
-            'IDRMS implemented a MuleSoft-based integration architecture.',
-            'Key components: Automated form-to-Salesforce ingestion, Intelligent record matching logic, Real-time data synchronization, and API-led connectivity for future integrations.',
-          ],
-        },
-        {
-          title: 'Measurable Results',
-          paragraphs: [
-            '• 40% reduction in manual processing effort',
-            '• 100% improved data accuracy',
-            '• 100% faster operational decision-making',
-            '• Scalable integration architecture for future needs',
-          ],
-        },
-      ],
-    },
-    tags: ['MuleSoft', 'Case Study', 'Integration', 'Automation'],
-    cardImage: BlogImg4,
-  },
+
+  // {
+  //   slug: 'healthcare-case-study',
+  //   title: 'How a Multi-Specialty Healthcare Network Improved Patient Engagement by 35% Using Salesforce',
+  //   description:
+  //     'A rapidly growing multi-specialty healthcare network managing patient interactions across departments, locations, and channels transformed their patient engagement using Salesforce.',
+  //   heroImage: BlogImg3,
+  //   contentImage: BlogImg5,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '8 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'A rapidly growing multi-specialty healthcare network was managing patient interactions across departments, locations, and channels. While clinical systems existed, patient engagement, communication, and service coordination were fragmented.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Patient data scattered across sales, service, and marketing systems',
+  //           '• Manual intake and follow-up processes causing appointment no-shows',
+  //           '• Slow service response times impacting patient experience',
+  //           '• No predictive insight into patient engagement or service demand',
+  //           '• Limited visibility into end-to-end patient journeys',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS designed a patient-centric Salesforce architecture that unified engagement, service, and analytics into a single operating model.',
+  //           'The solution included: Health Cloud for 360° patient profiles, Service Cloud for streamlined issue resolution, Marketing Cloud for personalized outreach and reminders, and Einstein Analytics for predictive patient behavior insights.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 35% improvement in patient engagement',
+  //           '• 40% reduction in appointment no-shows',
+  //           '• 25% faster service response times',
+  //           '• Unified patient journey visibility across departments',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Healthcare', 'Case Study', 'Salesforce', 'Health Cloud'],
+  //   cardImage: BlogImg3,
+  // },
+  // {
+  //   slug: 'rebate-management-case-study',
+  //   title: 'How Salesforce Automation Reduced Rebate Errors by 30% for a Global Distributor Network',
+  //   description:
+  //     'A global distributor-driven organization running multiple rebate programs across regions and partners transformed their rebate management with Salesforce automation.',
+  //   heroImage: BlogImg4,
+  //   contentImage: BlogImg3,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '7 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'A global distributor-driven organization was running multiple rebate programs across regions and partners. Rebates were critical to channel success—but manual tracking, complex calculations, and delayed payments created friction.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Manual rebate calculations prone to errors',
+  //           '• Limited real-time visibility for partners',
+  //           '• Delayed approvals and payout cycles',
+  //           '• High administrative effort to manage programs',
+  //           '• Poor reporting on rebate effectiveness',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS implemented a Salesforce-based rebate automation framework designed for scale and accuracy.',
+  //           'Key components: Custom rebate calculation engine, Partner portal for real-time visibility, Automated approval workflows, and Analytics dashboards for program performance.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 30% reduction in rebate calculation errors',
+  //           '• 25% faster rebate payments',
+  //           '• 20% increase in rebate program effectiveness',
+  //           '• 100% improved partner trust and satisfaction',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Rebate Management', 'Case Study', 'Salesforce', 'Automation'],
+  //   cardImage: BlogImg4,
+  // },
+  // {
+  //   slug: 'nonprofit-case-study',
+  //   title: 'How a Non-Profit Increased Donor Retention by 60% Using Salesforce Nonprofit Cloud',
+  //   description:
+  //     'A large non-profit organization managing multiple programs and campaigns transformed donor relationships using Salesforce Nonprofit Cloud.',
+  //   heroImage: BlogImg5,
+  //   contentImage: BlogImg3,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '7 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'A large non-profit organization managing multiple programs and campaigns struggled to maintain long-term donor relationships. While fundraising efforts were strong, donor data, impact visibility, and personalized engagement were fragmented.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Disconnected donor and campaign data',
+  //           '• Generic outreach that failed to build long-term engagement',
+  //           '• Limited visibility into program impact',
+  //           '• Manual reporting for stakeholders and funders',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS implemented a Salesforce Nonprofit Cloud ecosystem focused on engagement, transparency, and scalability.',
+  //           'The solution included: Nonprofit Cloud for donor and program management, Marketing Cloud for personalized donor journeys, Program Management for impact tracking, and Einstein Analytics for automated reporting.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 60% improvement in donor retention',
+  //           '• 45% increase in repeat donations',
+  //           '• 100% visibility into program impact',
+  //           '• Automated stakeholder and funder reporting',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Non-Profit', 'Case Study', 'Salesforce', 'Nonprofit Cloud'],
+  //   cardImage: BlogImg5,
+  // },
+  // {
+  //   slug: 'financial-services-case-study',
+  //   title: 'How Salesforce Enabled Smarter Cross-Selling and Faster Response in Financial Services',
+  //   description:
+  //     'A financial services institution offering multiple products transformed their customer engagement and compliance with Salesforce Financial Services Cloud.',
+  //   heroImage: BlogImg1,
+  //   contentImage: BlogImg3,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '7 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'A financial services institution offering multiple products struggled with disconnected customer data, slow inquiry handling, and strict compliance requirements.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Customer data spread across product systems',
+  //           '• Manual sales and service processes',
+  //           '• Slow response times impacting client trust',
+  //           '• Complex compliance and reporting requirements',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS deployed Salesforce Financial Services Cloud as the foundation for connected customer engagement.',
+  //           'The solution included: Financial Services Cloud for unified client profiles, Sales Cloud for opportunity management, Service Cloud for faster inquiry resolution, and Compliance tracking and automated reporting.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 35% increase in cross-selling success',
+  //           '• 40% faster response times',
+  //           '• 100% compliance with regulatory requirements',
+  //           '• Unified client view across all products',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Financial Services', 'Case Study', 'Salesforce', 'FSC'],
+  //   cardImage: BlogImg1,
+  // },
+  // {
+  //   slug: 'hospitality-case-study',
+  //   title: 'How Salesforce Increased Loyalty Engagement by 40% for a Global Hospitality Brand',
+  //   description:
+  //     'A global hospitality brand operating across multiple booking channels transformed guest experiences with Salesforce.',
+  //   heroImage: BlogImg2,
+  //   contentImage: BlogImg3,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '6 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'A global hospitality brand operating across multiple booking channels struggled to deliver personalized guest experiences. Guest data was fragmented, limiting loyalty engagement and service personalization.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Disconnected guest profiles across systems',
+  //           '• Generic loyalty campaigns',
+  //           '• Limited operational visibility for service teams',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS implemented a connected Salesforce hospitality platform.',
+  //           'Key components: Customer 360 for unified guest profiles, Marketing Cloud for personalized loyalty campaigns, Service Cloud for guest service excellence, and Field Service for on-property operations.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 30% increase in guest satisfaction scores',
+  //           '• 40% growth in loyalty program engagement',
+  //           '• Personalized guest experiences at every touchpoint',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Hospitality', 'Case Study', 'Salesforce', 'Loyalty'],
+  //   cardImage: BlogImg2,
+  // },
+  // {
+  //   slug: 'retail-case-study',
+  //   title: 'How Salesforce Personalization Increased Retail Conversions by 20%',
+  //   description:
+  //     'An omnichannel retail brand faced declining engagement due to fragmented customer data and generic marketing campaigns. Learn how they transformed with Salesforce.',
+  //   heroImage: BlogImg3,
+  //   contentImage: BlogImg5,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '6 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'An omnichannel retail brand faced declining engagement due to fragmented customer data and generic marketing campaigns. Leadership needed a solution for personalized customer journeys.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Siloed customer data',
+  //           '• Low engagement from generic campaigns',
+  //           '• Limited insight into customer behavior',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS built a Salesforce-powered retail personalization engine.',
+  //           'Key components: Customer 360 for unified shopper data, Marketing Cloud for omnichannel journeys, AI-driven segmentation using Einstein, and Commerce Cloud integration for seamless shopping experiences.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 20% increase in retail conversions',
+  //           '• 25% improvement in customer engagement',
+  //           '• 30% increase in repeat purchases',
+  //           '• Personalized experiences across all channels',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['Retail', 'Case Study', 'Salesforce', 'Personalization'],
+  //   cardImage: BlogImg3,
+  // },
+  // {
+  //   slug: 'mulesoft-case-study',
+  //   title: 'How MuleSoft Reduced Manual Processing by 40% Through Intelligent Integration',
+  //   description:
+  //     'An enterprise Salesforce user relied on external forms for data capture. Manual ingestion and complex record matching slowed operations and introduced data inconsistencies.',
+  //   heroImage: BlogImg4,
+  //   contentImage: BlogImg3,
+  //   author: {
+  //     name: 'IDRMS Team',
+  //     image: AuthorImg,
+  //   },
+  //   date: 'January 28, 2026',
+  //   readTime: '6 min Read',
+  //   content: {
+  //     sections: [
+  //       {
+  //         title: 'Business Context',
+  //         paragraphs: [
+  //           'An enterprise Salesforce user relied on external forms for data capture. Manual ingestion and complex record matching slowed operations and introduced data inconsistencies.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Core Challenges',
+  //         paragraphs: [
+  //           '• Manual data entry',
+  //           '• Complex matching logic',
+  //           '• Slow processing and retrieval',
+  //         ],
+  //       },
+  //       {
+  //         title: 'IDRMS Solution Approach',
+  //         paragraphs: [
+  //           'IDRMS implemented a MuleSoft-based integration architecture.',
+  //           'Key components: Automated form-to-Salesforce ingestion, Intelligent record matching logic, Real-time data synchronization, and API-led connectivity for future integrations.',
+  //         ],
+  //       },
+  //       {
+  //         title: 'Measurable Results',
+  //         paragraphs: [
+  //           '• 40% reduction in manual processing effort',
+  //           '• 100% improved data accuracy',
+  //           '• 100% faster operational decision-making',
+  //           '• Scalable integration architecture for future needs',
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   tags: ['MuleSoft', 'Case Study', 'Integration', 'Automation'],
+  //   cardImage: BlogImg4,
+  // },
 ];
 
 export function getBlogBySlug(slug: string): BlogPost | undefined {

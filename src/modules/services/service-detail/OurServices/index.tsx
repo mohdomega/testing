@@ -8,7 +8,14 @@ import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
-import ServiceImg1 from '../../../../../public/images/ServiceImages/service-image-1.png';
+import ServiceImg1 from '../../../../../public/images/ServiceImages/1.png';
+import ServiceImg2 from '../../../../../public/images/ServiceImages/2.png';
+import ServiceImg3 from '../../../../../public/images/ServiceImages/3.png';
+import ServiceImg4 from '../../../../../public/images/ServiceImages/4.png';
+import ServiceImg5 from '../../../../../public/images/ServiceImages/5.png';
+import ServiceImg6 from '../../../../../public/images/ServiceImages/6.png';
+import ServiceImg7 from '../../../../../public/images/ServiceImages/7.png';
+import ServiceImg8 from '../../../../../public/images/ServiceImages/8.png';
 import ARVRDevice from '/public/icons/servicePageCraousalIcons/ar-vr-device.svg';
 import ArrowLeft from '/public/icons/servicePageCraousalIcons/arrow left.svg';
 import ArrowRight from '/public/icons/servicePageCraousalIcons/arrow right.svg';
@@ -135,6 +142,23 @@ function CustomCarouselArrows() {
 
 export default function OurServices({ title, description, className }: OurServicesProps) {
   const pathname = usePathname();
+
+  // Map service routes to their corresponding images (1-8 in order)
+  const serviceImageMap: Record<string, any> = {
+    'custom-app-development': ServiceImg6,
+    'data-analytics-and-ai': ServiceImg5,
+    'data-migration': ServiceImg7,
+    'digital-transformation-consultation': ServiceImg2,
+    'integration-services': ServiceImg4,
+    'salesforce-implementation': ServiceImg1,
+    'salesforce-managed-services': ServiceImg3,
+    'slack-implementation-migration': ServiceImg8,
+  };
+
+  // Get the current service image based on pathname
+  const currentServiceImage = Object.keys(serviceImageMap).find((key) => pathname.includes(key));
+  const serviceImage = currentServiceImage ? serviceImageMap[currentServiceImage] : ServiceImg1;
+
   return (
     <Stack
       component="section"
@@ -180,7 +204,7 @@ export default function OurServices({ title, description, className }: OurServic
             </Stack>
           </Stack>
           <div className="flex-1 w-full aspect-square rounded-3xl bg-neutral-300 relative overflow-hidden">
-            <Image src={ServiceImg1} alt="service image" className="w-full h-full object-cover" />
+            <Image src={serviceImage} alt="service image" className="w-full h-full object-cover" />
           </div>
         </div>
 

@@ -69,7 +69,7 @@ function CustomCarouselArrows() {
   );
 }
 
-export default function OurServices({}: OurServicesProps) {
+export default function OurServices({ }: OurServicesProps) {
   return (
     <Stack
       component="section"

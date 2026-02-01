@@ -48,15 +48,7 @@ export default function Contact({ classname }: ContactProps) {
       </Stack>
 
       {/* Calendly Embed */}
-      {/* <CalendlyIframe />   Note :- Uncomment this for calendely iframe  */}
-
-      <div className="max-w-[1440px] w-full mx-auto">
-        <div
-          className="w-full min-h-[700px] rounded-2xl overflow-hidden bg-background shadow-lg flex justify-center items-center"
-        >
-          <h1 className='text-5xl'>Calendly Iframe</h1>
-        </div>
-      </div>
+      <CalendlyIframe />
     </Stack>
   );
 }
