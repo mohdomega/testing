@@ -66,295 +66,46 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
             ))}
           </CarouselContent>
         </Carousel>
-        {/* <Carousel
-          plugins={[AutoScroll({ direction: 'forward', stopOnInteraction: false, stopOnMouseEnter: true })]}
-          opts={{ loop: true, duration: 60 }}
-          className="w-full"
-        >
-          <CarouselContent className="gap-20 w-full justify-between items-center">
-            <CarouselItem className="basis-auto ml-20">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  100%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  200%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate
-                </Typography>
-              </Stack>
-            </CarouselItem>
-            <CarouselItem className="basis-auto">
-              <Stack alignItems="center" className="gap-2">
-                <Typography component="span" variant="h3" className="font-medium">
-                  300%
-                </Typography>
-                <Typography component="span" variant="title" className="font-medium">
-                  Success Rate End
-                </Typography>
-              </Stack>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel> */}
 
         <div className=" px-[150px] flex items-center justify-between gap-20">
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
-              100%
+              20+
             </Typography>
             <Typography component="span" variant="title" className="font-medium">
-              Success Rate
+              Salesforce Projects Delivered
             </Typography>
           </Stack>
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
-              100%
+              70+
             </Typography>
             <Typography component="span" variant="title" className="font-medium">
-              Success Rate
+              Salesforce Certifications
             </Typography>
           </Stack>
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
-              100%
+              30% Faster
             </Typography>
             <Typography component="span" variant="title" className="font-medium">
-              Success Rate
+              Time-to-Value
             </Typography>
           </Stack>
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
-              100%
+              90%+
             </Typography>
             <Typography component="span" variant="title" className="font-medium">
-              Success Rate
+              Client Retention
             </Typography>
           </Stack>
           <Stack alignItems="center" className="gap-2">
             <Typography component="span" variant="h3" className="font-medium">
-              100%
+              50+ Years
             </Typography>
             <Typography component="span" variant="title" className="font-medium">
-              Success Rate
+              Leadership Experience
             </Typography>
           </Stack>
         </div>

@@ -91,8 +91,11 @@ export default function Hero({ className }: HeroProps) {
           <div className="w-[140px] h-[70px] relative overflow-hidden flex items-center justify-center">
             <SalesforceLogo className="w-auto h-full max-w-full object-contain" />
           </div>
-          <div className="w-[140px] h-[70px] relative overflow-hidden">
-            <Image src={Slack} alt="slack" className="w-full h-full object-contain" />
+          {/* <div className="w-[120px] h-[100px] flex items-center justify-center overflow-hidden">
+            <SlackLogo className="w-full h-full scale-[0.7] origin-center" />
+          </div> */}
+          <div className="w-[140px] h-[50px] relative overflow-hidden">
+            <Image src={Slack} alt="aws" className="w-full h-full object-contain" />
           </div>
           <div className="w-[140px] h-[50px] relative overflow-hidden">
             <Image src={AWS} alt="aws" className="w-full h-full object-contain" />

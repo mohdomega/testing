@@ -37,34 +37,35 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
           <Card
             icon={Mentor}
             img={Img1}
-            title="Consultation Services"
+            title="Salesforce Implementation"
             path="/services/digital-transformation-consultation"
             // subtitle="End-to-end strategy aligned with Salesforce best practices"
-            subtitle="We help you define the right Salesforce strategy by aligning technology with your business goals. Our consultants assess your current landscape and create clear, outcome-driven roadmaps that reduce risk and improve adoption."
+            subtitle="We work closely with your teams to design and implement Salesforce solutions that fit your processes, users, and long-term business goals."
           />
           <Card
             icon={Integration}
             img={Img2}
-            title="Implementation & Integration"
+            title="Digital Transformation Consultation"
             path="/services/integration-services"
             // subtitle="Boost Salesforce ROI with seamless integration and clean data"
-            subtitle="We design, build, and integrate Salesforce solutions tailored to your business processes. From configuration to complex integrations, we ensure a smooth rollout that scales with your growth."
+            subtitle="We help organizations navigate digital transformation by understanding their challenges and designing Salesforce strategies that drive real business change."
           />
           <Card
             icon={Support}
             img={Img3}
-            title="Support & Maintenance"
+            title="Salesforce Managed Services"
             path="/services/salesforce-managed-services"
             // subtitle="Tailored support using latest tools to optimize Salesforce"
-            subtitle="We keep your Salesforce platform secure, optimized, and up to date with proactive support and ongoing enhancements. Our flexible support models help you maximize value without increasing operational overhead."
+            subtitle="We stay with you beyond go-live, providing ongoing Salesforce support, optimization, and guidance as your business evolves."
+
           />
           <Card
             icon={Team}
             img={Img4}
-            title="Staff Augmentation"
+            title="Integration Services"
             path="/services/salesforce-managed-services"
             // subtitle="Scalable Salesforce talent to fast-track your goals"
-            subtitle="Scale your team quickly with certified Salesforce professionals who integrate seamlessly with your internal teams. Our flexible staffing models give you the expertise you need—when you need it."
+            subtitle="We connect Salesforce with your existing systems to ensure your teams have accurate, real-time data where they need it most."
           />
         </div>
         <Stack alignItems="center">
