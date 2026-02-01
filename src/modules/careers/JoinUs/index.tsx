@@ -12,7 +12,7 @@ import { cn } from '@/lib';
 
 import { joinUs } from './action';
 
-import CareerImg11 from '/public/images/CareerImages/career-image-11.png';
+import CareerImg11 from '/public/images/CareerImages/career-image-11.jpg';
 
 interface ContactUsProps {
   className?: string;

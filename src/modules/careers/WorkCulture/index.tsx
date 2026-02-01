@@ -10,16 +10,16 @@ import StatCard from './StatCard';
 import BillIcon from '/public/icons/bill.svg';
 import CalenderIcon from '/public/icons/calendar.svg';
 import DirectSendBoxIcon from '/public/icons/directbox-send.svg';
-import CareerImg1 from '/public/images/CareerImages/career-image-1.png';
-import CareerImg2 from '/public/images/CareerImages/career-image-2.png';
-import CareerImg3 from '/public/images/CareerImages/career-image-3.png';
-import CareerImg4 from '/public/images/CareerImages/career-image-4.png';
-import CareerImg5 from '/public/images/CareerImages/career-image-5.png';
-import CareerImg6 from '/public/images/CareerImages/career-image-6.png';
-import CareerImg7 from '/public/images/CareerImages/career-image-7.png';
-import CareerImg8 from '/public/images/CareerImages/career-image-8.png';
-import CareerImg9 from '/public/images/CareerImages/career-image-9.png';
-import CareerImg10 from '/public/images/CareerImages/career-image-10.png';
+import CareerImg1 from '/public/images/CareerImages/career-image-1.jpg';
+import CareerImg2 from '/public/images/CareerImages/career-image-2.jpg';
+import CareerImg3 from '/public/images/CareerImages/career-image-3.jpg';
+import CareerImg4 from '/public/images/CareerImages/career-image-4.jpg';
+import CareerImg5 from '/public/images/CareerImages/career-image-5.jpg';
+import CareerImg6 from '/public/images/CareerImages/career-image-6.jpg';
+import CareerImg7 from '/public/images/CareerImages/career-image-7.jpg';
+import CareerImg8 from '/public/images/CareerImages/career-image-8.jpg';
+import CareerImg9 from '/public/images/CareerImages/career-image-9.jpg';
+import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
 
 interface WorkCultureProps {
   className?: string;

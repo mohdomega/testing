@@ -142,25 +142,21 @@
 //   );
 // }
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
-import Cloud from '/public/icons/cloud.svg';
-import Energy from '/public/icons/energy.svg';
-import ERP from '/public/icons/erp.svg';
-import Finance from '/public/icons/financial.svg';
-import Game from '/public/icons/game.svg';
-import HealthCare from '/public/icons/healthcare.svg';
-import Integration from '/public/icons/integration.svg';
-import MagicPen from '/public/icons/magicpen.svg';
-import Media from '/public/icons/media.svg';
-import Mentor from '/public/icons/mentor.svg';
-import Mobile from '/public/icons/mobile.svg';
-import Retail from '/public/icons/retail.svg';
-import Support from '/public/icons/support.svg';
+import SalesforceImplementationLogo from '/public/images/serviceLogos/Salesforce Implementation.png';
+import DataAnalyticsLogo from '/public/images/serviceLogos/Data Analytics & AI.png';
+import ManagedServicesLogo from '/public/images/serviceLogos/Salesforce Managed Services.png';
+import DigitalTransformationLogo from '/public/images/serviceLogos/Digital Transformation Consultation.png';
+import IntegrationServicesLogo from '/public/images/serviceLogos/Integration Services.png';
+import CustomAppLogo from '/public/images/serviceLogos/Custom App Development.png';
+import DataMigrationLogo from '/public/images/serviceLogos/Data Migration.png';
+import SlackLogo from '/public/images/serviceLogos/Slack ImplementationMigration.png';
 
 interface OurServicesProps {
   className?: string;
@@ -179,8 +175,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Mentor className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={SalesforceImplementationLogo} alt="Salesforce Implementation" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Salesforce Implementation
@@ -193,8 +189,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Integration className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={DataAnalyticsLogo} alt="Data Analytics & AI" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Data Analytics & AI
@@ -207,8 +203,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Support className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={ManagedServicesLogo} alt="Salesforce Managed Services" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Salesforce Managed Services
@@ -222,8 +218,8 @@ export default function OurServices({ className }: OurServicesProps) {
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
             style={{ padding: '48px 10px' }}
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Cloud className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={DigitalTransformationLogo} alt="Digital Transformation" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Digital Transformation Consultation
@@ -236,8 +232,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <ERP className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={IntegrationServicesLogo} alt="Integration Services" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Integration Services
@@ -250,8 +246,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Mobile className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={CustomAppLogo} alt="Custom App Development" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Custom App Development
@@ -264,8 +260,8 @@ export default function OurServices({ className }: OurServicesProps) {
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Game className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={DataMigrationLogo} alt="Data Migration" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Data Migration
@@ -279,8 +275,8 @@ export default function OurServices({ className }: OurServicesProps) {
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
             style={{ padding: '48px 10px' }}
           >
-            <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <MagicPen className="size-8 text-primary-dark max-lg:size-6" />
+            <div className="p-6 rounded-2xl border-2 border-black/15 max-lg:p-4">
+              <Image src={SlackLogo} alt="Slack Implementation" className="size-20 max-lg:size-16 object-cover" />
             </div>
             <Typography variant="title" className="font-medium text-center">
               Slack Implementation/Migration
