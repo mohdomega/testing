@@ -12,12 +12,12 @@ import CalenderIcon from '/public/icons/calendar.svg';
 import DirectSendBoxIcon from '/public/icons/directbox-send.svg';
 import CareerImg1 from '/public/images/CareerImages/career-image-1.jpg';
 import CareerImg2 from '/public/images/CareerImages/career-image-2.jpg';
-import CareerImg3 from '/public/images/CareerImages/career-image-3.jpg';
+import CareerImg3 from '/public/images/CareerImages/career-image-3.JPG';
 import CareerImg4 from '/public/images/CareerImages/career-image-4.jpg';
 import CareerImg5 from '/public/images/CareerImages/career-image-5.jpg';
 import CareerImg6 from '/public/images/CareerImages/career-image-6.jpg';
 import CareerImg7 from '/public/images/CareerImages/career-image-7.jpg';
-import CareerImg8 from '/public/images/CareerImages/career-image-8.jpg';
+import CareerImg8 from '/public/images/CareerImages/career-image-8.JPG';
 import CareerImg9 from '/public/images/CareerImages/career-image-9.jpg';
 import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
 
@@ -27,15 +27,19 @@ interface WorkCultureProps {
 
 export default function WorkCulture({ className }: WorkCultureProps) {
   return (
-    <Stack id="work-culture" component="section" className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}>
+    <Stack
+      id="work-culture"
+      component="section"
+      className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}
+    >
       <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10">
         <Stack className="gap-15">
           <Stack className="gap-1 max-lg:items-center max-lg:text-center">
             <TitleChip>Work Culture</TitleChip>
             <div className="grid grid-cols-2 items-center gap-20 **:text-balance font-medium max-lg:grid-cols-1 max-lg:gap-6">
               <Typography variant="h2" className="text-gradient">
-                {/* Team That Works Wonders */}
-                A culture where people thrive, ideas lead, and innovation grows—together.
+                {/* Team That Works Wonders */}A culture where people thrive, ideas lead, and innovation
+                grows—together.
               </Typography>
               <Typography className="text-primary-dark/60 text-balance">
                 {/* Our team represents us on every level and works with complete dedication to deliver the best
