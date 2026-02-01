@@ -25,7 +25,7 @@ interface OurOfferingsProps {
 export default function OurOfferings({ className }: OurOfferingsProps) {
   return (
     <Stack component="section" alignItems="center" className={cn('bg-background  w-full', className)}>
-      <div className="max-w-[1440px] w-full flex flex-col gap-[60px] px-20 py-17.5 mx-auto max-lg:p-15 max-sm:gap-10 max-sm:px-6 max-sm:py-10">
+      <div className="max-w-[1580px] w-full flex flex-col gap-[60px] px-20 py-17.5 mx-auto max-lg:p-15 max-sm:gap-10 max-sm:px-6 max-sm:py-10">
         <Stack alignItems="center" className="gap-[16px]">
           <TitleChip>Our Offerings</TitleChip>
           <Typography variant="h2" className="text-gradient text-center max-w-216">

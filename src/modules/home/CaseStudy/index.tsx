@@ -36,6 +36,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               step={1}
               title="Customer Service & CX Transformation"
               description="Improve CSAT, reduce handling time, and increase conversions with AI-driven Salesforce Service Cloud solutions by IDRMS."
+              blogSlug="cx-technology-case-study"
               highlightedFeatures={
                 <div className="w-full p-5 bg-white/10 rounded-3xl">
                   <Stack className="gap-4">
@@ -66,6 +67,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               step={2}
               title="Manufacturing Sales & Forecasting Transformation"
               description="Drive faster sales cycles, accurate forecasting, and connected manufacturing operations with Salesforce Manufacturing Cloud."
+              blogSlug="manufacturing-case-study"
               highlightedFeatures={
                 <div className="relative w-full p-6 pb-12.5 bg-white/10 rounded-2xl overflow-hidden">
                   <Stack className="gap-4 w-fit p-4 border border-dashed border-white/20 rounded-2xl">
@@ -132,6 +134,8 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               image={HomeVideoImg3}
               step={3}
               title="REBATE MANAGEMENT – CHANNEL & PARTNER AUTOMATION"
+              blogSlug="cx-technology-case-study"
+
               description="Automate rebate programs, improve accuracy, and accelerate partner payments using Salesforce-powered rebate management solutions."
               highlightedFeatures={
                 <Stack
@@ -156,6 +160,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               image={HomeVideoImg4}
               step={4}
               title="MULESOFT – SALESFORCE INTEGRATION AUTOMATION"
+              blogSlug="cx-technology-case-study"
               description="Automate data flows, reduce manual effort, and improve accuracy with MuleSoft-powered Salesforce integrations."
               highlightedFeatures={
                 <Stack direction="row" className="gap-4 max-sm:flex-col">

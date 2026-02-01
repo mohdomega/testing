@@ -3,6 +3,7 @@
 import { ReactNode, useRef, useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
@@ -20,6 +21,7 @@ interface StudyProps {
   highlightedFeatures: ReactNode;
   className?: string;
   image?: string | any;
+  blogSlug?: string;
 }
 
 export default function Study({
@@ -29,6 +31,7 @@ export default function Study({
   description,
   highlightedFeatures,
   className,
+  blogSlug,
 }: StudyProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,9 +70,15 @@ export default function Study({
               </Typography>
             </Stack>
             {highlightedFeatures}
-            <Button color="primary" onClick={() => setIsModalOpen(true)}>
-              View Case Study
-            </Button>
+            {blogSlug ? (
+              <Button component={Link} href={`/blogs/${blogSlug}`} color="primary">
+                View Case Study
+              </Button>
+            ) : (
+              <Button color="primary" onClick={() => setIsModalOpen(true)}>
+                View Case Study
+              </Button>
+            )}
           </Stack>
         ) : (
           <div className="bg-white/10 p-5 rounded-3xl">
@@ -104,9 +113,15 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button onClick={() => setIsModalOpen(true)} color="primary">
-            View Case Study
-          </Button>
+          {blogSlug ? (
+            <Button component={Link} href={`/blogs/${blogSlug}`} color="primary">
+              View Case Study
+            </Button>
+          ) : (
+            <Button onClick={() => setIsModalOpen(true)} color="primary">
+              View Case Study
+            </Button>
+          )}
         </Stack>
       ) : isOdd ? (
         <div className="bg-white/10 p-5 rounded-3xl">
@@ -126,9 +141,15 @@ export default function Study({
             </Typography>
           </Stack>
           {highlightedFeatures}
-          <Button onClick={() => setIsModalOpen(true)} color="primary">
-            View Case Study
-          </Button>
+          {blogSlug ? (
+            <Button component={Link} href={`/blogs/${blogSlug}`} color="primary">
+              View Case Study
+            </Button>
+          ) : (
+            <Button onClick={() => setIsModalOpen(true)} color="primary">
+              View Case Study
+            </Button>
+          )}
         </Stack>
       )}
       <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} studyTitle={title} />

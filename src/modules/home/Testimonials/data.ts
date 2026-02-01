@@ -51,7 +51,7 @@ export const testimonials = [
     location: 'Director of Operations',
     company: 'Slack',
     companyLogo: Ekinkare,
-    avatar: Image2,
+    avatar: Image1,
     quote: 'With IDRMS’s Salesforce implementation, we reduced manual effort by over 30% and gained real-time visibility across our sales pipeline and service operations.',
   },
   {

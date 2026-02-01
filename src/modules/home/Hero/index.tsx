@@ -19,6 +19,7 @@ import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
 
 import Slack from '/public/images/Home/Slack.png';
+import Slack1 from '/public/icons/slack1.png';
 import AWS from '/public/images/Home/AWS.png';
 import Mulesoft from '/public/images/Home/Mulesoft.png';
 import Spiff from '/public/images/Home/Spiff.png';
@@ -95,7 +96,7 @@ export default function Hero({ className }: HeroProps) {
             <SlackLogo className="w-full h-full scale-[0.7] origin-center" />
           </div> */}
           <div className="w-[140px] h-[50px] relative overflow-hidden">
-            <Image src={Slack} alt="aws" className="w-full h-full object-contain" />
+            <Image src={Slack1} alt="slack" className="w-full h-full object-contain" />
           </div>
           <div className="w-[140px] h-[50px] relative overflow-hidden">
             <Image src={AWS} alt="aws" className="w-full h-full object-contain" />

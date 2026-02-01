@@ -216,7 +216,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="#realEstate"
+            href="#nonProfit"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -225,7 +225,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
               <Building className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
-              Real Estate
+              NGO
             </Typography>
           </Stack>
           <Stack
@@ -244,7 +244,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="#mediaAndPublication"
+            href="#hospitality"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -253,12 +253,12 @@ export default function OurIndustries({ className }: OurServicesProps) {
               <Media className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
-              Media & Publication
+              Hospitality
             </Typography>
           </Stack>
           <Stack
             component={Link}
-            href="#logistics"
+            href="#rebateManagement"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -267,21 +267,21 @@ export default function OurIndustries({ className }: OurServicesProps) {
               <Logistic className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
-              Logistics
+              Rebate
             </Typography>
           </Stack>
           <Stack
             component={Link}
-            href="#energy"
+            href="#cxTechnology"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Energy className="size-8 text-primary-dark max-lg:size-6" />
+              <HealthCare className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
-              Energy
+              Customer Experience
             </Typography>
           </Stack>
         </div>

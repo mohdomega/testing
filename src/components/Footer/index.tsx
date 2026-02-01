@@ -56,13 +56,15 @@ export default function Footer({ className }: FooterProps) {
                 </Stack>
               </Stack>
               <Stack className="gap-4">
-                <Typography variant="body2" className="text-white/60">
-                  Follow us at
-                </Typography>
-                <Stack direction="row" className="gap-4">
+                <div className='flex items-center gap-4'>
+                  <Typography variant="body2" className="text-white/60">
+                    Follow us at
+                  </Typography>
                   <div className="rounded-md w-[50px] h-[50px] relative overflow-hidden">
                     <Image src={SalesforceRidgePartnerLogo} alt="SalesforceRidgePartnerLogo" className="w-full h-full object-cover" />
                   </div>
+                </div>
+                <Stack direction="row" className="gap-4">
                   {socialMedia.map(({ icon: Icon, label, link }) => (
                     <Stack
                       key={label}
