@@ -132,14 +132,14 @@ import { cn } from '@/lib';
 
 import ProfileCard from './ProfileCard';
 
-import DhavalJaniImg from '../../../../public/Images/Team/Dhaval Jani.png';
-import DipenIshaniImg from '../../../../public/Images/Team/Dipen Ishani.jpeg';
-import KrishnapriyaImg from '../../../../public/Images/Team/Krishnapriya PS.jpg';
-import PreetamImg from '../../../../public/Images/Team/Preetam.png';
-import SooryaImg from '../../../../public/Images/Team/Soorya.png';
-import MandaraImg from '../../../../public/Images/Team/mandara.png';
-import MansurIshaniImg from '../../../../public/Images/Team/Mansur Ishani.jpeg';
-import RuxanaIshaniImg from '../../../../public/Images/Team/Ruxana Ishani.png';
+import DhavalJaniImg from '../../../../public/images/Team/Dhaval Jani.png';
+import DipenIshaniImg from '../../../../public/images/Team/Dipen Ishani.jpeg';
+import KrishnapriyaImg from '../../../../public/images/Team/Krishnapriya PS.jpg';
+import PreetamImg from '../../../../public/images/Team/Preetam.png';
+import SooryaImg from '../../../../public/images/Team/Soorya.png';
+import MandaraImg from '../../../../public/images/Team/mandara.png';
+import MansurIshaniImg from '../../../../public/images/Team/Mansur Ishani.jpeg';
+import RuxanaIshaniImg from '../../../../public/images/Team/Ruxana Ishani.png';
 
 interface OurTeamProps {
   className?: string;
