@@ -9,7 +9,8 @@ import { cn } from '@/lib';
 
 import ArrowUp from '/public/icons/arrow-up.svg';
 import Bill from '/public/icons/bill.svg';
-import IndustryImg6 from '/public/images/industry/Communication.png';
+// import IndustryImg6 from '/public/images/industry/Communication.png';
+import IndustryImg6 from '/public/images/industry/Logistics.png';
 
 interface RebateManagementProps {
     className?: string;
@@ -18,7 +19,7 @@ interface RebateManagementProps {
 export default function RebateManagement({ className }: RebateManagementProps) {
     return (
         <Stack
-            id="rebateManagement"
+            id="logistics"
             component="section"
             className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5 bg-white group even:bg-background', className)}
         >
@@ -26,7 +27,8 @@ export default function RebateManagement({ className }: RebateManagementProps) {
                 <div className="grid grid-cols-2 items-center gap-10">
                     <Stack alignItems="flex-start" className="flex-1 gap-8">
                         <Stack className="gap-4">
-                            <TitleChip>Rebate Management</TitleChip>
+                            {/* <TitleChip>Rebate Management</TitleChip> */}
+                            <TitleChip>Logistics</TitleChip>
                             <Typography variant="h2" className="text-gradient">
                                 How Salesforce Automation Reduced Rebate Errors by 30% for a Global Distributor Network
                             </Typography>

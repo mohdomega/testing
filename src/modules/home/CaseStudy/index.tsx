@@ -4,10 +4,10 @@ import { cn } from '@/lib';
 
 import Study from './Study';
 
-import HomeVideoImg1 from '../../../../public/images/home-case-study-image-1.png';
-import HomeVideoImg2 from '../../../../public/images/home-case-study-image-2.png';
-import HomeVideoImg3 from '../../../../public/images/home-case-study-image-3.png';
-import HomeVideoImg4 from '../../../../public/images/home-case-study-image-4.png';
+import CXTransformationImg from '../../../../public/images/Home/CX Transformation.png';
+import ManufacturingImg from '../../../../public/images/Home/Manufacturing.png';
+import RebateManagementImg from '../../../../public/images/Home/Rebate Management.png';
+import MulesoftImg from '../../../../public/images/Home/Mulesoft Integration.png';
 import Automation from '/public/icons/automation.svg';
 import Clock from '/public/icons/clock.svg';
 import Microphone from '/public/icons/microphone.svg';
@@ -32,7 +32,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
           </Typography>
           <div className="grid grid-cols-[1fr_auto_1fr] gap-x-30 gap-y-20 max-lg:grid-cols-[auto_1fr] max-lg:gap-x-10 max-sm:gap-x-4 max-sm:gap-y-10">
             <Study
-              image={HomeVideoImg1}
+              image={CXTransformationImg}
               step={1}
               title="Customer Service & CX Transformation"
               description="Improve CSAT, reduce handling time, and increase conversions with AI-driven Salesforce Service Cloud solutions by IDRMS."
@@ -63,7 +63,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               }
             />
             <Study
-              image={HomeVideoImg2}
+              image={ManufacturingImg}
               step={2}
               title="Manufacturing Sales & Forecasting Transformation"
               description="Drive faster sales cycles, accurate forecasting, and connected manufacturing operations with Salesforce Manufacturing Cloud."
@@ -131,11 +131,10 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               }
             />
             <Study
-              image={HomeVideoImg3}
+              image={RebateManagementImg}
               step={3}
               title="REBATE MANAGEMENT – CHANNEL & PARTNER AUTOMATION"
               blogSlug="cx-technology-case-study"
-
               description="Automate rebate programs, improve accuracy, and accelerate partner payments using Salesforce-powered rebate management solutions."
               highlightedFeatures={
                 <Stack
@@ -157,7 +156,7 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               }
             />
             <Study
-              image={HomeVideoImg4}
+              image={MulesoftImg}
               step={4}
               title="MULESOFT – SALESFORCE INTEGRATION AUTOMATION"
               blogSlug="cx-technology-case-study"

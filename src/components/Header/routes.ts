@@ -13,7 +13,7 @@ export const routes = [
       // { name: 'Real Estate', path: '/industries#realEstate' },
       { name: 'Manufacturing', path: '/industries#manufacturing' },
       { name: 'CX Technology', path: '/industries#cxTechnology' },
-      { name: 'Rebate Management', path: '/industries#rebateManagement' },
+      { name: 'Logistics', path: '/industries#logistics' },
       { name: 'Non Profit', path: '/industries#nonProfit' },
       { name: 'Hospitality', path: '/industries#hospitality' },
     ],

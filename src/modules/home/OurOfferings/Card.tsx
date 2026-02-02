@@ -38,7 +38,7 @@ export default function Card({ icon: Icon, img, title, subtitle, className, path
           <div className="p-6 rounded-full gradient-vertical max-lg:p-4">
             <Icon className="size-8 text-white max-lg:size-6" />
           </div>
-          <Typography variant="h3" className="whitespace-nowrap text-2xl font-medium leading-[1]">
+          <Typography variant="h3" className="text-2xl font-medium leading-[1.2]">
             {title}
           </Typography>
         </div>

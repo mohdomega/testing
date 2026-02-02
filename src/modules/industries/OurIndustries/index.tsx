@@ -258,7 +258,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
           </Stack>
           <Stack
             component={Link}
-            href="#rebateManagement"
+            href="#logistics"
             justifyContent="center"
             alignItems="center"
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
@@ -267,7 +267,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
               <Logistic className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
-              Rebate
+              Logistics
             </Typography>
           </Stack>
           <Stack

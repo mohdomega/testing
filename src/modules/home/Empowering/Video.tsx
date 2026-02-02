@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { cn } from '@/lib';
 
 import HomeVideoImg1 from '../../../../public/images/video-image-1.png';
+import HomeCaseStudyHeadingImage from '../../../../public/images/Home/Case Study Heading Photo.png';
 
 interface VideoProps {
   className?: string;
@@ -16,7 +17,7 @@ export default function Video({ className }: VideoProps) {
           {/* TODO: Video */}
           {/* <div className="h-105 rounded-3xl bg-neutral-300 max-lg:h-54" /> */}
           <div className="h-105 rounded-3xl bg-neutral-300 max-lg:h-54 relative overflow-hidden">
-            <Image src={HomeVideoImg1} alt="video img 1" className="w-full h-full object-cover rounded-3x" />
+            <Image src={HomeCaseStudyHeadingImage} alt="video img 1" className="w-full h-full object-cover rounded-3x" />
           </div>
         </div>
       </div>
