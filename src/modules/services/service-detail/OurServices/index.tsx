@@ -28,7 +28,15 @@ interface OurServicesProps {
   title: string;
   description: string;
   className?: string;
+  tags?: string[];
 }
+
+const DEFAULT_TAGS = [
+  'Consultation Service',
+  'Implementation Service',
+  'Support & Maintenance',
+  'Staff Augmentation',
+];
 
 const serviceItems = [
   {
@@ -140,8 +148,10 @@ function CustomCarouselArrows() {
   );
 }
 
-export default function OurServices({ title, description, className }: OurServicesProps) {
+export default function OurServices({ title, description, className, tags }: OurServicesProps) {
   const pathname = usePathname();
+
+  const tagList = tags || DEFAULT_TAGS;
 
   // Map service routes to their corresponding images (1-8 in order)
   const serviceImageMap: Record<string, any> = {
@@ -177,30 +187,15 @@ export default function OurServices({ title, description, className }: OurServic
               <Typography className="text-balance">{description}</Typography>
             </Stack>
             <Stack direction="row" flexWrap="wrap" className="gap-4">
-              <Typography
-                variant="body2"
-                className="px-6 py-3 text-primary-dark/60 font-medium border border-primary-dark/30 rounded-full whitespace-nowrap"
-              >
-                Consultation Service
-              </Typography>
-              <Typography
-                variant="body2"
-                className="px-6 py-3 text-primary-dark/60 font-medium border border-primary-dark/30 rounded-full whitespace-nowrap"
-              >
-                Implementation Service
-              </Typography>
-              <Typography
-                variant="body2"
-                className="px-6 py-3 text-primary-dark/60 font-medium border border-primary-dark/30 rounded-full whitespace-nowrap"
-              >
-                Support & Maintenance
-              </Typography>
-              <Typography
-                variant="body2"
-                className="px-6 py-3 text-primary-dark/60 font-medium border border-primary-dark/30 rounded-full whitespace-nowrap"
-              >
-                Staff Augmentation
-              </Typography>
+              {tagList.map((tag, index) => (
+                <Typography
+                  key={index}
+                  variant="body2"
+                  className="px-6 py-3 text-primary-dark/60 font-medium border border-primary-dark/30 rounded-full whitespace-nowrap"
+                >
+                  {tag}
+                </Typography>
+              ))}
             </Stack>
           </Stack>
           <div className="flex-1 w-full aspect-square rounded-3xl bg-neutral-300 relative overflow-hidden">

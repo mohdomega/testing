@@ -10,6 +10,7 @@ interface ServicePageProps {
   heroDescription: string;
   serviceTitle: string;
   serviceDescription: string;
+  serviceTags?: string[];
 }
 
 export default function ServicePage({
@@ -17,11 +18,12 @@ export default function ServicePage({
   heroDescription,
   serviceTitle,
   serviceDescription,
+  serviceTags,
 }: ServicePageProps) {
   return (
     <div>
       <Hero title={title} description={heroDescription} />
-      <OurServices title={serviceTitle} description={serviceDescription} />
+      <OurServices title={serviceTitle} description={serviceDescription} tags={serviceTags} />
       {/* <CaseStudies /> */}
       {/* <Blogs /> */}
       <BlazeNewTrails />

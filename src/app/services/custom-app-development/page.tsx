@@ -7,6 +7,12 @@ export default function Page() {
       heroDescription="Launch faster and smarter with our custom app development solutions. We build scalable, user-friendly applications tailored to your specific business needs, from concept to deployment."
       serviceTitle="We help you get the most from Custom App Development"
       serviceDescription="From mobile to web applications, we make custom app development easier, faster, and more aligned with your vision. Our solutions help you engage users and drive business growth."
+      serviceTags={[
+        'Salesforce Custom App Development',
+        'Lightning & Apex Solutions',
+        'Tailored Business Applications',
+        'Scalable Platform Extensions',
+      ]}
     />
   );
 }

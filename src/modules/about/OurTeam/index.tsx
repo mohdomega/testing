@@ -132,38 +132,28 @@ import { cn } from '@/lib';
 
 import ProfileCard from './ProfileCard';
 
-import TeamImg1 from '../../../../public/images/TeamImages/team-image-1.png';
-import TeamImg2 from '../../../../public/images/TeamImages/team-image-2.png';
-import TeamImg3 from '../../../../public/images/TeamImages/team-image-3.png';
-import TeamImg4 from '../../../../public/images/TeamImages/team-image-4.png';
-import TeamImg5 from '../../../../public/images/TeamImages/team-image-5.png';
-import TeamImg6 from '../../../../public/images/TeamImages/team-image-6.png';
-import TeamImg7 from '../../../../public/images/TeamImages/team-image-7.png';
-import TeamImg8 from '../../../../public/images/TeamImages/team-image-8.png';
-import TeamImg9 from '../../../../public/images/TeamImages/team-image-9.png';
-
-// 🔹 2 extra images (same repeat ya new)
-import TeamImg10 from '../../../../public/images/TeamImages/team-image-1.png';
-import TeamImg11 from '../../../../public/images/TeamImages/team-image-2.png';
-import TeamImg12 from '../../../../public/images/TeamImages/team-image-3.png';
+import DhavalJaniImg from '../../../../public/Images/Team/Dhaval Jani.png';
+import DipenIshaniImg from '../../../../public/Images/Team/Dipen Ishani.jpeg';
+import KrishnapriyaImg from '../../../../public/Images/Team/Krishnapriya PS.jpg';
+import PreetamImg from '../../../../public/Images/Team/Preetam.png';
+import SooryaImg from '../../../../public/Images/Team/Soorya.png';
+import MandaraImg from '../../../../public/Images/Team/mandara.png';
+import MansurIshaniImg from '../../../../public/Images/Team/Mansur Ishani.jpeg';
+import RuxanaIshaniImg from '../../../../public/Images/Team/Ruxana Ishani.png';
 
 interface OurTeamProps {
   className?: string;
 }
 
 const TEAM_MEMBERS = [
-  { img: TeamImg1, name: 'Mateo Rossi', role: 'CTO', tagline: 'Builds smart logistics tech' },
-  { img: TeamImg2, name: 'Stephanie Moore', role: 'Design Head', tagline: 'Crafts intuitive designs' },
-  { img: TeamImg3, name: 'Liam Carter', role: 'Founder', tagline: 'Streamlines operations' },
-  { img: TeamImg4, name: 'Ethan Brooks', role: 'CMO', tagline: 'Innovates processes' },
-  { img: TeamImg5, name: 'Jennifer Rossi', role: 'CFO', tagline: 'Crafts intuitive designs' },
-  { img: TeamImg6, name: 'Edward Davids', role: 'Sr. Product Manager', tagline: 'Crafts intuitive designs' },
-  { img: TeamImg7, name: 'Cristina Jones', role: 'Sr. HR Manager', tagline: 'Builds smart logistics tech' },
-  { img: TeamImg8, name: 'Liam Payne', role: 'COO', tagline: 'Innovates processes' },
-  { img: TeamImg9, name: 'Jessica Moore', role: 'Sr. Marketing Manager', tagline: 'Innovates processes' },
-  { img: TeamImg10, name: 'Noah Smith', role: 'Tech Lead', tagline: 'Leads engineering teams' },
-  { img: TeamImg11, name: 'Olivia Brown', role: 'UX Manager', tagline: 'Improves user experience' },
-  { img: TeamImg12, name: 'William Johnson', role: 'QA Lead', tagline: 'Ensures product quality' },
+  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
+  { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
+  { img: DipenIshaniImg, name: 'Dipen Ishani', role: 'CEO/Founder', tagline: 'Dedicated to excellence' },
+  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
+  { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Dedicated to excellence' },
+  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
+  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
+  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
 ];
 
 export default function OurTeam({ className }: OurTeamProps) {
