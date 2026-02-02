@@ -24,85 +24,98 @@ export const testimonials = [
     location: 'Chief Revenue Officer',
     company: 'Elastic',
     companyLogo: GameADzone,
+    companyName: 'GameADzone',
     avatar: Image1,
     quote:
       'IDRMS helped us streamline our Sales and Service processes end to end. Their structured approach and deep platform expertise resulted in faster deal cycles and noticeably improved customer response times.',
-  },
-  {
-    name: 'Marissa Lim',
-    location: 'Chief Technology Officer',
-    company: 'Buildwave',
-    companyLogo: Kim,
-    avatar: Image2,
-    quote:
-      'What stood out about IDRMS was their ability to understand our business before touching the technology. The Salesforce solution they designed is scalable, intuitive, and clearly built for long-term growth.',
-  },
-  {
-    name: 'Amit Rao',
-    location: 'Vice President – Digital Transformation',
-    company: 'Elastic',
-    companyLogo: Oasis,
-    avatar: Image1,
-    quote:
-      'IDRMS didn’t just implement Salesforce for us — they became a trusted advisor. From discovery to go-live, the team was proactive, transparent, and focused on outcomes.',
-  },
-  {
-    name: 'Rahul Dsouza',
-    location: 'Director of Operations',
-    company: 'Slack',
-    companyLogo: Ekinkare,
-    avatar: Image1,
-    quote: 'With IDRMS’s Salesforce implementation, we reduced manual effort by over 30% and gained real-time visibility across our sales pipeline and service operations.',
-  },
-  {
-    name: 'Lara Dutta',
-    location: 'Head of Customer Experience',
-    company: 'Buildwave',
-    companyLogo: Ideacrest,
-    avatar: Image2,
-    quote:
-      'Their Salesforce expertise significantly improved our service response times and agent productivity. The solution was well-architected, cleanly integrated, and delivered exactly as promised.',
-  },
-  {
-    name: 'Linda',
-    location: 'Chief Information Officer',
-    company: 'Slack',
-    companyLogo: GameADzone,
-    avatar: Image2,
-    quote: 'IDRMS played a critical role in modernizing our Salesforce ecosystem. The integration work was seamless, and the platform now supports both our current needs and future expansion.',
   },
   {
     name: 'Julia Roberts',
     location: 'Chief Operating Officer',
     company: 'Slack',
     companyLogo: OsevenExports,
+    companyName: 'OsevenExports',
     avatar: Image2,
     quote: 'We saw measurable improvements within weeks of go-live. Sales forecasting accuracy improved, service escalations dropped, and leadership finally had a unified view of customer data.',
-  },
-  {
-    name: 'Aarav Kumar',
-    location: 'Director of Enterprise Applications',
-    company: 'Elastic',
-    companyLogo: Rudminds,
-    avatar: Image1,
-    quote:
-      'The IDRMS team brought strong Salesforce delivery discipline and domain knowledge. Their consultants worked as an extension of our internal team, ensuring smooth collaboration throughout.',
-  },
-  {
-    name: 'Anjlina Vogel',
-    location: 'Senior Director – IT Strategy',
-    company: 'Buildwave',
-    companyLogo: N,
-    avatar: Image2,
-    quote:
-      'What impressed us most was IDRMS’s commitment beyond implementation. Their ongoing Salesforce support and optimization continue to deliver value as our business evolves.',
   },
   {
     name: 'Lucy',
     location: 'Director of Information',
     company: 'Slack',
     companyLogo: Noble,
+    companyName: 'Noble',
     avatar: Image2,
     quote: 'IDRMS has been a reliable Salesforce partner for us. We continue to work with them on new initiatives, confident in their ability to deliver scalable, high-quality solutions.',
   },
+  {
+    name: 'Aarav Kumar',
+    location: 'Director of Enterprise Applications',
+    company: 'Elastic',
+    companyLogo: Rudminds,
+    companyName: 'Rudminds',
+    avatar: Image1,
+    quote:
+      'The IDRMS team brought strong Salesforce delivery discipline and domain knowledge. Their consultants worked as an extension of our internal team, ensuring smooth collaboration throughout.',
+  },
+
+   {
+    name: 'Lara Dutta',
+    location: 'Head of Customer Experience',
+    company: 'Buildwave',
+    companyLogo: Ideacrest,
+    companyName: 'Ideacrest',
+    avatar: Image2,
+    quote:
+      'Their Salesforce expertise significantly improved our service response times and agent productivity. The solution was well-architected, cleanly integrated, and delivered exactly as promised.',
+  },
+   {
+    name: 'Amit Rao',
+    location: 'Vice President – Digital Transformation',
+    company: 'Elastic',
+    companyLogo: Oasis,
+    companyName: 'Oasis',
+    avatar: Image1,
+    quote:
+      'IDRMS didn’t just implement Salesforce for us — they became a trusted advisor. From discovery to go-live, the team was proactive, transparent, and focused on outcomes.',
+  },
+
+  // {
+  //   name: 'Marissa Lim',
+  //   location: 'Chief Technology Officer',
+  //   company: 'Buildwave',
+  //   companyLogo: Kim,
+  //   avatar: Image2,
+  //   quote:
+  //     'What stood out about IDRMS was their ability to understand our business before touching the technology. The Salesforce solution they designed is scalable, intuitive, and clearly built for long-term growth.',
+  // },
+ 
+  // {
+  //   name: 'Rahul Dsouza',
+  //   location: 'Director of Operations',
+  //   company: 'Slack',
+  //   companyLogo: Ekinkare,
+  //   avatar: Image1,
+  //   quote: 'With IDRMS’s Salesforce implementation, we reduced manual effort by over 30% and gained real-time visibility across our sales pipeline and service operations.',
+  // },
+ 
+  // {
+  //   name: 'Linda',
+  //   location: 'Chief Information Officer',
+  //   company: 'Slack',
+  //   companyLogo: GameADzone,
+  //   avatar: Image2,
+  //   quote: 'IDRMS played a critical role in modernizing our Salesforce ecosystem. The integration work was seamless, and the platform now supports both our current needs and future expansion.',
+  // },
+  
+  // {
+  //   name: 'Anjlina Vogel',
+  //   location: 'Senior Director – IT Strategy',
+  //   company: 'Buildwave',
+  //   companyLogo: N,
+  //   avatar: Image2,
+  //   quote:
+  //     'What impressed us most was IDRMS’s commitment beyond implementation. Their ongoing Salesforce support and optimization continue to deliver value as our business evolves.',
+  // },
+  // {
+  
 ];

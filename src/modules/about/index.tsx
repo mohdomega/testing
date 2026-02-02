@@ -1,5 +1,7 @@
+import WorkCulture from '../careers/WorkCulture';
 import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
+import OurKPIs from '../shared/OurKPIs';
 import OurTrustedPeople from '../shared/OurTrustedPeople';
 import BoldAmbitions from './BoldAmbitions';
 import OurMission from './BoldAmbitions/OurMission';
@@ -13,10 +15,12 @@ export default function About() {
     <div>
       <Hero />
       <OurTrustedPeople className="pt-80" />
+       <OurKPIs />
       {/* <Rating /> */}
       <BoldAmbitions />
       <OurMission/>
       <WhyChooseUs />
+       <WorkCulture />
       <OurTeam />
       <ContactUs />
       <BlazeNewTrails className="bg-white" />

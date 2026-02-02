@@ -43,7 +43,7 @@ export const routes = [
     children: [
       { name: 'About IDRMS', path: '/about' },
       { name: 'Careers', path: '/careers' },
-      { name: 'Work Culture', path: '/careers#work-culture' },
+      { name: 'Work Culture', path: '/about#work-culture' },
     ],
   },
   // {

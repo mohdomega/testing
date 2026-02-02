@@ -112,6 +112,26 @@ const serviceItems = [
       'Mulesoft is a platform specializing in integration and API management, enabling businesses to connect applications & data.',
   },
 ];
+const DataAnalyticsAiAndServiceItems = [
+  {
+    icon: LeadGeneration,
+    label: 'Power BI',
+    description:
+      'Power BI transforms your raw data into interactive, real-time dashboards and reports, enabling faster decision-making through powerful visualizations, seamless data integration, and actionable business insights.',
+  },
+  {
+    icon: Payroll,
+    label: 'Tableau',
+    description:
+      'Tableau helps you explore, analyze, and understand your data through intuitive visual analytics, empowering teams to uncover trends, identify opportunities, and make data-driven decisions with confidence.',
+  },
+  {
+    icon: Clustering,
+    label: 'Agentforce',
+    description:
+      'Agentforce enables businesses to build and deploy AI-powered agents that automate tasks, assist customers, and enhance workflows, delivering intelligent, personalized experiences across multiple channels.',
+  },
+];
 
 function CustomCarouselArrows() {
   const { scrollPrev, scrollNext, canScrollPrev, canScrollNext } = useCarousel();
@@ -239,7 +259,7 @@ export default function OurServices({ title, description, className, tags }: Our
         {pathname.includes('data-analytics-and-ai') && (
           <div className="relative w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviceItems.slice(0, 3).map((item, index) => {
+              {DataAnalyticsAiAndServiceItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div

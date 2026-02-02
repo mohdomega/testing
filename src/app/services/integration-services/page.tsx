@@ -6,7 +6,8 @@ export default function Page() {
       title="Integration Services"
       heroDescription="Connect your systems seamlessly with our integration solutions. We design and implement robust integrations that unify your business processes, improve data flow, and provide real-time visibility."
       serviceTitle="We help you get the most from Integration Services"
-      serviceDescription="From simple API connections to complex enterprise architectures, we make system integration easier, faster, and more aligned with your business goals."
+      // serviceDescription="From simple API connections to complex enterprise architectures, we make system integration easier, faster, and more aligned with your business goals."
+      serviceDescription="We connect Salesforce with your existing systems to create a single, reliable flow of data across your organization."
       serviceTags={[
         'Salesforce Integration Services',
         'MuleSoft & API Integrations',

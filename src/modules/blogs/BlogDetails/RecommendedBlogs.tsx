@@ -19,8 +19,8 @@ export default function RecommendedBlogs() {
   const featuredBlogs = [...blogPosts, ...blogPosts];
 
   return (
-    <Stack className="bg-background mt-20 p-4 md:p-10 lg:p-20">
-      <div className="max-w-[1440px] w-full  mx-auto">
+    <Stack className="bg-background mt-20 p-4 md:p-15 lg:p-20">
+      <div className="max-w-[1440px] w-full mb-20  mx-auto">
         <Stack className="gap-1 mb-[60px]">
           <TitleChip>Latest Post</TitleChip>
           <Typography variant="h2" className="text-gradient text-6xl">
@@ -35,24 +35,20 @@ export default function RecommendedBlogs() {
             {/* <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none max-lg:w-10" /> */}
             <Carousel opts={{ loop: true, align: 'start', slidesToScroll: 1 }} className=" w-full h-full">
               {/* <CarouselContent className="gap-[38px] h-full items-stretch "> */}
-              <CarouselContent className="gap-[0px] h-full ">
-                {featuredBlogs.map((blog, index) => {
-                  return (
-                    <CarouselItem key={index} className="basis-auto h-full flex">
-                      <div className="h-full pr-10 max-lg:pr-5 flex">
-                        <Card
-                          className="bg-white h-full flex flex-col max-w-[280px] min-h-[404px]"
-                          key={blog.slug}
-                          blog={blog}
-                        />
-                      </div>
-                    </CarouselItem>
-                  );
-                })}
+              <CarouselContent className="flex items-stretch gap-0">
+                {featuredBlogs.map((blog, index) => (
+                  <CarouselItem key={index} className="basis-auto flex">
+                    <div className="pr-10 max-lg:pr-5 flex h-full">
+                      <Card
+                        className="bg-white flex flex-col max-w-[280px] min-h-[404px] h-full"
+                        key={blog.slug}
+                        blog={blog}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
-              <div className="max-lg:hidden absolute right-0 top-[-140px] flex justify-center items-center gap-4 mt-[20px]">
-                <CustomCarouselArrows />
-              </div>
+              <CustomCarouselArrows />
             </Carousel>
           </div>
         </Stack>
@@ -65,12 +61,12 @@ function CustomCarouselArrows() {
   const { scrollPrev, scrollNext, canScrollPrev, canScrollNext } = useCarousel();
 
   return (
-    <div className="flex flex-row gap-8">
+    <>
       <button
         onClick={scrollPrev}
         disabled={!canScrollPrev}
         className={cn(
-          'w-[60px] h-[60px] rounded-full bg-white border border-black/10 flex items-center justify-center transition-opacity hover:opacity-80',
+          'w-[60px] h-[60px] rounded-full bg-white border border-black/10 flex items-center justify-center transition-opacity hover:opacity-80 absolute left-[-80px] top-1/2 -translate-y-1/2 z-20 max-lg:hidden',
           !canScrollPrev && 'opacity-50 cursor-not-allowed'
         )}
         aria-label="Previous"
@@ -83,7 +79,7 @@ function CustomCarouselArrows() {
         onClick={scrollNext}
         disabled={!canScrollNext}
         className={cn(
-          'w-[60px] h-[60px] rounded-full bg-white border border-black/10 flex items-center justify-center transition-opacity hover:opacity-80',
+          'w-[60px] h-[60px] rounded-full bg-white border border-black/10 flex items-center justify-center transition-opacity hover:opacity-80 absolute right-[-80px] top-1/2 -translate-y-1/2 z-20 max-lg:hidden',
           !canScrollNext && 'opacity-50 cursor-not-allowed'
         )}
         aria-label="Next"
@@ -92,6 +88,6 @@ function CustomCarouselArrows() {
           <ArrowRight className="w-[24px] h-[24px] text-primary-dark m-auto" />
         </span>
       </button>
-    </div>
+    </>
   );
 }

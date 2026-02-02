@@ -38,7 +38,7 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Mentor}
             img={Img1}
             title="Salesforce Implementation"
-            path="/services/digital-transformation-consultation"
+            path="/services/salesforce-implementation"
             // subtitle="End-to-end strategy aligned with Salesforce best practices"
             subtitle="We work closely with your teams to design and implement Salesforce solutions that fit your processes, users, and long-term business goals."
           />
@@ -46,7 +46,7 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Integration}
             img={Img2}
             title="Digital Transformation Consultation"
-            path="/services/integration-services"
+            path="/services/digital-transformation-consultation"
             // subtitle="Boost Salesforce ROI with seamless integration and clean data"
             subtitle="We help organizations navigate digital transformation by understanding their challenges and designing Salesforce strategies that drive real business change."
           />
@@ -63,7 +63,7 @@ export default function OurOfferings({ className }: OurOfferingsProps) {
             icon={Team}
             img={Img4}
             title="Integration Services"
-            path="/services/salesforce-managed-services"
+            path="/services/integration-services"
             // subtitle="Scalable Salesforce talent to fast-track your goals"
             subtitle="We connect Salesforce with your existing systems to ensure your teams have accurate, real-time data where they need it most."
           />

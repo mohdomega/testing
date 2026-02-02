@@ -49,7 +49,8 @@ export default function Hero({ className }: HeroProps) {
               to grow, innovate, and make a real impact every day
             </Typography>
             <Stack direction="row" className="gap-3">
-              <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent">
+              {/* <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent"> */}
+              <Button component={Link} href="mailto:info@idrms.tech" color="accent">
                 Email us now
               </Button>
             </Stack>

@@ -149,7 +149,9 @@ export default function BlogContent({ blog }: BlogContentProps) {
               </Typography>
               <div className="flex gap-[8px]">
                 <Link
-                  href="#"
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => setIsTwitterHover(true)}
                   onMouseLeave={() => setIsTwitterHover(false)}
                   className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white group"
@@ -157,7 +159,9 @@ export default function BlogContent({ blog }: BlogContentProps) {
                   {isTwitterHover ? <Twitter BgFill="white" stroke="#1E0A52" /> : <Twitter />}
                 </Link>
                 <Link
-                  href="#"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => setIsFacebookHover(true)}
                   onMouseLeave={() => setIsFacebookHover(false)}
                   className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"
@@ -165,7 +169,9 @@ export default function BlogContent({ blog }: BlogContentProps) {
                   {isFacebookHover ? <Facebook BgFill="white" /> : <Facebook />}
                 </Link>
                 <Link
-                  href="#"
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => setIsInstagramHover(true)}
                   onMouseLeave={() => setIsInstagramHover(false)}
                   className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"
@@ -173,7 +179,9 @@ export default function BlogContent({ blog }: BlogContentProps) {
                   {isInstagramHover ? <Instagram BgFill="white" rectFill="#1E0A52" /> : <Instagram />}
                 </Link>
                 <Link
-                  href="#"
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => setIsLinkedinHover(true)}
                   onMouseLeave={() => setIsLinkedinHover(false)}
                   className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"

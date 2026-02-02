@@ -28,7 +28,7 @@ export default function OurBlogs({ className }: OurBlogsProps) {
           </Typography>
         </Stack>
         <div className="w-full grid grid-cols-2 gap-10 max-lg:gap-5 max-sm:grid-cols-1 max-sm:gap-4">
-          {displayBlogs.map((blog) => (
+          {displayBlogs.slice(0, 6).map((blog) => (
             <BlogCard
               key={blog.slug}
               img={blog.cardImage}

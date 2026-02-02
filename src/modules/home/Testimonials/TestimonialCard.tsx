@@ -12,6 +12,7 @@ interface TestimonialCardProps {
   companyLogo: any;
   avatar: any;
   quote: string;
+  companyName: string;
   className?: string;
 }
 
@@ -22,6 +23,7 @@ export default function TestimonialCard({
   companyLogo,
   avatar,
   quote,
+  companyName,
   className,
 }: TestimonialCardProps) {
   return (
@@ -60,10 +62,12 @@ export default function TestimonialCard({
       {/* Name and Location */}
       <div className="flex flex-col gap-1">
         <Typography variant="title" className="text-[18px] text-[#131313] font-semibold">
-          {name}
+          {/* {name} */}
+          {location}
         </Typography>
         <Typography variant="body2" className="text-[16px] text-[#5A5A59] font-normal">
-          {location}
+          {/* {location} */}
+          {companyName}
         </Typography>
       </div>
     </div>

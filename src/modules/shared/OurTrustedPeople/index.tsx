@@ -26,7 +26,7 @@ interface OurTrustedPeopleProps {
 }
 
 const CLIENT_LOGOS = [
-  { id: 1, src: AmericanBotanicals, alt: 'American Botanicals' },
+  // { id: 1, src: AmericanBotanicals, alt: 'American Botanicals' },
   { id: 2, src: Ekinkare, alt: 'Ekinkare' },
   { id: 3, src: GameADzone, alt: 'GameADzone' },
   { id: 4, src: Ideacrest, alt: 'Ideacrest' },
@@ -66,66 +66,6 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
             ))}
           </CarouselContent>
         </Carousel>
-
-        <div className="max-w-[1440px] w-full mx-auto px-6 md:px-10 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6">
-            <Stack
-              alignItems="center"
-              className="gap-3 p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <Typography component="span" variant="h2" className="font-bold text-gradient">
-                20+
-              </Typography>
-              <Typography component="span" variant="body2" className="font-medium text-center text-primary-dark/70">
-                Salesforce Projects Delivered
-              </Typography>
-            </Stack>
-            <Stack
-              alignItems="center"
-              className="gap-3 p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <Typography component="span" variant="h2" className="font-bold text-gradient">
-                70+
-              </Typography>
-              <Typography component="span" variant="body2" className="font-medium text-center text-primary-dark/70">
-                Salesforce Certifications
-              </Typography>
-            </Stack>
-            <Stack
-              alignItems="center"
-              className="gap-3 p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <Typography component="span" variant="h2" className="font-bold text-gradient">
-                30%
-              </Typography>
-              <Typography component="span" variant="body2" className="font-medium text-center text-primary-dark/70">
-                Faster Time-to-Value
-              </Typography>
-            </Stack>
-            <Stack
-              alignItems="center"
-              className="gap-3 p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <Typography component="span" variant="h2" className="font-bold text-gradient">
-                90%+
-              </Typography>
-              <Typography component="span" variant="body2" className="font-medium text-center text-primary-dark/70">
-                Client Retention
-              </Typography>
-            </Stack>
-            <Stack
-              alignItems="center"
-              className="gap-3 p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <Typography component="span" variant="h2" className="font-bold text-gradient">
-                50+
-              </Typography>
-              <Typography component="span" variant="body2" className="font-medium text-center text-primary-dark/70">
-                Years of Leadership Experience
-              </Typography>
-            </Stack>
-          </div>
-        </div>
       </Stack>
     </Stack>
   );

@@ -43,7 +43,8 @@ export default function Hero({ className }: HeroProps) {
             and we&apos;ll get back to you shortly
           </Typography>
           <Stack direction="row" className="gap-3">
-            <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent">
+            {/* <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent"> */}
+            <Button component={Link} href="mailto:info@idrms.tech" color="accent">
               Email us now
             </Button>
           </Stack>

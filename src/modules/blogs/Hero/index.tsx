@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Stack from '@/components/Stack';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import { blogPosts } from '../data';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
 import LightingFlash from '/public/icons/lighting-flash.svg';
@@ -14,6 +15,7 @@ interface HeroProps {
 }
 
 export default function Hero({ className }: HeroProps) {
+  const displayBlogs = blogPosts[blogPosts.length - 1];
   return (
     <Stack
       justifyContent="center"
@@ -51,7 +53,8 @@ export default function Hero({ className }: HeroProps) {
             <Link
               // href="#"
               // href={`/blogs/${blog.slug}`}
-              href={`/blogs/unlocking-the-true-power-of-salesforce`}
+              // href={`/blogs/unlocking-the-true-power-of-salesforce`}
+               href={`/blogs/${displayBlogs.slug}`}
               className="flex items-center gap-2 text-white hover:gap-3 transition-all mt-[12px]"
             >
               Read More <ChevronRight className="size-4" />

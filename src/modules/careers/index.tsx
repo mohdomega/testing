@@ -9,7 +9,7 @@ export default function Careers() {
     <div>
       <Hero />
       <JoinTeam />
-      <WorkCulture />
+      {/* <WorkCulture /> */}
       <BlazeNewTrails />
       <JoinUs id="join-us-section" />
     </div>

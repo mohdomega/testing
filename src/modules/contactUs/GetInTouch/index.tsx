@@ -9,7 +9,8 @@ import ContactForm from '@/modules/shared/ContactUs/ContactForm';
 import Integration from '/public/icons/integration.svg';
 import Mentor from '/public/icons/mentor.svg';
 import Support from '/public/icons/support.svg';
-import GetInTouchImg1 from '/public/images/get-in-touch-img1.png';
+// import GetInTouchImg1 from '/public/images/get-in-touch-img1.png';
+import GetInTouchImg from '/public/images/GetInTouchContactUS.png';
 
 interface GetInTouchProps {
   className?: string;
@@ -48,7 +49,7 @@ export default function GetInTouch({ className }: GetInTouchProps) {
             </div>
             {/* Image should sit behind icons, be centered and cover container */}
             <Image
-              src={GetInTouchImg1}
+              src={GetInTouchImg}
               alt="contact img 1"
               className="rounded-full absolute object-cover w-[400px] h-[400px] left-0 bottom-0"
               width={400}

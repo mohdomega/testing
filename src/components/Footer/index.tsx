@@ -149,12 +149,12 @@ export default function Footer({ className }: FooterProps) {
             <Typography variant="body2" className="text-white/60">
               © {new Date().getFullYear()}. All rights reserved by IDRMS Technology Pvt. Ltd.
             </Typography>
-            <Typography>
+            {/* <Typography>
               Website by{' '}
               <Link href="https://techanzo.com" target="_blank" className="font-bold">
                 Techanzo
               </Link>
-            </Typography>
+            </Typography> */}
           </Stack>
         </Stack>
       </div>

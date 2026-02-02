@@ -1,5 +1,6 @@
 import BlazeNewTrails from '../shared/BlazeNewTrails';
 import ContactUs from '../shared/ContactUs';
+import OurKPIs from '../shared/OurKPIs';
 import OurTrustedPeople from '../shared/OurTrustedPeople';
 import Blogs from './Blogs';
 import CaseStudy from './CaseStudy';
@@ -15,16 +16,19 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Empowering />
       <OurOfferings />
       <OurTrustedPeople />
+      <OurKPIs />
       <Testimonials />
-      <Empowering />
+       {/* spaccer */}
+      <div className="h-[250px]"/> 
       <Video />
       <CaseStudy />
-      <BlazeNewTrails className="max-lg:hidden" />
       <OurProcess />
-      {/* <OurTeam /> */}
       <Blogs />
+      <BlazeNewTrails className="max-lg:hidden" />
+      {/* <OurTeam /> */}
       <ContactUs />
     </div>
   );
