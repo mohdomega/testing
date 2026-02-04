@@ -21,6 +21,19 @@ import CareerImg8 from '/public/images/CareerImages/career-image-8.JPG';
 import CareerImg9 from '/public/images/CareerImages/career-image-9.jpg';
 import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
 
+const CAREER_IMAGES = [
+  { src: CareerImg1, className: 'col-start-1 col-end-2 row-start-2 row-end-4' },
+  { src: CareerImg4, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
+  { src: CareerImg7, className: 'col-start-1 col-end-2 row-start-10 row-end-12' },
+  { src: CareerImg2, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
+  { src: CareerImg5, className: 'col-start-2 col-end-4 row-start-7 row-end-9' },
+  { src: CareerImg8, className: 'col-start-2 col-end-3 row-start-9 row-end-13' },
+  { src: CareerImg9, className: 'col-start-3 col-end-4 row-start-9 row-end-13' },
+  { src: CareerImg3, className: 'col-start-4 col-end-5 row-start-2 row-end-6' },
+  { src: CareerImg6, className: 'col-start-4 col-end-5 row-start-6 row-end-8' },
+  { src: CareerImg10, className: 'col-start-4 col-end-5 row-start-8 row-end-12' },
+];
+
 interface WorkCultureProps {
   className?: string;
 }
@@ -52,37 +65,47 @@ export default function WorkCulture({ className }: WorkCultureProps) {
               </Typography>
             </div>
           </Stack>
-          <div className="grid grid-cols-4 grid-rows-12 gap-[40px] *:min-h-40 *:bg-primary-dark/60 *:rounded-3xl max-lg:gap-5">
-            <div className="col-start-1 col-end-2 row-start-2 row-end-4 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg1} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-1 col-end-2 row-start-4 row-end-10 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg4} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-1 col-end-2 row-start-10 row-end-12 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg7} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-2 col-end-4 row-start-1 row-end-7 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg2} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-2 col-end-4 row-start-7 row-end-9 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg5} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-2 col-end-3 row-start-9 row-end-13 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg8} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-3 col-end-4 row-start-9 row-end-13 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg9} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-4 col-end-5 row-start-2 row-end-6 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg3} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-4 col-end-5 row-start-6 row-end-8 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg6} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
-            <div className="col-start-4 col-end-5 row-start-8 row-end-12 relative overflow-hidden rounded-3xl">
-              <Image src={CareerImg10} alt="home video img 1" className="w-full h-full object-cover" fill />
-            </div>
+          {/* Desktop/Tablet Grid (Complex Layout) */}
+          <div className="hidden lg:grid grid-cols-4 grid-rows-12 gap-[40px] max-lg:gap-5">
+            {CAREER_IMAGES.map((img, index) => (
+              <div
+                key={index}
+                className={cn(
+                  'relative overflow-hidden rounded-3xl bg-primary-dark/60 min-h-40',
+                  img.className
+                )}
+              >
+                <Image
+                  src={img.src}
+                  alt={`career image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
+                  priority={index < 4}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Grid (Simple Layout) */}
+          <div className="grid lg:hidden grid-cols-2 gap-4 max-sm:grid-cols-1">
+            {CAREER_IMAGES.map((img, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-3xl bg-primary-dark/60 aspect-[4/3]"
+              >
+                <Image
+                  src={img.src}
+                  alt={`career image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="eager" // Ensure they load on mobile
+                  priority={index < 2}
+                />
+              </div>
+            ))}
           </div>
           <div className="grid grid-cols-2 gap-20 max-lg:grid-cols-1 max-lg:gap-6 max-lg:text-center">
             <Typography variant="h2" className="text-[72px] text-gradient text-balance w-fit">
@@ -103,7 +126,7 @@ export default function WorkCulture({ className }: WorkCultureProps) {
               </Typography>
             </Stack>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <StatCard icon={BillIcon} value="50+ Experts" description="Driving IDRMS forward" />
             <StatCard
               icon={DirectSendBoxIcon}
@@ -111,7 +134,7 @@ export default function WorkCulture({ className }: WorkCultureProps) {
               description="Our team proudly works from"
             />
             <StatCard icon={CalenderIcon} value="30+ Clients" description="We actively collaborate with " />
-          </div>
+          </div> */}
         </Stack>
       </div>
     </Stack>

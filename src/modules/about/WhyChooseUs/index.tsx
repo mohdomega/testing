@@ -40,18 +40,18 @@ export default function WhyChooseUs({ className }: WhyChooseUsProps) {
 
   return (
     <Stack component="section" alignItems="center" className={cn('py-17.5 bg-background w-full', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10 flex flex-col items-center gap-15">
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-4 max-sm:py-6 flex flex-col items-center gap-15">
         <Stack alignItems="center" className="gap-4">
           {/* <TitleChip>About us</TitleChip> */}
           <Typography variant="h2" className="text-gradient text-center">
             Why choose us
           </Typography>
         </Stack>
-        <Stack className="gap-10 p-10 w-full bg-white rounded-3xl">
+        <Stack className="gap-10 p-10 max-sm:p-4 w-full bg-white rounded-3xl">
           <Stack
             direction="row"
             justifyContent="space-between"
-            className="p-6 rounded-3xl shadow-[0px_8px_80px_0px_#0000000F] overflow-x-hidden"
+            className="p-6 max-sm:p-3 rounded-3xl shadow-[0px_8px_80px_0px_#0000000F] overflow-x-auto scrollbar-hide"
           >
             <Stack
               direction="row"
@@ -147,18 +147,28 @@ export default function WhyChooseUs({ className }: WhyChooseUsProps) {
             </Stack>
           </Stack>
           <div className="w-full">
-            <Stack direction="row" alignItems="center" className="gap-16">
-              <Stack alignItems="flex-start" className="flex-1 gap-6">
-                <div className="grid place-content-center size-20 bg-accent rounded-full">
-                  <Typography component="span" variant="title" className="text-black font-semibold">
+            {/* Content and Image Section */}
+            {/* max-lg:flex-col puts the first child (content) on top, second (image) on bottom */}
+            <Stack
+              direction="row"
+              alignItems="center"
+              className="gap-16 max-lg:flex-col max-lg:gap-8 max-lg:items-start"
+            >
+              <Stack alignItems="flex-start" className="flex-1 gap-6 w-full">
+                <div className="grid place-content-center size-20 bg-accent rounded-full max-sm:size-14">
+                  <Typography
+                    component="span"
+                    variant="title"
+                    className="text-black font-semibold max-sm:text-xl"
+                  >
                     {String(currentIndex + 1).padStart(2, '0')}
                   </Typography>
                 </div>
-                <Typography className="text-3xl font-medium text-primary-dark">
+                <Typography className="text-3xl font-medium text-primary-dark max-lg:text-2xl max-sm:text-lg">
                   {data[currentIndex]}
                 </Typography>
               </Stack>
-              <div className="relative overflow-hidden flex-1 aspect-[4/3] bg-neutral-300 rounded-3xl">
+              <div className="relative overflow-hidden flex-1 aspect-[4/3] bg-neutral-300 rounded-3xl w-full max-lg:aspect-video">
                 <Image
                   src={[First, Two, Three, Four][currentIndex]}
                   alt="home video img 1"

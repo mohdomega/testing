@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
+import Button from '@/components/Button';
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
@@ -18,7 +20,11 @@ interface GetInTouchProps {
 
 export default function GetInTouch({ className }: GetInTouchProps) {
   return (
-    <Stack component="section" alignItems="center" className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5', className)}>
+    <Stack
+      component="section"
+      alignItems="center"
+      className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5', className)}
+    >
       <div className="max-w-[1440px] w-full mx-auto flex flex-col items-center gap-15">
         <Stack className="gap-2 max-w-175 text-center">
           <Stack alignItems="center" className="gap-1">
@@ -57,8 +63,17 @@ export default function GetInTouch({ className }: GetInTouchProps) {
               priority
             />
           </div>
-          <div className="max-[1050px]:w-full">
-            <ContactForm className="bg-background" />
+          <div className="max-[1050px]:w-full flex flex-col items-center">
+            <ContactForm className="bg-background w-full" />
+            <div className="mt-10 w-full flex justify-center items-center">
+              <Button
+                component={Link}
+                href="/contact-us/schedule-meeting"
+                className="w-fit max-sm:self-center max-sm:px-6"
+              >
+                Schedule a Meeting
+              </Button>
+            </div>
           </div>
         </Stack>
       </div>

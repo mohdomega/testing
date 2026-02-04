@@ -42,10 +42,17 @@ export default function Header({ className }: HeaderProps) {
 
   const [isOpen, setIsOpen] = useState(false);
   const desktopMenuRef = useRef<HTMLElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   function handleToggle() {
     setIsOpen((prev) => !prev);
   }
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+    setIsOpenMenu({}); // Also reset the inner dropdown states
+  }, [pathname]);
 
   /*
    * Hover & Delay Logic
@@ -69,12 +76,24 @@ export default function Header({ className }: HeaderProps) {
   // Close desktop dropdown when clicking outside (still useful if clicks happen elsewhere)
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
+      // Desktop menu closing
       if (desktopMenuRef.current && !desktopMenuRef.current.contains(event.target as Node)) {
         setOpenDesktopMenu(null);
       }
+      // Mobile menu closing
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        // Make sure we didn't click the toggle button itself (which might be outside the ref if ref is on the menu container)
+        !(event.target as Element).closest('button[data-toggle="mobile-menu"]')
+      ) {
+        setIsOpen(false);
+      }
     }
 
-    if (openDesktopMenu) {
+    // Always listen for clicks if either menu is open
+    if (openDesktopMenu || isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
@@ -82,7 +101,7 @@ export default function Header({ className }: HeaderProps) {
       document.removeEventListener('mousedown', handleClickOutside);
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [openDesktopMenu]);
+  }, [openDesktopMenu, isOpen]);
 
   return (
     <header className={className}>
@@ -182,7 +201,7 @@ export default function Header({ className }: HeaderProps) {
                                 : isScrolled
                                   ? 'text-black hover:bg-black/10'
                                   : // : 'text-white hover:bg-white/30'
-                                  'text-black hover:bg-black/10'
+                                    'text-black hover:bg-black/10'
                             )}
                             onClick={() => {
                               setOpenDesktopMenu(null);
@@ -243,7 +262,7 @@ export default function Header({ className }: HeaderProps) {
                 )}
               />
             </Link>
-            <Button variant="icon" onClick={handleToggle}>
+            <Button variant="icon" onClick={handleToggle} data-toggle="mobile-menu">
               <MenuIcon
                 className={cn(
                   // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
@@ -253,100 +272,108 @@ export default function Header({ className }: HeaderProps) {
             </Button>
           </Stack>
           {isOpen && (
-            <Stack
-              component="nav"
-              justifyContent="space-between"
-              className={cn(
-                // 'bg-white/10 rounded-2xl mt-3 mx-10 px-4 py-4 backdrop-blur-xl transition-all duration-300',
-                'bg-white rounded-2xl mt-3 mx-10 px-4 py-4 shadow-xl transition-all duration-300',
-                {
-                  'bg-white': isScrolled,
-                }
-              )}
-            >
-              {/* <Stack component="ul" className="gap-4" divider={<hr className="border-t-white/10" />}> */}
-              <Stack component="ul" className="gap-4" divider={<hr className="border-t-black/10" />}>
-                {routes.map(({ name, path, children }) => (
-                  <li key={name} className="hover:scale-105 active:scale-95 transition duration-300">
-                    <NavLink
-                      href={path}
-                      className={cn(
-                        // 'px-1 py-0 text-white data-[active=true]:text-accent font-medium flex items-center justify-between',
-                        'px-1 py-0 text-black data-[active=true]:text-accent font-medium flex items-center justify-between',
-                        {
-                          'text-primary-dark': !isScrolled && isLightHeaderPage,
-                          'text-black': isScrolled,
-                        }
-                      )}
-                      onClick={(e: any) => {
-                        if (children) {
-                          // For parents with children: Navigate to parent route but keep menu open
-                          // Don't close navbar, just toggle the children menu
-                          setIsOpenMenu((prev: any) => ({
-                            ...prev,
-                            [name]: !prev[name],
-                          }));
-                          // Allow navigation to proceed - don't prevent default
-                          // Navbar will stay open so user can access children
-                        } else {
-                          // No children - close menu and navigate
-                          setIsOpen(false);
-                        }
-                      }}
-                    >
-                      {name}
-                      {children && (
-                        <span
-                          className={cn(
-                            isOpenMenu[name] ? 'rotate-360' : 'rotate-270',
-                            ' transition-all duration-300'
-                          )}
+            <div ref={mobileMenuRef}>
+              <Stack
+                component="nav"
+                justifyContent="space-between"
+                className={cn(
+                  // 'bg-white/10 rounded-2xl mt-3 mx-10 px-4 py-4 backdrop-blur-xl transition-all duration-300',
+                  'bg-white rounded-2xl mt-3 mx-10 px-4 py-4 shadow-xl transition-all duration-300',
+                  {
+                    'bg-white': isScrolled,
+                  }
+                )}
+              >
+                {/* <Stack component="ul" className="gap-4" divider={<hr className="border-t-white/10" />}> */}
+                <Stack component="ul" className="gap-4" divider={<hr className="border-t-black/10" />}>
+                  {routes.map(({ name, path, children }) => (
+                    <li key={name} className="hover:scale-105 active:scale-95 transition duration-300">
+                      <div
+                        className={cn(
+                          'px-1 py-0 font-medium flex items-center justify-between w-full hover:scale-105 active:scale-95 transition duration-300 min-h-[40px]',
+                          // Styles derived from previous NavLink className
+                          {
+                            'text-primary-dark': !isScrolled && isLightHeaderPage,
+                            'text-black': isScrolled,
+                          }
+                        )}
+                      >
+                        <NavLink
+                          href={path}
+                          className={cn('flex-1 text-black data-[active=true]:text-accent', {
+                            'text-primary-dark': !isScrolled && isLightHeaderPage,
+                            'text-black': isScrolled,
+                          })}
+                          onClick={() => {
+                            setIsOpen(false);
+                          }}
                         >
-                          {/* <ChevronDownSvg color="#1E0A52" /> */}
-                          <ChevronDownSvg color="black" />
-                        </span>
-                      )}
-                    </NavLink>
-
-                    {children && isOpenMenu[name] && (
-                      <div className=" ml-2 mt-1 flex flex-col gap-2">
-                        {children.map((sub) => (
-                          <NavLink
-                            key={sub.name}
-                            href={sub.path}
-                            className={cn(
-                              'text-sm transition-colors',
-                              !isScrolled && isLightHeaderPage
-                                ? 'text-primary-dark'
-                                : isScrolled
-                                  ? 'text-black hover:text-black/80'
-                                  // : 'text-white hover:text-white'
-                                  : 'text-black hover:text-black/80'
-                            )}
-                            onClick={() => {
-                              // Close menu when child is clicked
-                              setIsOpen(false);
-                              // Handle scroll for industry hash links
-                              if (sub.path.includes('#') && sub.path.startsWith('/industries')) {
-                                setTimeout(() => {
-                                  const hash = sub.path.split('#')[1];
-                                  const element = document.getElementById(hash);
-                                  if (element) {
-                                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                  }
-                                }, 100);
-                              }
+                          {name}
+                        </NavLink>
+                        {children && (
+                          <div
+                            className="cursor-pointer w-10 h-10 flex items-center justify-center"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setIsOpenMenu((prev: any) => ({
+                                // ...prev, // Remove this spread to implement accordion behavior (auto-close others)
+                                [name]: !prev[name],
+                              }));
                             }}
                           >
-                            {sub.name}
-                          </NavLink>
-                        ))}
+                            <span
+                              className={cn(
+                                isOpenMenu[name] ? 'rotate-360' : 'rotate-270',
+                                'block transition-all duration-300'
+                              )}
+                            >
+                              <ChevronDownSvg color="black" />
+                            </span>
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </li>
-                ))}
+
+                      {children && isOpenMenu[name] && (
+                        <div className=" ml-2 mt-1 flex flex-col gap-2">
+                          {children.map((sub) => (
+                            <NavLink
+                              key={sub.name}
+                              href={sub.path}
+                              className={cn(
+                                'text-sm transition-colors',
+                                !isScrolled && isLightHeaderPage
+                                  ? 'text-primary-dark'
+                                  : isScrolled
+                                    ? 'text-black hover:text-black/80'
+                                    : // : 'text-white hover:text-white'
+                                      'text-black hover:text-black/80'
+                              )}
+                              onClick={() => {
+                                // Close menu when child is clicked
+                                setIsOpen(false);
+                                // Handle scroll for industry hash links
+                                if (sub.path.includes('#') && sub.path.startsWith('/industries')) {
+                                  setTimeout(() => {
+                                    const hash = sub.path.split('#')[1];
+                                    const element = document.getElementById(hash);
+                                    if (element) {
+                                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }
+                                  }, 100);
+                                }
+                              }}
+                            >
+                              {sub.name}
+                            </NavLink>
+                          ))}
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </Stack>
               </Stack>
-            </Stack>
+            </div>
           )}
         </div>
       </ForNonDesktop>

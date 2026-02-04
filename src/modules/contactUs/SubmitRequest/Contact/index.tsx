@@ -74,10 +74,10 @@ export default function Contact({ className }: ContactProps) {
           alignItems="center"
           className="gradient-vertical rounded-3xl *:flex-1 overflow-hidden"
         >
-          <div className="h-77.5">
+          <div className="h-77.5 max-md:hidden">
             <Image src={LadyPointingRight} alt="lady pointing right" />
           </div>
-          <Stack className="gap-6 text-white">
+          <Stack className="gap-6 text-white p-6 justify-center max-sm:items-center max-sm:text-center">
             <Stack direction="row" alignItems="center" className="gap-3">
               <div className="p-3 border border-white/10 rounded-full">
                 <LightingFlash className="size-4 " />
@@ -105,14 +105,17 @@ export default function Contact({ className }: ContactProps) {
               <Stack
                 direction="row"
                 flexWrap="wrap"
-                className=" gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
+                className=" gap-4 max-w-120 w-full max-[1100px]:max-w-full"
               >
                 {services.map((item, index) => (
                   <Tooltip key={item.label} content={item.description}>
                     <Button
                       variant={index === currentIndex ? 'contained' : 'outlined'}
                       onClick={handleSelect(index)}
-                      className={index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10'}
+                      className={cn(
+                        index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10',
+                        'whitespace-normal h-auto py-2 text-center'
+                      )}
                     >
                       {item.label}
                     </Button>
@@ -120,6 +123,31 @@ export default function Contact({ className }: ContactProps) {
                 ))}
               </Stack>
             </Stack>
+            {/* <Stack className=" gap-4 w-full">
+              <Typography variant="subtitle" className="font-medium">
+                Services
+              </Typography>
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                className=" gap-4 max-w-120 w-full max-[1100px]:max-w-full"
+              >
+                {services.map((item, index) => (
+                  <Tooltip key={item.label} content={item.description}>
+                    <Button
+                      variant={index === currentIndex ? 'contained' : 'outlined'}
+                      onClick={handleSelect(index)}
+                      className={cn(
+                        index === currentIndex ? 'text-white' : 'text-primary-dark border-black/10',
+                        'whitespace-normal h-auto py-2 text-center'
+                      )}
+                    >
+                      {item.label}
+                    </Button>
+                  </Tooltip>
+                ))}
+              </Stack>
+            </Stack> */}
             <Stack className=" gap-4 w-full">
               <Typography variant="subtitle" className="font-medium">
                 Your Budget
@@ -127,14 +155,17 @@ export default function Contact({ className }: ContactProps) {
               <Stack
                 direction="row"
                 flexWrap="wrap"
-                className=" gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
+                className=" gap-4 max-w-120 w-full max-[1100px]:max-w-full"
               >
                 {budgets.map((item, index) => (
                   <Tooltip key={item.label} content={item.description}>
                     <Button
                       variant={index === currentIndex2 ? 'contained' : 'outlined'}
                       onClick={handleSelect2(index)}
-                      className={index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10'}
+                      className={cn(
+                        index === currentIndex2 ? 'text-white' : 'text-primary-dark border-black/10',
+                        'whitespace-normal h-auto py-2 text-center'
+                      )}
                     >
                       {item.label}
                     </Button>
@@ -149,14 +180,17 @@ export default function Contact({ className }: ContactProps) {
               <Stack
                 direction="row"
                 flexWrap="wrap"
-                className="gap-4 max-w-120 max-[1100px]:w-full max-[1100px]:max-w-full"
+                className="gap-4 max-w-120 w-full max-[1100px]:max-w-full"
               >
                 {delivery.map((item, index) => (
                   <Tooltip key={item.label} content={item.description}>
                     <Button
                       variant={index === currentIndex3 ? 'contained' : 'outlined'}
                       onClick={handleSelect3(index)}
-                      className={index === currentIndex3 ? 'text-white' : 'text-primary-dark border-black/10'}
+                      className={cn(
+                        index === currentIndex3 ? 'text-white' : 'text-primary-dark border-black/10',
+                        'whitespace-normal h-auto py-2 text-center'
+                      )}
                     >
                       {item.label}
                     </Button>
@@ -165,9 +199,9 @@ export default function Contact({ className }: ContactProps) {
               </Stack>
             </Stack>
           </Stack>
-          <div className="w-1/2 max-[1100px]:w-full max-[1100px]:flex max-[1100px]:justify-center">
+          <div className="w-1/2 max-[1100px]:w-full flex flex-col items-center">
             <QuoteRequestForm
-              className="bg-background max-[1100px]:w-full"
+              className="bg-background w-full"
               selectedService={services[currentIndex]?.label || services[0].label}
               selectedBudget={budgets[currentIndex2]?.label || budgets[0].label}
               selectedDeliveryTime={delivery[currentIndex3]?.label || delivery[0].label}

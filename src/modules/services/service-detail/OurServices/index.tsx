@@ -206,7 +206,7 @@ export default function OurServices({ title, description, className, tags }: Our
               </Typography>
               <Typography className="text-balance">{description}</Typography>
             </Stack>
-            <Stack direction="row" flexWrap="wrap" className="gap-4">
+            {/* <Stack direction="row" flexWrap="wrap" className="gap-4">
               {tagList.map((tag, index) => (
                 <Typography
                   key={index}
@@ -215,6 +215,18 @@ export default function OurServices({ title, description, className, tags }: Our
                 >
                   {tag}
                 </Typography>
+              ))}
+            </Stack> */}
+            <Stack className="gap-4">
+              {tagList.map((tag, index) => (
+                <Stack key={index} direction="row" alignItems="center" className="gap-3">
+                  <div className="min-w-5 min-h-5 w-5 h-5 rounded-full bg-primary-light/10 flex items-center justify-center">
+                    <ArrowRight className="w-2.5 h-2.5 text-primary-dark" />
+                  </div>
+                  <Typography variant="body2" className="text-primary-dark font-medium">
+                    {tag}
+                  </Typography>
+                </Stack>
               ))}
             </Stack>
           </Stack>

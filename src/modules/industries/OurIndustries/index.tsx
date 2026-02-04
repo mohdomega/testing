@@ -170,8 +170,9 @@ export default function OurIndustries({ className }: OurServicesProps) {
   return (
     <section className={cn('w-full', className)}>
       {/* <div className="max-w-[1440px] w-full mx-auto"> */}
-      <div className=" w-full mx-auto">
-        <div className="grid grid-cols-4 border border-black/15 max-sm:grid-cols-2">
+      <div className="w-full mx-auto">
+        {/* Desktop Grid */}
+        <div className="grid grid-cols-4 max-lg:grid-cols-2 border border-black/15 max-sm:hidden">
           <Stack
             component={Link}
             href="#healthcare"
@@ -284,6 +285,68 @@ export default function OurIndustries({ className }: OurServicesProps) {
               Customer Experience
             </Typography>
           </Stack>
+        </div>
+
+        {/* Mobile Horizontal Scroll */}
+        <div className="sm:hidden sticky top-[72px] z-40 bg-white border-b border-gray-200 shadow-sm overflow-x-auto scrollbar-hide">
+          <div className="flex items-center gap-4 p-4 min-w-max">
+            <Link
+              href="#healthcare"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <HealthCare className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Healthcare</span>
+            </Link>
+            <Link
+              href="#financialServices"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Finance className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Finance</span>
+            </Link>
+            <Link
+              href="#retail"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Retail className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Retail</span>
+            </Link>
+            <Link
+              href="#nonProfit"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Building className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">NGO</span>
+            </Link>
+            <Link
+              href="#manufacturing"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Manufacturing className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Manufacturing</span>
+            </Link>
+            <Link
+              href="#hospitality"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Media className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Hospitality</span>
+            </Link>
+            <Link
+              href="#logistics"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <Logistic className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">Logistics</span>
+            </Link>
+            <Link
+              href="#cxTechnology"
+              className="flex flex-col items-center justify-center gap-3 p-4 bg-gray-50 rounded-2xl hover:bg-primary group hover:text-white transition-all min-w-[140px] aspect-square border border-gray-100 shadow-sm"
+            >
+              <HealthCare className="size-8 text-primary-dark group-hover:text-white transition-colors" />
+              <span className="font-medium text-center">CX</span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -82,29 +82,34 @@ export default function Hero({ className }: HeroProps) {
 
         <Rating className="max-lg:hidden" />
 
-        <Stack direction="row" className="" alignItems="center" justifyContent="space-between">
+        <Stack
+          direction="row"
+          className="gap-4 max-sm:gap-6 "
+          alignItems="center"
+          justifyContent="space-between"
+        >
           {/* <SlackLogo className="size-26" /> */}
           {/* <MicrosoftLogo className="size-26" /> */}
           {/* <AWSLogo className="size-26" /> */}
           {/* <SalesforceLogo className="size-20 border border-red-500" /> */}
           {/* <SniffLogo className="size-26" /> */}
           {/* <Image src={Slack} alt="slack" className="" /> */}
-          <div className="w-[140px] h-[70px] relative overflow-hidden flex items-center justify-center">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[70px] max-sm:h-[40px] relative overflow-hidden flex items-center justify-center">
             <SalesforceLogo className="w-auto h-full max-w-full object-contain" />
           </div>
           {/* <div className="w-[120px] h-[100px] flex items-center justify-center overflow-hidden">
             <SlackLogo className="w-full h-full scale-[0.7] origin-center" />
           </div> */}
-          <div className="w-[140px] h-[50px] relative overflow-hidden">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[50px] max-sm:h-[30px] relative overflow-hidden">
             <Image src={Slack1} alt="slack" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[140px] h-[50px] relative overflow-hidden">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[50px] max-sm:h-[20px] relative overflow-hidden">
             <Image src={AWS} alt="aws" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[140px] h-[70px] relative overflow-hidden">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[70px] max-sm:h-[40px] relative overflow-hidden">
             <Image src={Mulesoft} alt="mulesoft" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[140px] h-[70px] relative overflow-hidden">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[70px] max-sm:h-[40px] relative overflow-hidden">
             <Image src={Spiff} alt="spiff" className="w-full h-full object-contain" />
           </div>
         </Stack>

@@ -20,7 +20,7 @@ export default function OurVision({ className }: OurVisionProps) {
         <Stack
           direction="row"
           alignItems="center"
-          className="gap-[100px] max-lg:gap-[50px] max-sm:gap-[24px] max-lg:flex-col"
+          className="gap-[100px] max-lg:gap-[50px] max-sm:gap-[24px] max-lg:flex-col-reverse"
         >
           <div className="max-w-[400px] max-h-[616px] relative overflow-hidden flex-1 w-full aspect-square rounded-3xl bg-[#F2F0F7] max-lg:aspect-[4/3]">
             <Image src={AboutImg5} alt="home video img 1" className="w-full h-full object-cover" />

@@ -53,19 +53,29 @@ export default function BlogContent({ blog }: BlogContentProps) {
 
         {/* Hero Image & Author */}
         <div className=" relative w-full aspect-video rounded-3xl overflow-hidden">
-          <Image src={blog.heroImage} alt="Blog Hero" className="w-full h-full object-cover" />
+          <Image
+            src={blog.heroImage}
+            alt="Blog Hero"
+            className="w-full h-full object-cover"
+            quality={100}
+            priority
+            sizes="100vw"
+          />
 
           {/* Author Card */}
-          <div className=" absolute bottom-6 left-6 bg-white p-4 rounded-[20px] flex items-center gap-6 max-sm:bottom-4 max-sm:left-4 max-sm:p-3 max-w-[362px] w-full min-h-[92px] ">
-            <div className="w-[60px] h-[60px] rounded-full overflow-hidden bg-yellow-500">
+          <div className=" absolute bottom-6 left-6 bg-white p-4 rounded-[20px] flex items-center gap-6 max-sm:bottom-[8px] max-sm:left-[8px] max-sm:p-2  max-sm:rounded-tr-2xl max-w-[362px] max-sm:w-fit min-h-[92px] max-sm:min-h-[60px] max-sm:gap-3">
+            <div className="w-[60px] h-[60px] max-sm:w-[40px] max-sm:h-[40px] rounded-full overflow-hidden bg-yellow-500">
               <Image src={blog.author.image} alt="Author" className="w-full h-full object-cover" />
             </div>
             <div>
-              <Typography variant="h6" className="font-medium text-xl">
+              <Typography variant="h6" className="font-medium text-sm md:text-lg">
                 {blog.author.name}
               </Typography>
-              <Typography variant="small" className="text-secondary text-md flex items-center gap-2">
-                <TimeCircle />
+              <Typography
+                variant="small"
+                className="text-secondary text-sm flex items-center gap-1 md:gap-2 sm:text-md"
+              >
+                <TimeCircle className="max-sm:w-4 max-sm:h-4" />
                 {blog.readTime}
               </Typography>
             </div>
@@ -115,7 +125,12 @@ export default function BlogContent({ blog }: BlogContentProps) {
               ))}
               {index === 1 && (
                 <div className="max-w-[768px] h-[305px] w-full aspect-[2/1] rounded-3xl overflow-hidden mt-6">
-                  <Image src={blog.contentImage} alt="Content Image" className="w-full h-full object-cover" />
+                  <Image
+                    src={blog.contentImage}
+                    alt="Content Image"
+                    className="w-full h-full object-cover"
+                    quality={100}
+                  />
                 </div>
               )}
             </Stack>

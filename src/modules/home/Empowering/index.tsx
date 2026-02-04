@@ -7,12 +7,12 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 import Image from 'next/image';
 
-import Img1 from '/public/images/offering-hero-img-1.png';
-import Img2 from '/public/images/offering-hero-img-2.png';
-import Img3 from '/public/images/offering-hero-img-3.jpg';
-import Img4 from '/public/images/offering-hero-img-4.png';
-import Img5 from '/public/images/offering-hero-img-5.jpg';
-import Img6 from '/public/images/offering-hero-img-6.png';
+import Img1 from '/public/images/AboutImages/1.png';
+import Img2 from '/public/images/AboutImages/2.png';
+import Img3 from '/public/images/AboutImages/3.png';
+import Img4 from '/public/images/AboutImages/4.png';
+import Img5 from '/public/images/AboutImages/about-image-1.png';
+import Img6 from '/public/images/AboutImages/about-image-2.png';
 
 interface EmpoweringProps {
   className?: string;
@@ -28,7 +28,8 @@ const chips = [
 
 export default function Empowering({ className }: EmpoweringProps) {
   return (
-    <div className={cn('relative pb-52.5 max-lg:pb-27', className)}>
+    // <div className={cn('relative pb-52.5 max-lg:pb-27', className)}>
+    <div className={cn('relative ', className)}>
       <Stack
         component="section"
         alignItems="center"
@@ -75,7 +76,8 @@ export default function Empowering({ className }: EmpoweringProps) {
       </Stack>
 
       <div className="max-w-[1440px] w-full mx-auto absolute inset-0 pointer-events-none max-lg:hidden">
-        <div className="h-[85%] relative  *:pointer-events-auto">
+        {/* <div className="h-[85%] relative  *:pointer-events-auto"> */}
+        <div className="h-[110%] relative  *:pointer-events-auto">
           <Image
             src={Img1}
             alt=""

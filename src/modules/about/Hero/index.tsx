@@ -18,7 +18,10 @@ export default function Hero({ className }: HeroProps) {
   return (
     <Stack
       component="section"
-      className={cn('pt-0 min-h-[900px] w-full bg-[url("/images/bg-gradient.png")] bg-cover', className)}
+      className={cn(
+        'pt-0 min-h-[900px] w-full bg-[url("/images/bg-gradient.png")] bg-cover bg-center',
+        className
+      )}
     >
       <div className="max-w-[1440px] w-full mx-auto px-0 pt-40 pb-20 max-lg:px-0 max-lg:pb-15 max-sm:px-6 max-sm:pb-10">
         <Stack className=" gap-82.5 max-lg:gap-15 max-sm:gap-10">

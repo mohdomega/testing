@@ -55,12 +55,16 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
         >
           <CarouselContent className="-ml-20">
             {CLIENT_LOGOS.map((logo) => (
-              <CarouselItem key={logo.id} className="basis-auto h-20 flex items-center justify-center pl-20">
+              <CarouselItem
+                key={logo.id}
+                className="basis-auto h-20 flex items-center justify-center pl-20 max-md:pl-10 max-sm:pl-6"
+              >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
+                  quality={100}
                   // className="h-full w-auto object-contain max-h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                  className="h-full w-auto object-contain max-h-16 transition-all duration-300"
+                  className="h-full w-auto object-contain max-h-16 max-sm:max-h-8 max-sm:max-w-[80px] transition-all duration-300"
                 />
               </CarouselItem>
             ))}

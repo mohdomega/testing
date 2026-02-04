@@ -32,7 +32,10 @@ export default function Hero({ className }: HeroProps) {
             <LightingFlash className="size-4" />
             <Typography variant="small">Smart CRM Insights</Typography>
           </Stack>
-          <Typography variant="h1" className="text-white text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-medium">
+          <Typography
+            variant="h1"
+            className="text-white text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-medium"
+          >
             The IDRMS Journal
           </Typography>
         </Stack>
@@ -40,7 +43,13 @@ export default function Hero({ className }: HeroProps) {
         {/* Featured Blog Content */}
         <div className="w-full grid grid-cols-2 gap-[60px] items-center max-lg:grid-cols-1">
           <div className="rounded-3xl overflow-hidden aspect-video relative w-full">
-            <Image src={FeaturedImg} alt="Featured Blog" className="object-cover w-full h-full" />
+            <Image
+              src={FeaturedImg}
+              alt="Featured Blog"
+              className="w-full h-full object-cover"
+              quality={100}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
           <Stack className="gap-[12px] text-white items-start">
             <Typography variant="h2" className="text-2xl font-medium leading-tight">
@@ -54,7 +63,7 @@ export default function Hero({ className }: HeroProps) {
               // href="#"
               // href={`/blogs/${blog.slug}`}
               // href={`/blogs/unlocking-the-true-power-of-salesforce`}
-               href={`/blogs/${displayBlogs.slug}`}
+              href={`/blogs/${displayBlogs.slug}`}
               className="flex items-center gap-2 text-white hover:gap-3 transition-all mt-[12px]"
             >
               Read More <ChevronRight className="size-4" />

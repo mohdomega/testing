@@ -24,7 +24,13 @@ export default function BlogCard({ img, title, description, link, className }: B
       className={cn('gap-4 p-[24px] rounded-[24px] bg-white overflow-hidden h-full', className)}
     >
       <div className="w-full rounded-[16px] overflow-hidden aspect-[3/2]">
-        <Image src={img} alt={`${title}-img`} className="w-full h-full object-cover" />
+        <Image
+          src={img}
+          alt={`${title}-img`}
+          className="w-full h-full object-cover"
+          quality={100}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
 
       <Stack alignItems="flex-start" className="gap-[8px] flex-1">

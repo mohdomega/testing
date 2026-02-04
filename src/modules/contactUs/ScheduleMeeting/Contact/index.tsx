@@ -23,12 +23,12 @@ export default function Contact({ classname }: ContactProps) {
       <Stack
         direction="row"
         alignItems="center"
-        className="gradient-vertical rounded-3xl *:flex-1 overflow-hidden max-lg:flex-col"
+        className="gradient-vertical rounded-3xl *:flex-1 overflow-hidden"
       >
-        <div className="h-77.5 max-lg:h-auto max-lg:w-full">
-          <Image src={LadyPointingRight} alt="lady pointing right" className="max-lg:w-full max-lg:h-auto" />
+        <div className="h-77.5 max-md:hidden">
+          <Image src={LadyPointingRight} alt="lady pointing right" />
         </div>
-        <Stack className="gap-6 text-white max-lg:p-8">
+        <Stack className="gap-6 text-white p-6 justify-center max-sm:items-center max-sm:text-center">
           <Stack direction="row" alignItems="center" className="gap-3">
             <div className="p-3 border border-white/10 rounded-full">
               <LightingFlash className="size-4 " />

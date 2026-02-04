@@ -33,7 +33,7 @@ export default function ProfileCard({
         src={img}
         alt="team image"
         fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
       />
       <Stack
         className={cn(

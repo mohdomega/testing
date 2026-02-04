@@ -17,9 +17,9 @@ export default function Home() {
     <div>
       <Hero />
       <Empowering />
+      <OurKPIs />
       <OurOfferings />
       <OurTrustedPeople />
-      <OurKPIs />
       <Testimonials />
        {/* spaccer */}
       <div className="h-[250px]"/> 

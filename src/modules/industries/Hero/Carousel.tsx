@@ -32,25 +32,43 @@ export default function Carousel({ className }: { className?: string }) {
   const [offset, setOffset] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(1440);
+  const [cardDimensions, setCardDimensions] = useState({ width: 402, gap: 40 });
 
   // Get container width on mount and resize
   useEffect(() => {
-    const updateWidth = () => {
+    const updateDimensions = () => {
       if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth);
+        const width = containerRef.current.offsetWidth;
+        setContainerWidth(width);
+
+        // Update card dimensions based on screen width
+        if (width < 640) {
+          // Mobile
+          setCardDimensions({ width: 280, gap: 16 });
+        } else if (width < 1024) {
+          // Tablet
+          setCardDimensions({ width: 320, gap: 24 });
+        } else {
+          // Desktop
+          setCardDimensions({ width: 402, gap: 40 });
+        }
       }
     };
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
   // Smooth animation - cards slide from LEFT to RIGHT
   useAnimationFrame((time) => {
     // Speed: pixels per millisecond (adjust for faster/slower)
-    const speed = 0.03;
+    const speed = 0.06;
     setOffset(time * speed);
   });
+
+  const { width: CARD_WIDTH, gap: GAP } = cardDimensions;
+  const CARD_TOTAL = CARD_WIDTH + GAP;
 
   // Calculate how many cards we need to fill the screen + buffer
   const totalCards = Math.ceil(containerWidth / CARD_TOTAL) + 6;
@@ -101,7 +119,7 @@ export default function Carousel({ className }: { className?: string }) {
 
           return (
             <motion.div
-              key={index}
+              key={`${index}-${CARD_WIDTH}`} // Force re-render on width change
               className="absolute bottom-0 origin-bottom"
               style={{
                 left: cardX,
@@ -116,7 +134,10 @@ export default function Carousel({ className }: { className?: string }) {
                 zIndex: Math.max(1, zIndex),
               }}
             >
-              <div className="relative w-[402px] h-[360px] max-lg:w-[320px] max-lg:h-[300px] max-sm:w-[280px] max-sm:h-[260px] rounded-3xl overflow-hidden bg-white/10 shadow-2xl border-[6px] border-white/40">
+              <div
+                className="relative rounded-3xl overflow-hidden bg-white/10 shadow-2xl border-[6px] border-white/40 transitions-all duration-300"
+                style={{ width: `${CARD_WIDTH}px`, height: 'auto', aspectRatio: '402/360' }}
+              >
                 <Image
                   src={img}
                   alt={`Industry Image ${index + 1}`}

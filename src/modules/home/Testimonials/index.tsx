@@ -36,13 +36,18 @@ export default function Testimonials({ className }: TestimonialsProps) {
               faster, and lead with impact.
             </Typography>
           </Stack>
-          <div className="flex gap-8 lg:mt-12">
+          <div className="hidden lg:flex gap-8 lg:mt-12">
             <CustomCarouselArrows api={api} />
           </div>
         </div>
 
         {/* Carousel */}
         <div className="relative w-full">
+          {/* Mobile Arrows (Absolute positioned) */}
+          <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 flex justify-between items-center px-0 z-20 pointer-events-none lg:hidden">
+            <CustomCarouselArrows api={api} buttonClassName="pointer-events-auto w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" />
+          </div>
+
           <Carousel
             setApi={setApi}
             opts={{ loop: false, align: 'start', slidesToScroll: 1 }}
@@ -65,7 +70,7 @@ export default function Testimonials({ className }: TestimonialsProps) {
   );
 }
 
-function CustomCarouselArrows({ api }: { api?: CarouselApi }) {
+function CustomCarouselArrows({ api, buttonClassName }: { api?: CarouselApi; buttonClassName?: string }) {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
@@ -108,8 +113,9 @@ function CustomCarouselArrows({ api }: { api?: CarouselApi }) {
       <button
         onClick={scrollPrev}
         className={cn(
-          'w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all',
-          leftButtonActive ? '' : 'bg-white border border-gray-200'
+          '-ml-3 lg:ml-0 w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all',
+          leftButtonActive ? '' : 'bg-white border border-gray-200',
+          buttonClassName
         )}
         style={
           leftButtonActive
@@ -121,13 +127,14 @@ function CustomCarouselArrows({ api }: { api?: CarouselApi }) {
         aria-label="Previous"
       >
         {/* <ArrowLeft className={cn('w-6 h-6', leftButtonActive ? 'text-white' : 'text-black')} /> */}
-        <LeftArrowSvg className={cn('w-6 h-6', leftButtonActive ? 'text-white' : 'text-black')} />
+        <LeftArrowSvg className={cn('sm:w-6 sm:h-6 lg:w-6 lg:h-6 w-4 h-4', leftButtonActive ? 'text-white' : 'text-black')} />
       </button>
       <button
         onClick={scrollNext}
         className={cn(
-          'w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all',
-          rightButtonActive ? '' : 'bg-white border border-gray-100'
+          '-mr-3 lg:mr-0 w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all',
+          rightButtonActive ? '' : 'bg-white border border-gray-100',
+          buttonClassName
         )}
         style={
           rightButtonActive
@@ -139,7 +146,7 @@ function CustomCarouselArrows({ api }: { api?: CarouselApi }) {
         aria-label="Next"
       >
         {/* <ArrowRight className={cn('w-6 h-6', rightButtonActive ? 'text-white ' : 'text-primary-dark')} /> */}
-        <RightArrowSvg className={cn('w-6 h-6', rightButtonActive ? 'text-white ' : 'text-primary-dark')} />
+        <RightArrowSvg className={cn('sm:w-6 sm:h-6 lg:w-6 lg:h-6 w-4 h-4', rightButtonActive ? 'text-white ' : 'text-primary-dark')} />
       </button>
     </>
   );
