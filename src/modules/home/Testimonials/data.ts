@@ -1,5 +1,8 @@
 import Image1 from '/public/icons/testimonials/image5.png';
 import Image2 from '/public/icons/testimonials/image4.png';
+import Image4 from '/public/icons/testimonials/image6.png';
+import Image5 from '/public/icons/testimonials/image7.png';
+import Image6 from '/public/icons/testimonials/image8.png';
 import Image3 from '/public/icons/testimonials/image3.png';
 import ElasticLogo from '/public/icons/testimonials/elastic logo.png';
 import BuildwaveLogo from '/public/icons/testimonials/buildwave logo.png';
@@ -44,7 +47,7 @@ export const testimonials = [
     company: 'Slack',
     companyLogo: Noble,
     companyName: 'Noble',
-    avatar: Image2,
+    avatar: Image4,
     quote: 'IDRMS has been a reliable Salesforce partner for us. We continue to work with them on new initiatives, confident in their ability to deliver scalable, high-quality solutions.',
   },
   {
@@ -53,7 +56,7 @@ export const testimonials = [
     company: 'Elastic',
     companyLogo: Rudminds,
     companyName: 'Rudminds',
-    avatar: Image1,
+    avatar: Image6,
     quote:
       'The IDRMS team brought strong Salesforce delivery discipline and domain knowledge. Their consultants worked as an extension of our internal team, ensuring smooth collaboration throughout.',
   },
@@ -64,20 +67,20 @@ export const testimonials = [
     company: 'Buildwave',
     companyLogo: Ideacrest,
     companyName: 'Ideacrest',
-    avatar: Image2,
+    avatar: Image5,
     quote:
       'Their Salesforce expertise significantly improved our service response times and agent productivity. The solution was well-architected, cleanly integrated, and delivered exactly as promised.',
-  },
-   {
-    name: 'Amit Rao',
-    location: 'Vice President – Digital Transformation',
-    company: 'Elastic',
-    companyLogo: Oasis,
-    companyName: 'Oasis',
-    avatar: Image1,
-    quote:
-      'IDRMS didn’t just implement Salesforce for us — they became a trusted advisor. From discovery to go-live, the team was proactive, transparent, and focused on outcomes.',
-  },
+   },
+  //  {
+  //   name: 'Amit Rao',
+  //   location: 'Vice President – Digital Transformation',
+  //   company: 'Elastic',
+  //   companyLogo: Oasis,
+  //   companyName: 'Oasis',
+  //   avatar: Image1,
+  //   quote:
+  //     'IDRMS didn’t just implement Salesforce for us — they became a trusted advisor. From discovery to go-live, the team was proactive, transparent, and focused on outcomes.',
+  // },
 
   // {
   //   name: 'Marissa Lim',

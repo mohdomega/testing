@@ -67,7 +67,7 @@ export default function EngageWithUs({ className }: EngageWithUsProps) {
                 href="/contact-us/submit-request"
                 endIcon={<ChevronRight className="size-4" />}
               >
-                Chat with us
+                Request
               </Button>
             </Stack>
           </Stack>
@@ -91,7 +91,7 @@ export default function EngageWithUs({ className }: EngageWithUsProps) {
                 href="/contact-us/schedule-meeting"
                 endIcon={<ChevronRight className="size-4" />}
               >
-                Chat with us
+                Schedule
               </Button>
             </Stack>
           </Stack>

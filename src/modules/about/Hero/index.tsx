@@ -23,8 +23,8 @@ export default function Hero({ className }: HeroProps) {
         className
       )}
     >
-      <div className="max-w-[1440px] w-full mx-auto px-0 pt-40 pb-20 max-lg:px-0 max-lg:pb-15 max-sm:px-6 max-sm:pb-10">
-        <Stack className=" gap-82.5 max-lg:gap-15 max-sm:gap-10">
+      <div className="max-w-[1440px] w-full mx-auto px-0 pt-40 pb-10 max-lg:px-0 max-lg:pb-15 max-sm:px-6 max-sm:pb-4">
+        <Stack className=" gap-82.5 max-lg:gap-12 max-sm:gap-20">
           <Stack alignItems="center" className="gap-10">
             <Stack alignItems="center" className="gap-4 max-w-250 text-center">
               <TitleChip dotClassName="bg-white" className="bg-white/10 text-white">

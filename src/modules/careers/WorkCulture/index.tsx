@@ -23,9 +23,9 @@ import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
 
 const CAREER_IMAGES = [
   { src: CareerImg1, className: 'col-start-1 col-end-2 row-start-2 row-end-4' },
-  { src: CareerImg4, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
+  { src: CareerImg2, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
   { src: CareerImg7, className: 'col-start-1 col-end-2 row-start-10 row-end-12' },
-  { src: CareerImg2, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
+  { src: CareerImg4, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
   { src: CareerImg5, className: 'col-start-2 col-end-4 row-start-7 row-end-9' },
   { src: CareerImg8, className: 'col-start-2 col-end-3 row-start-9 row-end-13' },
   { src: CareerImg9, className: 'col-start-3 col-end-4 row-start-9 row-end-13' },
@@ -43,9 +43,9 @@ export default function WorkCulture({ className }: WorkCultureProps) {
     <Stack
       id="work-culture"
       component="section"
-      className={cn('py-17.5 bg-background w-full max-sm:py-10', className)}
+      className={cn('py-12 bg-background w-full max-sm:py-10', className)}
     >
-      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10">
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-1 max-lg:px-15 max-sm:px-6 max-sm:py-2">
         <Stack className="gap-15">
           <Stack className="gap-1 max-lg:items-center max-lg:text-center">
             <TitleChip>Work Culture</TitleChip>

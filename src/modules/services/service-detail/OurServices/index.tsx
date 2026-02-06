@@ -23,6 +23,9 @@ import CloudIcon from '/public/icons/servicePageCraousalIcons/cloud (1).svg';
 import Clustering from '/public/icons/servicePageCraousalIcons/clustering.svg';
 import LeadGeneration from '/public/icons/servicePageCraousalIcons/lead-generation.svg';
 import Payroll from '/public/icons/servicePageCraousalIcons/payroll.svg';
+import Tableau from '/public/icons/servicePageCraousalIcons/tableau.svg';
+import PowerBi from '/public/icons/servicePageCraousalIcons/PowerBi.svg';
+//import AgentForce from '/public/icons/servicePageCraousalIcons/AgentForce.svg';
 
 interface OurServicesProps {
   title: string;
@@ -114,13 +117,13 @@ const serviceItems = [
 ];
 const DataAnalyticsAiAndServiceItems = [
   {
-    icon: LeadGeneration,
+    icon: PowerBi,
     label: 'Power BI',
     description:
       'Power BI transforms your raw data into interactive, real-time dashboards and reports, enabling faster decision-making through powerful visualizations, seamless data integration, and actionable business insights.',
   },
   {
-    icon: Payroll,
+    icon: Tableau,
     label: 'Tableau',
     description:
       'Tableau helps you explore, analyze, and understand your data through intuitive visual analytics, empowering teams to uncover trends, identify opportunities, and make data-driven decisions with confidence.',

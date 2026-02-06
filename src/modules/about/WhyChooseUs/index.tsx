@@ -39,8 +39,8 @@ export default function WhyChooseUs({ className }: WhyChooseUsProps) {
   }
 
   return (
-    <Stack component="section" alignItems="center" className={cn('py-17.5 bg-background w-full', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-4 max-sm:py-6 flex flex-col items-center gap-15">
+    <Stack component="section" alignItems="center" className={cn('py-12 bg-background w-full', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-2 max-lg:px-15 max-sm:px-4 max-sm:py-3 flex flex-col items-center gap-15">
         <Stack alignItems="center" className="gap-4">
           {/* <TitleChip>About us</TitleChip> */}
           <Typography variant="h2" className="text-gradient text-center">

@@ -146,13 +146,13 @@ interface OurTeamProps {
 }
 
 const TEAM_MEMBERS = [
-  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
-  { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
+  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Director', tagline: 'Dedicated to excellence' },
+ // { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
   { img: DipenIshaniImg, name: 'Dipen Ishani', role: 'CEO/Founder', tagline: 'Dedicated to excellence' },
-  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
+//  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
   { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Dedicated to excellence' },
-  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
-  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
+//  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
+//  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
   { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
 ];
 
@@ -161,7 +161,7 @@ export default function OurTeam({ className }: OurTeamProps) {
     <Stack
       id="our-team"
       alignItems="center"
-      className={cn('gap-8 md:gap-15 px-4 md:px-20 py-10 md:py-17.5', className)}
+      className={cn('gap-8 md:gap-15 px-4 md:px-20 py-10 md:py-8', className)}
     >
       <Stack alignItems="center" className="gap-4">
         <TitleChip>Our visionaries</TitleChip>

@@ -29,8 +29,8 @@ export default function Blogs({ className }: BlogsProps) {
   const visibleBlogs = showAll ? featuredBlogs : featuredBlogs.slice(0, 4);
 
   return (
-    <Stack className={cn('w-full py-17.5 max-sm:py-10', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10 flex flex-col items-center gap-15 max-sm:gap-10">
+    <Stack className={cn('w-full py-12 max-sm:py-10', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-8 max-lg:px-15 max-sm:px-6 max-sm:py-2 flex flex-col items-center gap-15 max-sm:gap-10">
         <Stack alignItems="center" className="gap-4">
           <TitleChip>Latest Post</TitleChip>
           <Typography variant="h2" className="text-gradient">

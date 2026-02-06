@@ -18,7 +18,7 @@ export default function OurProcess({ className }: OurProcessProps) {
   return (
     <Stack
       component="section"
-      className={cn('gap-15 px-20 py-17.5 max-lg:p-15 max-sm:gap-10 max-sm:p-10', className)}
+      className={cn('gap-15 px-20 py-12 max-lg:p-15 max-sm:gap-10 max-sm:p-10', className)}
     >
       <Stack alignItems="center" className="gap-1">
         {/* <TitleChip>Our visionaries</TitleChip> */}

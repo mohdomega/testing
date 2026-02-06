@@ -26,8 +26,8 @@ export default function JoinTeam({ className }: JoinTeamProps) {
 
   return (
     <>
-      <Stack component="section" className={cn('py-17.5 w-full', className)}>
-        <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10">
+      <Stack component="section" className={cn('py-12 w-full', className)}>
+        <div className="max-w-[1440px] w-full mx-auto px-20 py-8 max-lg:px-15 max-sm:px-6 max-sm:py-6">
           <Stack className="gap-15">
             <Stack className="gap-4 font-medium max-lg:items-center max-lg:text-center">
               <TitleChip>Careers</TitleChip>

@@ -10,12 +10,12 @@ export const routes = [
       { name: 'Healthcare', path: '/industries#healthcare' },
       { name: 'Financial Services', path: '/industries#financialServices' },
       { name: 'Retail', path: '/industries#retail' },
+      { name: 'NGO', path: '/industries#nonProfit' },
       // { name: 'Real Estate', path: '/industries#realEstate' },
       { name: 'Manufacturing', path: '/industries#manufacturing' },
-      { name: 'CX Technology', path: '/industries#cxTechnology' },
-      { name: 'Logistics', path: '/industries#logistics' },
-      { name: 'Non Profit', path: '/industries#nonProfit' },
       { name: 'Hospitality', path: '/industries#hospitality' },
+      { name: 'Logistics', path: '/industries#logistics' },
+      { name: 'Customer Experience', path: '/industries#cxTechnology' },
     ],
   },
   {
@@ -42,8 +42,8 @@ export const routes = [
     path: '/about',
     children: [
       { name: 'About IDRMS', path: '/about' },
-      { name: 'Careers', path: '/careers' },
       { name: 'Work Culture', path: '/about#work-culture' },
+      { name: 'Careers', path: '/careers' },
     ],
   },
   // {

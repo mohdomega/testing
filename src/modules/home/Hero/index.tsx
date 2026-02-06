@@ -21,7 +21,7 @@ import LightingFlash from '/public/icons/lighting-flash.svg';
 import Slack from '/public/images/Home/Slack.png';
 import Slack1 from '/public/icons/slack1.png';
 import AWS from '/public/images/Home/AWS.png';
-import Mulesoft from '/public/images/Home/Mulesoft.png';
+import Mulesoft from '/public/images/Home/Mulesoft-1.png';
 import Spiff from '/public/images/Home/Spiff.png';
 
 interface HeroProps {
@@ -103,10 +103,10 @@ export default function Hero({ className }: HeroProps) {
           <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[50px] max-sm:h-[30px] relative overflow-hidden">
             <Image src={Slack1} alt="slack" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[50px] max-sm:h-[20px] relative overflow-hidden">
+          <div className="w-[120px] mt-[10px] max-lg:w-[100px] max-sm:w-[60px] h-[40px] max-sm:h-[20px] relative overflow-hidden">
             <Image src={AWS} alt="aws" className="w-full h-full object-contain" />
           </div>
-          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[70px] max-sm:h-[40px] relative overflow-hidden">
+          <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[100px] max-sm:h-[40px] relative overflow-hidden">
             <Image src={Mulesoft} alt="mulesoft" className="w-full h-full object-contain" />
           </div>
           <div className="w-[140px] max-lg:w-[100px] max-sm:w-[60px] h-[70px] max-sm:h-[40px] relative overflow-hidden">

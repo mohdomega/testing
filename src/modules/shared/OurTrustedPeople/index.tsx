@@ -44,7 +44,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
     <Stack
       component="section"
       alignItems="center"
-      className={cn('gap-10 py-17.5 max-lg:py-15 max-lg:p-10', className)}
+      className={cn('gap-10 py-12 max-lg:py-15 max-lg:p-10', className)}
     >
       <TitleChip>Trusted By</TitleChip>
       <Stack className="gap-7.5 w-full">

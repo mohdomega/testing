@@ -8,12 +8,12 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
-import Img1 from '/public/images/offering-hero-img-1.png';
-import Img2 from '/public/images/offering-hero-img-2.png';
-import Img3 from '/public/images/offering-hero-img-3.jpg';
-import Img4 from '/public/images/offering-hero-img-4.png';
-import Img5 from '/public/images/offering-hero-img-5.jpg';
-import Img6 from '/public/images/offering-hero-img-6.png';
+import Img1 from '/public/images/offering-hero-img-7.jpg';
+import Img2 from '/public/images/offering-hero-img-8.png';
+import Img3 from '/public/images/offering-hero-img-9.jpg';
+import Img4 from '/public/images/offering-hero-img-10.png';
+import Img5 from '/public/images/offering-hero-img-11.png';
+import Img6 from '/public/images/offering-hero-img-12.png';
 
 interface HeroProps {
   className?: string;

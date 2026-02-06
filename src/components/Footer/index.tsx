@@ -60,7 +60,7 @@ export default function Footer({ className }: FooterProps) {
                   <Typography variant="body2" className="text-white/60">
                     Follow us at
                   </Typography>
-                  <div className="rounded-md w-[50px] h-[50px] relative overflow-hidden">
+                  <div className="rounded-md w-[70px] h-[90px] relative overflow-hidden">
                     <Image src={SalesforceRidgePartnerLogo} alt="SalesforceRidgePartnerLogo" className="w-full h-full object-cover" />
                   </div>
                 </div>

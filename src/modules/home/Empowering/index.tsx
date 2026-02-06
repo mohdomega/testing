@@ -7,12 +7,12 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 import Image from 'next/image';
 
-import Img1 from '/public/images/AboutImages/1.png';
-import Img2 from '/public/images/AboutImages/2.png';
-import Img3 from '/public/images/AboutImages/3.png';
-import Img4 from '/public/images/AboutImages/4.png';
-import Img5 from '/public/images/AboutImages/about-image-1.png';
-import Img6 from '/public/images/AboutImages/about-image-2.png';
+import Img1 from '/public/images/AboutImages/about-image-14.jpg';
+import Img2 from '/public/images/AboutImages/about-image-13.jpg';
+import Img3 from '/public/images/AboutImages/about-image-12.jpg';
+import Img4 from '/public/images/AboutImages/about-image-11.jpg';
+import Img5 from '/public/images/AboutImages/about-image-8.png';
+import Img6 from '/public/images/AboutImages/about-image-9.png';
 
 interface EmpoweringProps {
   className?: string;

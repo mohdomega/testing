@@ -15,7 +15,7 @@ interface BlazeNewTrailsProps {
 
 export default function BlazeNewTrails({ className }: BlazeNewTrailsProps) {
   return (
-    <section className={cn('px-20 py-17.5 bg-background max-lg:p-0', className)}>
+    <section className={cn('px-20 py-12 bg-background max-lg:p-0', className)}>
       <div className="max-w-[1440px] w-full mx-auto">
         <Stack direction="row" className=" gap-0 rounded-3xl gradient-vertical max-lg:rounded-none">
           <Stack

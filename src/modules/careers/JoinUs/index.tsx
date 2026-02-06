@@ -32,8 +32,8 @@ export default function JoinUs({ className, id }: ContactUsProps) {
   }, [state?.success]);
 
   return (
-    <Stack component="section" id={id} className={cn('py-17.5 bg-white w-full max-sm:py-10', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-20 py-17.5 max-lg:px-15 max-sm:px-6 max-sm:py-10 flex flex-col items-center gap-13">
+    <Stack component="section" id={id} className={cn('py-12 bg-white w-full max-sm:py-10', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-20 py-8 max-lg:px-15 max-sm:px-6 max-sm:py-6 flex flex-col items-center gap-13">
         <Stack className="gap-2 max-w-116 text-center">
           <Stack alignItems="center" className="gap-1">
             <TitleChip>Begin your journey</TitleChip>

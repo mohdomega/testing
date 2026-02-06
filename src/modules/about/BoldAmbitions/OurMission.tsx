@@ -15,8 +15,8 @@ interface OurVisionProps {
 
 export default function OurVision({ className }: OurVisionProps) {
   return (
-    <Stack component="section" className={cn('py-17.5 bg-white w-full max-sm:py-10', className)}>
-      <div className="max-w-[1440px] w-full mx-auto px-31 py-[70px] max-lg:px-15 max-sm:px-6 max-sm:py-10">
+    <Stack component="section" className={cn('py-2 bg-white w-full max-sm:py-3', className)}>
+      <div className="max-w-[1440px] w-full mx-auto px-31 py-[50px] max-lg:px-15 max-sm:px-6 max-sm:py-10">
         <Stack
           direction="row"
           alignItems="center"

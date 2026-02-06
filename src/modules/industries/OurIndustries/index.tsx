@@ -251,7 +251,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <Media className="size-8 text-primary-dark max-lg:size-6" />
+              <HealthCare className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
               Hospitality
@@ -279,7 +279,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
             className="gap-4 border border-black/15 py-12 hover:bg-[#ebe6f8] transition-colors duration-300"
           >
             <div className="p-6 rounded-full border-2 border-black/15 max-lg:p-4">
-              <HealthCare className="size-8 text-primary-dark max-lg:size-6" />
+              <Media className="size-8 text-primary-dark max-lg:size-6" />
             </div>
             <Typography variant="title" className="font-medium">
               Customer Experience
