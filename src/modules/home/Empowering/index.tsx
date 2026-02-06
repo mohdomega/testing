@@ -7,10 +7,10 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 import Image from 'next/image';
 
-import Img1 from '/public/images/AboutImages/about-image-14.jpg';
-import Img2 from '/public/images/AboutImages/about-image-13.jpg';
+import Img1 from '/public/images/AboutImages/about-image-14.JPG';
+import Img2 from '/public/images/AboutImages/about-image-13.JPG';
 import Img3 from '/public/images/AboutImages/about-image-12.jpg';
-import Img4 from '/public/images/AboutImages/about-image-11.jpg';
+import Img4 from '/public/images/AboutImages/about-image-11.JPG';
 import Img5 from '/public/images/AboutImages/about-image-8.png';
 import Img6 from '/public/images/AboutImages/about-image-9.png';
 
