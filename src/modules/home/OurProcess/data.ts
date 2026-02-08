@@ -54,23 +54,39 @@ export const process = [
     description:
       'Understanding your business goals, current processes is key. Through stakeholder discussions and requirement workshops, we identify challenges, priorities, and success metrics to ensure alignment from day one.',
     icon: Vector,
+    color: '#D6CDEA', // Light Purple
   },
   {
     title: 'Design for Impact',
     description:
       'We design a future-ready Salesforce solution tailored to your business. We do the solution architecture, data models, integration strategy, and an implementation roadmap aligned to your growth plans.',
     icon: Mentor,
+    color: '#FCC33F', // Accent Yellow
   },
   {
     title: 'Execution in Motion',
     description:
       'Our certified experts configure, customize, and integrate Salesforce using agile delivery methods. We ensure clean data migration, seamless system integrations, and rigorous testing—followed by user training and a smooth go-live.',
     icon: Zap,
+    color: '#C4B5FD', // Lighter Violet
   },
   {
     title: 'Value That Grows',
     description:
       'Post-launch, we stay engaged to provide support, enhancements, and performance optimization. As your business evolves, we help scale Salesforce through continuous improvements, platform upgrades, and adoption support.',
     icon: Support1,
+    color: '#FFE082', // Light Amber
+  },
+  {
+    title: 'Innovate',
+    description: 'Continuously improving with new technologies',
+    icon: Vector, // Reusing icon for now
+    color: '#D6CDEA', // Light Purple
+  },
+  {
+    title: 'Scale',
+    description: 'Expanding capabilities for future growth',
+    icon: Mentor, // Reusing icon for now
+    color: '#FCC33F', // Accent Yellow
   },
 ];

@@ -22,7 +22,7 @@ export default function Testimonials({ className }: TestimonialsProps) {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
-    <Stack component="section" className={cn('gap-15 px-6 md:px-10 lg:px-20 py-17.5', className)}>
+    <Stack component="section" className={cn('gap-15 px-6 md:px-10 lg:px-20 py-10 md:py-12 lg:py-17.5', className)}>
       <div className="max-w-[1440px] w-full mx-auto flex flex-col gap-15">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">

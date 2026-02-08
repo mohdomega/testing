@@ -14,6 +14,7 @@ import QuoteRequestForm from '@/modules/shared/ContactUs/QuoteRequestForm';
 import LightingFlash from '/public/icons/lighting-flash.svg';
 import LadyPointingRight from '/public/images/lady-pointing-right.png';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const services = [
   { label: 'Sales Cloud', description: 'Manage your sales processes and customer relationships.' },
@@ -43,6 +44,7 @@ interface ContactProps {
 
 export default function Contact({ className }: ContactProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const pathname = usePathname();
 
   function handleSelect(index: number) {
     return () => {
@@ -208,15 +210,17 @@ export default function Contact({ className }: ContactProps) {
               formType="request"
             />
 
-            <div className="mt-10 w-full flex justify-center items-center">
-              <Button
-                component={Link}
-                href="/contact-us/schedule-meeting"
-                className="w-fit max-sm:self-center max-sm:px-6"
-              >
-                Schedule a Meeting
-              </Button>
-            </div>
+            {pathname === '/contact-us/submit-request' && (
+              <div className="mt-10 w-full flex justify-center items-center">
+                <Button
+                  component={Link}
+                  href="/contact-us/schedule-meeting"
+                  className="w-fit max-sm:self-center max-sm:px-6"
+                >
+                  Schedule a Meeting
+                </Button>
+              </div>
+            )}
           </div>
         </Stack>
       </div>

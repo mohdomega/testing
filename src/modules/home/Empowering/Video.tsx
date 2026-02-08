@@ -16,11 +16,11 @@ export default function Video({ className }: VideoProps) {
         <div className="max-w-[1440px] w-full mx-auto">
           {/* TODO: Video */}
           {/* <div className="h-105 rounded-3xl bg-neutral-300 max-lg:h-54" /> */}
-          <div className="h-105 rounded-3xl bg-neutral-300 max-lg:h-auto relative overflow-hidden">
+          <div className="rounded-3xl bg-neutral-300 relative overflow-hidden">
             <Image
               src={HomeCaseStudyHeadingImage}
               alt="video img 1"
-              className="w-full lg:h-full max-lg:h-auto object-fill rounded-3xl"
+              className="w-full h-auto object-cover rounded-3xl"
             />
           </div>
         </div>

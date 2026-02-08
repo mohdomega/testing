@@ -10,6 +10,7 @@ export default function CalendlyIframe() {
         className="calendly-inline-widget"
         data-url="https://calendly.com/soorya-k-idrms/30min"
         style={{ minWidth: '320px', height: '1000px' }}
+        data-resize="true"
       />
       <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
     </>

@@ -40,18 +40,19 @@ export default function GetInTouch({ className }: GetInTouchProps) {
         </Stack>
         <Stack
           direction="row"
+          alignItems="center"
           className="gap-15 w-full max-[1050px]:flex-col max-[1050px]:items-center *:flex-1 max-[1050px]:*:flex-none"
         >
-          <div className="rounded-3xl relative overflow-hidden max-w-[496px] w-full aspect-square flex items-center justify-center max-[1050px]:mx-auto max-[1050px]:hidden">
+          <div className="rounded-3xl relative overflow-hidden max-w-[496px] max-h-[498px] w-full aspect-square flex items-center justify-center max-[1050px]:mx-auto max-[1050px]:hidden">
             {/* Use more reliable spacing for absolute positions */}
-            <div className="absolute top-4 left-8 p-6 flex justify-center items-center rounded-full w-[90px] h-[90px] bg-[#F2F0F7] z-10">
-              <Integration className="w-8 h-8 text-primary-dark max-lg:w-6 max-lg:h-6" />
+            <div className="absolute top-0 left-[30px] p-6 flex justify-center items-center rounded-full w-[90px] h-[90px] bg-[#F2F0F7] z-10">
+              <Integration className="w-[27px] h-[27px] text-primary-dark max-lg:w-6 max-lg:h-6" />
             </div>
-            <div className="absolute top-4 right-8 p-6 flex justify-center items-center rounded-full w-[120px] h-[120px] bg-[#F2F0F7] z-10">
-              <Mentor className="w-8 h-8 text-primary-dark max-lg:w-6 max-lg:h-6" />
+            <div className="absolute top-0 right-[17px] p-6 flex justify-center items-center rounded-full w-[120px] h-[120px] bg-[#F2F0F7] z-10">
+              <Mentor className="w-[40px] h-[40px] text-primary-dark max-lg:w-6 max-lg:h-6" />
             </div>
-            <div className="absolute right-4 bottom-8 p-6 flex justify-center items-center rounded-full w-[90px] h-[90px] bg-[#F2F0F7] z-10">
-              <Support className="w-8 h-8 text-primary-dark max-lg:w-6 max-lg:h-6" />
+            <div className="absolute right-0 bottom-5 p-6 flex justify-center items-center rounded-full w-[90px] h-[90px] bg-[#F2F0F7] z-10">
+              <Support className="w-[27px] h-[27px] text-primary-dark max-lg:w-6 max-lg:h-6" />
             </div>
             {/* Image should sit behind icons, be centered and cover container */}
             <Image
@@ -65,7 +66,7 @@ export default function GetInTouch({ className }: GetInTouchProps) {
           </div>
           <div className="max-[1050px]:w-full flex flex-col items-center">
             <ContactForm className="bg-background w-full" />
-            <div className="mt-10 w-full flex justify-center items-center">
+            {/* <div className="mt-10 w-full flex justify-center items-center">
               <Button
                 component={Link}
                 href="/contact-us/schedule-meeting"
@@ -73,7 +74,7 @@ export default function GetInTouch({ className }: GetInTouchProps) {
               >
                 Schedule a Meeting
               </Button>
-            </div>
+            </div> */}
           </div>
         </Stack>
       </div>
