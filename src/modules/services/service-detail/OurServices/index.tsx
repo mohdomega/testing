@@ -25,6 +25,7 @@ import LeadGeneration from '/public/icons/servicePageCraousalIcons/lead-generati
 import Payroll from '/public/icons/servicePageCraousalIcons/payroll.svg';
 import Tableau from '/public/icons/servicePageCraousalIcons/tableau.svg';
 import PowerBi from '/public/icons/servicePageCraousalIcons/PowerBi.svg';
+import AgentForce from '/public/icons/servicePageCraousalIcons/agentforce-1.svg';
 //import AgentForce from '/public/icons/servicePageCraousalIcons/AgentForce.svg';
 
 interface OurServicesProps {
@@ -129,7 +130,7 @@ const DataAnalyticsAiAndServiceItems = [
       'Tableau helps you explore, analyze, and understand your data through intuitive visual analytics, empowering teams to uncover trends, identify opportunities, and make data-driven decisions with confidence.',
   },
   {
-    icon: Clustering,
+    icon: AgentForce,
     label: 'Agentforce',
     description:
       'Agentforce enables businesses to build and deploy AI-powered agents that automate tasks, assist customers, and enhance workflows, delivering intelligent, personalized experiences across multiple channels.',

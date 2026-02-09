@@ -13,6 +13,7 @@ import { cn } from '@/lib';
 import { joinUs } from './action';
 
 import CareerImg11 from '/public/images/CareerImages/career-image-11.jpg';
+import CareerImg12 from '/public/images/CareerImages/career12.png';
 
 interface ContactUsProps {
   className?: string;
@@ -47,7 +48,7 @@ export default function JoinUs({ className, id }: ContactUsProps) {
         </Stack>
         <Stack direction="row" className="gap-10 w-full">
           <div className="flex-1 rounded-3xl max-lg:aspect-video relative overflow-hidden flex-1 max-lg:hidden">
-            <Image src={CareerImg11} alt="career img 11" className="w-full h-full object-cover" />
+            <Image src={CareerImg12} alt="career img 11" className="w-full h-full object-cover" />
           </div>
           <Stack
             ref={ref}

@@ -17,21 +17,25 @@ import CareerImg4 from '/public/images/CareerImages/career-image-4.jpg';
 import CareerImg5 from '/public/images/CareerImages/career-image-5.jpg';
 import CareerImg6 from '/public/images/CareerImages/career-image-6.jpg';
 import CareerImg7 from '/public/images/CareerImages/career-image-7.jpg';
-import CareerImg8 from '/public/images/CareerImages/career-image-8.JPG';
+import CareerImg8 from '/public/images/CareerImages/career-image-16.png';
 import CareerImg9 from '/public/images/CareerImages/career-image-9.jpg';
 import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
+import CareerImg11 from '/public/images/CareerImages/career-image-15.jpg';
+import CareerImg12 from '/public/images/CareerImages/career-image-12.png';
+import CareerImg13 from '/public/images/CareerImages/career-image-13.jpg';
+import CareerImg14 from '/public/images/CareerImages/career-image-14.jpg';
 
 const CAREER_IMAGES = [
   { src: CareerImg1, className: 'col-start-1 col-end-2 row-start-2 row-end-4' },
-  { src: CareerImg2, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
+  { src: CareerImg14, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
   { src: CareerImg7, className: 'col-start-1 col-end-2 row-start-10 row-end-12' },
   { src: CareerImg4, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
-  { src: CareerImg5, className: 'col-start-2 col-end-4 row-start-7 row-end-9' },
+  { src: CareerImg13, className: 'col-start-2 col-end-4 row-start-7 row-end-9' },
   { src: CareerImg8, className: 'col-start-2 col-end-3 row-start-9 row-end-13' },
   { src: CareerImg9, className: 'col-start-3 col-end-4 row-start-9 row-end-13' },
   { src: CareerImg3, className: 'col-start-4 col-end-5 row-start-2 row-end-6' },
-  { src: CareerImg6, className: 'col-start-4 col-end-5 row-start-6 row-end-8' },
-  { src: CareerImg10, className: 'col-start-4 col-end-5 row-start-8 row-end-12' },
+  { src: CareerImg11, className: 'col-start-4 col-end-5 row-start-6 row-end-8' },
+  { src: CareerImg12, className: 'col-start-4 col-end-5 row-start-8 row-end-12' }
 ];
 
 interface WorkCultureProps {

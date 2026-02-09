@@ -26,7 +26,7 @@ export default function CXTechnology({ className }: CXTechnologyProps) {
         <div className="grid grid-cols-2 items-center gap-10 max-lg:grid-cols-1">
           <Stack alignItems="flex-start" className="flex-1 gap-8">
             <Stack className="gap-4">
-              <TitleChip>CX Technology</TitleChip>
+              <TitleChip>Customer Experience</TitleChip>
               <Typography variant="h2" className="text-gradient text-xl sm:text-2xl md:text-4xl">
                 How a CX Services Firm Improved CSAT by 25% Using Salesforce Einstein AI
               </Typography>

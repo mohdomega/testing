@@ -140,6 +140,7 @@ import SooryaImg from '../../../../public/images/Team/Soorya.png';
 import MandaraImg from '../../../../public/images/Team/mandara.png';
 import MansurIshaniImg from '../../../../public/images/Team/Mansur Ishani.jpeg';
 import RuxanaIshaniImg from '../../../../public/images/Team/Ruxana Ishani.png';
+import PoojaImg from '../../../../public/images/Team/Pooja.png'; 
 
 interface OurTeamProps {
   className?: string;
@@ -153,7 +154,8 @@ const TEAM_MEMBERS = [
   { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Dedicated to excellence' },
 //  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
 //  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
-  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
+//  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
+  { img: PoojaImg, name: 'Pooja', role: 'CTO', tagline: 'Dedicated to excellence' },
 ];
 
 export default function OurTeam({ className }: OurTeamProps) {
