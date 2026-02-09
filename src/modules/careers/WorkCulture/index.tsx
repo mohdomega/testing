@@ -20,7 +20,7 @@ import CareerImg7 from '/public/images/CareerImages/career-image-7.jpg';
 import CareerImg8 from '/public/images/CareerImages/career-image-16.png';
 import CareerImg9 from '/public/images/CareerImages/career-image-9.jpg';
 import CareerImg10 from '/public/images/CareerImages/career-image-10.jpg';
-import CareerImg11 from '/public/images/CareerImages/career-image-15.jpg';
+import CareerImg11 from '/public/images/CareerImages/career-image-15.JPG';
 import CareerImg12 from '/public/images/CareerImages/career-image-12.png';
 import CareerImg13 from '/public/images/CareerImages/career-image-13.jpg';
 import CareerImg14 from '/public/images/CareerImages/career-image-14.jpg';
@@ -35,7 +35,7 @@ const CAREER_IMAGES = [
   { src: CareerImg9, className: 'col-start-3 col-end-4 row-start-9 row-end-13' },
   { src: CareerImg3, className: 'col-start-4 col-end-5 row-start-2 row-end-6' },
   { src: CareerImg11, className: 'col-start-4 col-end-5 row-start-6 row-end-8' },
-  { src: CareerImg12, className: 'col-start-4 col-end-5 row-start-8 row-end-12' }
+  { src: CareerImg12, className: 'col-start-4 col-end-5 row-start-8 row-end-12' },
 ];
 
 interface WorkCultureProps {
