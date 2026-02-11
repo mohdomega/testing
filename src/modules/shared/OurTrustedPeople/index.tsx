@@ -11,7 +11,7 @@ import AutoScroll from 'embla-carousel-auto-scroll';
 import AmericanBotanicals from '/public/images/HomePageClients/American Botanicals.png';
 import Ekinkare from '/public/images/HomePageClients/Ekinkare.png';
 import GameADzone from '/public/images/HomePageClients/GameADzone.png';
-import Ideacrest from '/public/images/HomePageClients/Ideacrest.png';
+import Ideacrest from '/public/images/HomePageClients/Logo_ideacrest.png';
 import Kim from '/public/images/HomePageClients/Kim.png';
 import N from '/public/images/HomePageClients/N.png';
 import Noble from '/public/images/HomePageClients/Noble.png';
@@ -35,7 +35,7 @@ const CLIENT_LOGOS = [
   { id: 7, src: Noble, alt: 'Noble' },
   { id: 8, src: Oasis, alt: 'Oasis' },
   { id: 9, src: OsevenExports, alt: 'Oseven Exports' },
-  { id: 10, src: Rudminds, alt: 'Rudminds' },
+  { id: 10, src: Rudminds, alt: 'Trudminds' },
   { id: 11, src: SaintGobin, alt: 'Saint Gobin' },
 ];
 
@@ -46,7 +46,7 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
       alignItems="center"
       className={cn('gap-10 py-12 max-lg:py-15 max-lg:p-10', className)}
     >
-      <TitleChip>Trusted By</TitleChip>
+      <TitleChip>Trusted by Clients as a Technology Partner</TitleChip>
       <Stack className="gap-7.5 w-full">
         <Carousel
           plugins={[AutoScroll({ direction: 'backward', stopOnInteraction: false, stopOnMouseEnter: true })]}

@@ -43,19 +43,19 @@ export const testimonials = [
   },
   {
     name: 'Lucy',
-    location: 'Director of Information',
+    location: 'Director',
     company: 'Slack',
     companyLogo: Noble,
     companyName: 'Noble',
     avatar: Image4,
-    quote: 'IDRMS has been a reliable Salesforce partner for us. We continue to work with them on new initiatives, confident in their ability to deliver scalable, high-quality solutions.',
+    quote: 'IDRMS has been a reliable Technology partner for us. We continue to work with them on new initiatives, confident in their ability to deliver scalable, high-quality solutions.',
   },
   {
     name: 'Aarav Kumar',
-    location: 'Director of Enterprise Applications',
+    location: 'Director',
     company: 'Elastic',
     companyLogo: Rudminds,
-    companyName: 'Rudminds',
+    companyName: 'Trudminds',
     avatar: Image6,
     quote:
       'The IDRMS team brought strong Salesforce delivery discipline and domain knowledge. Their consultants worked as an extension of our internal team, ensuring smooth collaboration throughout.',
@@ -63,7 +63,7 @@ export const testimonials = [
 
    {
     name: 'Lara Dutta',
-    location: 'Head of Customer Experience',
+    location: 'Co-Founder',
     company: 'Buildwave',
     companyLogo: Ideacrest,
     companyName: 'Ideacrest',

@@ -1,7 +1,11 @@
-import ServiceImg2 from '../../../../public/images/ServiceImages/service-image-2.png';
-import ServiceImg3 from '../../../../public/images/ServiceImages/service-image-3.png';
-import ServiceImg4 from '../../../../public/images/ServiceImages/service-image-4.png';
-import ServiceImg5 from '../../../../public/images/ServiceImages/service-image-5.png';
+import ServiceImg2 from '../../../../public/images/ServiceImages/CX Transformation.png';
+import ServiceImg3 from '../../../../public/images/ServiceImages/Manufacturing.png';
+import ServiceImg4 from '../../../../public/images/ServiceImages/Healthcare.png';
+import ServiceImg5 from '../../../../public/images/ServiceImages/Rebate.png';
+import ServiceImg6 from '../../../../public/images/ServiceImages/Non Profit.png';
+import ServiceImg7 from '../../../../public/images/ServiceImages/Financial.png';
+import ServiceImg8 from '../../../../public/images/ServiceImages/Hospitality.png';
+import ServiceImg9 from '../../../../public/images/ServiceImages/Mulesoft.png';
 
 export interface CaseStudy {
   id: string;
@@ -225,7 +229,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'non-profit-ngo-donor-program-management',
     title: 'NON-PROFIT (NGO) – DONOR & PROGRAM MANAGEMENT',
-    image: ServiceImg2,
+    image: ServiceImg6,
     description:
       'Increase donor retention, improve transparency, and scale impact using Salesforce Nonprofit Cloud solutions.',
     meta: {
@@ -271,7 +275,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'financial-services-crm-compliance-enablement',
     title: 'FINANCIAL SERVICES – CRM & COMPLIANCE ENABLEMENT',
-    image: ServiceImg3,
+    image: ServiceImg7,
     description:
       'Deliver personalized financial experiences while ensuring compliance with Salesforce Financial Services Cloud.',
     meta: {
@@ -317,7 +321,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'hospitality-travel-guest-experience-loyalty',
     title: 'HOSPITALITY & TRAVEL – GUEST EXPERIENCE & LOYALTY',
-    image: ServiceImg4,
+    image: ServiceImg8,
     description:
       'Personalize guest journeys, improve loyalty engagement, and streamline operations with Salesforce for hospitality.',
     meta: {
@@ -403,7 +407,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'mulesoft-salesforce-integration-automation',
     title: 'MULESOFT – SALESFORCE INTEGRATION AUTOMATION',
-    image: ServiceImg2,
+    image: ServiceImg9,
     description:
       'Automate data flows, reduce manual effort, and improve accuracy with MuleSoft-powered Salesforce integrations.',
     meta: {

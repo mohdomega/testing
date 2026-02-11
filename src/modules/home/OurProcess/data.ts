@@ -50,7 +50,7 @@ import Support1 from '/public/icons/support1.svg';
 // ];
 export const process = [
   {
-    title: 'Discover & Align',
+    title: 'Discover and  Align',
     description:
       'Understanding your business goals, current processes is key. Through stakeholder discussions and requirement workshops, we identify challenges, priorities, and success metrics to ensure alignment from day one.',
     icon: Vector,
@@ -77,16 +77,16 @@ export const process = [
     icon: Support1,
     color: '#FFE082', // Light Amber
   },
-  {
-    title: 'Innovate',
-    description: 'Continuously improving with new technologies',
-    icon: Vector, // Reusing icon for now
-    color: '#D6CDEA', // Light Purple
-  },
-  {
-    title: 'Scale',
-    description: 'Expanding capabilities for future growth',
-    icon: Mentor, // Reusing icon for now
-    color: '#FCC33F', // Accent Yellow
-  },
+  // {
+  //   title: 'Innovate',
+  //   description: 'Continuously improving with new technologies',
+  //   icon: Vector, // Reusing icon for now
+  //   color: '#D6CDEA', // Light Purple
+  // },
+  // {
+  //   title: 'Scale',
+  //   description: 'Expanding capabilities for future growth',
+  //   icon: Mentor, // Reusing icon for now
+  //   color: '#FCC33F', // Accent Yellow
+  // },
 ];

@@ -91,12 +91,12 @@ export default function OurProcess({ className }: OurProcessProps) {
 
       <div className="relative w-full max-w-[1440px] mx-auto group">
         {/* Carousel Arrows - Side Positioned */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 z-40  -ml-10 sm:-ml-4 lg:-ml-4 max-lg:left-2">
+        {/* <div className="absolute top-1/2 left-0 -translate-y-1/2 z-40  -ml-10 sm:-ml-4 lg:-ml-4 max-lg:left-2">
           <CustomCarouselArrow direction="prev" api={api} />
         </div>
         <div className="absolute top-1/2 right-0 -translate-y-1/2 z-40 -mr-10 sm:-mr-4 lg:-mr-4 max-lg:right-2">
           <CustomCarouselArrow direction="next" api={api} />
-        </div>
+        </div> */}
 
         <Carousel
           setApi={setApi}

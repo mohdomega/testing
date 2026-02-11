@@ -24,12 +24,14 @@ import CareerImg11 from '/public/images/CareerImages/career-image-15.JPG';
 import CareerImg12 from '/public/images/CareerImages/career-image-12.png';
 import CareerImg13 from '/public/images/CareerImages/career-image-13.jpg';
 import CareerImg14 from '/public/images/CareerImages/career-image-14.jpg';
+import CareerImg15 from '/public/images/CareerImages/career12.png';
+import CareerImg16 from '/public/images/CareerImages/career-image-17.png';
 
 const CAREER_IMAGES = [
   { src: CareerImg1, className: 'col-start-1 col-end-2 row-start-2 row-end-4' },
-  { src: CareerImg14, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
+  { src: CareerImg16, className: 'col-start-1 col-end-2 row-start-4 row-end-10' },
   { src: CareerImg7, className: 'col-start-1 col-end-2 row-start-10 row-end-12' },
-  { src: CareerImg4, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
+  { src: CareerImg15, className: 'col-start-2 col-end-4 row-start-1 row-end-7' },
   { src: CareerImg13, className: 'col-start-2 col-end-4 row-start-7 row-end-9' },
   { src: CareerImg8, className: 'col-start-2 col-end-3 row-start-9 row-end-13' },
   { src: CareerImg9, className: 'col-start-3 col-end-4 row-start-9 row-end-13' },

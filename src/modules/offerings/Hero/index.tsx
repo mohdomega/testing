@@ -8,12 +8,19 @@ import Typography from '@/components/Typography';
 import { cn } from '@/lib';
 
 import ChevronRight from '/public/icons/chevron-right.svg';
-import Img1 from '/public/images/offering-hero-img-7.jpg';
+/*import Img1 from '/public/images/offering-hero-img-7.jpg';
 import Img2 from '/public/images/offering-hero-img-8.png';
 import Img3 from '/public/images/offering-hero-img-9.jpg';
 import Img4 from '/public/images/offering-hero-img-10.png';
 import Img5 from '/public/images/offering-hero-img-11.png';
-import Img6 from '/public/images/offering-hero-img-12.png';
+import Img6 from '/public/images/offering-hero-img-12.png';*/
+
+import Img1 from '/public/images/Einstein.png';
+import Img2 from '/public/images/Mulesoft (1).png';
+import Img3 from '/public/images/Sales.png';
+import Img4 from '/public/images/Service.png';
+import Img5 from '/public/images/Slack.png';
+import Img6 from '/public/images/Tableau.png';
 
 interface HeroProps {
   className?: string;
@@ -82,12 +89,12 @@ export default function Hero({ className }: HeroProps) {
             className="absolute top-1/2 left-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
           />
           <Image
-            src={Img4}
+            src={Img5}
             alt=""
             className="absolute top-1/2 right-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
           />
           <Image
-            src={Img5}
+            src={Img4}
             alt=""
             className="absolute top-3/4 left-1/5 rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
           />
