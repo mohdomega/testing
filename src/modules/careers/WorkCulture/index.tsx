@@ -24,7 +24,7 @@ import CareerImg11 from '/public/images/CareerImages/career-image-15.JPG';
 import CareerImg12 from '/public/images/CareerImages/career-image-12.png';
 import CareerImg13 from '/public/images/CareerImages/career-image-13.jpg';
 import CareerImg14 from '/public/images/CareerImages/career-image-14.jpg';
-import CareerImg15 from '/public/images/CareerImages/career12.png';
+import CareerImg15 from '/public/images/CareerImages/Career12.png';
 import CareerImg16 from '/public/images/CareerImages/career-image-17.png';
 
 const CAREER_IMAGES = [
