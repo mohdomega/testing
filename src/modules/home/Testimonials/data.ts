@@ -30,7 +30,7 @@ export const testimonials = [
     companyName: 'GameADzone',
     avatar: Image1,
     quote:
-      'IDRMS helped us streamline our Sales and Service processes end to end. Their structured approach and deep platform expertise resulted in faster deal cycles and noticeably improved customer response times.',
+      'IDRMS helped us streamline our marketing processes end to end. Their structured approach and deep platform expertise resulted in faster deal cycles and noticeably improved customer response times.',
   },
   {
     name: 'Julia Roberts',
@@ -63,7 +63,7 @@ export const testimonials = [
 
    {
     name: 'Lara Dutta',
-    location: 'Co-Founder',
+    location: 'Co-Founder/CTO',
     company: 'Buildwave',
     companyLogo: Ideacrest,
     companyName: 'Ideacrest',

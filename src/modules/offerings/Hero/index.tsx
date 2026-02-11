@@ -16,7 +16,7 @@ import Img5 from '/public/images/offering-hero-img-11.png';
 import Img6 from '/public/images/offering-hero-img-12.png';*/
 
 import Img1 from '/public/images/Einstein.png';
-import Img2 from '/public/images/Mulesoft (1).png';
+import Img2 from '/public/images/Mulesoft (2).png';
 import Img3 from '/public/images/Sales.png';
 import Img4 from '/public/images/Service.png';
 import Img5 from '/public/images/Slack.png';

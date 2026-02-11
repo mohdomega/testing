@@ -147,15 +147,15 @@ interface OurTeamProps {
 }
 
 const TEAM_MEMBERS = [
-  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Director', tagline: 'Dedicated to excellence' },
+  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Director', tagline: 'Strategic Growth Leader' },
  // { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
-  { img: DipenIshaniImg, name: 'Dipen Ishani', role: 'CEO/Founder', tagline: 'Dedicated to excellence' },
+  { img: DipenIshaniImg, name: 'Dipen Ishani', role: 'CEO/Founder', tagline: 'Vision Beyond Technology' },
 //  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
-  { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Dedicated to excellence' },
+  { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Driving Sustainable Growth' },
 //  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
 //  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
 //  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
-  { img: PoojaImg, name: 'Pooja', role: 'CTO', tagline: 'Dedicated to excellence' },
+  { img: PoojaImg, name: 'Pooja', role: 'CTO', tagline: 'Architecture with Purpose' },
 ];
 
 export default function OurTeam({ className }: OurTeamProps) {

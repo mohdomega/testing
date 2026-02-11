@@ -16,8 +16,8 @@ import Kim from '/public/images/HomePageClients/Kim.png';
 import N from '/public/images/HomePageClients/N.png';
 import Noble from '/public/images/HomePageClients/Noble.png';
 import Oasis from '/public/images/HomePageClients/Oasis.png';
-import OsevenExports from '/public/images/HomePageClients/Oseven Exports.png';
-import Rudminds from '/public/images/HomePageClients/Rudminds.png';
+import OsevenExports from '/public/images/HomePageClients/Oseven.png';
+import Rudminds from '/public/images/HomePageClients/Truminds.png';
 import SaintGobin from '/public/images/HomePageClients/Saint Gobin.png';
 import Typography from '@/components/Typography';
 
