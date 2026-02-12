@@ -155,7 +155,7 @@ const TEAM_MEMBERS = [
 //  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
 //  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
 //  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
-  { img: PoojaImg, name: 'Pooja', role: 'CTO', tagline: 'Architecture with Purpose' },
+  { img: PoojaImg, name: 'Pooja', role: 'CTO/Co-Founder', tagline: 'Architecture with Purpose' },
 ];
 
 export default function OurTeam({ className }: OurTeamProps) {

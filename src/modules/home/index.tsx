@@ -19,13 +19,13 @@ export default function Home() {
       <Empowering />
       <OurKPIs />
       <OurOfferings />
-      <OurTrustedPeople />
       <Testimonials />
       {/* spaccer */}
       <div className=" h-[50px] sm:h-[80px] md:h-[120px] lg:h-[150px]" />
       <Video />
       <CaseStudy />
       <OurProcess />
+      <OurTrustedPeople />
       <Blogs />
       <BlazeNewTrails className="max-lg:hidden" />
       {/* <OurTeam /> */}
