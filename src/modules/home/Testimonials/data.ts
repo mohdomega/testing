@@ -30,7 +30,7 @@ export const testimonials = [
     companyName: 'GameADzone',
     avatar: Image1,
     quote:
-      'IDRMS helped us streamline our marketing processes end to end. Their structured approach and deep platform expertise resulted in faster deal cycles and noticeably improved customer response times.',
+      'IDRMS helped us streamline our Marketing operations end to end. Their structured approach and deep platform expertise resulted in increased engagement rates and noticeably improved customer CTA and renewal rates.',
   },
   {
     name: 'Julia Roberts',
