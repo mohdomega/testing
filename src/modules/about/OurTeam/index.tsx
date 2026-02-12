@@ -140,7 +140,7 @@ import SooryaImg from '../../../../public/images/Team/Soorya.png';
 import MandaraImg from '../../../../public/images/Team/mandara.png';
 import MansurIshaniImg from '../../../../public/images/Team/Mansur Ishani.jpeg';
 import RuxanaIshaniImg from '../../../../public/images/Team/Ruxana Ishani.png';
-import PoojaImg from '../../../../public/images/Team/Pooja.png'; 
+import PoojaImg from '../../../../public/images/Team/Pooja HD.png'; 
 
 interface OurTeamProps {
   className?: string;
