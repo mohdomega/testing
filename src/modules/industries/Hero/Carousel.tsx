@@ -71,7 +71,10 @@ export default function Carousel({ className }: { className?: string }) {
   const CARD_TOTAL = CARD_WIDTH + GAP;
 
   // Calculate how many cards we need to fill the screen + buffer
-  const totalCards = Math.ceil(containerWidth / CARD_TOTAL) + 6;
+  //  const totalCards = Math.ceil(containerWidth / CARD_TOTAL) + 6;
+  const minCards = Math.ceil(containerWidth / CARD_TOTAL) + 6;
+  // Ensure total cards is a multiple of images.length (e.g., 6) for seamless looping
+  const totalCards = Math.ceil(minCards / images.length) * images.length;
   const centerX = containerWidth / 2;
 
   // Generate cards array

@@ -48,7 +48,7 @@ export const testimonials = [
     companyLogo: Noble,
     companyName: 'Noble',
     avatar: Image4,
-    quote: 'IDRMS helped us streamline our Marketing operations end to end. Their structured approach and deep platform expertise resulted in increased engagement rates and noticeably improved customer CTA and renewal rates.',
+    quote: 'IDRMS has been a reliable Salesforce partner for us. We continue to work with them on new initiatives, confident in their ability to deliver scalable, high-quality solutions.',
   },
   {
     name: 'Aarav Kumar',
