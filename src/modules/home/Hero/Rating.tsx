@@ -37,7 +37,7 @@ export default function Rating({ className }: RatingProps) {
           <Typography variant="body2">4.9</Typography>
           <Typography variant="body2">50k+ users</Typography>
         </Stack>
-        <Typography className="text-white/60">60+ Projects delivered</Typography>
+        <Typography className="text-white/60">30+ Projects delivered</Typography>
       </Stack>
 
       <div className="rounded-md w-[65px] h-[65px] relative overflow-hidden">
