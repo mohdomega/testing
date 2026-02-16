@@ -16,7 +16,9 @@ import NavLink from './NavLink';
 import { routes } from './routes';
 
 import ChevronDownSvg from '/public/icons/ChevronDownSvg';
-import Logo from '/public/icons/main-logo.svg';
+// import Logo from '/public/icons/main-logo.svg';
+// import Logo from '/public/icons/idrms_logo_icon.svg';
+import Logo from '/public/icons/idrms_logo_icon-cropped.svg';
 import MenuIcon from '/public/icons/menu-icon.svg';
 
 interface HeaderProps {
@@ -117,11 +119,11 @@ export default function Header({ className }: HeaderProps) {
             'bg-background': !isScrolled && isLightHeaderPage,
           })}
         >
-          <Link href="/">
+          <Link href="/" className="w-[136px] h-[38px] flex items-center justify-center">
             <Logo
               className={cn(
                 // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
-                'text-black'
+                'text-black w-full h-full'
               )}
             />
           </Link>
@@ -254,11 +256,11 @@ export default function Header({ className }: HeaderProps) {
               'bg-white shadow-2xl': isScrolled,
             })}
           >
-            <Link href="/">
+            <Link href="/" className="w-[136px] h-[38px] flex items-center justify-center">
               <Logo
                 className={cn(
                   // !isScrolled && isLightHeaderPage ? '#1E0A52' : isScrolled ? 'text-black' : 'text-white'
-                  'text-black'
+                  'text-black w-full h-full'
                 )}
               />
             </Link>
