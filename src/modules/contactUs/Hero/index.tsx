@@ -33,7 +33,10 @@ export default function Hero({ className }: HeroProps) {
               Need help?
             </Typography>
           </Stack>
-          <Typography variant="h1" className="text-white font-medium max-w-150 text-[28px] md:text-[48px] lg:text-[72px] ">
+          <Typography
+            variant="h1"
+            className="text-white font-medium max-w-150 text-[28px] md:text-[48px] lg:text-[72px] "
+          >
             Contact us
           </Typography>
         </Stack>
@@ -43,7 +46,6 @@ export default function Hero({ className }: HeroProps) {
             and we&apos;ll get back to you shortly
           </Typography>
           <Stack direction="row" className="gap-3">
-            {/* <Button component={Link} href="mailto:ruchit@techanzo.com" color="accent"> */}
             <Button component={Link} href="mailto:info@idrms.tech" color="accent">
               Email us now
             </Button>
