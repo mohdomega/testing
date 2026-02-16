@@ -168,7 +168,7 @@ export default function OurTeam({ className }: OurTeamProps) {
       <Stack alignItems="center" className="gap-4">
         <TitleChip>Our visionaries</TitleChip>
         <Typography variant="h2" className="text-gradient text-center">
-          Meet the Team
+        Meet the Leadership Team
         </Typography>
       </Stack>
 
