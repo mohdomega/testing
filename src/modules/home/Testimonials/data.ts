@@ -55,7 +55,7 @@ export const testimonials = [
     location: 'Director',
     company: 'Elastic',
     companyLogo: Rudminds,
-    companyName: 'Trudminds',
+    companyName: 'Truminds',
     avatar: Image6,
     quote:
       'The IDRMS team brought strong Salesforce delivery discipline and domain knowledge. Their consultants worked as an extension of our internal team, ensuring smooth collaboration throughout.',
