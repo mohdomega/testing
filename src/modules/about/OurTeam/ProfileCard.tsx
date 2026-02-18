@@ -48,7 +48,7 @@ export default function ProfileCard({
           >
             {name}
           </Typography>
-          <Typography className="text-white/80 text-[10px] sm:text-xs md:text-sm leading-tight">
+          <Typography className="text-[#F5CFFB]/80 text-[10px] sm:text-xs md:text-sm leading-tight">
             {tagline}
           </Typography>
         </Stack>
