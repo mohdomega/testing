@@ -18,7 +18,7 @@ import { routes } from './routes';
 import ChevronDownSvg from '/public/icons/ChevronDownSvg';
 // import Logo from '/public/icons/main-logo.svg';
 // import Logo from '/public/icons/idrms_logo_icon.svg';
-import Logo from '/public/icons/idrms_logo_icon-cropped.svg';
+import Logo from '/public/icons/logo 184X51.svg';
 import MenuIcon from '/public/icons/menu-icon.svg';
 
 interface HeaderProps {
