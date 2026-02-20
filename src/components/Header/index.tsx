@@ -18,7 +18,7 @@ import { routes } from './routes';
 import ChevronDownSvg from '/public/icons/ChevronDownSvg';
 // import Logo from '/public/icons/main-logo.svg';
 // import Logo from '/public/icons/idrms_logo_icon.svg';
-import Logo from '/public/icons/logo 184X51.svg';
+import Logo from '/public/icons/Logo 184X51.svg';
 import MenuIcon from '/public/icons/menu-icon.svg';
 
 interface HeaderProps {
@@ -187,7 +187,7 @@ export default function Header({ className }: HeaderProps) {
                   {children && openDesktopMenu === name && (
                     <div
                       className={cn(
-                        'absolute left-[-24px] top-full mt-1 flex flex-col rounded-2xl transition-all duration-300 p-[16px] min-w-[160px] z-50 shadow-xl',
+                        'absolute left-[-24px] top-full mt-1 flex flex-col rounded-2xl transition-all duration-300 p-[16px] min-w-[160px] z-[60] shadow-xl',
                         // isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-xl'
                         isScrolled ? 'bg-white' : 'bg-white'
                       )}

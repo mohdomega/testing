@@ -68,7 +68,7 @@ export default function Tooltip({ content, children, className, position = 'top'
             marginLeft: `${shift}px`,
           }}
           className={cn(
-            'absolute z-50 px-4 py-2 text-sm font-regular text-white',
+            'absolute z-[60] px-4 py-2 text-sm font-regular text-white',
             'gradient-vertical text-white',
             'rounded-xl shadow-xl',
             'animate-in fade-in-0 zoom-in-95 duration-200',

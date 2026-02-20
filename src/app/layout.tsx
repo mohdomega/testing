@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${generalSans.variable} font-sans antialiased min-h-screen flex flex-col bg-white overflow-x-hidden`}
       >
         <div className="flex-1">
-          <Header className="fixed top-0 left-0 z-[999] w-full mt-6" />
+          <Header className="fixed top-0 left-0 z-50 w-full mt-6" />
           <main>{children}</main>
           <Footer />
         </div>

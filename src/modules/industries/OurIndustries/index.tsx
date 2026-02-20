@@ -288,7 +288,7 @@ export default function OurIndustries({ className }: OurServicesProps) {
         </div>
 
         {/* Mobile Horizontal Scroll */}
-        <div className="sm:hidden sticky top-[72px] z-40 bg-white border-b border-gray-200 shadow-sm overflow-x-auto scrollbar-hide">
+        <div className="sm:hidden sticky top-[72px] z-30 bg-white border-b border-gray-200 shadow-sm overflow-x-auto scrollbar-hide">
           <div className="flex items-center gap-4 p-4 min-w-max">
             <Link
               href="#healthcare"

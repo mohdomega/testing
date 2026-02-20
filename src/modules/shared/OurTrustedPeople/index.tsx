@@ -54,9 +54,9 @@ export default function OurTrustedPeople({ className }: OurTrustedPeopleProps) {
           className="w-full"
         >
           <CarouselContent className="-ml-20">
-            {CLIENT_LOGOS.map((logo) => (
+            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, index) => (
               <CarouselItem
-                key={logo.id}
+                key={`${logo.id}-${index}`}
                 className="basis-auto h-20 flex items-center justify-center pl-20 max-md:pl-10 max-sm:pl-6"
               >
                 <Image
