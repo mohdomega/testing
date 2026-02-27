@@ -24,8 +24,8 @@ export default function Home() {
       <Video />
       <CaseStudy />
       <OurProcess />
-      <OurTrustedPeople />
-      <Testimonials />
+      {/* <OurTrustedPeople /> */}
+      {/* <Testimonials /> */}
       <Blogs />
       <BlazeNewTrails className="max-lg:hidden" />
       {/* <OurTeam /> */}

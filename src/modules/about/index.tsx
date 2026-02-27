@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div>
       <Hero />
-      <OurTrustedPeople className="pt-80" />
+      {/* <OurTrustedPeople className="pt-80" /> */}
        <OurKPIs />
       {/* <Rating /> */}
       <BoldAmbitions />
