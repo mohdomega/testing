@@ -11,6 +11,7 @@ interface ProfileCardProps {
   role: string;
   tagline: string;
   justifyBetween?: boolean;
+  imagePosition?: string;
 }
 export default function ProfileCard({
   justifyBetween,
@@ -19,12 +20,13 @@ export default function ProfileCard({
   name,
   tagline,
   role,
+  imagePosition = 'object-top',
 }: ProfileCardProps) {
   return (
     <Stack
       justifyContent="flex-end"
       className={cn(
-        'w-full min-h-[240px] p-3 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#646FC626] relative overflow-hidden group',
+        'w-full rounded-2xl sm:rounded-3xl bg-[#646FC626] relative overflow-hidden group',
         className
       )}
     >
@@ -33,11 +35,11 @@ export default function ProfileCard({
         src={img}
         alt="team image"
         fill
-        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        className={cn('object-cover transition-transform duration-500 group-hover:scale-105', imagePosition)}
       />
       <Stack
         className={cn(
-          'gap-3 sm:gap-4 p-4 sm:p-6 border border-white rounded-xl sm:rounded-[20px] backdrop-blur-[20px] z-10 w-full flex-shrink-0 mb-1',
+          'gap-3 sm:gap-4 p-4 sm:p-4 border border-white rounded-xl sm:rounded-[20px] backdrop-blur-[20px] z-10 w-full flex-shrink-0 mb-0',
           justifyBetween && 'flex lg:flex-row flex-col lg:items-center lg:justify-between sm:gap-2'
         )}
       >

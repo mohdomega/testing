@@ -147,15 +147,39 @@ interface OurTeamProps {
 }
 
 const TEAM_MEMBERS = [
-  { img: MansurIshaniImg, name: 'Mansur Ishani', role: 'Director', tagline: 'Strategic Growth Leader' },
+  {
+    img: MansurIshaniImg,
+    name: 'Mansur Ishani',
+    role: 'Director',
+    tagline: 'Strategic Growth Leader',
+    imagePosition: 'object-[center_60%]',
+  },
   // { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
-  { img: DipenIshaniImg, name: 'Dipen Ishani', role: 'CEO/Founder', tagline: 'Vision Beyond Technology' },
+  {
+    img: DipenIshaniImg,
+    name: 'Dipen Ishani',
+    role: 'CEO/Founder',
+    tagline: 'Vision Beyond Technology',
+    imagePosition: 'object-top',
+  },
   //  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
-  { img: DhavalJaniImg, name: 'Dhaval Jani', role: 'CFO', tagline: 'Driving Sustainable Growth' },
+  {
+    img: DhavalJaniImg,
+    name: 'Dhaval Jani',
+    role: 'CFO',
+    tagline: 'Driving Sustainable Growth',
+    imagePosition: 'object-[center_60%]',
+  },
   //  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
   //  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
   //  { img: PreetamImg, name: 'Preetam', role: 'CTO', tagline: 'Dedicated to excellence' },
-  { img: PoojaImg, name: 'Pooja', role: 'CTO/Co-Founder', tagline: 'Architecture with Purpose' },
+  {
+    img: PoojaImg,
+    name: 'Pooja',
+    role: 'CTO/Co-Founder',
+    tagline: 'Architecture with Purpose',
+    imagePosition: 'object-top',
+  },
 ];
 
 export default function OurTeam({ className }: OurTeamProps) {
@@ -172,18 +196,16 @@ export default function OurTeam({ className }: OurTeamProps) {
         </Typography>
       </Stack>
 
-      <div className="max-w-[1240px] w-full px-2">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+      <div className="max-w-[1240px] w-full px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 justify-items-center">
           {TEAM_MEMBERS.map((member, index) => (
-            <div
-              key={index}
-              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] xl:w-[calc(25%-18px)]"
-            >
+            <div key={index} className="w-full">
               <ProfileCard
                 img={member.img}
                 name={member.name}
                 role={member.role}
                 tagline={member.tagline}
+                imagePosition={member.imagePosition}
                 className="aspect-[3/4]"
               />
             </div>
