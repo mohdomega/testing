@@ -152,7 +152,7 @@ const TEAM_MEMBERS = [
     name: 'Mansur Ishani',
     role: 'Director',
     tagline: 'Strategic Growth Leader',
-    imagePosition: 'object-[center_60%]',
+    imagePosition: 'object-[center_90%]',
   },
   // { img: RuxanaIshaniImg, name: 'Ruxana Ishani', role: 'Diector', tagline: 'Dedicated to excellence' },
   {
@@ -160,7 +160,7 @@ const TEAM_MEMBERS = [
     name: 'Dipen Ishani',
     role: 'CEO/Founder',
     tagline: 'Vision Beyond Technology',
-    imagePosition: 'object-top',
+    imagePosition: 'object-[center_25%]',
   },
   //  { img: SooryaImg, name: 'Soorya', role: 'Head of Sales', tagline: 'Dedicated to excellence' },
   {
@@ -168,7 +168,7 @@ const TEAM_MEMBERS = [
     name: 'Dhaval Jani',
     role: 'CFO',
     tagline: 'Driving Sustainable Growth',
-    imagePosition: 'object-[center_60%]',
+    imagePosition: 'object-[center_80%]',
   },
   //  { img: KrishnapriyaImg, name: 'Krishnapriya Satheesh', role: 'CHRO', tagline: 'Dedicated to excellence' },
   //  { img: MandaraImg, name: 'Mandara M', role: 'HR Executive', tagline: 'Dedicated to excellence' },
