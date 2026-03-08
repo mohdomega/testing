@@ -54,7 +54,7 @@ export default function Study({
     <div
       ref={ref}
       className={cn(
-        'relative col-span-3 grid grid-cols-subgrid grid-rows-1 group max-lg:col-span-2',
+        'relative col-span-3 grid grid-cols-subgrid grid-rows-1 group max-lg:col-span-2 max-[1200px]:gap-6',
         className
       )}
     >

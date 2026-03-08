@@ -57,7 +57,14 @@ export default function OurOfferingInfinityCard({ className }: OurTrustedPeopleP
     >
       <Stack className="gap-7.5 w-full">
         <Carousel
-          plugins={[AutoScroll({ direction: 'backward', stopOnInteraction: false, stopOnMouseEnter: true })]}
+          plugins={[
+            AutoScroll({
+              direction: 'backward',
+              stopOnInteraction: false,
+              stopOnMouseEnter: false,
+              speed: 4,
+            }),
+          ]}
           opts={{ loop: true, duration: 55 }}
           className="w-full"
         >

@@ -108,68 +108,76 @@ export default function DownloadJDModal({
     }
   };
 
+  const modalHeader = (
+    <Stack className="gap-2">
+      <Typography variant="h4" className="font-medium text-primary-dark">
+        Download Job Description
+      </Typography>
+      <Typography variant="body2" className="text-primary-dark/60">
+        Please provide your details to download the JD for <strong>{jobTitle}</strong>
+      </Typography>
+    </Stack>
+  );
+
+  const modalFooter = (
+    <Stack direction="row" className="gap-3">
+      <Button
+        type="button"
+        variant="outlined"
+        onClick={onClose}
+        className="flex-1 bg-red-500 text-white"
+        disabled={loading}
+      >
+        Cancel
+      </Button>
+      <Button
+        type="submit"
+        variant="contained"
+        className="flex-1"
+        isLoading={loading}
+        form="download-jd-form"
+      >
+        Download JD
+      </Button>
+    </Stack>
+  );
+
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <Stack className="gap-6">
-        <Stack className="gap-2">
-          <Typography variant="h4" className="font-medium text-primary-dark">
-            Download Job Description
+    <Modal isOpen={isOpen} onClose={onClose} header={modalHeader} footer={modalFooter}>
+      <form id="download-jd-form" onSubmit={handleSubmit} className="w-full flex flex-col gap-4 pb-2">
+        <TextField
+          name="name"
+          id="name"
+          label="Full Name"
+          placeholder="Enter your full name"
+          required
+          className="w-full"
+        />
+        <TextField
+          name="email"
+          id="email"
+          type="email"
+          label="Email Address"
+          placeholder="Enter your email"
+          required
+          className="w-full"
+        />
+        <TextField
+          name="phone"
+          id="phone"
+          type="tel"
+          label="Phone Number"
+          placeholder="Enter your phone number"
+          required
+          className="w-full"
+        />
+
+        {error && (
+          <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
+            ✗ {error}
           </Typography>
-          <Typography variant="body2" className="text-primary-dark/60">
-            Please provide your details to download the JD for <strong>{jobTitle}</strong>
-          </Typography>
-        </Stack>
-
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-          <TextField
-            name="name"
-            id="name"
-            label="Full Name"
-            placeholder="Enter your full name"
-            required
-            className="w-full"
-          />
-          <TextField
-            name="email"
-            id="email"
-            type="email"
-            label="Email Address"
-            placeholder="Enter your email"
-            required
-            className="w-full"
-          />
-          <TextField
-            name="phone"
-            id="phone"
-            type="tel"
-            label="Phone Number"
-            placeholder="Enter your phone number"
-            required
-            className="w-full"
-          />
-
-          {error && (
-            <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
-              ✗ {error}
-            </Typography>
-          )}
-
-          <Stack direction="row" className="gap-3 mt-2">
-            <Button
-              type="button"
-              variant="outlined"
-              onClick={onClose}
-              className="flex-1 bg-red-500 text-white"
-              disabled={loading}
-            >
-              Cancel
-            </Button>
-            <Button type="submit" variant="contained" className="flex-1" isLoading={loading}>
-              Download JD
-            </Button>
-          </Stack>
-        </form>
-      </Stack>
+        )}
+      </form>
     </Modal>
   );
 }

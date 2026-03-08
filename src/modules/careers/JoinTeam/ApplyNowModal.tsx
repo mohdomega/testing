@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef,useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Button from '@/components/Button';
 import Modal from '@/components/Modal';
@@ -122,92 +122,100 @@ export default function ApplyNowModal({
     }
   };
 
+  const modalHeader = (
+    <Stack className="gap-2">
+      <Typography variant="h4" className="font-medium text-primary-dark">
+        Apply Now
+      </Typography>
+      <Typography variant="body2" className="text-primary-dark/60">
+        Please fill in your details to apply for <strong>{jobTitle}</strong>
+      </Typography>
+    </Stack>
+  );
+
+  const modalFooter = (
+    <Stack direction="row" className="gap-3">
+      <Button
+        type="button"
+        variant="outlined"
+        onClick={handleClose}
+        className="flex-1 bg-red-500 text-white"
+        disabled={loading}
+        form="apply-now-form"
+      >
+        Cancel
+      </Button>
+      <Button type="submit" variant="contained" className="flex-1" isLoading={loading} form="apply-now-form">
+        Submit Application
+      </Button>
+    </Stack>
+  );
+
   return (
-    <Modal isOpen={isOpen} onClose={handleClose}>
-      <Stack className="gap-6">
+    <Modal isOpen={isOpen} onClose={handleClose} header={modalHeader} footer={modalFooter}>
+      <form
+        id="apply-now-form"
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="w-full flex flex-col gap-4 pb-2"
+      >
+        <TextField
+          name="name"
+          id="name"
+          label="Full Name"
+          placeholder="Enter your full name"
+          required
+          className="w-full"
+        />
+        <TextField
+          name="email"
+          id="email"
+          type="email"
+          label="Email Address"
+          placeholder="Enter your email"
+          required
+          className="w-full"
+        />
+        <TextField
+          name="phone"
+          id="phone"
+          type="tel"
+          label="Phone Number"
+          placeholder="Enter your phone number"
+          required
+          className="w-full"
+        />
+
         <Stack className="gap-2">
-          <Typography variant="h4" className="font-medium text-primary-dark">
-            Apply Now
+          <Typography component="label" htmlFor="resume" variant="subtitle" className="font-medium">
+            Resume <span className="text-red-500">*</span>
           </Typography>
-          <Typography variant="body2" className="text-primary-dark/60">
-            Please fill in your details to apply for <strong>{jobTitle}</strong>
+          <input
+            ref={fileInputRef}
+            type="file"
+            name="resume"
+            id="resume"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+            className="px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary hover:file:bg-primary/90 cursor-pointer"
+          />
+          <Typography variant="small" className="text-primary-dark/60">
+            Accepted formats: PDF, JPG, PNG (Max size: 5MB)
           </Typography>
         </Stack>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-          <TextField
-            name="name"
-            id="name"
-            label="Full Name"
-            placeholder="Enter your full name"
-            required
-            className="w-full"
-          />
-          <TextField
-            name="email"
-            id="email"
-            type="email"
-            label="Email Address"
-            placeholder="Enter your email"
-            required
-            className="w-full"
-          />
-          <TextField
-            name="phone"
-            id="phone"
-            type="tel"
-            label="Phone Number"
-            placeholder="Enter your phone number"
-            required
-            className="w-full"
-          />
+        {error && (
+          <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
+            ✗ {error}
+          </Typography>
+        )}
 
-          <Stack className="gap-2">
-            <Typography component="label" htmlFor="resume" variant="subtitle" className="font-medium">
-              Resume <span className="text-red-500">*</span>
-            </Typography>
-            <input
-              ref={fileInputRef}
-              type="file"
-              name="resume"
-              id="resume"
-              accept=".pdf,.jpg,.jpeg,.png"
-              required
-              className="px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary  hover:file:bg-primary/90 cursor-pointer"
-            />
-            <Typography variant="small" className="text-primary-dark/60">
-              Accepted formats: PDF, JPG, PNG (Max size: 5MB)
-            </Typography>
-          </Stack>
-
-          {error && (
-            <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
-              ✗ {error}
-            </Typography>
-          )}
-
-          {success && (
-            <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
-              ✓ Application submitted successfully! We&apos;ll get back to you soon.
-            </Typography>
-          )}
-
-          <Stack direction="row" className="gap-3 mt-2">
-            <Button
-              type="button"
-              variant="outlined"
-              onClick={handleClose}
-              className="flex-1 bg-red-500 text-white"
-              disabled={loading}
-            >
-              Cancel
-            </Button>
-            <Button type="submit" variant="contained" className="flex-1" isLoading={loading}>
-              Submit Application
-            </Button>
-          </Stack>
-        </form>
-      </Stack>
+        {success && (
+          <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
+            ✓ Application submitted successfully! We&apos;ll get back to you soon.
+          </Typography>
+        )}
+      </form>
     </Modal>
   );
 }

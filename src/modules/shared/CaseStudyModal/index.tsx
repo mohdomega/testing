@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef,useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { sendCaseStudyDownloadEmail } from '@/actions/case-study';
 import Button from '@/components/Button';
@@ -118,65 +118,66 @@ export default function CaseStudyModal({ isOpen, onClose, studyTitle }: CaseStud
     }
   };
 
+  const modalHeader = (
+    <Stack className="gap-2">
+      <Typography variant="h4" className="font-medium text-primary-dark">
+        Download Case Study
+      </Typography>
+      <Typography variant="body2" className="text-primary-dark/60">
+        Please fill in your details to download <strong>{studyTitle}</strong>.
+      </Typography>
+    </Stack>
+  );
+
+  const modalFooter = (
+    <Stack direction="row" className="gap-3">
+      <Button type="button" variant="outlined" onClick={handleClose} className="flex-1" disabled={loading}>
+        Cancel
+      </Button>
+      <Button type="submit" variant="contained" className="flex-1" isLoading={loading} form="case-study-form">
+        Download Now
+      </Button>
+    </Stack>
+  );
+
   return (
-    <Modal isOpen={isOpen} onClose={handleClose}>
-      <Stack className="gap-6">
-        <Stack className="gap-2">
-          <Typography variant="h4" className="font-medium text-primary-dark">
-            Download Case Study
+    <Modal isOpen={isOpen} onClose={handleClose} header={modalHeader} footer={modalFooter}>
+      <form
+        id="case-study-form"
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="w-full flex flex-col gap-4 pb-2"
+      >
+        <TextField
+          name="name"
+          id="name"
+          label="Full Name"
+          placeholder="Enter your full name"
+          required
+          className="w-full"
+        />
+        <TextField
+          name="email"
+          id="email"
+          type="email"
+          label="Email Address"
+          placeholder="Enter your email"
+          required
+          className="w-full"
+        />
+
+        {error && (
+          <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
+            ✗ {error}
           </Typography>
-          <Typography variant="body2" className="text-primary-dark/60">
-            Please fill in your details to download <strong>{studyTitle}</strong>.
+        )}
+
+        {success && (
+          <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
+            ✓ Thank you! Your download is starting...
           </Typography>
-        </Stack>
-
-        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-          <TextField
-            name="name"
-            id="name"
-            label="Full Name"
-            placeholder="Enter your full name"
-            required
-            className="w-full"
-          />
-          <TextField
-            name="email"
-            id="email"
-            type="email"
-            label="Email Address"
-            placeholder="Enter your email"
-            required
-            className="w-full"
-          />
-
-          {error && (
-            <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
-              ✗ {error}
-            </Typography>
-          )}
-
-          {success && (
-            <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
-              ✓ Thank you! Your download is starting...
-            </Typography>
-          )}
-
-          <Stack direction="row" className="gap-3 mt-2">
-            <Button
-              type="button"
-              variant="outlined"
-              onClick={handleClose}
-              className="flex-1"
-              disabled={loading}
-            >
-              Cancel
-            </Button>
-            <Button type="submit" variant="contained" className="flex-1" isLoading={loading}>
-              Download Now
-            </Button>
-          </Stack>
-        </form>
-      </Stack>
+        )}
+      </form>
     </Modal>
   );
 }

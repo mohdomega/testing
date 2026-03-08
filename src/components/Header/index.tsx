@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 import Button from '@/components/Button';
 import Stack from '@/components/Stack';
-import { cn } from '@/lib';
+import { cn, useScrollLock } from '@/lib';
 import { useMotionValueEvent, useScroll } from 'motion/react';
 
 import ForDesktop from '../MediaQuery/ForDesktop';
@@ -49,6 +49,8 @@ export default function Header({ className }: HeaderProps) {
   function handleToggle() {
     setIsOpen((prev) => !prev);
   }
+
+  useScrollLock(isOpen);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -274,13 +276,12 @@ export default function Header({ className }: HeaderProps) {
             </Button>
           </Stack>
           {isOpen && (
-            <div ref={mobileMenuRef}>
+            <div ref={mobileMenuRef} className="fixed inset-x-0 top-[100px] z-[60] px-10">
               <Stack
                 component="nav"
                 justifyContent="space-between"
                 className={cn(
-                  // 'bg-white/10 rounded-2xl mt-3 mx-10 px-4 py-4 backdrop-blur-xl transition-all duration-300',
-                  'bg-white rounded-2xl mt-3 mx-10 px-4 py-4 shadow-xl transition-all duration-300',
+                  'bg-white rounded-2xl p-4 shadow-xl transition-all duration-300 max-h-[calc(100dvh-120px)] overflow-y-auto',
                   {
                     'bg-white': isScrolled,
                   }

@@ -69,61 +69,64 @@ export default function CaseStudy({ className }: CaseStudyProps) {
               description="Drive faster sales cycles, accurate forecasting, and connected manufacturing operations with Salesforce Manufacturing Cloud."
               blogSlug="manufacturing-case-study"
               highlightedFeatures={
-                <div className="relative w-full p-6 pb-12.5 bg-white/10 rounded-2xl overflow-hidden">
-                  <Stack className="gap-4 w-fit p-4 border border-dashed border-white/20 rounded-2xl">
-                    <Typography className="text-white font-medium">IDRMS Salesforce</Typography>
-                    <Stack divider={<div className="h-0.5 bg-white/10" />} className="gap-3">
-                      <Stack direction="row" alignItems="flex-start" className="gap-2">
-                        <Star className="size-4 text-white" />
-                        <Stack direction="row" alignItems="center" className="gap-3">
-                          <div className="p-3 rounded-full bg-white">
-                            <PieChart className="size-4" />
-                          </div>
-                          <Typography variant="small" className="font-medium text-white/60">
-                            Advanced Segmentation
-                          </Typography>
+                <div className="w-full p-6 bg-white/10 rounded-2xl">
+                  <Stack className="gap-6">
+                    {/* Top Card */}
+                    <Stack className="gap-4 w-fit p-4 border border-dashed border-white/20 rounded-2xl">
+                      <Typography className="text-white font-medium">IDRMS Salesforce</Typography>
+                      <Stack divider={<div className="h-0.5 bg-white/10" />} className="gap-3">
+                        <Stack direction="row" alignItems="flex-start" className="gap-2">
+                          <Star className="size-4 text-white" />
+                          <Stack direction="row" alignItems="center" className="gap-3">
+                            <div className="p-3 rounded-full bg-white">
+                              <PieChart className="size-4" />
+                            </div>
+                            <Typography variant="small" className="font-medium text-white/60">
+                              Advanced Segmentation
+                            </Typography>
+                          </Stack>
+                          <Star className="size-4 text-white opacity-0" />
                         </Stack>
-                        <Star className="size-4 text-white opacity-0" />
-                      </Stack>
-                      <Stack direction="row" alignItems="flex-start" className="gap-2">
-                        <Star className="size-4 text-white" />
-                        <Stack direction="row" alignItems="center" className="gap-3">
-                          <div className="p-3 rounded-full bg-white">
-                            <Microphone className="size-4" />
-                          </div>
-                          <Typography variant="small" className="font-medium text-white/60">
-                            Personalized Campaigns
-                          </Typography>
+                        <Stack direction="row" alignItems="flex-start" className="gap-2">
+                          <Star className="size-4 text-white" />
+                          <Stack direction="row" alignItems="center" className="gap-3">
+                            <div className="p-3 rounded-full bg-white">
+                              <Microphone className="size-4" />
+                            </div>
+                            <Typography variant="small" className="font-medium text-white/60">
+                              Personalized Campaigns
+                            </Typography>
+                          </Stack>
                         </Stack>
                       </Stack>
                     </Stack>
-                  </Stack>
-                  <Stack className="absolute top-[55%] right-6 gap-4 w-fit p-4 bg-white rounded-2xl">
-                    <Typography className="font-medium text-primary-dark">Key Features</Typography>
-                    <Stack divider={<div className="h-0.25 bg-primary-dark/10" />} className="gap-3">
-                      <Stack direction="row" alignItems="flex-start" className="gap-2">
-                        <Star className="size-4 text-primary-dark" />
-                        <Stack direction="row" alignItems="center" className="gap-3">
-                          <div className="p-3 rounded-full bg-[#7952DF]">
-                            <Automation className="size-4" />
-                          </div>
-                          <Typography variant="small" className="font-medium text-primary-dark">
-                            Automation
-                          </Typography>
+
+                    {/* Bottom Card (Shifted right for visual interest) */}
+                    <Stack className="self-end mr-2 gap-4 w-fit p-4 bg-white rounded-2xl shadow-xl">
+                      <Typography className="font-medium text-primary-dark">Key Features</Typography>
+                      <Stack divider={<div className="h-0.25 bg-primary-dark/10" />} className="gap-3">
+                        <Stack direction="row" alignItems="flex-start" className="gap-2">
+                          <Star className="size-4 text-primary-dark" />
+                          <Stack direction="row" alignItems="center" className="gap-3">
+                            <div className="p-3 rounded-full bg-[#7952DF]">
+                              <Automation className="size-4" />
+                            </div>
+                            <Typography variant="small" className="font-medium text-primary-dark">
+                              Automation
+                            </Typography>
+                          </Stack>
                         </Stack>
-                        <Star className="size-4 text-white opacity-0" />
-                      </Stack>
-                      <Stack direction="row" alignItems="flex-start" className="gap-2">
-                        <Star className="size-4 text-primary-dark" />
-                        <Stack direction="row" alignItems="center" className="gap-3">
-                          <div className="p-3 rounded-full bg-[#7952DF]">
-                            <Automation className="size-4" />
-                          </div>
-                          <Typography variant="small" className="font-medium text-primary-dark">
-                            Advanced Segmentation
-                          </Typography>
+                        <Stack direction="row" alignItems="flex-start" className="gap-2">
+                          <Star className="size-4 text-primary-dark" />
+                          <Stack direction="row" alignItems="center" className="gap-3">
+                            <div className="p-3 rounded-full bg-[#7952DF]">
+                              <Automation className="size-4" />
+                            </div>
+                            <Typography variant="small" className="font-medium text-primary-dark">
+                              Advanced Segmentation
+                            </Typography>
+                          </Stack>
                         </Stack>
-                        <Star className="size-4 text-white opacity-0" />
                       </Stack>
                     </Stack>
                   </Stack>
