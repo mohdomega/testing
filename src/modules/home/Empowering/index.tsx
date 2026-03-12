@@ -79,34 +79,40 @@ export default function Empowering({ className }: EmpoweringProps) {
         {/* <div className="h-[85%] relative  *:pointer-events-auto"> */}
         <div className="h-[110%] relative  *:pointer-events-auto">
           <Image
+            quality={100}
             src={Img1}
             alt=""
-            className="absolute top-1/20 left-1/6 -rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+            className="absolute top-1/20 left-1/6 -rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover"
           />
           <Image
+            quality={100}
             src={Img2}
             alt=""
-            className="absolute top-1/20 right-1/6 rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+            className="absolute top-1/20 right-1/6 rotate-12 size-30 border-8 border-white/20 rounded-2xl object-cover"
           />
           <Image
+            quality={100}
             src={Img3}
             alt=""
-            className="absolute top-1/2 left-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
+            className="absolute top-1/2 left-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover"
           />
           <Image
+            quality={100}
             src={Img4}
             alt=""
-            className="absolute top-1/2 right-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover backdrop-blur-xl"
+            className="absolute top-1/2 right-1/16 -translate-y-1/2 size-30 border-8 border-white/20 rounded-full object-cover"
           />
           <Image
+            quality={100}
             src={Img5}
             alt=""
-            className="absolute top-3/4 left-1/5 rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+            className="absolute top-3/4 left-1/5 rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover"
           />
           <Image
+            quality={100}
             src={Img6}
             alt=""
-            className="absolute top-3/4 right-1/5 -rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover backdrop-blur-xl"
+            className="absolute top-3/4 right-1/5 -rotate-12 -translate-y-1/4 size-30 border-8 border-white/20 rounded-2xl object-cover"
           />
         </div>
       </div>

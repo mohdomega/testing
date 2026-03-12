@@ -9,6 +9,9 @@ import '../styles/globals.css';
 export const metadata: Metadata = {
   title: 'IDRMS',
   description: 'Transform your business with Salesforce',
+  icons: {
+    icon: '/favicon_idrms.ico',
+  },
 };
 
 export default function RootLayout({

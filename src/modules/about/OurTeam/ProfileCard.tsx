@@ -39,7 +39,7 @@ export default function ProfileCard({
       />
       <Stack
         className={cn(
-          'gap-3 sm:gap-4 p-4 sm:p-4 border border-white rounded-xl sm:rounded-[20px] backdrop-blur-[20px] z-10 w-full flex-shrink-0 mb-0',
+          'gap-3 sm:gap-4 p-4 sm:p-4 border border-white/20 rounded-xl sm:rounded-[20px] bg-black/40 backdrop-blur-[20px] z-10 w-full flex-shrink-0 mb-0',
           justifyBetween && 'flex lg:flex-row flex-col lg:items-center lg:justify-between sm:gap-2'
         )}
       >
@@ -50,11 +50,11 @@ export default function ProfileCard({
           >
             {name}
           </Typography>
-          <Typography className="text-[#DBDBDB]/80 text-[10px] sm:text-xs md:text-sm leading-tight">
+          <Typography className="text-white/80 text-[10px] sm:text-xs md:text-sm leading-tight">
             {tagline}
           </Typography>
         </Stack>
-        <Typography className="text-[#FCC33F] font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
+        <Typography className="text-accent font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
           - {role}
         </Typography>
       </Stack>
