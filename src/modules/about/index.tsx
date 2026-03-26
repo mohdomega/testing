@@ -15,7 +15,7 @@ export default function About() {
     <div>
       <Hero />
       {/* <OurTrustedPeople className="pt-80" /> */}
-       <OurKPIs />
+       <OurKPIs className="pt-[250px] max-lg:pt-17.5" />
       {/* <Rating /> */}
       <BoldAmbitions />
       <OurMission/>

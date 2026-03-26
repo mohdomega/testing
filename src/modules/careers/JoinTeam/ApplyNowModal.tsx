@@ -7,6 +7,7 @@ import Modal from '@/components/Modal';
 import Stack from '@/components/Stack';
 import TextField from '@/components/TextField';
 import Typography from '@/components/Typography';
+import Toast from '@/components/Toast';
 
 import { applyNow } from './applyAction';
 
@@ -28,6 +29,7 @@ export default function ApplyNowModal({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -85,6 +87,7 @@ export default function ApplyNowModal({
 
       if (result.success) {
         setSuccess(true);
+        setShowToast(true);
         // Reset form
         if (formRef.current) {
           formRef.current.reset();
@@ -152,70 +155,77 @@ export default function ApplyNowModal({
   );
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose} header={modalHeader} footer={modalFooter}>
-      <form
-        id="apply-now-form"
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="w-full flex flex-col gap-4 pb-2"
-      >
-        <TextField
-          name="name"
-          id="name"
-          label="Full Name"
-          placeholder="Enter your full name"
-          required
-          className="w-full"
-        />
-        <TextField
-          name="email"
-          id="email"
-          type="email"
-          label="Email Address"
-          placeholder="Enter your email"
-          required
-          className="w-full"
-        />
-        <TextField
-          name="phone"
-          id="phone"
-          type="tel"
-          label="Phone Number"
-          placeholder="Enter your phone number"
-          required
-          className="w-full"
-        />
-
-        <Stack className="gap-2">
-          <Typography component="label" htmlFor="resume" variant="subtitle" className="font-medium">
-            Resume <span className="text-red-500">*</span>
-          </Typography>
-          <input
-            ref={fileInputRef}
-            type="file"
-            name="resume"
-            id="resume"
-            accept=".pdf,.jpg,.jpeg,.png"
+    <>
+      <Toast 
+        isShowing={showToast} 
+        onClose={() => setShowToast(false)} 
+        message="Application submitted successfully! We will get back to you soon." 
+      />
+      <Modal isOpen={isOpen} onClose={handleClose} header={modalHeader} footer={modalFooter}>
+        <form
+          id="apply-now-form"
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-4 pb-2"
+        >
+          <TextField
+            name="name"
+            id="name"
+            label="Full Name"
+            placeholder="Enter your full name"
             required
-            className="px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary hover:file:bg-primary/90 cursor-pointer"
+            className="w-full"
           />
-          <Typography variant="small" className="text-primary-dark/60">
-            Accepted formats: PDF, JPG, PNG (Max size: 5MB)
-          </Typography>
-        </Stack>
+          <TextField
+            name="email"
+            id="email"
+            type="email"
+            label="Email Address"
+            placeholder="Enter your email"
+            required
+            className="w-full"
+          />
+          <TextField
+            name="phone"
+            id="phone"
+            type="tel"
+            label="Phone Number"
+            placeholder="Enter your phone number"
+            required
+            className="w-full"
+          />
 
-        {error && (
-          <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
-            ✗ {error}
-          </Typography>
-        )}
+          <Stack className="gap-2">
+            <Typography component="label" htmlFor="resume" variant="subtitle" className="font-medium">
+              Resume <span className="text-red-500">*</span>
+            </Typography>
+            <input
+              ref={fileInputRef}
+              type="file"
+              name="resume"
+              id="resume"
+              accept=".pdf,.jpg,.jpeg,.png"
+              required
+              className="px-4 py-3 text-md border border-black/10 rounded-xl text-secondary focus-visible:outline-secondary max-sm:text-sm w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary hover:file:bg-primary/90 cursor-pointer"
+            />
+            <Typography variant="small" className="text-primary-dark/60">
+              Accepted formats: PDF, JPG, PNG (Max size: 5MB)
+            </Typography>
+          </Stack>
 
-        {success && (
-          <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
-            ✓ Application submitted successfully! We&apos;ll get back to you soon.
-          </Typography>
-        )}
-      </form>
-    </Modal>
+          {error && (
+            <Typography className="text-red-600 font-medium bg-red-50 px-4 py-3 rounded-lg">
+              ✗ {error}
+            </Typography>
+          )}
+
+          {success && (
+            <Typography className="text-green-600 font-medium bg-green-50 px-4 py-3 rounded-lg">
+              ✓ Application submitted successfully! We&apos;ll get back to you soon.
+            </Typography>
+          )}
+        </form>
+      </Modal>
+    </>
   );
 }

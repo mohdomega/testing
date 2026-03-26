@@ -28,6 +28,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+   /* zoom: 90%; */
 }
 
 body {
