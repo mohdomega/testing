@@ -1,0 +1,19 @@
+import ServicePage from '@/modules/services/service-detail';
+
+export default function Page() {
+  return (
+    <ServicePage
+      title="Integration Services"
+      heroDescription="Connect your systems seamlessly with our integration solutions. We design and implement robust integrations that unify your business processes, improve data flow, and provide real-time visibility."
+      serviceTitle="Connecting Systems and Data to Create a Single Source of Truth"
+      // serviceDescription="From simple API connections to complex enterprise architectures, we make system integration easier, faster, and more aligned with your business goals."
+      serviceDescription="We connect Salesforce with your existing systems to create a single, reliable flow of data across your organization."
+      serviceTags={[
+        'Salesforce Integration Services',
+        'MuleSoft & API Integrations',
+        'Real-Time Data Synchronization',
+        'Enterprise System Connectivity',
+      ]}
+    />
+  );
+}

@@ -1,0 +1,215 @@
+'use client';
+
+import { useState } from 'react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import Stack from '@/components/Stack';
+import Typography from '@/components/Typography';
+import { cn } from '@/lib';
+
+import { BlogPost } from '../data';
+import Sidebar from './Sidebar';
+
+// import Facebook from '/public/images/BlogImages/facebook.svg';
+import Facebook from '/public/icons/blogsDetailsIcons/Facebook';
+// import Instagram from '/public/images/BlogImages/instagram-fill.svg';
+import Instagram from '/public/icons/blogsDetailsIcons/Instagram';
+// import Linkedin from '/public/images/BlogImages/linkedin.svg';
+import Linkedin from '/public/icons/blogsDetailsIcons/LinkedIn';
+import Twitter from '/public/icons/blogsDetailsIcons/Twitter';
+import Calendar from '/public/images/BlogImages/Calendar.svg';
+// import Twitter from '/public/images/BlogImages/twitter.svg';
+import Share from '/public/images/BlogImages/share alt.svg';
+import TimeCircle from '/public/images/BlogImages/time-circle.svg';
+
+interface BlogContentProps {
+  blog: BlogPost;
+}
+
+export default function BlogContent({ blog }: BlogContentProps) {
+  const [isTwitterHover, setIsTwitterHover] = useState(false);
+  const [isFacebookHover, setIsFacebookHover] = useState(false);
+  const [isInstagramHover, setIsInstagramHover] = useState(false);
+  const [isLinkedinHover, setIsLinkedinHover] = useState(false);
+  return (
+    <Stack className="gap-10">
+      {/* Header */}
+      <Stack className="gap-[60px]">
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          className="gap-10 flex max-[1150px]:flex-col justify-between items-center"
+        >
+          <Typography variant="h1" className="text-6xl font-medium leading-tight ">
+            {blog.title}
+          </Typography>
+          <Typography className="text-secondary max-w-md text-md max-[1150px]:max-w-full w-full">
+            {blog.description}
+          </Typography>
+        </Stack>
+
+        {/* Hero Image & Author */}
+        <div className=" relative w-full aspect-video rounded-3xl overflow-hidden">
+          <Image
+            src={blog.heroImage}
+            alt="Blog Hero"
+            className="w-full h-full object-cover"
+            quality={100}
+            priority
+            sizes="100vw"
+          />
+
+          {/* Author Card */}
+          <div className=" absolute bottom-6 left-6 bg-white p-4 rounded-[20px] flex items-center gap-6 max-sm:bottom-[8px] max-sm:left-[8px] max-sm:p-2  max-sm:rounded-tr-2xl max-w-[362px] max-sm:w-fit min-h-[92px] max-sm:min-h-[60px] max-sm:gap-3">
+            <div className="w-[60px] h-[60px] max-sm:w-[40px] max-sm:h-[40px] rounded-full overflow-hidden bg-yellow-500">
+              <Image src={blog.author.image} alt="Author" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <Typography variant="h6" className="font-medium text-sm md:text-lg">
+                {blog.author.name}
+              </Typography>
+              <Typography
+                variant="small"
+                className="text-secondary text-sm flex items-center gap-1 md:gap-2 sm:text-md"
+              >
+                <TimeCircle className="max-sm:w-4 max-sm:h-4" />
+                {blog.readTime}
+              </Typography>
+            </div>
+          </div>
+        </div>
+
+        {/* Date */}
+        <div className="flex items-center gap-2 px-8 py-4 bg-background rounded-full w-fit">
+          <Calendar />
+          <Typography variant="small" className="font-medium text-primary-dark text-[16px]">
+            {blog.date}
+          </Typography>
+        </div>
+      </Stack>
+
+      {/* Content */}
+      <Stack className="text-secondary leading-relaxed grid grid-cols-[1fr_400px] gap-20 max-xl:gap-10 max-lg:grid-cols-1">
+        <Stack className="gap-6">
+          {blog.content.sections.map((section, index) => (
+            <Stack key={index}>
+              <Typography variant="h3" className="text-2xl font-medium text-primary-dark">
+                {section.title}
+              </Typography>
+              {section.paragraphs.map((paragraph, pIndex) => (
+                <div key={pIndex}>
+                  {pIndex > 0 && <br />}
+                  {typeof paragraph === 'object' && paragraph.list ? (
+                    // <ul className="list-disc pl-10 space-y-2 mt-2">
+                    <ul className="list-disc pl-7 -mt-4">
+                      {paragraph.list.map((item: string, i: number) => (
+                        <li key={i}>
+                          <Typography className="text-md font-regular text-secondary">{item}</Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : typeof paragraph === 'string' && paragraph.startsWith('End Goal:') ? (
+                    <Typography className={cn('text-md font-regular text-secondary', pIndex === 0 && 'mt-3')}>
+                      <span className="font-bold block mb-1">End Goal:</span>
+                      {paragraph.replace('End Goal:', '').trim()}
+                    </Typography>
+                  ) : (
+                    <Typography className={cn('text-md font-regular text-secondary', pIndex === 0 && 'mt-3')}>
+                      {paragraph}
+                    </Typography>
+                  )}
+                </div>
+              ))}
+              {index === 1 && (
+                <div className="max-w-[768px] h-[305px] w-full aspect-[2/1] rounded-3xl overflow-hidden mt-6">
+                  <Image
+                    src={blog.contentImage}
+                    alt="Content Image"
+                    className="w-full h-full object-cover"
+                    quality={100}
+                  />
+                </div>
+              )}
+            </Stack>
+          ))}
+
+          {/* Footer / Tags / Share */}
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+            className=" mt-4 gap-3 max-sm:flex-col max-sm:gap-6 max-sm:items-start"
+          >
+            <div className="flex flex-wrap gap-3">
+              {blog.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-[13px] rounded-full border border-black/10 text-md font-regular text-primary-dark"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-6">
+              <Typography
+                variant="small"
+                className="font-regular text-primary-dark text-md flex items-center gap-[10px]"
+              >
+                <Share />
+                Share
+              </Typography>
+              <div className="flex gap-[8px]">
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setIsTwitterHover(true)}
+                  onMouseLeave={() => setIsTwitterHover(false)}
+                  className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white group"
+                >
+                  {isTwitterHover ? <Twitter BgFill="white" stroke="#1E0A52" /> : <Twitter />}
+                </Link>
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setIsFacebookHover(true)}
+                  onMouseLeave={() => setIsFacebookHover(false)}
+                  className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"
+                >
+                  {isFacebookHover ? <Facebook BgFill="white" /> : <Facebook />}
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setIsInstagramHover(true)}
+                  onMouseLeave={() => setIsInstagramHover(false)}
+                  className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"
+                >
+                  {isInstagramHover ? <Instagram BgFill="white" rectFill="#1E0A52" /> : <Instagram />}
+                </Link>
+                <Link
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setIsLinkedinHover(true)}
+                  onMouseLeave={() => setIsLinkedinHover(false)}
+                  className="flex items-center justify-center rounded-full w-[50px] h-[50px] border border-[#DCDCDC] text-primary-dark hover:bg-primary-dark hover:text-white"
+                >
+                  {isLinkedinHover ? <Linkedin BgFill="white" rectFill="#1E0A52" /> : <Linkedin />}
+                </Link>
+              </div>
+            </div>
+          </Stack>
+        </Stack>
+
+        <Sidebar />
+      </Stack>
+    </Stack>
+  );
+}

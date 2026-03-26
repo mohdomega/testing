@@ -1,0 +1,20 @@
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="afGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"></stop>
+      <stop offset="100%" stop-color="#0F172A"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(20,20)">
+    <path d="M40 0 L80 20 V60 C80 80 60 95 40 100 C20 95 0 80 0 60 V20 Z" fill="url(#afGradient)"></path>
+    <path d="M38 20 L55 45 H45 L60 75 L30 50 H40 Z" fill="#FFFFFF"></path>
+  </g>
+
+  <!-- Text -->
+  <text x="130" y="70" font-family="Segoe UI, Montserrat, Arial, sans-serif" font-size="42" font-weight="700" fill="#0F172A">
+    Agent
+    <tspan fill="#3B82F6">Force</tspan>
+  </text>
+</svg>
