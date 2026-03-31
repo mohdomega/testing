@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   title: 'IDRMS',
   description: 'Transform your business with Salesforce',
   icons: {
-    icon: '/favicon_idrms.ico',
+    // icon: '/favicon_idrms.ico',
+    icon: '/IdrmsSvg.svg',
   },
 };
 
