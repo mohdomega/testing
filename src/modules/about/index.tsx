@@ -10,7 +10,7 @@ import OurTeam from './OurTeam';
 import Rating from './Rating';
 import WhyChooseUs from './WhyChooseUs';
 
-export default function About() {
+export default function About({ isNA }: { isNA?: boolean }) {
   return (
     <div>
       <Hero />
@@ -21,7 +21,7 @@ export default function About() {
       <OurMission/>
       <WhyChooseUs />
        <WorkCulture />
-      <OurTeam />
+      <OurTeam initialIsNA={isNA} />
       <ContactUs />
       <BlazeNewTrails className="bg-white" />
     </div>

@@ -125,10 +125,16 @@
 //   );
 // }
 
+'use client';
+
+import { useSearchParams } from 'next/navigation';
+import { Suspense, useEffect, useState } from 'react';
+
 import Stack from '@/components/Stack';
 import TitleChip from '@/components/TitleChip';
 import Typography from '@/components/Typography';
 import { cn } from '@/lib';
+import { detectNorthAmerica } from '@/lib/geo';
 
 import ProfileCard from './ProfileCard';
 
@@ -182,7 +188,40 @@ const TEAM_MEMBERS = [
   },
 ];
 
-export default function OurTeam({ className }: OurTeamProps) {
+function OurTeamContent({ className, initialIsNA }: OurTeamProps & { initialIsNA?: boolean }) {
+  const searchParams = useSearchParams();
+  const [isNA, setIsNA] = useState(initialIsNA || false);
+
+  useEffect(() => {
+    // If server already detected NA, we can skip detection unless it's a test
+    const test = searchParams.get('test_region');
+    if (test === 'NA') {
+      setIsNA(true);
+      return;
+    }
+    
+    if (test === 'OTHER') {
+      setIsNA(false);
+      return;
+    }
+
+    // Only fetch if we don't have server-side info yet (e.g. during local dev)
+    if (initialIsNA === undefined) {
+      detectNorthAmerica(searchParams).then(setIsNA);
+    }
+  }, [searchParams, initialIsNA]);
+
+  // Update Dipen's role ONLY if in North America
+  const teamWithUpdatedRoles = TEAM_MEMBERS.map((member) => {
+    if (member.name === 'Dipen Ishani' && isNA) {
+      return {
+        ...member,
+        role: 'Chief Solution Officer/Founder',
+      };
+    }
+    return member;
+  });
+
   return (
     <Stack
       id="our-team"
@@ -198,7 +237,7 @@ export default function OurTeam({ className }: OurTeamProps) {
 
       <div className="max-w-[1240px] w-full px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 justify-items-center">
-          {TEAM_MEMBERS.map((member, index) => (
+          {teamWithUpdatedRoles.map((member, index) => (
             <div key={index} className="w-full">
               <ProfileCard
                 img={member.img}
@@ -213,5 +252,13 @@ export default function OurTeam({ className }: OurTeamProps) {
         </div>
       </div>
     </Stack>
+  );
+}
+
+export default function OurTeam({ className, initialIsNA }: OurTeamProps & { initialIsNA?: boolean }) {
+  return (
+    <Suspense fallback={null}>
+      <OurTeamContent className={className} initialIsNA={initialIsNA} />
+    </Suspense>
   );
 }
