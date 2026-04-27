@@ -211,13 +211,21 @@ function OurTeamContent({ className, initialIsNA }: OurTeamProps & { initialIsNA
     }
   }, [searchParams, initialIsNA]);
 
-  // Update Dipen's role ONLY if in North America
+  // Update roles ONLY if in North America
   const teamWithUpdatedRoles = TEAM_MEMBERS.map((member) => {
-    if (member.name === 'Dipen Ishani' && isNA) {
-      return {
-        ...member,
-        role: 'Chief Solution Officer/Founder',
-      };
+    if (isNA) {
+      if (member.name === 'Dipen Ishani') {
+        return {
+          ...member,
+          role: 'Chief Digital Officer / Co Founder',
+        };
+      }
+      if (member.name === 'Mansur Ishani') {
+        return {
+          ...member,
+          role: 'Director/Founder',
+        };
+      }
     }
     return member;
   });
@@ -238,14 +246,14 @@ function OurTeamContent({ className, initialIsNA }: OurTeamProps & { initialIsNA
       <div className="max-w-[1240px] w-full px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 justify-items-center">
           {teamWithUpdatedRoles.map((member, index) => (
-            <div key={index} className="w-full">
+            <div key={index} className="w-full h-full">
               <ProfileCard
                 img={member.img}
                 name={member.name}
                 role={member.role}
                 tagline={member.tagline}
                 imagePosition={member.imagePosition}
-                className="aspect-[3/4]"
+                className="aspect-[3/4] h-full"
               />
             </div>
           ))}

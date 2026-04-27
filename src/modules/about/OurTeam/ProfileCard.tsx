@@ -54,7 +54,7 @@ export default function ProfileCard({
             {tagline}
           </Typography>
         </Stack>
-        <Typography className="text-accent font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
+        <Typography className="text-accent font-bold text-xs sm:text-sm md:text-base leading-snug">
           - {role}
         </Typography>
       </Stack>
