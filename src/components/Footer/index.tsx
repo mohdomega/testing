@@ -13,9 +13,10 @@ import Logo from '/public/icons/main-logo.svg';
 import IndiaFlag from '/public/images/india-flag.png';
 import USFlag from '/public/images/us-flag.jpg';
 
-
 import SalesforceRidgePartnerLogo from '/public/images/Home/Salesforce RIdge Partner Logo.jpeg';
-
+import ISOCertifiedLogo1 from '/public/images/ISOCertifiedLogo1.png';
+import ISOCertifiedLogo2 from '/public/images/ISOCertifiedLogo2.png';
+import ISOCertifiedLogo3 from '/public/images/ISOCertifiedLogo3.png';
 
 interface FooterProps {
   className?: string;
@@ -55,29 +56,58 @@ export default function Footer({ className }: FooterProps) {
                   ))}
                 </Stack>
               </Stack>
-              <Stack className="gap-4">
-                <div className='flex items-center gap-4'>
-                  <Typography variant="body2" className="text-white/60">
-                    Follow us at
-                  </Typography>
-                  <div className="rounded-md w-[70px] h-[90px] relative overflow-hidden">
-                    <Image src={SalesforceRidgePartnerLogo} alt="SalesforceRidgePartnerLogo" className="w-full h-full object-cover" />
+              <Stack className="gap-10">
+                <div className="flex items-center gap-4 ">
+                  <div className="flex items-center gap-4">
+                    <Typography variant="body2" className="text-white/60">
+                      Follow us at
+                    </Typography>
+                    <Stack direction="row" className="gap-4">
+                      {socialMedia.map(({ icon: Icon, label, link }) => (
+                        <Stack
+                          key={label}
+                          component={Link}
+                          href={link}
+                          justifyContent="center"
+                          alignItems="center"
+                          target="_blank"
+                          className="size-12 border border-white/10 rounded-full"
+                        >
+                          <Icon className="size-5" />
+                        </Stack>
+                      ))}
+                    </Stack>
                   </div>
                 </div>
-                <Stack direction="row" className="gap-4">
-                  {socialMedia.map(({ icon: Icon, label, link }) => (
-                    <Stack
-                      key={label}
-                      component={Link}
-                      href={link}
-                      justifyContent="center"
-                      alignItems="center"
-                      target='_blank'
-                      className="size-12 border border-white/10 rounded-full"
-                    >
-                      <Icon className="size-5" />
-                    </Stack>
-                  ))}
+                <Stack alignItems="center" direction="row" className="gap-4">
+                  <div className="rounded-md w-[70px] h-[90px] relative overflow-hidden">
+                    <Image
+                      src={SalesforceRidgePartnerLogo}
+                      alt="SalesforceRidgePartnerLogo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className=" rounded-full w-[70px] h-[70px] relative overflow-hidden">
+                    <Image
+                      src={ISOCertifiedLogo1}
+                      alt="ISOCertifiedLogo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="rounded-full w-[70px] h-[70px] relative overflow-hidden">
+                    <Image
+                      src={ISOCertifiedLogo2}
+                      alt="ISOCertifiedLogo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="rounded-full w-[70px] h-[70px] relative overflow-hidden">
+                    <Image
+                      src={ISOCertifiedLogo3}
+                      alt="ISOCertifiedLogo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </Stack>
               </Stack>
             </Stack>

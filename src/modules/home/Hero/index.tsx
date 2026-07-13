@@ -34,7 +34,7 @@ export default function Hero({ className }: HeroProps) {
       justifyContent="center"
       className={cn(
         // 'min-h-screen bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6 w-full',
-        'min-h-[850px] bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 pb-20 max-lg:px-15 max-sm:px-6 w-full',
+        'min-h-[850px] bg-[url("/images/bg-gradient.png")] bg-cover pt-32 px-20 max-lg:pb-20 pb-12 max-lg:px-15 max-sm:px-6 w-full',
         className
       )}
     >
